@@ -1,0 +1,415 @@
+<!doctype html>
+<html lang="az">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rezidentura Quiz — All-in-One (Firestore)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+:root {
+  --bg:#0b1020; --card:#111831; --muted:#94a3b8;
+  --text:#e2e8f0; --accent:#60a5fa; --ok:#22c55e; --warn:#f59e0b; --red:#ef4444;
+}
+*{box-sizing:border-box} body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto;color:var(--text);background:linear-gradient(180deg,#0b1020,#0f172a 20%,#0b1020)}
+.topbar{display:flex;align-items:center;justify-content:space-between;padding:14px 18px;border-bottom:1px solid #1f2a44;background:#0b1224;position:sticky;top:0;z-index:10}
+.topbar h1{margin:0;font-size:20px;font-weight:700}
+.pill{background:#172554;color:#93c5fd;padding:4px 8px;border-radius:999px;font-size:.9em}
+.card{max-width:1100px;margin:16px auto;background:var(--card);border:1px solid #1f2a44;border-radius:14px;padding:16px;box-shadow:0 20px 70px rgba(0,0,0,.25)}
+.btn{border:none;border-radius:10px;padding:10px 14px;background:#1e293b;color:#e2e8f0;cursor:pointer}
+.btn:hover{filter:brightness(1.2)}
+.btn.primary{background:linear-gradient(135deg,#2563eb,#7c3aed)}
+.btn.secondary{background:#0b3758}
+.btn.ghost{background:transparent;border:1px solid #1f2a44}
+.btn.file{position:relative;overflow:hidden}
+.btn.file input{position:absolute;inset:0;opacity:0;cursor:pointer}
+.row{display:flex;align-items:center;gap:10px}
+.row.space{justify-content:space-between}
+.grid{display:grid;grid-template-columns:1fr;gap:12px}
+@media(min-width:880px){.grid{grid-template-columns:1fr 1fr}}
+.stack{display:flex;flex-direction:column;gap:6px}
+.stack span{color:var(--muted);font-size:.95em}
+input,select,textarea{background:#0d1326;color:#e2e8f0;border:1px solid #213055;border-radius:10px;padding:10px}
+input::placeholder,textarea::placeholder{color:#64748b}
+.answers input{width:100%}
+.muted{color:var(--muted)}
+.grow{flex:1}
+
+#list .item{border:1px solid #1f2a44;border-radius:12px;padding:14px;margin:10px 0;background:#0c1327}
+#list .item h3{margin:0 0 8px 0}
+.badge{font-size:.75em;padding:3px 8px;border:1px solid #213055;border-radius:999px;background:#0c1a38;color:#a5b4fc}
+.kv{display:flex;gap:8px;flex-wrap:wrap}
+.kv span{background:#0d1a35;border:1px solid #1f2a44;border-radius:8px;padding:4px 8px}
+.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.actions .ok{background:#052e2b;border-color:#064e3b}
+.actions .warn{background:#3a2104;border-color:#a16207}
+.actions .red{background:#3a0f12;border-color:#7f1d1d}
+
+/* small extras */
+.small-admin-btn { padding:6px 10px; font-size:.9em; border-radius:999px; border:1px solid #f97316; background:#ffedd5; color:#9a3412; cursor:pointer; }
+.small-admin-btn:hover { background:#fed7aa; }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <h1>Rezidentura Quiz — <span class="pill">Firestore</span></h1>
+    <div class="right">
+      <button id="btnAuthGoogle" class="btn secondary">Google ilə daxil ol (opsional)</button>
+      <button id="btnSignOut" class="btn ghost" disabled>Çıxış</button>
+    </div>
+  </header>
+
+  <!-- Admin Panel (Firestore) -->
+  <section class="card" id="adminPanel">
+    <h2>Admin Panel</h2>
+    <div class="grid">
+      <label class="stack">
+        <span>Admin şifrəsi</span>
+        <input id="adminPwd" type="password" placeholder="məs: rezident2025" />
+      </label>
+      <label class="stack">
+        <span>Kateqoriya seç / yarat</span>
+        <div class="row">
+          <select id="categorySelect"></select>
+          <input id="newCategory" type="text" placeholder="Yeni kateqoriya adı" />
+          <button id="btnCreateCategory" class="btn">Yarat</button>
+        </div>
+      </label>
+    </div>
+
+    <div class="grid">
+      <label class="stack">
+        <span>Yeni sual mətni</span>
+        <textarea id="qText" rows="2" placeholder="Sual..."></textarea>
+      </label>
+      <label class="stack">
+        <span>Cavablar (4 variant)</span>
+        <div class="row answers">
+          <input id="a1" placeholder="A" />
+          <input id="a2" placeholder="B" />
+          <input id="a3" placeholder="C" />
+          <input id="a4" placeholder="D" />
+        </div>
+      </label>
+      <label class="stack">
+        <span>Düzgün cavab (1-4)</span>
+        <input id="correctIndex" type="number" min="1" max="4" value="1" />
+      </label>
+    </div>
+    <div class="row">
+      <button id="btnAddQuestion" class="btn primary">➕ Sual əlavə et</button>
+      <label class="btn file">
+        JSON import (bu kateqoriyaya)
+        <input id="jsonFile" type="file" accept=".json"/>
+      </label>
+      <button id="btnImportJson" class="btn">JSON-u yüklə</button>
+    </div>
+    <small class="muted">Qeyd: Google Auth opsionaldır. Təhlükəsizlik üçün ən azı admin şifrəsi tələb olunur.</small>
+  </section>
+
+  <!-- Axtarış / siyahı -->
+  <section class="card">
+    <div class="row space">
+      <input id="searchInput" class="grow" placeholder="Sualda və cavablarda axtar..." />
+      <button id="btnRefresh" class="btn">Yenilə</button>
+    </div>
+    <div id="list"></div>
+  </section>
+
+  <!-- Firebase init (inline module) -->
+  <script type="module">
+/**
+ * Firebase init (CDN, ES modules)
+ * Doldur: aşağıdakı firebaseConfig obyektini öz layihənlə əvəz et.
+ * (Bunlar frontend açarlarıdır – təhlükəli deyil.)
+ */
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-app.js";
+import { getFirestore } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-firestore.js";
+import { getAuth, signInWithPopup, GoogleAuthProvider, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-auth.js";
+
+export const firebaseConfig = {
+  apiKey: "PASTE_API_KEY",
+  authDomain: "PASTE_AUTH_DOMAIN",
+  projectId: "PASTE_PROJECT_ID",
+  storageBucket: "PASTE_STORAGE_BUCKET",
+  messagingSenderId: "PASTE_SENDER_ID",
+  appId: "PASTE_APP_ID"
+};
+
+export const app = initializeApp(firebaseConfig);
+export const db  = getFirestore(app);
+export const auth = getAuth(app);
+export const provider = new GoogleAuthProvider();
+
+// Auth helpers
+export function attachAuthUI() {
+  const loginBtn = document.getElementById("btnAuthGoogle");
+  const signOutBtn = document.getElementById("btnSignOut");
+  if (loginBtn) loginBtn.addEventListener("click", () => signInWithPopup(auth, provider));
+  if (signOutBtn) signOutBtn.addEventListener("click", () => signOut(auth));
+
+  onAuthStateChanged(auth, (user) => {
+    if (user) {
+      loginBtn?.setAttribute("disabled", "true");
+      loginBtn?.classList.add("ghost");
+      loginBtn.textContent = user.displayName || "Daxil oldun";
+      signOutBtn?.removeAttribute("disabled");
+    } else {
+      loginBtn?.removeAttribute("disabled");
+      loginBtn?.classList.remove("ghost");
+      loginBtn.textContent = "Google ilə daxil ol (opsional)";
+      signOutBtn?.setAttribute("disabled","true");
+    }
+  });
+}
+
+
+// Expose to window for the inline app script
+window.db = db;
+window.auth = auth;
+window.attachAuthUI = attachAuthUI;
+
+  </script>
+
+  <!-- App logic (inline module) -->
+  <script type="module">
+const db = window.db; const auth = window.auth; const attachAuthUI = window.attachAuthUI;
+
+/**
+ * Quiz App — Firestore versiyası (kateqoriyalarla)
+ * Funksiyalar:
+ *  - Kateqoriya siyahısı (dinamik, Firestore-dan distinct)
+ *  - Yeni kateqoriya yaratmaq (sadəcə ad daxil etməklə)
+ *  - JSON import (fayldan oxu → bu kateqoriyaya yaz)
+ *  - Sual əlavə et / redaktə et / sil
+ *  - Axtarış
+ */
+import {
+  collection, addDoc, getDocs, query, where, orderBy, serverTimestamp,
+  doc, updateDoc, deleteDoc
+} from "https://www.gstatic.com/firebasejs/10.12.4/firebase-firestore.js";
+
+// ======= Sadə admin şifrəsi (opsional; istəsən Firebase Auth rolları ilə əvəz et) =======
+const ADMIN_OK = () => {
+  const pwd = document.getElementById("adminPwd")?.value || "";
+  return pwd && pwd.length >= 4; // minimal yoxlama; diləsən sabitlə müqayisə et
+};
+
+// Firestore kolleksiya adı
+const COLL = "Suallar";
+
+// UI elementləri
+const categorySelect = document.getElementById("categorySelect");
+const newCategoryInput = document.getElementById("newCategory");
+const btnCreateCategory = document.getElementById("btnCreateCategory");
+const btnAddQuestion = document.getElementById("btnAddQuestion");
+const btnRefresh = document.getElementById("btnRefresh");
+const list = document.getElementById("list");
+const searchInput = document.getElementById("searchInput");
+
+const jsonFile = document.getElementById("jsonFile");
+const btnImportJson = document.getElementById("btnImportJson");
+
+const qText = document.getElementById("qText");
+const a1 = document.getElementById("a1");
+const a2 = document.getElementById("a2");
+const a3 = document.getElementById("a3");
+const a4 = document.getElementById("a4");
+const correctIndex = document.getElementById("correctIndex");
+
+// ======= Helperlər =======
+function normalizeCat(name) { return (name||"").trim().toLowerCase(); }
+
+async function distinctCategories() {
+  const snap = await getDocs(collection(db, COLL));
+  const set = new Set();
+  snap.forEach(d => { if (d.data().category) set.add(d.data().category); });
+  return Array.from(set).sort();
+}
+
+async function refreshCategoriesUI() {
+  const cats = await distinctCategories();
+  const current = categorySelect.value;
+  categorySelect.innerHTML = "";
+  if (cats.length === 0) {
+    const opt = document.createElement("option");
+    opt.value = ""; opt.textContent = "Hələ kateqoriya yoxdur";
+    categorySelect.appendChild(opt);
+  } else {
+    for (const c of cats) {
+      const opt = document.createElement("option");
+      opt.value = c; opt.textContent = c;
+      categorySelect.appendChild(opt);
+    }
+  }
+  if (current) categorySelect.value = current;
+}
+
+async function loadByCategory(cat, term="") {
+  list.innerHTML = "<div class='muted'>Yüklənir...</div>";
+  const q = query(collection(db, COLL));
+  const snap = await getDocs(q);
+  const items = [];
+  snap.forEach(d => {
+    const data = d.data();
+    if (data.category === cat) items.push({ id:d.id, ...data });
+  });
+
+  // Axtarış
+  const queryTerm = (term||"").toLowerCase();
+  const filtered = items.filter(it => {
+    if (!queryTerm) return true;
+    const inQ = (it.question||"").toLowerCase().includes(queryTerm);
+    const inA = Array.isArray(it.answers) && it.answers.some(x => (x||"").toLowerCase().includes(queryTerm));
+    return inQ || inA;
+  });
+
+  // render
+  renderList(filtered);
+}
+
+function renderList(rows) {
+  if (rows.length === 0) { list.innerHTML = "<div class='muted'>Sual tapılmadı.</div>"; return; }
+  list.innerHTML = "";
+  rows.forEach((r, idx) => {
+    const el = document.createElement("div");
+    el.className = "item";
+    el.innerHTML = `
+      <h3>${idx+1}. ${escapeHtml(r.question||"")}</h3>
+      <div class="kv">
+        ${(r.answers||[]).map((a,i)=>`<span>${String.fromCharCode(65+i)}) ${escapeHtml(a)}</span>`).join("")}
+      </div>
+      <div style="margin-top:8px">
+        <span class="badge">category: ${escapeHtml(r.category||"-")}</span>
+        <span class="badge">correct: ${(r.correctIndex??0)+1}</span>
+      </div>
+      <div class="actions">
+        <button class="btn ok" data-id="${r.id}" data-action="edit">✏️ Dəyiş</button>
+        <button class="btn warn" data-id="${r.id}" data-action="dup">📄 Kopya kimi əlavə et</button>
+        <button class="btn red" data-id="${r.id}" data-action="del">🗑 Sil</button>
+      </div>
+    `;
+    list.appendChild(el);
+  });
+
+  // action listeners
+  list.querySelectorAll("button[data-action]").forEach(btn => {
+    btn.addEventListener("click", async () => {
+      if (!ADMIN_OK()) { alert("Admin şifrəsini yaz!"); return; }
+      const id = btn.getAttribute("data-id");
+      const action = btn.getAttribute("data-action");
+      const cat = categorySelect.value;
+
+      if (action === "del") {
+        if (confirm("Bu sual silinsin?")) {
+          await deleteDoc(doc(db, COLL, id));
+          await loadByCategory(cat, searchInput.value);
+        }
+      }
+      if (action === "edit") {
+        // prompt-larla sadə edit
+        const curTitle = btn.closest(".item").querySelector("h3").textContent.replace(/^\d+\.\s*/, "");
+        const newQ = prompt("Sual mətni:", curTitle) || curTitle;
+        const newCorrect = parseInt(prompt("Düzgün cavab (1-4):", "1"), 10) - 1;
+        // cavabları oxumağa ehtiyac var → DOM-dan
+        const spans = Array.from(btn.closest(".item").querySelectorAll(".kv span"));
+        const answers = spans.map(s => s.textContent.replace(/^[A-D]\)\s*/, ""));
+        // istəsən ayrıca cavabları da bir-bir soruşa bilərik
+        await updateDoc(doc(db, COLL, id), {
+          question: newQ,
+          correctIndex: isNaN(newCorrect) ? 0 : Math.max(0, Math.min(3, newCorrect))
+        });
+        await loadByCategory(cat, searchInput.value);
+      }
+      if (action === "dup") {
+        // mövcud sualın kopyasını eyni kateqoriyaya əlavə et
+        const spans = Array.from(btn.closest(".item").querySelectorAll(".kv span"));
+        const answers = spans.map(s => s.textContent.replace(/^[A-D]\)\s*/, ""));
+        const title = btn.closest(".item").querySelector("h3").textContent.replace(/^\d+\.\s*/, "");
+        await addDoc(collection(db, COLL), {
+          question: title,
+          answers, correctIndex: 0, category: cat, createdAt: serverTimestamp()
+        });
+        await loadByCategory(cat, searchInput.value);
+      }
+    });
+  });
+}
+
+function escapeHtml(s){return (s||"").replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m]))}
+
+// ======= Eventlər =======
+btnCreateCategory.addEventListener("click", async () => {
+  if (!ADMIN_OK()) return alert("Admin şifrəsini yaz!");
+  const cat = normalizeCat(newCategoryInput.value);
+  if (!cat) return alert("Kateqoriya adı boş ola bilməz.");
+  // Kateqoriya ayrıca kolleksiya deyil; sadəcə seçim siyahısına əlavə edirik.
+  const opt = document.createElement("option");
+  opt.value = cat; opt.textContent = cat;
+  categorySelect.appendChild(opt);
+  categorySelect.value = cat;
+  newCategoryInput.value = "";
+  alert(`"${cat}" kateqoriyası hazırdır. İstədiyin qədər sual əlavə edə bilərsən.`);
+});
+
+btnAddQuestion.addEventListener("click", async () => {
+  if (!ADMIN_OK()) return alert("Admin şifrəsini yaz!");
+  const cat = normalizeCat(categorySelect.value || newCategoryInput.value);
+  if (!cat) return alert("Əvvəl kateqoriya seç və ya yarat.");
+  const question = (qText.value||"").trim();
+  const answers = [a1.value,a2.value,a3.value,a4.value].map(x => (x||"").trim());
+  const cIdx = Math.max(0, Math.min(3, (parseInt(correctIndex.value,10)-1)||0));
+  if (!question || answers.some(x=>!x)) return alert("Sual və 4 cavab mütləq doldurulmalıdır.");
+  await addDoc(collection(db, COLL), { question, answers, correctIndex:cIdx, category: cat, createdAt: serverTimestamp() });
+  qText.value = a1.value = a2.value = a3.value = a4.value = "";
+  correctIndex.value = 1;
+  await loadByCategory(cat, searchInput.value);
+});
+
+btnRefresh.addEventListener("click", async () => {
+  const cat = normalizeCat(categorySelect.value);
+  if (!cat) return alert("Kateqoriya seçin.");
+  await loadByCategory(cat, searchInput.value);
+});
+
+searchInput.addEventListener("input", async () => {
+  const cat = normalizeCat(categorySelect.value);
+  if (!cat) return;
+  await loadByCategory(cat, searchInput.value);
+});
+
+btnImportJson.addEventListener("click", async () => {
+  if (!ADMIN_OK()) return alert("Admin şifrəsini yaz!");
+  const file = jsonFile.files?.[0];
+  if (!file) return alert("JSON faylı seçin.");
+  const cat = normalizeCat(categorySelect.value || newCategoryInput.value);
+  if (!cat) return alert("Əvvəl kateqoriya seç və ya yarat.");
+  const text = await file.text();
+  let arr;
+  try { arr = JSON.parse(text); } catch { return alert("JSON düzgün deyil."); }
+  if (!Array.isArray(arr)) return alert("JSON massiv olmalıdır.");
+  let count = 0;
+  for (const q of arr) {
+    const question = (q.question||"").trim();
+    const answers = Array.isArray(q.answers)? q.answers.map(x=> (x||'').trim()) : null;
+    const cIdx = typeof q.correctIndex==="number"? q.correctIndex : 0;
+    if (!question || !answers || answers.length<2) continue;
+    await addDoc(collection(db, COLL), { question, answers, correctIndex:cIdx, category:cat, createdAt: serverTimestamp() });
+    count++;
+  }
+  alert(`${count} sual "${cat}" kateqoriyasına əlavə olundu.`);
+  await loadByCategory(cat, searchInput.value);
+});
+
+// İlk yüklənmə
+attachAuthUI();
+refreshCategoriesUI().then(()=>{
+  // kateqoriya yoxdursa inputdan yaradıla bilər; varsa birincini yükləyək
+  const d = categorySelect.value;
+  if (d) loadByCategory(d);
+});
+
+  </script>
+</body>
+</html>
