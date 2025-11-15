@@ -1,0 +1,2216 @@
+/* Extracted styles from original HTML */
+
+
+    /* Ümumi stil */
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Caveat', Caveat, sans-serif;
+      background: linear-gradient(120deg, #e0e7ff 0%, #f8fafc 100%);
+      margin: 0;
+      min-height: 100vh;
+    }
+    h1, h2 {
+      font-family: 'Consolas', Arial, sans-serif;
+    }
+    /* Başlanğıc ekranı üçün stil */
+    #welcomeScreen {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      height: 130vh;
+      background: linear-gradient(120deg, #cf1999 0%, #1824c4 100%);
+      padding: 0 20px;
+      text-align: center;
+    } 
+    #welcomeScreen h1 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+      color: #2563eb;
+      font-family: 'Pacifico', cursive;
+    }
+    #welcomeScreen p {
+      font-size: 1.2em;
+      margin-bottom: 40px;
+      color: #333;
+    }
+    #startBtn {
+      font-family: 'Canveat', consolas;
+      font-size: 3.5em;
+      padding: 44px 100px;
+      border-radius: 32px;
+      border: none;
+      background: linear-gradient(90deg, #fbbf24 60%, #f472b6 100%);
+      color: #222;
+      box-shadow: 0 8px 36px rgba(251,191,36,0.18);
+      cursor: pointer;
+      margin: 0;
+      letter-spacing: 2px;
+      transition: background 0.2s, transform 0.1s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    #startBtn:hover {
+      transform: scale(1.07);
+      box-shadow: 0 12px 48px rgba(251,191,36,0.22);
+    }
+    /* Axtarış paneli */
+    .search-container {
+      text-align: center;
+      margin-bottom: 24px;
+      padding: 24px;
+      background: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(248,250,252,0.9) 100%);
+      border-radius: 20px;
+      box-shadow: 0 8px 32px rgba(37,99,235,0.08);
+      border: 1px solid rgba(37,99,235,0.1);
+      backdrop-filter: blur(10px);
+    }
+    .search-container input {
+      border-radius: 16px;
+      border: 2px solid rgba(37,99,235,0.1);
+      padding: 16px 20px;
+      font-size: 1.1em;
+      width: 320px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      font-family: 'Inter', sans-serif;
+      background: rgba(255,255,255,0.9);
+    }
+    .search-container input:focus {
+      outline: none;
+      border-color: #667eea;
+      box-shadow: 0 0 0 4px rgba(102,126,234,0.1);
+      transform: translateY(-2px);
+    }
+    .search-container button {
+      border-radius: 16px;
+      padding: 16px 24px;
+      font-size: 1em;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: #fff;
+      border: none;
+      margin-left: 12px;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      cursor: pointer;
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      box-shadow: 0 4px 16px rgba(102,126,234,0.2);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .search-container button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(102,126,234,0.3);
+    }
+    /* Əsas məzmun */
+    .main-container {
+      margin: 0 auto;
+      max-width: 700px;
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+      padding: 32px 24px 24px 24px;
+    }
+    h1 {
+      text-align: center;
+    }
+    .question {
+      background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%);
+      border-radius: 24px;
+      box-shadow: 0 8px 32px rgba(37,99,235,0.08);
+      margin-bottom: 32px;
+      padding: 32px 24px;
+      border: 1px solid rgba(37,99,235,0.1);
+      animation: slideInUp 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .question::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #667eea, #764ba2);
+    }
+
+    @keyframes slideInUp {
+      from { 
+        opacity: 0; 
+        transform: translateY(30px) scale(0.95);
+      }
+      to { 
+        opacity: 1; 
+        transform: translateY(0) scale(1);
+      }
+    }
+    .question h2 {
+  font-size: 1.7em;
+  font-family: 'Times New Roman', sans-serif;
+}
+    .answers button {
+      display: block;
+      width: 100%;
+      margin: 12px 0;
+      padding: 16px 20px;
+      border: none;
+      border-radius: 16px;
+      cursor: pointer;
+      font-size: 1.1em;
+      background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+      color: #374151;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+      outline: none;
+      border: 1px solid rgba(0,0,0,0.05);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .answers button::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+      transition: left 0.6s;
+    }
+
+    .answers button:hover::before {
+      left: 100%;
+    }
+
+    .answers button:hover:not(.correct):not(.wrong) {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: #fff;
+      transform: translateY(-2px) scale(1.02);
+      box-shadow: 0 8px 24px rgba(102,126,234,0.25);
+      border-color: transparent;
+    }
+
+    .answers button.correct {
+      background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+      color: #fff;
+      font-weight: 600;
+      box-shadow: 0 8px 24px rgba(16,185,129,0.25);
+      border: 2px solid #10b981;
+      transform: scale(1.02);
+    }
+
+    .answers button.wrong {
+      background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+      color: #fff;
+      font-weight: 600;
+      box-shadow: 0 8px 24px rgba(239,68,68,0.25);
+      border: 2px solid #ef4444;
+      transform: scale(1.02);
+    }
+    .next-btn, .reset-btn {
+  background-color: #e11d48;
+  color: #fff;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.reset-btn:hover {
+  background-color: #be123c;
+}
+    .next-btn:hover, .reset-btn:hover {
+      background-color: #0056b3;
+    }
+    /* Səhifə navigasiyası – kvadrat düymələr şəklində, yan-yana */
+    .page-navigation {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    .page-navigation button {
+      border-radius: 8px;
+      margin: 4px;
+      background: #2563eb;
+      color: #fff;
+      border: none;
+      font-size: 1em;
+      width: 42px;
+      height: 42px;
+      transition: background 0.2s, transform 0.1s;
+    }
+    .page-navigation button.active {
+      background: #1e40af;
+      font-weight: bold;
+      transform: scale(1.08);
+    }
+    .page-navigation span {
+      font-size: 1.3em;
+      color: #64748b;
+      margin: 0 8px;
+      user-select: none;
+    }
+    /* Yan panel – səhifənin sağ tərəfində, gizli/yoxlanır */
+    .side-panel {
+      position: fixed;
+      top: 0;
+      right: -320px;
+      width: 300px;
+      height: 100vh;
+      background: rgba(255,255,255,0.85);
+      backdrop-filter: blur(20px);
+      border-radius: 24px 0 0 24px;
+      box-shadow: -8px 0 32px rgba(37,99,235,0.15);
+      padding: 32px 24px 24px 24px;
+      transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      overflow-y: auto;
+      z-index: 999;
+      border-left: 1px solid rgba(37,99,235,0.1);
+      font-family: 'Inter', sans-serif;
+    }
+    .side-panel.open {
+      right: 0;
+    }
+    .side-panel h2 {
+      font-size: 1.4em;
+      color: #667eea;
+      margin-top: 0;
+      margin-bottom: 16px;
+      letter-spacing: 0.5px;
+      text-align: left;
+      background: linear-gradient(135deg, rgba(102,126,234,0.1) 0%, rgba(118,75,162,0.1) 100%);
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(102,126,234,0.08);
+      border: 1px solid rgba(102,126,234,0.1);
+      padding: 16px 20px;
+      margin-bottom: 20px;
+      font-weight: 700;
+      font-family: 'Inter', sans-serif;
+    }
+    .side-panel div, .side-panel p {
+      background: rgba(255,255,255,0.8);
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+      border: 1px solid rgba(0,0,0,0.05);
+      padding: 12px 16px;
+      margin-bottom: 16px;
+      font-family: 'Inter', sans-serif;
+      backdrop-filter: blur(10px);
+    }
+    #progressInfo p {
+      margin: 5px 0;
+      font-size: 15px;
+      color: #333;
+      background: none;
+      border: none;
+      box-shadow: none;
+      padding: 0;
+    }
+    .wrong-questions-list button,
+    .flagged-questions-list button {
+      box-shadow: 0 2px 8px rgba(220,53,69,0.08);
+      border: 1px solid #eee;
+      transition: transform 0.1s;
+    }
+    .wrong-questions-list button:hover,
+    .flagged-questions-list button:hover {
+      transform: scale(1.08);
+      background: #fff3f3;
+      color: #dc3545;
+    }
+    .wrong-questions-list button {
+      min-width: 36px;
+      min-height: 36px;
+      font-size: 1.2em;
+      padding: 6px 0;
+      margin: 5px 8px 5px 0;
+      border-radius: 6px;
+      font-family: 'Consolas', Consolas, monospace;
+      background: #fff;
+      color: #dc3545;
+      border: 1.5px solid #dc3545;
+      box-shadow: 0 2px 8px rgba(220,53,69,0.08);
+      position: relative;
+      transition: transform 0.1s, background 0.2s;
+    }
+    .wrong-questions-list button:hover {
+      transform: scale(1.08);
+      background: #fff3f3;
+      color: #fff;
+      background-color: #dc3545;
+    }
+    .wrong-questions-list button span {
+      font-size: 0.9em;
+    }
+    .toggle-button {
+      position: fixed;
+      top: 32px;
+      right: 0;
+      width: 48px;
+      height: 48px;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: #fff;
+      border-top-left-radius: 16px;
+      border-bottom-left-radius: 16px;
+      cursor: pointer;
+      z-index: 11000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: -4px 4px 16px rgba(102,126,234,0.3);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      font-size: 1.5em;
+      border: none;
+      font-family: 'Inter', sans-serif;
+    }
+    .toggle-button:hover {
+      transform: translateX(-4px);
+      box-shadow: -8px 8px 24px rgba(102,126,234,0.4);
+    }
+    /* Extra Options: hər sualda Flag və Note düymələri */
+    .extra-options {
+      margin-top: 16px;
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .extra-options button {
+      margin-right: 0;
+      padding: 8px 16px;
+      font-size: 0.9em;
+      cursor: pointer;
+      border: none;
+      border-radius: 12px;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .extra-options .flag-btn {
+      background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+      color: #fff;
+      box-shadow: 0 4px 12px rgba(251,191,36,0.2);
+    }
+    .extra-options .flag-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(251,191,36,0.3);
+    }
+    .extra-options .note-btn {
+      background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+      color: #fff;
+      box-shadow: 0 4px 12px rgba(59,130,246,0.2);
+    }
+    .extra-options .note-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(59,130,246,0.3);
+    }
+    .extra-options .clear-answer-btn {
+      background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+      color: #fff;
+      box-shadow: 0 4px 12px rgba(239,68,68,0.2);
+    }
+    .extra-options .clear-answer-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(239,68,68,0.3);
+    }
+    .extra-options textarea {
+      width: 100%;
+      margin-top: 12px;
+      border-radius: 12px;
+      padding: 12px;
+      border: 1px solid rgba(0,0,0,0.1);
+      font-family: 'Inter', sans-serif;
+      resize: vertical;
+      min-height: 80px;
+      background: rgba(255,255,255,0.8);
+      backdrop-filter: blur(10px);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .extra-options textarea:focus {
+      outline: none;
+      border-color: #0ea5e9;
+      box-shadow: 0 0 0 4px rgba(14,165,233,0.1);
+      transform: translateY(-2px);
+    }
+    
+    .note-container {
+      position: relative;
+      margin-top: 12px;
+    }
+    
+    .note-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+      font-size: 0.9em;
+      color: #64748b;
+    }
+    
+    .note-actions {
+      display: flex;
+      gap: 8px;
+    }
+    
+    .note-action-btn {
+      padding: 4px 8px;
+      border: none;
+      border-radius: 6px;
+      font-size: 0.8em;
+      cursor: pointer;
+      transition: all 0.2s;
+      background: #f1f5f9;
+      color: #64748b;
+    }
+    
+    .note-action-btn:hover {
+      background: #e2e8f0;
+      color: #475569;
+    }
+    
+    .note-action-btn.delete {
+      background: #fef2f2;
+      color: #dc2626;
+    }
+    
+    .note-action-btn.delete:hover {
+      background: #fee2e2;
+    }
+    
+    .note-action-btn.save {
+      background: #f0fdf4;
+      color: #16a34a;
+    }
+    
+    .note-action-btn.save:hover {
+      background: #dcfce7;
+    }
+    
+    .character-count {
+      font-size: 0.8em;
+      color: #94a3b8;
+    }
+    
+    .character-count.warning {
+      color: #f59e0b;
+    }
+    
+    .character-count.danger {
+      color: #dc2626;
+    }
+    /* Kateqoriya düymələri üçün stil */
+    .category-btn {
+      width: 240px;
+      margin: 12px 0;
+      padding: 18px 0;
+      font-size: 1.25em;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: #fff;
+      border: none;
+      border-radius: 18px;
+      cursor: pointer;
+      box-shadow: 0 8px 32px rgba(102,126,234,0.15);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .category-btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+      transition: left 0.5s;
+    }
+
+    .category-btn:hover::before {
+      left: 100%;
+    }
+
+    .category-btn:hover {
+      transform: translateY(-4px) scale(1.02);
+      box-shadow: 0 16px 48px rgba(102,126,234,0.25);
+    }
+
+    .category-btn.selected {
+      font-size: 1.6em;
+      background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+      color: #fff;
+      transform: scale(1.08);
+      font-weight: bold;
+      box-shadow: 0 12px 40px rgba(245,87,108,0.3);
+      z-index: 2;
+    }
+
+    .category-btn.inactive {
+      opacity: 0.6;
+      filter: grayscale(0.3);
+      font-size: 1em;
+      background: linear-gradient(135deg, #e5e7eb 0%, #d1d5db 100%);
+      color: #6b7280;
+      box-shadow: none;
+    }
+
+    .category-btn i {
+      margin-right: 8px;
+      font-size: 1.1em;
+    }
+
+    /* Başlanğıc ekranı üçün stil */
+    #welcomeScreen {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      height: 100vh;
+      background: linear-gradient(120deg, #f8fafc 0%, #e0e7ff 100%);
+      padding: 0 20px;
+      text-align: center;
+    }
+    #welcomeScreen h1 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+      color: #2563eb;
+      font-family: 'Pacifico', cursive;
+    }
+    #welcomeScreen p {
+      font-size: 1.2em;
+      margin-bottom: 40px;
+      color: #333;
+    }
+    #startBtn {
+      font-family: 'Caveat', cursive;
+      font-size: 3.5em;
+      padding: 44px 100px;
+      border-radius: 32px;
+      border: none;
+      background: linear-gradient(90deg, #17cc9f 60%, #0b0ec2 100%);
+      color: #222;
+      box-shadow: 0 8px 36px rgba(251,191,36,0.18);
+      cursor: pointer;
+      margin: 0;
+      letter-spacing: 2px;
+      transition: background 0.2s, transform 0.1s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    #startBtn:hover {
+      transform: scale(1.07);
+      box-shadow: 0 12px 48px rgba(251,191,36,0.22);
+    }
+    .order-mode-option:hover {
+  background: #2ed30c;
+}
+/* Estetik flag mode və geri düymələri üçün */
+.flagged-mode-btn, #exitFlaggedModeBtn {
+  margin-top: 16px;
+  background: linear-gradient(90deg, rgb(6, 230, 73) 60%, #f472b6 100%);
+  color: #222;
+  font-weight: bold;
+  width: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
+  font-size: 1.15em;
+  padding: 14px 0;
+  box-shadow: 0 4px 16px rgba(251,191,36,0.13);
+  transition: background 0.18s, transform 0.12s;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.flagged-mode-btn:hover, #exitFlaggedModeBtn:hover {
+  background: linear-gradient(90deg, #f472b6 60%, #0ada94 100%);
+  color: #fff;
+  transform: scale(1.04);
+}
+#exitFlaggedModeBtn::before {
+  content: "⟵";
+  font-size: 1.2em;
+  margin-right: 8px;
+}
+.flagged-mode-btn {
+  margin-top: 18px;
+  background: linear-gradient(90deg, #0ee28a 60%, #980dcf 100%);
+  color: #222;
+  font-weight: bold;
+  width: 100%;
+  border-radius: 18px;
+  cursor: pointer;
+  border: none;
+  font-size: 1em;
+  padding: 10px 0;
+  box-shadow: 0 6px 24px rgba(251,191,36,0.18);
+  transition: background 0.18s, transform 0.12s, color 0.18s, box-shadow 0.18s;
+  letter-spacing: 1.5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  text-shadow: 0 2px 8px #fff8;
+  outline: none;
+  border: 2px solid #fbbf24;
+}
+.flagged-mode-btn:hover {
+  background: linear-gradient(90deg, #f472b6 60%, #fbbf24 100%);
+  color: #fff;
+  transform: scale(1.06) rotate(-1deg);
+  box-shadow: 0 12px 36px rgba(251,191,36,0.22);
+  border-color: #f472b6;
+}
+  body.dark-mode {
+    background: linear-gradient(120deg, #18181b 0%, #1e293b 100%);
+    color: #e5e7eb;
+  }
+  body.dark-mode .main-container {
+    background: #23272f;
+    color: #e5e7eb;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+  }
+  body.dark-mode .question {
+    background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+    border-color: #475569;
+    color: #e7e9eb;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+  }
+  body.dark-mode .answers button {
+    background: linear-gradient(135deg, #334155 0%, #475569 100%);
+    color: #e5e7eb;
+    border-color: #475569;
+  }
+  body.dark-mode .answers button:hover:not(.correct):not(.wrong) {
+    background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%);
+    color: #fff;
+    box-shadow: 0 8px 24px rgba(14,165,233,0.3);
+  }
+  body.dark-mode .answers button.correct {
+    background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+    color: #fff;
+    box-shadow: 0 8px 24px rgba(34,197,94,0.3);
+  }
+  body.dark-mode .answers button.wrong {
+    background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+    color: #fff;
+    box-shadow: 0 8px 24px rgba(239,68,68,0.3);
+  }
+  body.dark-mode .side-panel {
+    background: linear-gradient(135deg, rgba(30,41,59,0.95) 0%, rgba(51,65,85,0.95) 100%);
+    color: #e5e7eb;
+    border-left: 1px solid #475569;
+    backdrop-filter: blur(20px);
+  }
+  body.dark-mode .side-panel h2 {
+    background: linear-gradient(135deg, rgba(14,165,233,0.1) 0%, rgba(2,132,199,0.1) 100%);
+    border-color: #0ea5e9;
+    color: #0ea5e9;
+  }
+  body.dark-mode .side-panel div, body.dark-mode .side-panel p {
+    background: rgba(30,41,59,0.8);
+    border-color: #475569;
+    color: #e5e7eb;
+  }
+  body.dark-mode .category-btn {
+    background: linear-gradient(135deg, #334155 0%, #475569 100%);
+    color: #e5e7eb;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+  }
+  body.dark-mode .category-btn.selected {
+    background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+    color: #1e293b;
+    box-shadow: 0 12px 40px rgba(251,191,36,0.3);
+  }
+  body.dark-mode .category-btn.inactive {
+    background: linear-gradient(135deg, #475569 0%, #64748b 100%);
+    color: #94a3b8;
+  }
+  body.dark-mode #welcomeScreen {
+    background: linear-gradient(120deg, #1e293b 0%, #0f172a 100%);
+    color: #e5e7eb;
+  }
+  body.dark-mode input, body.dark-mode textarea {
+    background: #334155;
+    color: #e7e9eb;
+    border-color: #475569;
+  }
+  body.dark-mode input:focus, body.dark-mode textarea:focus {
+    border-color: #0ea5e9;
+    box-shadow: 0 0 0 4px rgba(14,165,233,0.1);
+  }
+  body.dark-mode .search-container {
+    background: linear-gradient(135deg, rgba(30,41,59,0.9) 0%, rgba(51,65,85,0.9) 100%);
+    border-color: #475569;
+  }
+  body.dark-mode .search-container button {
+    background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%);
+    color: #fff;
+  }
+  body.dark-mode .search-container button:hover {
+    background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+  }
+  body.dark-mode .extra-options button {
+    background: linear-gradient(135deg, #334155 0%, #475569 100%);
+    color: #e5e7eb;
+  }
+  body.dark-mode .extra-options .flag-btn {
+    background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+    color: #1e293b;
+  }
+  body.dark-mode .extra-options .note-btn {
+    background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%);
+    color: #fff;
+  }
+  body.dark-mode .extra-options .clear-answer-btn {
+    background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+    color: #fff;
+  }
+  body.dark-mode .toggle-button {
+    background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%);
+    color: #fff;
+  }
+  body.dark-mode .reset-btn {
+    background: #334155;
+    color: #e5e7eb;
+    border-color: #475569;
+  }
+  body.dark-mode .reset-btn:hover {
+    background: #475569;
+  }
+  body.dark-mode .page-navigation button {
+    background: #334155;
+    color: #e5e7eb;
+    border-color: #475569;
+  }
+  body.dark-mode .page-navigation button.active {
+    background: #0ea5e9;
+    color: #fff;
+  }
+  body.dark-mode .wrong-questions-list button,
+  body.dark-mode .flagged-questions-list button,
+  body.dark-mode .repeated-mistakes-list button {
+    background: #334155;
+    color: #e7e9eb;
+    border-color: #475569;
+  }
+  body.dark-mode .wrong-questions-list button:hover,
+  body.dark-mode .flagged-questions-list button:hover,
+  body.dark-mode .repeated-mistakes-list button:hover {
+    background: #475569;
+  }
+  body.dark-mode .flagged-mode-btn {
+    background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+    color: #fff;
+  }
+  body.dark-mode .flagged-mode-btn:hover {
+    background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
+  }
+
+  @media (max-width: 600px) {
+  #patanSubcats,
+  #patanSubcats > div {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 8px !important;
+    width: 100% !important;
+    margin-left: 0 !important;
+  }
+  .category-btn {
+    width: 100% !important;
+    min-width: unset !important;
+    font-size: 1em;
+    padding: 12px 0;
+    box-sizing: border-box;
+  }
+  .main-container {
+    max-width: 100vw;
+    padding: 10px 2vw 10px 2vw;
+    border-radius: 10px;
+  }
+    .side-panel {
+    width: 85vw !important;
+    right: -90vw !important;
+    border-radius: 12px 0 0 12px !important;
+    padding: 18px 6px !important;
+    font-size: 1em !important;
+    top: 0 !important;
+    height: 100vh !important;
+    z-index: 10001 !important;
+    box-shadow: -2px 0 24px rgba(37,99,235,0.10);
+    background: #fff;
+    transition: right 0.35s cubic-bezier(.77,0,.18,1);
+  }
+  .side-panel.open {
+    right: 0 !important;
+  }
+  .side-overlay {
+    display: block;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.25);
+    z-index: 10000;
+  }
+  .toggle-button {
+    top: 8px !important;
+    right: 0 !important;
+    width: 38px !important;
+    height: 38px !important;
+    font-size: 1.5em !important;
+    z-index: 11000 !important;
+    display: flex !important;
+  }
+}
+@media (min-width: 601px) {
+  .side-overlay { display: none !important; }
+}
+@keyframes bounce {
+  0%, 100% { transform: translateY(0);}
+  50% { transform: translateY(-18px);}
+}
+#patanSubcats {
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: auto;
+}
+  body, html {
+  overflow-x: hidden;
+}
+.main-container {
+  max-width: 100vw;
+  box-sizing: border-box;
+}
+    
+    /* Flashcard rejimi üçün stillər */
+    .flashcard-question {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      border-radius: 20px;
+      box-shadow: 0 12px 40px rgba(102,126,234,0.2);
+      margin-bottom: 32px;
+      padding: 40px 30px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      color: #fff;
+      min-height: 200px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .flashcard-question::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(45deg, rgba(255,255,255,0.1) 0%, transparent 50%, rgba(255,255,255,0.1) 100%);
+      animation: shimmer 3s infinite;
+    }
+    
+    @keyframes shimmer {
+      0% { transform: translateX(-100%); }
+      100% { transform: translateX(100%); }
+    }
+    
+    .flashcard-question h2 {
+      font-size: 1.8em;
+      margin-bottom: 20px;
+      position: relative;
+      z-index: 2;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    }
+    
+    .flashcard-answers {
+      display: none;
+      margin-top: 20px;
+      position: relative;
+      z-index: 2;
+    }
+    
+    .flashcard-answers.show {
+      display: block;
+      animation: slideInUp 0.5s ease-out;
+    }
+    
+    .flashcard-answers button {
+      background: rgba(255,255,255,0.9);
+      color: #333;
+      border: none;
+      border-radius: 12px;
+      padding: 12px 20px;
+      margin: 8px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(10px);
+    }
+    
+    .flashcard-answers button:hover {
+      background: rgba(255,255,255,1);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+    
+    .flashcard-answers button.correct {
+      background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+      color: #fff;
+      font-weight: 600;
+    }
+    
+    .flashcard-answers button.wrong {
+      background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+      color: #fff;
+      font-weight: 600;
+    }
+    
+    .flashcard-controls {
+      margin-top: 20px;
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      position: relative;
+      z-index: 2;
+    }
+    
+    .flashcard-controls button {
+      background: rgba(255,255,255,0.2);
+      color: #fff;
+      border: 2px solid rgba(255,255,255,0.3);
+      border-radius: 12px;
+      padding: 12px 24px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(10px);
+    }
+    
+    .flashcard-controls button:hover {
+      background: rgba(255,255,255,0.3);
+      border-color: rgba(255,255,255,0.5);
+      transform: translateY(-2px);
+    }
+    
+    .flashcard-indicator {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: rgba(255,255,255,0.2);
+      color: #fff;
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-size: 0.9em;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255,255,255,0.3);
+    }
+    
+    /* Dark mode flashcard stilləri */
+    body.dark-mode .flashcard-question {
+      background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+      border-color: #475569;
+      color: #e7e9eb;
+      box-shadow: 0 12px 40px rgba(0,0,0,0.3);
+    }
+    
+    body.dark-mode .flashcard-question::before {
+      background: linear-gradient(45deg, rgba(255,255,255,0.05) 0%, transparent 50%, rgba(255,255,255,0.05) 100%);
+    }
+    
+    body.dark-mode .flashcard-answers button {
+      background: rgba(51,65,85,0.9);
+      color: #e7e9eb;
+      border-color: #475569;
+    }
+    
+    body.dark-mode .flashcard-answers button:hover {
+      background: rgba(71,85,105,1);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    }
+    
+    body.dark-mode .flashcard-answers button.correct {
+      background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+      color: #fff;
+    }
+    
+    body.dark-mode .flashcard-answers button.wrong {
+      background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+      color: #fff;
+    }
+    
+    body.dark-mode .flashcard-controls button {
+      background: rgba(51,65,85,0.3);
+      color: #e7e9eb;
+      border-color: #475569;
+    }
+    
+    body.dark-mode .flashcard-controls button:hover {
+      background: rgba(71,85,105,0.4);
+      border-color: #64748b;
+    }
+    
+    body.dark-mode .flashcard-indicator {
+      background: rgba(51,65,85,0.3);
+      color: #e7e9eb;
+      border-color: #475569;
+    }
+    
+    /* Kateqoriya düymələri üçün stil */
+    .category-btn {
+      width: 240px;
+      margin: 12px 0;
+      padding: 18px 0;
+      font-size: 1.25em;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: #fff;
+      border: none;
+      border-radius: 18px;
+      cursor: pointer;
+      box-shadow: 0 8px 32px rgba(102,126,234,0.15);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .category-btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+      transition: left 0.5s;
+    }
+
+    .category-btn:hover::before {
+      left: 100%;
+    }
+
+    .category-btn:hover {
+      transform: translateY(-4px) scale(1.02);
+      box-shadow: 0 16px 48px rgba(102,126,234,0.25);
+    }
+
+    .category-btn.selected {
+      font-size: 1.6em;
+      background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+      color: #fff;
+      transform: scale(1.08);
+      font-weight: bold;
+      box-shadow: 0 12px 40px rgba(245,87,108,0.3);
+      z-index: 2;
+    }
+
+    .category-btn.inactive {
+      opacity: 0.6;
+      filter: grayscale(0.3);
+      font-size: 1em;
+      background: linear-gradient(135deg, #e5e7eb 0%, #d1d5db 100%);
+      color: #6b7280;
+      box-shadow: none;
+    }
+
+    .category-btn i {
+      margin-right: 8px;
+      font-size: 1.1em;
+    }
+
+    /* Başlanğıc ekranı üçün stil */
+    #welcomeScreen {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      height: 100vh;
+      background: linear-gradient(120deg, #f8fafc 0%, #e0e7ff 100%);
+      padding: 0 20px;
+      text-align: center;
+    }
+    #welcomeScreen h1 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+      color: #2563eb;
+      font-family: 'Pacifico', cursive;
+    }
+    #welcomeScreen p {
+      font-size: 1.2em;
+      margin-bottom: 40px;
+      color: #333;
+    }
+    #startBtn {
+      font-family: 'Caveat', cursive;
+      font-size: 3.5em;
+      padding: 44px 100px;
+      border-radius: 32px;
+      border: none;
+      background: linear-gradient(90deg, #17cc9f 60%, #0b0ec2 100%);
+      color: #222;
+      box-shadow: 0 8px 36px rgba(251,191,36,0.18);
+      cursor: pointer;
+      margin: 0;
+      letter-spacing: 2px;
+      transition: background 0.2s, transform 0.1s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    #startBtn:hover {
+      transform: scale(1.07);
+      box-shadow: 0 12px 48px rgba(251,191,36,0.22);
+    }
+    .order-mode-option:hover {
+  background: #2ed30c;
+}
+/* Estetik flag mode və geri düymələri üçün */
+.flagged-mode-btn, #exitFlaggedModeBtn {
+  margin-top: 16px;
+  background: linear-gradient(90deg, rgb(6, 230, 73) 60%, #f472b6 100%);
+  color: #222;
+  font-weight: bold;
+  width: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
+  font-size: 1.15em;
+  padding: 14px 0;
+  box-shadow: 0 4px 16px rgba(251,191,36,0.13);
+  transition: background 0.18s, transform 0.12s;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.flagged-mode-btn:hover, #exitFlaggedModeBtn:hover {
+  background: linear-gradient(90deg, #f472b6 60%, #0ada94 100%);
+  color: #fff;
+  transform: scale(1.04);
+}
+#exitFlaggedModeBtn::before {
+  content: "⟵";
+  font-size: 1.2em;
+  margin-right: 8px;
+}
+.flagged-mode-btn {
+  margin-top: 18px;
+  background: linear-gradient(90deg, #0ee28a 60%, #980dcf 100%);
+  color: #222;
+  font-weight: bold;
+  width: 100%;
+  border-radius: 18px;
+  cursor: pointer;
+  border: none;
+  font-size: 1em;
+  padding: 10px 0;
+  box-shadow: 0 6px 24px rgba(251,191,36,0.18);
+  transition: background 0.18s, transform 0.12s, color 0.18s, box-shadow 0.18s;
+  letter-spacing: 1.5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  text-shadow: 0 2px 8px #fff8;
+  outline: none;
+  border: 2px solid #fbbf24;
+}
+.flagged-mode-btn:hover {
+  background: linear-gradient(90deg, #f472b6 60%, #fbbf24 100%);
+  color: #fff;
+  transform: scale(1.06) rotate(-1deg);
+  box-shadow: 0 12px 36px rgba(251,191,36,0.22);
+  border-color: #f472b6;
+}
+  body.dark-mode {
+    background: linear-gradient(120deg, #18181b 0%, #1e293b 100%);
+    color: #e5e7eb;
+  }
+  body.dark-mode .main-container {
+    background: #23272f;
+    color: #e5e7eb;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+  }
+  body.dark-mode .question {
+    background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+    border-color: #475569;
+    color: #e7e9eb;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+  }
+  body.dark-mode .answers button {
+    background: linear-gradient(135deg, #334155 0%, #475569 100%);
+    color: #e7e9eb;
+    border-color: #475569;
+  }
+  body.dark-mode .answers button:hover:not(.correct):not(.wrong) {
+    background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%);
+    color: #fff;
+    box-shadow: 0 8px 24px rgba(14,165,233,0.3);
+  }
+  body.dark-mode .answers button.correct {
+    background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+    color: #fff;
+    box-shadow: 0 8px 24px rgba(34,197,94,0.3);
+  }
+  body.dark-mode .answers button.wrong {
+    background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+    color: #fff;
+    box-shadow: 0 8px 24px rgba(239,68,68,0.3);
+  }
+  body.dark-mode .side-panel {
+    background: linear-gradient(135deg, rgba(30,41,59,0.95) 0%, rgba(51,65,85,0.95) 100%);
+    color: #e5e7eb;
+    border-left: 1px solid #475569;
+    backdrop-filter: blur(20px);
+  }
+  body.dark-mode .side-panel h2 {
+    background: linear-gradient(135deg, rgba(14,165,233,0.1) 0%, rgba(2,132,199,0.1) 100%);
+    border-color: #0ea5e9;
+    color: #0ea5e9;
+  }
+  body.dark-mode .side-panel div, body.dark-mode .side-panel p {
+    background: rgba(30,41,59,0.8);
+    border-color: #475569;
+    color: #e7e9eb;
+  }
+  body.dark-mode .category-btn {
+    background: linear-gradient(135deg, #334155 0%, #475569 100%);
+    color: #e7e9eb;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+  }
+  body.dark-mode .category-btn.selected {
+    background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+    color: #1e293b;
+    box-shadow: 0 12px 40px rgba(251,191,36,0.3);
+  }
+  body.dark-mode .category-btn.inactive {
+    background: linear-gradient(135deg, #475569 0%, #64748b 100%);
+    color: #94a3b8;
+  }
+  body.dark-mode #welcomeScreen {
+    background: linear-gradient(120deg, #1e293b 0%, #0f172a 100%);
+    color: #e7e9eb;
+  }
+  body.dark-mode input, body.dark-mode textarea {
+    background: #334155;
+    color: #e7e9eb;
+    border-color: #475569;
+  }
+  body.dark-mode input:focus, body.dark-mode textarea:focus {
+    border-color: #0ea5e9;
+    box-shadow: 0 0 0 4px rgba(14,165,233,0.1);
+  }
+  body.dark-mode .search-container {
+    background: linear-gradient(135deg, rgba(30,41,59,0.9) 0%, rgba(51,65,85,0.9) 100%);
+    border-color: #475569;
+  }
+  body.dark-mode .search-container button {
+    background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%);
+    color: #fff;
+  }
+  body.dark-mode .search-container button:hover {
+    background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+  }
+  body.dark-mode .extra-options button {
+    background: linear-gradient(135deg, #334155 0%, #475569 100%);
+    color: #e7e9eb;
+  }
+  body.dark-mode .extra-options .flag-btn {
+    background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+    color: #1e293b;
+  }
+  body.dark-mode .extra-options .note-btn {
+    background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%);
+    color: #fff;
+  }
+  body.dark-mode .extra-options .clear-answer-btn {
+    background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+    color: #fff;
+  }
+  body.dark-mode .toggle-button {
+    background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%);
+    color: #fff;
+  }
+  body.dark-mode .reset-btn {
+    background: #334155;
+    color: #e7e9eb;
+    border-color: #475569;
+  }
+  body.dark-mode .reset-btn:hover {
+    background: #475569;
+  }
+  body.dark-mode .page-navigation button {
+    background: #334155;
+    color: #e7e9eb;
+    border-color: #475569;
+  }
+  body.dark-mode .page-navigation button.active {
+    background: #0ea5e9;
+    color: #fff;
+  }
+  body.dark-mode .wrong-questions-list button,
+  body.dark-mode .flagged-questions-list button,
+  body.dark-mode .repeated-mistakes-list button {
+    background: #334155;
+    color: #e7e9eb;
+    border-color: #475569;
+  }
+  body.dark-mode .wrong-questions-list button:hover,
+  body.dark-mode .flagged-questions-list button:hover,
+  body.dark-mode .repeated-mistakes-list button:hover {
+    background: #475569;
+  }
+  body.dark-mode .flagged-mode-btn {
+    background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+    color: #fff;
+  }
+  body.dark-mode .flagged-mode-btn:hover {
+    background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
+  }
+
+  @media (max-width: 600px) {
+  #patanSubcats,
+  #patanSubcats > div {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 8px !important;
+    width: 100% !important;
+    margin-left: 0 !important;
+  }
+  .category-btn {
+    width: 100% !important;
+    min-width: unset !important;
+    font-size: 1em;
+    padding: 12px 0;
+    box-sizing: border-box;
+  }
+  .main-container {
+    max-width: 100vw;
+    padding: 10px 2vw 10px 2vw;
+    border-radius: 10px;
+  }
+    .side-panel {
+    width: 85vw !important;
+    right: -90vw !important;
+    border-radius: 12px 0 0 12px !important;
+    padding: 18px 6px !important;
+    font-size: 1em !important;
+    top: 0 !important;
+    height: 100vh !important;
+    z-index: 10001 !important;
+    box-shadow: -2px 0 24px rgba(37,99,235,0.10);
+    background: #fff;
+    transition: right 0.35s cubic-bezier(.77,0,.18,1);
+  }
+  .side-panel.open {
+    right: 0 !important;
+  }
+  .side-overlay {
+    display: block;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.25);
+    z-index: 10000;
+  }
+  .toggle-button {
+    top: 8px !important;
+    right: 0 !important;
+    width: 38px !important;
+    height: 38px !important;
+    font-size: 1.5em !important;
+    z-index: 11000 !important;
+    display: flex !important;
+  }
+}
+@media (min-width: 601px) {
+  .side-overlay { display: none !important; }
+}
+@keyframes bounce {
+  0%, 100% { transform: translateY(0);}
+  50% { transform: translateY(-18px);}
+}
+#patanSubcats {
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: auto;
+}
+  body, html {
+  overflow-x: hidden;
+}
+.main-container {
+  max-width: 100vw;
+  box-sizing: border-box;
+}
+    
+    /* Flashcard rejimi üçün stillər */
+    .flashcard-question {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      border-radius: 20px;
+      box-shadow: 0 12px 40px rgba(102,126,234,0.2);
+      margin-bottom: 32px;
+      padding: 40px 30px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      color: #fff;
+      min-height: 200px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .flashcard-question::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(45deg, rgba(255,255,255,0.1) 0%, transparent 50%, rgba(255,255,255,0.1) 100%);
+      animation: shimmer 3s infinite;
+    }
+    
+    @keyframes shimmer {
+      0% { transform: translateX(-100%); }
+      100% { transform: translateX(100%); }
+    }
+    
+    .flashcard-question h2 {
+      font-size: 1.8em;
+      margin-bottom: 20px;
+      position: relative;
+      z-index: 2;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    }
+    
+    .flashcard-answers {
+      display: none;
+      margin-top: 20px;
+      position: relative;
+      z-index: 2;
+    }
+    
+    .flashcard-answers.show {
+      display: block;
+      animation: slideInUp 0.5s ease-out;
+    }
+    
+    .flashcard-answers button {
+      background: rgba(255,255,255,0.9);
+      color: #333;
+      border: none;
+      border-radius: 12px;
+      padding: 12px 20px;
+      margin: 8px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(10px);
+    }
+    
+    .flashcard-answers button:hover {
+      background: rgba(255,255,255,1);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+    
+    .flashcard-answers button.correct {
+      background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+      color: #fff;
+      font-weight: 600;
+    }
+    
+    .flashcard-answers button.wrong {
+      background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+      color: #fff;
+      font-weight: 600;
+    }
+    
+    .flashcard-controls {
+      margin-top: 20px;
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      position: relative;
+      z-index: 2;
+    }
+    
+    .flashcard-controls button {
+      background: rgba(255,255,255,0.2);
+      color: #fff;
+      border: 2px solid rgba(255,255,255,0.3);
+      border-radius: 12px;
+      padding: 12px 24px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(10px);
+    }
+    
+    .flashcard-controls button:hover {
+      background: rgba(255,255,255,0.3);
+      border-color: rgba(255,255,255,0.5);
+      transform: translateY(-2px);
+    }
+    
+    .flashcard-indicator {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: rgba(255,255,255,0.2);
+      color: #fff;
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-size: 0.9em;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255,255,255,0.3);
+    }
+    
+    /* Dark mode flashcard stilləri */
+    body.dark-mode .flashcard-question {
+      background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+      border-color: #475569;
+      color: #e7e9eb;
+      box-shadow: 0 12px 40px rgba(0,0,0,0.3);
+    }
+    
+    body.dark-mode .flashcard-question::before {
+      background: linear-gradient(45deg, rgba(255,255,255,0.05) 0%, transparent 50%, rgba(255,255,255,0.05) 100%);
+    }
+    
+    body.dark-mode .flashcard-answers button {
+      background: rgba(51,65,85,0.9);
+      color: #e7e9eb;
+      border-color: #475569;
+    }
+    
+    body.dark-mode .flashcard-answers button:hover {
+      background: rgba(71,85,105,1);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    }
+    
+    body.dark-mode .flashcard-answers button.correct {
+      background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+      color: #fff;
+    }
+    
+    body.dark-mode .flashcard-answers button.wrong {
+      background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+      color: #fff;
+    }
+    
+    body.dark-mode .flashcard-controls button {
+      background: rgba(51,65,85,0.3);
+      color: #e7e9eb;
+      border-color: #475569;
+    }
+    
+    body.dark-mode .flashcard-controls button:hover {
+      background: rgba(71,85,105,0.4);
+      border-color: #64748b;
+    }
+    
+    body.dark-mode .flashcard-indicator {
+      background: rgba(51,65,85,0.3);
+      color: #e7e9eb;
+      border-color: #475569;
+    }
+    
+    /* Kateqoriya düymələri üçün stil */
+    .category-btn {
+      width: 240px;
+      margin: 12px 0;
+      padding: 18px 0;
+      font-size: 1.25em;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: #fff;
+      border: none;
+      border-radius: 18px;
+      cursor: pointer;
+      box-shadow: 0 8px 32px rgba(102,126,234,0.15);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .category-btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+      transition: left 0.5s;
+    }
+
+    .category-btn:hover::before {
+      left: 100%;
+    }
+
+    .category-btn:hover {
+      transform: translateY(-4px) scale(1.02);
+      box-shadow: 0 16px 48px rgba(102,126,234,0.25);
+    }
+
+    .category-btn.selected {
+      font-size: 1.6em;
+      background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+      color: #fff;
+      transform: scale(1.08);
+      font-weight: bold;
+      box-shadow: 0 12px 40px rgba(245,87,108,0.3);
+      z-index: 2;
+    }
+
+    .category-btn.inactive {
+      opacity: 0.6;
+      filter: grayscale(0.3);
+      font-size: 1em;
+      background: linear-gradient(135deg, #e5e7eb 0%, #d1d5db 100%);
+      color: #6b7280;
+      box-shadow: none;
+    }
+
+    .category-btn i {
+      margin-right: 8px;
+      font-size: 1.1em;
+    }
+
+    /* Başlanğıc ekranı üçün stil */
+    #welcomeScreen {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      height: 100vh;
+      background: linear-gradient(120deg, #f8fafc 0%, #e0e7ff 100%);
+      padding: 0 20px;
+      text-align: center;
+    }
+    #welcomeScreen h1 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+      color: #2563eb;
+      font-family: 'Pacifico', cursive;
+    }
+    #welcomeScreen p {
+      font-size: 1.2em;
+      margin-bottom: 40px;
+      color: #333;
+    }
+    #startBtn {
+      font-family: 'Caveat', cursive;
+      font-size: 3.5em;
+      padding: 44px 100px;
+      border-radius: 32px;
+      border: none;
+      background: linear-gradient(90deg, #17cc9f 60%, #0b0ec2 100%);
+      color: #222;
+      box-shadow: 0 8px 36px rgba(251,191,36,0.18);
+      cursor: pointer;
+      margin: 0;
+      letter-spacing: 2px;
+      transition: background 0.2s, transform 0.1s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    #startBtn:hover {
+      transform: scale(1.07);
+      box-shadow: 0 12px 48px rgba(251,191,36,0.22);
+    }
+    .order-mode-option:hover {
+  background: #2ed30c;
+}
+/* Estetik flag mode və geri düymələri üçün */
+.flagged-mode-btn, #exitFlaggedModeBtn {
+  margin-top: 16px;
+  background: linear-gradient(90deg, rgb(6, 230, 73) 60%, #f472b6 100%);
+  color: #222;
+  font-weight: bold;
+  width: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
+  font-size: 1.15em;
+  padding: 14px 0;
+  box-shadow: 0 4px 16px rgba(251,191,36,0.13);
+  transition: background 0.18s, transform 0.12s;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.flagged-mode-btn:hover, #exitFlaggedModeBtn:hover {
+  background: linear-gradient(90deg, #f472b6 60%, #0ada94 100%);
+  color: #fff;
+  transform: scale(1.04);
+}
+#exitFlaggedModeBtn::before {
+  content: "⟵";
+  font-size: 1.2em;
+  margin-right: 8px;
+}
+.flagged-mode-btn {
+  margin-top: 18px;
+  background: linear-gradient(90deg, #0ee28a 60%, #980dcf 100%);
+  color: #222;
+  font-weight: bold;
+  width: 100%;
+  border-radius: 18px;
+  cursor: pointer;
+  border: none;
+  font-size: 1em;
+  padding: 10px 0;
+  box-shadow: 0 6px 24px rgba(251,191,36,0.18);
+  transition: background 0.18s, transform 0.12s, color 0.18s, box-shadow 0.18s;
+  letter-spacing: 1.5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  text-shadow: 0 2px 8px #fff8;
+  outline: none;
+  border: 2px solid #fbbf24;
+}
+.flagged-mode-btn:hover {
+  background: linear-gradient(90deg, #f472b6 60%, #fbbf24 100%);
+  color: #fff;
+  transform: scale(1.06) rotate(-1deg);
+  box-shadow: 0 12px 36px rgba(251,191,36,0.22);
+  border-color: #f472b6;
+}
+  body.dark-mode {
+    background: linear-gradient(120deg, #18181b 0%, #1e293b 100%);
+    color: #e5e7eb;
+  }
+  body.dark-mode .main-container {
+    background: #23272f;
+    color: #e5e7eb;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+  }
+  body.dark-mode .question {
+    background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+    border-color: #475569;
+    color: #e7e9eb;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+  }
+  body.dark-mode .answers button {
+    background: linear-gradient(135deg, #334155 0%, #475569 100%);
+    color: #e7e9eb;
+    border-color: #475569;
+  }
+  body.dark-mode .answers button:hover:not(.correct):not(.wrong) {
+    background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%);
+    color: #fff;
+    box-shadow: 0 8px 24px rgba(14,165,233,0.3);
+  }
+  body.dark-mode .answers button.correct {
+    background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+    color: #fff;
+    box-shadow: 0 8px 24px rgba(34,197,94,0.3);
+  }
+  body.dark-mode .answers button.wrong {
+    background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+    color: #fff;
+    box-shadow: 0 8px 24px rgba(239,68,68,0.3);
+  }
+  body.dark-mode .side-panel {
+    background: linear-gradient(135deg, rgba(30,41,59,0.95) 0%, rgba(51,65,85,0.95) 100%);
+    color: #e5e7eb;
+    border-left: 1px solid #475569;
+    backdrop-filter: blur(20px);
+  }
+  body.dark-mode .side-panel h2 {
+    background: linear-gradient(135deg, rgba(14,165,233,0.1) 0%, rgba(2,132,199,0.1) 100%);
+    border-color: #0ea5e9;
+    color: #0ea5e9;
+  }
+  body.dark-mode .side-panel div, body.dark-mode .side-panel p {
+    background: rgba(30,41,59,0.8);
+    border-color: #475569;
+    color: #e7e9eb;
+  }
+  body.dark-mode .category-btn {
+    background: linear-gradient(135deg, #334155 0%, #475569 100%);
+    color: #e7e9eb;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+  }
+  body.dark-mode .category-btn.selected {
+    background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+    color: #1e293b;
+    box-shadow: 0 12px 40px rgba(251,191,36,0.3);
+  }
+  body.dark-mode .category-btn.inactive {
+    background: linear-gradient(135deg, #475569 0%, #64748b 100%);
+    color: #94a3b8;
+  }
+  body.dark-mode #welcomeScreen {
+    background: linear-gradient(120deg, #1e293b 0%, #0f172a 100%);
+    color: #e7e9eb;
+  }
+  body.dark-mode input, body.dark-mode textarea {
+    background: #334155;
+    color: #e7e9eb;
+    border-color: #475569;
+  }
+  body.dark-mode input:focus, body.dark-mode textarea:focus {
+    border-color: #0ea5e9;
+    box-shadow: 0 0 0 4px rgba(14,165,233,0.1);
+  }
+  body.dark-mode .search-container {
+    background: linear-gradient(135deg, rgba(30,41,59,0.9) 0%, rgba(51,65,85,0.9) 100%);
+    border-color: #475569;
+  }
+  body.dark-mode .search-container button {
+    background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%);
+    color: #fff;
+  }
+  body.dark-mode .search-container button:hover {
+    background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+  }
+  body.dark-mode .extra-options button {
+    background: linear-gradient(135deg, #334155 0%, #475569 100%);
+    color: #e7e9eb;
+  }
+  body.dark-mode .extra-options .flag-btn {
+    background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+    color: #1e293b;
+  }
+  body.dark-mode .extra-options .note-btn {
+    background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%);
+    color: #fff;
+  }
+  body.dark-mode .extra-options .clear-answer-btn {
+    background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+    color: #fff;
+  }
+  body.dark-mode .toggle-button {
+    background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%);
+    color: #fff;
+  }
+  body.dark-mode .reset-btn {
+    background: #334155;
+    color: #e7e9eb;
+    border-color: #475569;
+  }
+  body.dark-mode .reset-btn:hover {
+    background: #475569;
+  }
+  body.dark-mode .page-navigation button {
+    background: #334155;
+    color: #e7e9eb;
+    border-color: #475569;
+  }
+  body.dark-mode .page-navigation button.active {
+    background: #0ea5e9;
+    color: #fff;
+  }
+  body.dark-mode .wrong-questions-list button,
+  body.dark-mode .flagged-questions-list button,
+  body.dark-mode .repeated-mistakes-list button {
+    background: #334155;
+    color: #e7e9eb;
+    border-color: #475569;
+  }
+  body.dark-mode .wrong-questions-list button:hover,
+  body.dark-mode .flagged-questions-list button:hover,
+  body.dark-mode .repeated-mistakes-list button:hover {
+    background: #475569;
+  }
+  body.dark-mode .flagged-mode-btn {
+    background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+    color: #fff;
+  }
+  body.dark-mode .flagged-mode-btn:hover {
+    background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
+  }
+
+  @media (max-width: 600px) {
+  #patanSubcats,
+  #patanSubcats > div {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 8px !important;
+    width: 100% !important;
+    margin-left: 0 !important;
+  }
+  .category-btn {
+    width: 100% !important;
+    min-width: unset !important;
+    font-size: 1em;
+    padding: 12px 0;
+    box-sizing: border-box;
+  }
+  .main-container {
+    max-width: 100vw;
+    padding: 10px 2vw 10px 2vw;
+    border-radius: 10px;
+  }
+    .side-panel {
+    width: 85vw !important;
+    right: -90vw !important;
+    border-radius: 12px 0 0 12px !important;
+    padding: 18px 6px !important;
+    font-size: 1em !important;
+    top: 0 !important;
+    height: 100vh !important;
+    z-index: 10001 !important;
+    box-shadow: -2px 0 24px rgba(37,99,235,0.10);
+    background: #fff;
+    transition: right 0.35s cubic-bezier(.77,0,.18,1);
+  }
+  .side-panel.open {
+    right: 0 !important;
+  }
+  .side-overlay {
+    display: block;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.25);
+    z-index: 10000;
+  }
+  .toggle-button {
+    top: 8px !important;
+    right: 0 !important;
+    width: 38px !important;
+    height: 38px !important;
+    font-size: 1.5em !important;
+    z-index: 11000 !important;
+    display: flex !important;
+  }
+}
+@media (min-width: 601px) {
+  .side-overlay { display: none !important; }
+}
+@keyframes bounce {
+  0%, 100% { transform: translateY(0);}
+  50% { transform: translateY(-18px);}
+}
+#patanSubcats {
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: auto;
+}
+  body, html {
+  overflow-x: hidden;
+}
+.main-container {
+  max-width: 100vw;
+  box-sizing: border-box;
+}
+    
+    /* Flashcard rejimi üçün stillər */
+    .flashcard-question {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      border-radius: 20px;
+      box-shadow: 0 12px 40px rgba(102,126,234,0.2);
+      margin-bottom: 32px;
+      padding: 40px 30px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      color: #fff;
+      min-height: 200px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .flashcard-question::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(45deg, rgba(255,255,255,0.1) 0%, transparent 50%, rgba(255,255,255,0.1) 100%);
+      animation: shimmer 3s infinite;
+    }
+    
+    @keyframes shimmer {
+      0% { transform: translateX(-100%); }
+      100% { transform: translateX(100%); }
+    }
+    
+    .flashcard-question h2 {
+      font-size: 1.8em;
+      margin-bottom: 20px;
+      position: relative;
+      z-index: 2;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    }
+    
+    .flashcard-answers {
+      display: none;
+      margin-top: 20px;
+      position: relative;
+      z-index: 2;
+    }
+    
+    .flashcard-answers.show {
+      display: block;
+      animation: slideInUp 0.5s ease-out;
+    }
+    
+    .flashcard-answers button {
+      background: rgba(255,255,255,0.9);
+      color: #333;
+      border: none;
+      border-radius: 12px;
+      padding: 12px 20px;
+      margin: 8px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(10px);
+    }
+    
+    .flashcard-answers button:hover {
+      background: rgba(255,255,255,1);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+    
+    .flashcard-answers button.correct {
+      background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+      color: #fff;
+      font-weight: 600;
+    }
+    
+    .flashcard-answers button.wrong {
+      background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+      color: #fff;
+      font-weight: 600;
+    }
+    
+    .flashcard-controls {
+      margin-top: 20px;
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      position: relative;
+      z-index: 2;
+    }
+    
+    .flashcard-controls button {
+      background: rgba(255,255,255,0.2);
+      color: #fff;
+      border: 2px solid rgba(255,255,255,0.3);
+      border-radius: 12px;
+      padding: 12px 24px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(10px);
+    }
+    
+    .flashcard-controls button:hover {
+      background: rgba(255,255,255,0.3);
+      border-color: rgba(255,255,255,0.5);
+      transform: translateY(-2px);
+    }
+    
+    .flashcard-indicator {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: rgba(255,255,255,0.2);
+      color: #fff;
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-size: 0.9em;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255,255,255,0.3);
+    }
+    
+    /* Dark mode flashcard stilləri */
+    body.dark-mode .flashcard-question {
+      background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+      border-color: #475569;
+      color: #e7e9eb;
+      box-shadow: 0 12px 40px rgba(0,0,0,0.3);
+    }
+    
+    body.dark-mode .flashcard-question::before {
+      background: linear-gradient(45deg, rgba(255,255,255,0.05) 0%, transparent 50%, rgba(255,255,255,0.05) 100%);
+    }
+    
+    body.dark-mode .flashcard-answers button {
+      background: rgba(51,65,85,0.9);
+      color: #e7e9eb;
+      border-color: #475569;
+    }
+    
+    body.dark-mode .flashcard-answers button:hover {
+      background: rgba(71,85,105,1);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    }
+    
+    body.dark-mode .flashcard-answers button.correct {
+      background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+      color: #fff;
+    }
+    
+    body.dark-mode .flashcard-answers button.wrong {
+      background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+      color: #fff;
+    }
+    
+    body.dark-mode .flashcard-controls button {
+      background: rgba(51,65,85,0.3);
+      color: #e7e9eb;
+      border-color: #475569;
+    }
+    
+    body.dark-mode .flashcard-controls button:hover {
+      background: rgba(71,85,105,0.4);
+      border-color: #64748b;
+    }
+    
+    body.dark-mode .flashcard-indicator {
+      background: rgba(51,65,85,0.3);
+      color: #e7e9eb;
+      border-color: #475569;
+    }
+    
+    /* Kateqoriya düymələri üçün stil */
+  
