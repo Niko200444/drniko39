@@ -608,9 +608,7 @@
       "Yeganə müalicə oktreotiddir",
       "Pəhrizin rolu yoxdur"
     ]
-  }
-]
-[
+  },
   {
     "question": "Leyomiomanın EUS görüntüsünə ən uyğun təsvir hansıdır?",
     "answers": [
@@ -1003,4 +1001,692 @@
       "Regional limfa düyünlərinə metastaz nadirdir"
     ]
   },
-  
+  {
+    "question": "Qida borusunun turşudan təmizlənməsində iştirak edən mexanizmlərin ən dolğun kombinasiyası hansıdır?",
+    "answers": [
+      "Ağırlıq qüvvəsi, peristaltika, ağız suyu, selikaltı bikarbonatlar",
+      "Yalnız peristaltika",
+      "Yalnız ağız suyu",
+      "Yalnız reflüksün qarşısı alınırsa təmizlənmə lazım deyil",
+      "Yalnız diafraqma ayaqcıqları"
+    ]
+  },
+  {
+    "question": "Yatarkən reflüksün daha zədələyici olmasının əsas səbəbləri hansı cavabda düzgündür?",
+    "answers": [
+      "Ağırlıq qüvvəsinin aradan qalxması, udma və ağız suyunun azalması",
+      "Mədənin daha çox boşalması və çox udma",
+      "Diafraqma ayaqcıqlarının yığılmasının artması",
+      "AESTB-nin tam yox olması",
+      "Mədənin turşuluğunun sıfıra enməsi"
+    ]
+  },
+  {
+    "question": "Qeyri-steroid iltihabəleyhin (QSİƏP) QERX ilə əlaqəsinə dair doğru olan hansıdır?",
+    "answers": [
+      "QSİƏP-lər selikli qişanı zədələyə və LES təzyiqinə təsir edə bilər",
+      "QSİƏP-lər QERX riskini azaldır",
+      "Yalnız mədədə zədələyicidir, qida borusuna təsir etmir",
+      "QSİƏP-lər pH-metriyanı pozur və yalnış pozitiv edir",
+      "Heç biri"
+    ]
+  },
+  {
+    "question": "Qıcqırmanı kəskinləşdirən tipik pəhriz faktorlarının ən doğru siyahısı hansıdır?",
+    "answers": [
+      "Şokolad, kofe, alkohol, ədviyyat, tomat, limon şirəsi",
+      "Süd və banan",
+      "Yalnız su",
+      "Yalnız ət",
+      "Yalnız fast-food"
+    ]
+  },
+  {
+    "question": "QERX-li xəstədə disfagiyanın yaranması nəyi tələb edir?",
+    "answers": [
+      "Təcili və hərtərəfli müayinə (o cümlədən şişi istisna etmək)",
+      "Gözləmə və yalnız diet dəyişiklikləri",
+      "Antasid artırmaq",
+      "Yalnız pH-metriya",
+      "Heç nə"
+    ]
+  },
+  {
+    "question": "Sürüşən hiatal yırtıq QERX riskini necə artırır?",
+    "answers": [
+      "AES-i diafraqma ayaqcıqlarından ayıraraq baryeri zəiflədir və AESTB epizodları artır",
+      "AES təzyiqini yüksəldir",
+      "Mədə boşalmasını sürətləndirir",
+      "Qida borusu təmizlənməsini yaxşılaşdırır",
+      "Heç bir təsir göstərmir"
+    ]
+  },
+  {
+    "question": "Endoskopiyanın QERX-li xəstələrin əməliyyatönü qiymətləndirilməsində əsas rolu nədir?",
+    "answers": [
+      "Şişi istisna etmək və peptik zədələnmələri göstərmək",
+      "LES təzyiqini ölçmək",
+      "pH-metriyanı əvəz etmək",
+      "Hiatal yırtığı mütləq ölçmək",
+      "AESTB tezliyini hesablamaq"
+    ]
+  },
+  {
+    "question": "24 saatlıq pH-monitorinqi nəyi standart olaraq qiymətləndirir?",
+    "answers": [
+      "pH<4 epizodlarının sayını və davametmə müddətini, duruşdan asılılığını",
+      "pH>9 epizodlarının sayını",
+      "Qida borusunun temperaturunu",
+      "Mədənin qaz həcmini",
+      "LES uzunluğunu"
+    ]
+  },
+  {
+    "question": "QERX-də tipik qıcqırma hansı gündəlik vərdiş və qidalardan sonra kəskinləşir?",
+    "answers": [
+      "Şokolad, kofe və alkohol kimi məhsullar",
+      "Süd və banan",
+      "Yalnız su içmək",
+      "Yalnız ət yeməkləri",
+      "Duzsuz pəhriz"
+    ]
+  },
+  {
+    "question": "QERX-də gecə reflüksünün zədələyiciliyini ən yaxşı izah edən kombinasiyanı seçin:",
+    "answers": [
+      "Ağırlıq qüvvəsinin təsirinin azalması, udmanın və ağız suyunun azalması",
+      "Mədə boşalmasının sürətlənməsi və çox udma",
+      "Diafraqma ayaqcıqlarının tonusunun artması",
+      "AESTB-nin tam yox olması",
+      "Mədənin turşuluğunun sıfır olması"
+    ]
+  },
+  {
+    "question": "QERX-li xəstədə disfagiyanın meydana çıxması nəyə işarədir?",
+    "answers": [
+      "Təcili və hərtərəfli müayinəyə ehtiyac var (o cümlədən şişi istisna etmək)",
+      "Sadəcə funksional pozğunluqdur, gözlənilə bilər",
+      "Yalnız pH-metriya etmək kifayətdir",
+      "Yalnız diet dəyişikliyi yetərlidir",
+      "Heç bir tədbir gərək deyil"
+    ]
+  },
+  {
+    "question": "Sürüşən hiatal yırtıq antireflüks baryerini necə zəiflədir?",
+    "answers": [
+      "AES-i diafraqma ayaqcıqlarından ayıraraq və AESTB epizodlarını artıraraq",
+      "AES təzyiqini artıraraq",
+      "Mədə boşalmasını sürətləndirərək",
+      "Qida borusu klirensini gücləndirərək",
+      "Heç bir təsiri yoxdur"
+    ]
+  },
+  {
+    "question": "Qida borusunun turşudan təmizlənməsində hansı mexanizmlər birlikdə işləyir?",
+    "answers": [
+      "Ağırlıq, peristaltika, ağız suyu, bikarbonatlar",
+      "Yalnız peristaltika",
+      "Yalnız ağız suyu",
+      "Yalnız diafraqma ayaqcıqları",
+      "Yalnız prokinetiklər"
+    ]
+  },
+  {
+    "question": "QERX-in patogenezində H. pylori infeksiyası barədə hansı yanaşma doğrudur?",
+    "answers": [
+      "Qida borusunu infeksiyalaşdırmır; əlaqə barədə məlumatlar ziddiyyətlidir",
+      "Qida borusunu infeksiyalaşdırır və birbaşa ezofagit yaradır",
+      "Eradikasiya həmişə reflüksü azaldır",
+      "Yalnız Barret qida borusunda olur",
+      "Heç bir rolu yoxdur və müzakirə edilmir"
+    ]
+  },
+  {
+    "question": "QERX üçün tipik ‘qeyri-ürək mənşəli döş ağrısı’ ilə bağlı doğru ifadəni seçin:",
+    "answers": [
+      "QERX-də döş ağrısı qeyri-kardiak mənşəli ola bilər",
+      "QERX-lə əlaqəsizdir",
+      "Yalnız qadınlarda rast gəlinir",
+      "Yalnız fiziki yüklənmə ilə yaranır",
+      "Həmişə EKG-də dəyişiklik verir"
+    ]
+  },
+  {
+    "question": "Cərrahi planlanan QERX-li xəstədə endoskopiyanın əsas məqsədi hansıdır?",
+    "answers": [
+      "Şişi istisna etmək və peptik zədələnmələri göstərmək",
+      "AESTB tezliyini hesablamaq",
+      "Hiatal yırtıq ölçüsünü təyin etmək",
+      "AES təzyiqini ölçmək",
+      "Mədə boşalma zamanını ölçmək"
+    ]
+  }, {
+    "question": "Qastroezofageal reflüks xəstəliyi (QERX) anlayışı ən düzgün necə ifadə olunur?",
+    "answers": [
+      "Qastroezofageal reflüks nəticəsində simptomlar və/və ya histopatoloji zədələnmələr",
+      "Yalnız endoskopik ezofagit olan hallardır",
+      "Yalnız pH<4 epizodlarının çoxluğu",
+      "Yalnız qıcqırma şikayəti",
+      "Yalnız regurgitasiya şikayəti"
+    ]
+  },
+  {
+    "question": "Epidemiologiya ilə bağlı düzgün olanı seçin:",
+    "answers": [
+      "QERX kişi və qadınlarda bərabərdir, lakin ezofagit kişilərdə daha çoxdur",
+      "QERX yalnız qadınlarda rast gəlinir",
+      "Hamiləlik QERX riskini azaldır",
+      "Afrikada QERX Şimali Amerikadan daha çoxdur",
+      "Barret ezofagiti qadınlarda daha çoxdur"
+    ]
+  },
+  {
+    "question": "Aşağı ezofageal sfinkter (AES) ilə bağlı düzgün ifadə hansıdır?",
+    "answers": [
+      "1,0–3,5 sm uzunluğunda sirkulyar əzələ seqmentidir; təzyiq 10–45 mm c. süt.",
+      "Uzunluğu 5–10 sm-dir və təzyiqi 0–5 mm c. süt.",
+      "Qida borusu cisminə bənzər, spontan yığılma yaratmır",
+      "Udma zamanı heç vaxt boşalmır",
+      "Transmural elektrik stimulyasiyasına cavab vermir"
+    ]
+  },
+  {
+    "question": "AES-in tranzitor boşalması (AESTB) barədə hansı ifadə DOĞRUDUR?",
+    "answers": [
+      "QERX xəstələrində reflüks epizodlarının təxminən 70%-i AESTB ilə bağlıdır",
+      "Yalnız udma ilə əlaqəli olur və 3–10 s davam edir",
+      "Normal şəxsdə saatda 10–15 dəfə olur",
+      "AESTB qamma-aminoyağ turşusu reseptorları ilə artır",
+      "AESTB diafraqma ayaqcıqlarının yığılması ilə azalır"
+    ]
+  },
+  {
+    "question": "Diafraqma dəliyi yırtığının (sürüşən) QERX-ə təsiri barədə ən doğru cavabı seçin:",
+    "answers": [
+      "AES-i diafraqma ayaqcıqlarından ayıraraq baryeri zəiflədir",
+      "AES təzyiqini həmişə artırır",
+      "Reflüks riskini azaltmaqla əlaqəlidir",
+      "Yalnız gənclərdə əhəmiyyətlidir",
+      "pH-metriyada heç bir dəyişiklik yaratmır"
+    ]
+  },
+  {
+    "question": "Qida borusuna ən çox zədələyici təsir hansı şəraitdə olur?",
+    "answers": [
+      "Turşu və pepsin birlikdə, həmçinin öd/pankreas şirəsi əlavə olduqda",
+      "Yalnız turşu olduqda (pH<2)",
+      "Yalnız öd olduqda",
+      "Yalnız mədəaltı vəzi fermentləri olduqda",
+      "Yalnız pepsin olduqda"
+    ]
+  },
+  {
+    "question": "Gecə reflüksünün daha zədələyici olmasının SƏBƏBİ hansıdır?",
+    "answers": [
+      "Udma və ağız suyu udulmasının azalması, peristaltikanın zəifləməsi",
+      "Ağırlıq qüvvəsinin təsirinin artması",
+      "Mədənin boşalmasının sürətlənməsi",
+      "Diafraqma ayaqcıqlarının tonusunun artması",
+      "AESTB-nin olmaması"
+    ]
+  },
+  {
+    "question": "Tipik klinik əlamətlərdən HANSISI QERX üçün xarakterikdir?",
+    "answers": [
+      "Qıcqırma qida qəbulundan 1–2 saat sonra artır və antasidlərə cavab verir",
+      "Həmişə yalnız ‘döş ağrısı’ olur",
+      "Melena və hematemez",
+      "Yalnız gecələr olan dispepsiya",
+      "Qeyri-ürək mənşəli ağrı heç vaxt olmur"
+    ]
+  },
+  {
+    "question": "Disfagiyanın QERX-də interpretasiyası ilə bağlı doğru olan:",
+    "answers": [
+      "Yalnız bərk qidalarla disfagiya mexaniki pozğunluğa şübhə yaradır",
+      "Yalnız bərk qidalarla disfagiya funksional pozğunluğu göstərir",
+      "Həm bərk, həm maye ilə disfagiya mexaniki obstruksiyanı göstərir",
+      "Disfagiya QERX üçün qeyri-mümkündür",
+      "Disfagiya olduqda müayinələr ləngidilməlidir"
+    ]
+  },
+  {
+    "question": "QERX-in əsas ağırlaşmaları arasında hansı YOXDUR?",
+    "answers": [
+      "Duodenum perforasiyası",
+      "Ezofagit",
+      "Striktura",
+      "Barret qida borusu",
+      "Adenokarsinoma riski (Barret fonunda)"
+    ]
+  },
+  {
+    "question": "QERX ağırlaşmalarının əmələ gəlməsi üçün hansı iki şərt vacibdir?",
+    "answers": [
+      "AES-in mexaniki çatışmazlığı və qida borusunun pH<4 və/və ya >7 möhtəviyyatlara məruz qalması",
+      "AES-in hiperfunksiyası və qələvi pH",
+      "Mədənin sürətli boşalması və hipersekresiya",
+      "Yalnız pepsinin mövcudluğu",
+      "Yalnız ödün mövcudluğu"
+    ]
+  },
+  {
+    "question": "24-saatlıq pH-metriyada hansı parametr standart olaraq qiymətləndirilir?",
+    "answers": [
+      "pH<4 epizodlarının sayı və davametmə müddəti",
+      "pH>9 epizodlarının ümumi sayı",
+      "Qida borusunun temperaturu",
+      "Mədənin qaz həcmi",
+      "Peristaltik dalğaların amplitudası"
+    ]
+  },
+  {
+    "question": "Cərrahi müalicə planlanan xəstələrdə endoskopiyanın əsas məqsədi nədir?",
+    "answers": [
+      "Şişi istisna etmək və peptik zədələnmələri göstəriciləri ilə aşkarlamaq",
+      "Hiatal yırtığı ölçüsünü təyin etmək",
+      "pH-metriyanı əvəz etmək",
+      "Bütün hallarda biopsiya ilə Barret diaqnozunu təsdiqləmək",
+      "AES təzyiqini ölçmək"
+    ]
+  },
+  {
+    "question": "Helicobacter pylori ilə QERX arasındakı əlaqə barədə ən uyğun cavabı seçin:",
+    "answers": [
+      "H. pylori infeksiyası qida borusunu infeksiyalaşdırmır; QERX-lə əlaqəsi ziddiyyətlidir",
+      "H. pylori qida borusunu infeksiyalaşdırır və birbaşa QERX törədir",
+      "H. pylori eradikasiyası həmişə QERX-i azaldır",
+      "H. pylori yalnız Barret qida borusunda olur",
+      "H. pylori reflüksü həmişə ağırlaşdırır"
+    ]
+  },
+  {
+    "question": "Bilirubinin 24-saatlıq izlənməsi ilə bağlı doğru olan:",
+    "answers": [
+      "QERX-li xəstələrin ~58%-də qida borusu onikibarmaq bağırsaq şirəsinin təsirinə məruz qalır",
+      "Bilirubin reflüksün turş komponentini ölçür",
+      "Bilirubin yalnız mədədə ölçülür",
+      "Bilirubin monitorinqi kliniki əhəmiyyət daşımır",
+      "Bilirubin monitorinqi yalnız pediatrik yaşda aparılır"
+    ]
+  },
+  {
+    "question": "Peptik xora xəstəliyinin müalicəsində dönüş nöqtəsi olan kəşf və yanaşma hansıdır?",
+    "answers": [
+      "H2-reseptor antaqonistləri və daha sonra PPI-lərin tətbiqi; H. pylori-nin eradikasiyası",
+      "Sadəcə pəhriz və istirahət",
+      "Yalnız antasidlər",
+      "Yalnız cərrahiyyə",
+      "Yalnız antikolinerjiklər"
+    ]
+  },
+  {
+    "question": "H. pylori-nin mədədə yaşamasına imkan verən əsas ferment və onun rolu:",
+    "answers": [
+      "Ureaza — sidik cövhərini ammonium və bikarbonata parçalayaraq qələvi mikromühit yaradır",
+      "Laktaza — seliyi parçalayır",
+      "Proteaza — pepsini parçalayır",
+      "Lipaza — yağları emulqə edir",
+      "Amilaza — karbohidratları parçalayır"
+    ]
+  },
+  {
+    "question": "H. pylori infeksiyasının peptik xora patogenezindəki mexanizmlərinə hansı uyğundur?",
+    "answers": [
+      "Lokal toksik məhsullar, iltihabi immun cavab, qastrinin artması (D-hüceyrələrin azalması)",
+      "Yalnız turşu sekresiyasını azaldır",
+      "Yalnız mədədə selik artımı yaradır",
+      "Yalnız vagusun aktivləşməsi",
+      "Yalnız pylor spazmı"
+    ]
+  },
+  {
+    "question": "H. pylori yalnız hansı epiteldə yaşayır və niyə?",
+    "answers": [
+      "Mədə epiteli — spesifik adherent reseptorlara görə",
+      "Qida borusunun yastı epiteli — çox qatlıdır",
+      "Duodenum epiteli — bikarbonat zəngindir",
+      "Kolon epiteli — selik qalınlığına görə",
+      "Bronx epiteli — qələvi mühitə görə"
+    ]
+  },
+  {
+    "question": "NSAİİ-lə əlaqəli xora barədə düzgün olan hansıdır?",
+    "answers": [
+      "Əsasən mədədə olur və xroniki qastrit az rast gəlinir",
+      "Əsasən onikibarmaq bağırsaqda olur və xroniki qastritlə birlikdədir",
+      "Yalnız uşaqlarda rast gəlinir",
+      "Residiv riski dərman dayanılsa belə həmişə yüksəkdir",
+      "H. pylori ilə hər zaman birlikdədir"
+    ]
+  },
+  {
+    "question": "Duodenal xoranın patofiziologiyasına aid daha uyğun ifadə hansıdır?",
+    "answers": [
+      "Bikarbonat sekresiyasının azalması, gecələr turşu ifrazının artması və duodenuma turş yüklənmə",
+      "Yalnız turşu sekresiyası azdır",
+      "Mədənin hipomotorikliyi və turşunun azalması",
+      "Yalnız qastrinin azalması",
+      "Yalnız pylor stenozu"
+    ]
+  },
+  {
+    "question": "Johnson təsnifatına görə I tip mədə xorası harada yerləşir?",
+    "answers": [
+      "Kiçik əyrilikdə incisura yaxınlığında",
+      "Fundusda",
+      "Kardiyada",
+      "Böyük əyrilikdə",
+      "Pilor kanalında"
+    ]
+  },
+  {
+    "question": "Mədə və duodenum xorasının tipik ağrı xronologiyası barədə doğru cütlük hansıdır?",
+    "answers": [
+      "Mədə xorası — erkən ağrı; duodenum — gecikmiş/acqarına/gecə ağrıları",
+      "Mədə xorası — gecikmiş ağrı; duodenum — erkən ağrı",
+      "Hər ikisində yalnız acqarına ağrı",
+      "Heç birində qida ilə əlaqə yoxdur",
+      "Yalnız mədə xorasında ağrı olur"
+    ]
+  },
+  {
+    "question": "Bariumlu rentgenoqrafiyada peptik xoranın ən etibarlı birbaşa əlaməti:",
+    "answers": [
+      "‘Taxça’ (niş) simptomu",
+      "Mədənin qaz qovuğu",
+      "Mədə forması",
+      "Pilorospazm",
+      "Hava-maye səviyyəsi"
+    ]
+  },
+  {
+    "question": "Endoskopiyanın peptik xorada üstünlüklərinə hansı daxildir?",
+    "answers": [
+      "Yüksək diaqnostik dəqiqlik, biopsiya və lazım olduqda müalicəvi müdaxilə imkanı",
+      "Yalnız vizualizasiya",
+      "Yalnız biopsiya",
+      "Yalnız qan analizlərini əvəz edir",
+      "Rentgenologiyanı ləğv edir"
+    ]
+  },
+  {
+    "question": "Mədə xorası aşkarlandıqda maliqnizasiyanı inkar etmək üçün vacib addım nədir?",
+    "answers": [
+      "Biopsiya və sitologiya; lazım gələrsə təkrarlamaq",
+      "Yalnız PPI başlamaq",
+      "Heç nə etməmək",
+      "Urea breath test kifayətdir",
+      "Yalnız seroloji test"
+    ]
+  },
+  {
+    "question": "H. pylori üçün invaziv testlərə nələr daxildir?",
+    "answers": [
+      "Ekspres ureaza testi, histologiya və kultural test",
+      "Serologiya və urea breath test",
+      "Nəcisdə antigen testi",
+      "Sidikdə antikor testi",
+      "Qan qazı analizi"
+    ]
+  },
+  {
+    "question": "Urea breath test barədə doğru olan:",
+    "answers": [
+      "Həssaslıq və spesifikliyi yüksəkdir; eradikasiyadan ən azı 4 həftə sonra aparılmalıdır",
+      "Yalnız endoskopiya ilə aparılır",
+      "Həmişə yalnış pozitiv verir",
+      "Mədə xorasında istifadə olunmur",
+      "Yalnız C13 istifadə oluna bilər"
+    ]
+  },
+  {
+    "question": "Rentgenoloji müayinədə duodenal xoranın aşkarlanma dərəcəsini artıran yanaşma:",
+    "answers": [
+      "İkiqat kontrast (barium + qaz) tətbiqi",
+      "Birqat kontrast yetərlidir",
+      "Yalnız su içirərək müayinə",
+      "Yalnız hipotoniya dərmanları",
+      "Yalnız sağ yanı pozisiya"
+    ]
+  },
+  {
+    "question": "‘Mendel’ perkutor ağrı zonası hansı hallar üçün xarakterikdir?",
+    "answers": [
+      "Xoranın lokalizasiyasından asılı olaraq epiqastral/perkutor ağrı zonalarının aşkarlanması",
+      "Yalnız mədə xoraları",
+      "Yalnız duodenal xoralar",
+      "Yalnız pankreatit",
+      "Yalnız hiatal yırtıq"
+    ]
+  },
+  {
+    "question": "NSAİİ-ə bağlı kəskin qastroduodenal zədələnmələr ən çox hansı dövrdə meydana çıxır?",
+    "answers": [
+      "İlk 1–2 həftədə",
+      "3–6 ay sonra",
+      "1 ildən sonra",
+      "Heç vaxt",
+      "Yalnız dərman kəsiləndə"
+    ]
+  },
+  {
+    "question": "Endoskopiyada xoranın dibində qara rəngli qartmaq görünməsi nəyi göstərir?",
+    "answers": [
+      "Keçirilmiş qanaxma",
+      "Mövcud qanaxma",
+      "Maliqnizasiyanı",
+      "H. pylori infeksiyasını",
+      "Metaplaziyanı"
+    ]
+  },
+  {
+    "question": "Peptik xoranın əsas ağırlaşmalarına nələr daxildir?",
+    "answers": [
+      "Qanaxma, perforasiya, stenoz",
+      "Qastrik volvulus",
+      "Qaraciyər sirrozu",
+      "Apendisit",
+      "Hiatal yırtıq"
+    ]
+  },
+  {
+    "question": "Rentgenoloji müayinə ilə endoskopiyanın müqayisəsində düzgün yanaşma hansıdır?",
+    "answers": [
+      "Endoskopiya daha dəqiqdir və biopsiya imkanı verir; rentgenoloji müayinəni tamamlayır",
+      "Rentgenoloji müayinə həmişə daha dəqiqdir",
+      "Endoskopiya heç vaxt lazım deyil",
+      "Rentgenologiya biopsiyanı əvəz edir",
+      "Heç biri doğru deyil"
+    ]
+  }, {
+    "question": "Mədə xorasının Johnson təsnifatına görə duodenal xora ilə birgə rast gəlinən və turşu hipersekresiyası ilə müşayiət olunan forması hansıdır?",
+    "answers": [
+      "II tip",
+      "I tip",
+      "IV tip",
+      "Crohn xəstəliyi",
+      "Candida ezofagiti"
+    ]
+  },
+  {
+    "question": "Pilorik kanaldan 2 sm daxilində yerləşən mədə xorası hansı tipe aiddir?",
+    "answers": [
+      "III tip",
+      "I tip",
+      "II tip",
+      "IV tip",
+      "V tip (QSİƏP-lə əlaqəli)"
+    ]
+  },
+  {
+    "question": "Mədənin proksimal hissəsində/kardiyada yerləşən mədə xoraları haqqında doğru olanı seçin:",
+    "answers": [
+      "IV tip hesab olunur və hipersekresiya tipik deyil",
+      "Yüksək turşu sekresiyası ilə gedir",
+      "Həmişə H. pylori mənşəlidir",
+      "Yalnız gənclərdə rast gəlinir",
+      "QSİƏP-larla bağlıdır"
+    ]
+  },
+  {
+    "question": "Johnson təsnifatına V tip hansı halları birləşdirir?",
+    "answers": [
+      "QSİƏP-ların təsirindən yaranan mədə xoraları",
+      "Stress xoraları",
+      "Crohn xəstəliyinin xoraları",
+      "Zollinger–Ellison sindromu",
+      "Yalnız kardial xoralar"
+    ]
+  },
+  {
+    "question": "Helicobacter pylori yalnız hansı epitel tipində stabil kolonizasiya edir?",
+    "answers": [
+      "Mədə tipli epitel (mədə seliyi daxilində)",
+      "Qida borusunun çoxqatlı yastı epitelində",
+      "Kolon epitelində",
+      "Bronx epitelində",
+      "Pankreas axar epitelində"
+    ]
+  },
+  {
+    "question": "H. pylori-nin mədə mühitində yaşamasını asanlaşdıran əsas ferment və rolu:",
+    "answers": [
+      "Ureaza — sidik cövhərini ammonium və bikarbonata parçalayaraq qələvi mikromühit yaradır",
+      "Amilaza — karbohidratları parçalayır",
+      "Lipaza — yağları emulqə edir",
+      "Proteaza — pepsini deaktivləşdirir",
+      "Laktaza — seliyi parçalayır"
+    ]
+  },
+  {
+    "question": "H. pylori infeksiyasının toxumalara zədələyici təsiri üçün AİDMİR:",
+    "answers": [
+      "Toksik məhsullar, lokal immun cavabın induksiyası və qastrinin artması",
+      "Yalnız epitel hüceyrələrini mexaniki zədələyir",
+      "Yalnız turşu sekresiyasını azaldır",
+      "Yalnız vagal tonusu artırır",
+      "Yalnız bikarbonatları azaldır"
+    ]
+  },
+  {
+    "question": "H. pylori infeksiyası olan onikibarmaq bağırsaq xorasında qastrin səviyyəsinin artmasının əsas səbəbi:",
+    "answers": [
+      "Antral D-hüceyrələrin azalması → somatostatin azalır",
+      "Parietal hüceyrələrin tam itməsi",
+      "Pilor stenozu",
+      "Mədənin boşalmasının sürətlənməsi",
+      "Yalnız diet amilləri"
+    ]
+  },
+  {
+    "question": "QSİƏP-larla əlaqəli xoralara dair doğru ifadəni seçin:",
+    "answers": [
+      "Əsasən mədədə olur və xroniki qastrit az rast gəlinir",
+      "Əsasən duodenumda olur və həmişə xroniki qastritlə gedir",
+      "Hər zaman H. pylori ilə birlikdədir",
+      "Dərman dayandırıldıqdan sonra tez-tez residiv verir",
+      "Qanaxma riski yoxdur"
+    ]
+  },
+  {
+    "question": "Duodenal xoraya meyli artıran sekretor pozğunluqlardan biri:",
+    "answers": [
+      "Gecə turşu sekresiyasının artması",
+      "Bikarbonat sekresiyasının artması",
+      "Qastrinin azalması",
+      "Mədənin boşalmasının ləngiməsi",
+      "Heç biri"
+    ]
+  },
+  {
+    "question": "Mədə xorasında tipik ağrı xronologiyası hansıdır?",
+    "answers": [
+      "Qidadan 30 dəq–1 saat sonra başlayan erkən ağrı",
+      "Yalnız acqarına ağrılar",
+      "Yalnız gecə ağrısı",
+      "Qidadan 1,5–2 saat sonra başlayan gecikmiş ağrı",
+      "Ağrı qida ilə əlaqəsizdir"
+    ]
+  },
+  {
+    "question": "Rentgenoloji müayinədə xoranın ən etibarlı birbaşa əlaməti:",
+    "answers": [
+      "“Taxça” (niş) simptomu",
+      "Mədə qaz qovuğu",
+      "Pilorospazm",
+      "Hava–maye səviyyəsi",
+      "Mədə forması"
+    ]
+  },
+  {
+    "question": "Duodenal xoranın aşkarlanmasında hansı rentgen texnikası həssaslığı artırır?",
+    "answers": [
+      "İkiqat kontrast (barium + qaz)",
+      "Sadə (birqat) kontrast",
+      "Yalnız su içirilməsi",
+      "Yalnız sağ yanı pozisiya",
+      "Hipertoniya dərmanı verilməsi"
+    ]
+  },
+  {
+    "question": "Relaksasion duodenoqrafiya üçün istifadə olunan dərman kombinasiya və məqsəd:",
+    "answers": [
+      "Aeron və ya atropin — spazmı azaltmaq və soğanağı yaxşı göstərmək",
+      "Adrenalin + lidokain — ağrını azaltmaq",
+      "Metoklopramid — mədə boşalmasını sürətləndirmək",
+      "Propranolol — tremoru azaltmaq",
+      "Heç biri"
+    ]
+  },
+  {
+    "question": "Mendel perkutor ağrı zonaları barədə düzgün yanaşma:",
+    "answers": [
+      "Xoranın yerindən asılı olaraq epiqastriumda lokal ağrı zonaları aşkarlanır",
+      "Yalnız mədə xoraları üçün xarakterikdir",
+      "Yalnız duodenal xoralar üçün xarakterikdir",
+      "Klinik əhəmiyyəti yoxdur",
+      "Ancaq pankreatitdə olur"
+    ]
+  },
+  {
+    "question": "Endoskopiyanın peptik xorada əsas üstünlüyü hansıdır?",
+    "answers": [
+      "Biopsiya və lazım gəldikdə müalicəvi müdaxilə imkanı ilə yüksək diaqnostik dəqiqlik",
+      "Yalnız vizualizasiya",
+      "Rentgenologiyanı əvəz edir",
+      "Heç bir üstünlüyü yoxdur",
+      "Yalnız laborator analizləri əvəz edir"
+    ]
+  },
+  {
+    "question": "Ən azı neçə müddətdən sonra H. pylori eradikasiyasının dəyərləndirilməsi üçün urea breath test aparılmalıdır?",
+    "answers": [
+      "≥4 həftə sonra",
+      "1 həftə sonra",
+      "2 həftə sonra",
+      "6 ay sonra",
+      "Vaxt önəmsizdir"
+    ]
+  },
+  {
+    "question": "Qara rəngli qartmaq endoskopiyada nəyi göstərir?",
+    "answers": [
+      "Keçirilmiş qanaxma",
+      "Aktiv qanaxma",
+      "Maliqnizasiyanı",
+      "H. pylori-ni",
+      "Metaplaziyanı"
+    ]
+  },
+  {
+    "question": "Peptik xora xəstəliyinin əsas ağırlaşmaları hansı üçlükdə cəmlənir?",
+    "answers": [
+      "Qanaxma, perforasiya, çıxış stenozu",
+      "Volvulus, pankreatit, kolit",
+      "Kolit, divertikulit, apendisit",
+      "Hemorroy, fissura, fistula",
+      "Qaraciyər sirrozu, ascit, ensefalopatiya"
+    ]
+  }
+  ]
