@@ -792,5 +792,215 @@
       "Re-epitelizasiya turş mühitdə daha yaxşıdır",
       "Heç bir üstünlüyü yoxdur"
     ]
-  }
-]
+  },
+  {
+    "question": "Qida borusunun ən çox rast gəlinən xoşxassəli şişi hansıdır?",
+    "answers": [
+      "Leyomioma",
+      "Papilloma",
+      "Lipoma",
+      "Neyrofibroma",
+      "Hemangioma"
+    ]
+  },
+  {
+    "question": "Leyomioma üçün tipik epidemioloji xüsusiyyət hansıdır?",
+    "answers": [
+      "20–50 yaş; kişilərdə qadınlara nisbətən ~2:1; 3–10% çoxsaylı ola bilər",
+      "Əsasən 60 yaşdan yuxarı qadınlarda",
+      "Uşaqlarda daha çoxdur",
+      "Yalnız boyun şöbəsində olur",
+      "Həmişə simptomatikdir"
+    ]
+  },
+  {
+    "question": "Leyomiomanın lokalizasiyası barədə doğru olanı seçin:",
+    "answers": [
+      "Qida borusunun orta və aşağı 1/3-də >80% rast gəlinir",
+      "Boyun şöbəsində daha çoxdur",
+      "Yalnız proksimalda olur",
+      "Yalnız kardiyada olur",
+      "Mədədə daha çox rast gəlinir"
+    ]
+  },
+  {
+    "question": "Leyomioma üçün hansı ölçüdən sonra simptomlar daha çox meydana çıxır?",
+    "answers": [
+      "5 sm-dən böyük olduqda",
+      "<2 sm",
+      "2–3 sm",
+      "Həmişə simptomsuzdur",
+      "Yalnız malign olduqda"
+    ]
+  },
+  {
+    "question": "Leyomiomanın müalicəsi üçün düzgün yanaşma hansıdır?",
+    "answers": [
+      "Simptomsuz, tipik kiçik leyomiomalar müşahidə oluna bilər; simptom və ya >5 sm olduqda xaric edilməlidir",
+      "Hər kəsi əməliyyat etmək lazımdır",
+      "Yalnız radioterapiya",
+      "Yalnız kemoterapiya",
+      "Yalnız proton nasosu inhibitorları"
+    ]
+  },
+  {
+    "question": "Qida borusu polipi barədə hansı ifadə doğrudur?",
+    "answers": [
+      "Çox vaxt boyun şöbəsindədir və ağıza çıxaraq asfiksiyaya səbəb ola bilər",
+      "Həmişə çoxsaylıdır",
+      "Heç vaxt qanamaz",
+      "Həmişə endoskopik polipektomiya kifayətdir və residiv olmaz",
+      "Yalnız qadınlarda rast gəlinir"
+    ]
+  },
+  {
+    "question": "Barret qida borusunun əsas müəyyənedici xüsusiyyəti hansıdır?",
+    "answers": [
+      "Silindrik epitelə metaplaziya və qədəhəbənzər hüceyrələrin əmələ gəlməsi",
+      "Qida borusunda yastı epitelin hiperplaziyası",
+      "Qida borusunda keratoz",
+      "Yalnız ezofagit",
+      "Yalnız z-linein distala yer dəyişməsi"
+    ]
+  },
+  {
+    "question": "Barret qida borusunun tipik risk amilləri hansılardır?",
+    "answers": [
+      "Uzunmüddətli QERX, kişi cinsi, diafraqma dəliyi yırtığı",
+      "Qısa müddətli reflüks, qadın cinsi, 20 yaş",
+      "Yalnız H. pylori infeksiyası",
+      "Yalnız steroid istifadəsi",
+      "Pilor stenozu"
+    ]
+  },
+  {
+    "question": "Endoskopiyada Barret qida borusunu düşündürən görünüş hansıdır?",
+    "answers": [
+      "Kardiodan proksimala doğru 2–4 sm uzanan qırmızımtıl ‘alov dili’",
+      "Ağ mukoza və eritemasız sahələr",
+      "Yalnız ağ nekrotik zolaqlar",
+      "Diffuz polipoz dəyişikliklər",
+      "Mukoza altında kalsinatlar"
+    ]
+  },
+  {
+    "question": "Barret qida borusunda histoloji təsdiq üçün tələb olunan kriteriya:",
+    "answers": [
+      "Metaplaziyaya uğramış epiteldə qədəhəbənzər hüceyrələrin aşkarlanması",
+      "Z-xəttindən 2 sm yuxarıda mədə epiteli",
+      "Qırmızı ‘dillər’in olması",
+      "Yüngül ezofagit",
+      "H. pylori müsbətliyi"
+    ]
+  },
+  {
+    "question": "Barret qida borusunda displaziya və adenokarsinoma riski ilə bağlı düzgün olan:",
+    "answers": [
+      "Bədxassəli transformasiya ildə ~0,8% təşkil edir",
+      "Heç vaxt xərçənglə əlaqəli deyil",
+      "Yalnız skvamoz karsinomaya çevrilir",
+      "Risk yalnız qadınlarda yüksəkdir",
+      "Risk pH-dan asılı deyil"
+    ]
+  },
+  {
+    "question": "Barret qida borusunda biopsiya strategiyası ilə bağlı doğrunu seçin:",
+    "answers": [
+      "Mədə büküşündən 2–4 sm proksimalda sirkulyar çoxsaylı hədəfli biopsiyalar (ən azı 4 fraqment, 3 sm aralı)",
+      "Təsadüfi bir biopsiya kifayətdir",
+      "Bir fragment kifayətdir",
+      "Yalnız xora sahəsindən biopsiya",
+      "Biopsiya göstəriş deyil"
+    ]
+  },
+  {
+    "question": "Barret qida borusunun müalicəsində əsas yanaşma hansı hallarda PPI-lardır?",
+    "answers": [
+      "Uzun seqmentli, displazi olmayan hallarda PPI-lər",
+      "Qısa seqmentli və displaziyasız hallarda yalnız H2-blokatorlar",
+      "Yalnız cərrahi müalicə",
+      "Yalnız fotodinamik terapiya",
+      "Yalnız krioterapiya"
+    ]
+  },
+  {
+    "question": "Endoskopik rezeksiyada perforasiya riskini azaltmaq üçün tətbiq olunan addım hansıdır?",
+    "answers": [
+      "Submukozaya fizioloji məhlul və ya adrenalin (1:100000) yeridilməsi",
+      "Heç bir maye yeridilmədən birbaşa kəsilmə",
+      "Yüksək güclü lazerlə dərindən kəsilmə",
+      "Qazla dilatasiya",
+      "Krioterapiya öncəsi steroid"
+    ]
+  },
+  {
+    "question": "Termiki ablasiya ilə bağlı hansı çatışmazlıq qeyd olunub?",
+    "answers": [
+      "Gələcəkdə striktura riski, təkrar müdaxilə ehtiyacı və dərialtı qalan displazi ocaqları",
+      "Heç vaxt striktura yaratmır",
+      "Bir prosedurla tam sağalma təmin edir",
+      "Re-epitelizasiya asid şəraitdə daha yaxşıdır",
+      "Heç bir üstünlüyü yoxdur"
+    ]
+  },
+  {
+    "question": "Qida borusunun yastı-hüceyrəli xərçəngi (YHX) üçün əsas risk faktorları ilə bağlı doğru olan:",
+    "answers": [
+      "Vitamin A, C və fol turşusu defisiti risk faktorlarıdır",
+      "Tütün və alkoqolun birlikdə istifadəsi riski azaldır",
+      "HPV ilə heç bir əlaqə yoxdur",
+      "Axalaziya YHX riskini azaldır",
+      "Qaynaqlı maye qəbulu əlaqəsizdir"
+    ]
+  },
+  {
+    "question": "Axalaziya fonunda xərçəng inkişafına dair düzgün olan:",
+    "answers": [
+      "Yastı-hüceyrəli xərçəng daha çoxdur və interval təxminən 17–20 ildir",
+      "Disfagiyadan xərçəngə keçid 1–2 il çəkir",
+      "Yalnız adenokarsinoma yaranır",
+      "Risk yalnız əməliyyat olunmayanlarda azdır",
+      "Heç bir əlaqə yoxdur"
+    ]
+  },
+  {
+    "question": "Diaqnostik mərhələləndirmədə lokal invaziyanın dərinliyi və regional limfa düyünləri üçün ən həssas üsul:",
+    "answers": [
+      "Endoskopik ultrasəs (EUS)",
+      "KT",
+      "PET",
+      "Bariumlu ezofaqoqrafiya",
+      "EKQ"
+    ]
+  },
+  {
+    "question": "Qida borusunun adenokarsinoması barədə doğru olanı seçin:",
+    "answers": [
+      "Əksəriyyəti Barret epitelindən inkişaf edir və distal 1/3-də (~90%) yerləşir",
+      "Əksəriyyəti proksimal 1/3-dədir",
+      "Qadınlarda daha çoxdur",
+      "HPV ilə sıx əlaqəlidir",
+      "Heç vaxt polipoid görünüşlü olmur"
+    ]
+  },
+  {
+    "question": "YHX-in makroskopik formalarına aid olan:",
+    "answers": [
+      "Göbələyəbənzər (~60%), xoralaşan (~25%), infiltrativ (~15%)",
+      "Yalnız infiltrativ tip",
+      "Yalnız polipoid tip",
+      "Yalnız eroziv tip",
+      "Heç biri"
+    ]
+  },
+  {
+    "question": "Qida borusunun limfa yolu ilə yayılmasının xüsusiyyəti hansıdır?",
+    "answers": [
+      "Seliqli qişa və əzələ qatında limfa damarlarının olması erkən limfa yayılmasına şərait yaradır",
+      "Limfa damarları yalnız selikaltı qatda yerləşir",
+      "Seliqli qişanın özündə limfa damarları yoxdur",
+      "Yalnız hematogen yayılma olur",
+      "Regional limfa düyünlərinə metastaz nadirdir"
+    ]
+  },
+  
