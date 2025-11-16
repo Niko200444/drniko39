@@ -163,7 +163,6 @@ function computeStats() {
 
 // ======== Flashcard köməkçilər ========
 
-// hazırki filtrlənmiş suallar (id sırası ilə)
 function getFilteredQuestionsRaw() {
   let list = allQuestions.slice();
   const query = searchQuery.trim().toLowerCase();
@@ -188,6 +187,15 @@ function getFilteredQuestionsRaw() {
 
   if ((exam.running || exam.lastResult) && Array.isArray(exam.questionIds) && exam.questionIds.length) {
     list = list.filter((q) => exam.questionIds.includes(q.id));
+  }
+
+  // Əlavə: random/ardıcıl seçimi burada tətbiq et
+  if (!singleQuestionMode) {
+    // Normal rejimdə random/ardıcıl
+    const orderRadio = document.querySelector('input[name="quizOrder"]:checked');
+    if (orderRadio && orderRadio.value === "random") {
+      list = shuffleArray(list);
+    }
   }
 
   return list;
