@@ -1,9 +1,8 @@
 {
-  "name": "Rezidentura Quiz",
+  "name": "Niko Quiz",
   "short_name": "Quiz",
-  "start_url": "./index.html",
+  "start_url": ".",
   "display": "standalone",
-  "background_color": "#0b1020",
-  "theme_color": "#2563eb",
-  "icons": []
+  "background_color": "#0f172a",
+  "theme_color": "#0f172a"
 }
