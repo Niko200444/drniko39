@@ -1308,6 +1308,4 @@ document.addEventListener("DOMContentLoaded", () => {
   // PWA install
   initPWAInstall();
 });
-function toggleMobileMode() {
-  document.body.classList.toggle('flashcard-mode');
-}
+
