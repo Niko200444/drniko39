@@ -18,6 +18,104 @@ function saveJSON(key, value) {
   }
 }
 
+// ===== Firebase Auth + Firestore Sync =====
+let FB = { app:null, auth:null, db:null, user:null };
+function firebaseAvailable(){ return typeof window !== 'undefined' && window.firebase && window.FIREBASE_CONFIG && window.FIREBASE_CONFIG.apiKey && !String(window.FIREBASE_CONFIG.apiKey).includes("PASTE_"); }
+
+function initFirebaseAuth(){
+  try{
+    if(!firebaseAvailable()) { console.log("Firebase config yoxdur və ya tamamlanmayıb."); return; }
+    if (!FB.app) FB.app = firebase.initializeApp(window.FIREBASE_CONFIG);
+    if (!FB.auth) FB.auth = firebase.auth();
+    if (!FB.db) FB.db = firebase.firestore();
+    FB.auth.setPersistence(firebase.auth.Auth.Persistence.LOCAL);
+    FB.auth.onAuthStateChanged((u)=>{
+      FB.user = u || null;
+      updateAuthUI();
+      if (FB.user) { loadRemoteState().catch(console.warn); }
+    });
+    // UI listeners
+    const gbtn = document.getElementById("googleSignInBtn");
+    const sbtn = document.getElementById("signOutBtn");
+    if (gbtn) gbtn.addEventListener("click", async ()=>{
+      try{
+        const provider = new firebase.auth.GoogleAuthProvider();
+        await FB.auth.signInWithPopup(provider);
+      }catch(err){ console.warn("Google sign-in error", err); alert("Giriş alınmadı: " + err.message); }
+    });
+    if (sbtn) sbtn.addEventListener("click", ()=> FB.auth.signOut());
+  }catch(e){ console.warn("Firebase init error", e); }
+}
+
+function updateAuthUI(){
+  const gbtn = document.getElementById("googleSignInBtn");
+  const badge = document.getElementById("userBadge");
+  const nameEl = document.getElementById("userName");
+  const photoEl = document.getElementById("userPhoto");
+  if (!gbtn || !badge) return;
+  if (FB.user){
+    gbtn.classList.add("hidden");
+    badge.classList.remove("hidden");
+    nameEl.textContent = FB.user.displayName || FB.user.email || "İstifadəçi";
+    if (FB.user.photoURL) { photoEl.src = FB.user.photoURL; photoEl.classList.remove("hidden"); } else { photoEl.classList.add("hidden"); }
+  } else {
+    gbtn.classList.remove("hidden");
+    badge.classList.add("hidden");
+  }
+}
+
+// Local state to object
+function collectLocalState(){
+  const data = {};
+  for (let i=0;i<localStorage.length;i++){
+    const k = localStorage.key(i);
+    if (!k) continue;
+    if (k.startsWith("quiz_")) {
+      try{ data[k] = JSON.parse(localStorage.getItem(k)); }
+      catch{ data[k] = localStorage.getItem(k); }
+    }
+  }
+  return data;
+}
+
+async function saveRemoteState(){
+  if (!FB.user || !FB.db) return;
+  const data = collectLocalState();
+  const ref = FB.db.collection("users").doc(FB.user.uid).collection("appState").doc("state");
+  await ref.set({ data, updatedAt: firebase.firestore.FieldValue.serverTimestamp() }, { merge: true });
+}
+
+async function loadRemoteState(){
+  if (!FB.user || !FB.db) return;
+  const ref = FB.db.collection("users").doc(FB.user.uid).collection("appState").doc("state");
+  const snap = await ref.get();
+  if (snap.exists){
+    const remote = snap.data().data || {};
+    // Merge: remote üstünlük alsın
+    Object.keys(remote).forEach((k)=>{
+      try{ localStorage.setItem(k, JSON.stringify(remote[k])); }
+      catch{ localStorage.setItem(k, String(remote[k])); }
+    });
+    // Yerli parametrləri yenilə
+    loadCategoryState();
+    renderAll();
+  } else {
+    // Uzağa ilkin yükləmə
+    await saveRemoteState();
+  }
+}
+
+// sadə debounce
+function debounce(fn, wait) {
+  let timeout;
+  return function(...args) {
+    clearTimeout(timeout);
+    timeout = setTimeout(() => fn(...args), wait);
+  };
+}
+
+const saveRemoteStateDebounced = debounce(saveRemoteState, 1500);
+
 
 
 
@@ -40,9 +138,16 @@ let questionNotes = {}; // id -> "text"
 
 let isAdmin = false;
 
+// Auto sync (default: OFF)
+let autoSyncEnabled = localStorage.getItem('quiz_autoSync') === '1';
+
+// PWA install prompt holder
+let _deferredInstallPrompt = null;
+
 // Flashcard sıralama
 let flashOrderMode = "sequential"; // "sequential" | "random"
 let orderedIds = []; // flashcard rejimində göstərmə sırası
+let randomOrderIds = []; // normal (multi-sual) rejim üçün stabil random sıra
 
 // İmtahan state
 let exam = {
@@ -54,10 +159,18 @@ let exam = {
   questionIds: []
 };
 
+let appStarted = false;
+
 // Helpers
 function storageKey(name) {
   if (!currentCategory) return "quiz_global_" + name;
   return "quiz_" + currentCategory + "_" + name;
+}
+try {
+  // ...
+}
+catch (e) {
+  // ...
 }
 
 function truncate(text, max) {
@@ -118,6 +231,7 @@ function loadCategoryState() {
 }
 
 function saveCategoryState() {
+  try { if (autoSyncEnabled && FB.user) saveRemoteStateDebounced(); } catch(e){}
   saveJSON(storageKey("selectedAnswers"), selectedAnswers);
   saveJSON(storageKey("wrongQuestions"), wrongQuestions);
   saveJSON(storageKey("flaggedQuestions"), flaggedQuestions);
@@ -163,6 +277,7 @@ function computeStats() {
 
 // ======== Flashcard köməkçilər ========
 
+// hazırki filtrlənmiş suallar (id sırası ilə)
 function getFilteredQuestionsRaw() {
   let list = allQuestions.slice();
   const query = searchQuery.trim().toLowerCase();
@@ -194,10 +309,19 @@ function getFilteredQuestionsRaw() {
     // Normal rejimdə random/ardıcıl
     const orderRadio = document.querySelector('input[name="quizOrder"]:checked');
     if (orderRadio && orderRadio.value === "random") {
-      list = shuffleArray(list);
+      // Random sıralama yalnız list dəyişəndə qurulsun
+      const currentIds = list.map(q => q.id);
+      const sameMembership = (randomOrderIds.length === currentIds.length) && currentIds.every(id => randomOrderIds.includes(id));
+      if (!sameMembership) {
+        randomOrderIds = shuffleArray(currentIds);
+      }
+      // Random sıralamaya uyğun düzülüş
+      list = randomOrderIds.map(id => list.find(q => q.id === id)).filter(Boolean);
+    } else {
+      // Ardıcıl rejimdə random sıralamanı sıfırla
+      randomOrderIds = [];
     }
   }
-
   return list;
 }
 
@@ -597,7 +721,7 @@ function renderSidePanel() {
     const entries = Object.values(editedQuestions || {}).sort((a, b) => a.id - b.id);
     if (!entries.length) {
       editedList.classList.add("empty");
-      editedList.textContent = "Hələ heç bir sual redaktə olunmayıb";
+      editedList.textContent = "";
     } else {
       editedList.classList.remove("empty");
       entries.forEach((entry) => {
@@ -786,59 +910,95 @@ function toggleEditedVersion(id) {
   renderAll();
 }
 
+
 function editQuestion(id) {
   if (!isAdmin) {
     alert("Bu funksiyanı istifadə etmək üçün admin girişi lazımdır.");
     adminLoginPrompt();
     return;
   }
-
   const q = allQuestions.find((qq) => qq.id === id);
   if (!q) return;
+  const card = document.getElementById("question-" + id);
+  if (!card) return;
 
-  const newQuestionText = prompt("Yeni sual mətni:", q.question);
-  if (newQuestionText === null) return;
+  // Daxili redaktə sahəsi
+  const originalHTML = card.innerHTML;
+  card.dataset.original = originalHTML;
 
-  const newAnswers = [];
-  for (let i = 0; i < q.answers.length; i++) {
-    const letter = String.fromCharCode(65 + i);
-    const updated = prompt(`Variant ${letter}:`, q.answers[i] || "");
-    if (updated === null) return;
-    newAnswers.push(updated.trim());
-  }
+  const makeAnswerRow = (idx, val) => {
+    const letter = String.fromCharCode(65 + idx);
+    const checked = (idx === q.correctIndex) ? 'checked' : '';
+    return `
+      <div class="edit-answer-row">
+        <label class="edit-letter">${letter}</label>
+        <input type="text" class="edit-answer-input" data-idx="${idx}" value="${val.replace(/"/g,'&quot;')}" />
+        <label class="edit-correct">
+          <input type="radio" name="correct-${id}" value="${idx}" ${checked} /> Düzgün
+        </label>
+      </div>`;
+  };
 
-  let defaultLetter = String.fromCharCode(65 + q.correctIndex);
-  const letterInput = prompt("Düzgün cavabın hərfini yaz (A, B, C, ...):", defaultLetter);
-  if (letterInput === null) return;
+  card.innerHTML = `
+    <div class="edit-area">
+      <div class="edit-header">
+        <span class="badge">Redaktə rejimi</span>
+        <div class="edit-actions">
+          <button class="save-btn"><i class="fa fa-save"></i> Yadda saxla</button>
+          <button class="cancel-btn"><i class="fa fa-times"></i> Ləğv et</button>
+        </div>
+      </div>
+      <div class="edit-question-block">
+        <label>Sual mətni</label>
+        <textarea class="edit-question-input" rows="3">${q.question.replace(/</g,'&lt;').replace(/>/g,'&gt;')}</textarea>
+      </div>
+      <div class="edit-answers-block">
+        ${q.answers.map((a, i) => makeAnswerRow(i, a)).join("")}
+      </div>
+    </div>
+  `;
 
-  const letter = letterInput.trim().toUpperCase();
-  const idx = letter.charCodeAt(0) - 65;
-  if (idx < 0 || idx >= newAnswers.length) {
-    alert("Yanlış hərf daxil etmisən.");
-    return;
-  }
+  const saveBtn = card.querySelector(".save-btn");
+  const cancelBtn = card.querySelector(".cancel-btn");
 
-  const before = editedQuestions[id]
-    ? editedQuestions[id].before
-    : { question: q.question, answers: q.answers.slice(), correctIndex: q.correctIndex };
+  cancelBtn.addEventListener("click", () => {
+    // geri qaytar
+    card.innerHTML = card.dataset.original || originalHTML;
+    renderAll();
+  });
 
-  const after = { question: newQuestionText.trim(), answers: newAnswers, correctIndex: idx };
+  saveBtn.addEventListener("click", () => {
+    const qTextEl = card.querySelector(".edit-question-input");
+    const ansEls = Array.from(card.querySelectorAll(".edit-answer-input"));
+    const corrEl = card.querySelector('input[name="correct-' + id + '"]:checked');
 
-  editedQuestions[id] = { id, before, after, active: "after", updatedAt: Date.now() };
+    const newQuestionText = (qTextEl.value || "").trim();
+    const newAnswers = ansEls.map((el) => (el.value || "").trim()).filter(x => x.length);
+    const corrIdx = corrEl ? parseInt(corrEl.value, 10) : -1;
 
-  q.question = after.question;
-  q.answers = after.answers.slice();
-  q.correctIndex = after.correctIndex;
+    if (!newQuestionText) { alert("Sual mətni boş ola bilməz."); return; }
+    if (newAnswers.length < 2) { alert("Ən azı 2 cavab variantı lazımdır."); return; }
+    if (corrIdx < 0 || corrIdx >= newAnswers.length) { alert("Düzgün cavabı seç."); return; }
 
-  delete selectedAnswers[id];
+    const before = editedQuestions[id]
+      ? editedQuestions[id].before
+      : { question: q.question, answers: q.answers.slice(), correctIndex: q.correctIndex };
 
-  saveCategoryState();
-  renderAll();
+    const after = { question: newQuestionText, answers: newAnswers, correctIndex: corrIdx };
 
-  alert("Sual uğurla redaktə olundu və 'Dəyişmiş suallar' bölməsinə əlavə edildi.");
+    editedQuestions[id] = { id, before, after, active: "after", updatedAt: Date.now() };
+    // tətbiq et
+    q.question = after.question;
+    q.answers = after.answers.slice();
+    q.correctIndex = after.correctIndex;
+
+    delete selectedAnswers[id];
+    saveCategoryState();
+    renderAll();
+    alert("Sual yerində redaktə olundu ✅");
+  });
 }
 
-// Bu funksiya: wrong/flagged rejiminə keçəndə həmin rejimdəki sualların cavabını sıfırlayır
 function resetAnswersForCurrentFilter() {
   const filtered = getFilteredQuestions(); // filterMode artıq dəyişib
   filtered.forEach((q) => {
@@ -1158,26 +1318,76 @@ function attachSwipeHandlers() {
 
 // ===== PWA Install düyməsi =====
 let deferredPrompt = null;
-function initPWAInstall() {
-  const btn = document.getElementById("installBtn");
-  window.addEventListener("beforeinstallprompt", (e) => {
+function initPWAInstall(){
+  const btn = document.getElementById('installBtn');
+  const show = ()=>{ if(btn) btn.classList.remove('hidden'); };
+  const hide = ()=>{ if(btn) btn.classList.add('hidden'); };
+  const isStandalone = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone;
+  if (isStandalone) hide();
+  window.addEventListener('beforeinstallprompt', (e)=>{
     e.preventDefault();
     deferredPrompt = e;
-    if (btn) btn.classList.remove("hidden");
+    show();
   });
-  if (btn) {
-    btn.addEventListener("click", async () => {
-      if (!deferredPrompt) return;
+  window.addEventListener('appinstalled', hide);
+  if (btn){
+    btn.addEventListener('click', async ()=>{
+      if (!deferredPrompt){
+        try{ showSyncStatus('Quraşdırma hazır deyil. iOS: Share → Add to Home Screen.', true);}catch(_){ }
+        return;
+      }
       deferredPrompt.prompt();
       await deferredPrompt.userChoice;
       deferredPrompt = null;
-      btn.classList.add("hidden");
+      hide();
     });
   }
 }
-
 // Init
+// ===== Sync controls UI helpers =====
+function setSyncUIEnabled(enabled){
+  const up = document.getElementById('syncUpBtn');
+  const down = document.getElementById('pullDownBtn');
+  if (up) up.disabled = !enabled;
+  if (down) down.disabled = !enabled;
+}
+function showSyncStatus(text, isError){
+  const el = document.getElementById('syncStatus');
+  if (!el) return;
+  el.textContent = text || '';
+  el.style.background = isError ? 'rgba(239,68,68,0.15)' : '';
+  el.style.borderColor = isError ? '#ef4444' : '';
+}
+
 document.addEventListener("DOMContentLoaded", () => {
+  initFirebaseAuth();
+
+  // Prev/Next flashcard düymələri
+  const prevBtn = document.getElementById("prevCard");
+  const nextBtn = document.getElementById("nextCard");
+  if (prevBtn) prevBtn.addEventListener("click", () => { goPrevCard(); updateFlashcardUI(); });
+  if (nextBtn) nextBtn.addEventListener("click", () => { goNextCard(); updateFlashcardUI(); });
+
+  // Üstdəki "🗂️ Flashcard" üzən düymə
+  const floatFlashBtn = document.getElementById("flashcardFloatingToggle");
+  if (floatFlashBtn) {
+    const syncLabel = () => {
+      floatFlashBtn.textContent = "🗂️ " + (singleQuestionMode ? "Flashcard ON" : "Flashcard");
+    };
+    syncLabel();
+    floatFlashBtn.addEventListener("click", () => {
+      singleQuestionMode = !singleQuestionMode;
+      const sqToggleEl = document.getElementById("singleQuestionModeToggle");
+      if (sqToggleEl) sqToggleEl.checked = singleQuestionMode;
+      questionsPerPage = singleQuestionMode ? 1 : baseQuestionsPerPage;
+      currentPage = 1;
+      recomputeOrderedIds();
+      renderAll();
+      updateFlashcardUI();
+      syncLabel();
+    });
+  }
+
  
   // Start button
   const startBtn = document.getElementById("startBtn");
@@ -1185,11 +1395,18 @@ document.addEventListener("DOMContentLoaded", () => {
   const main = document.getElementById("mainContent");
   if (startBtn && welcome && main) {
     startBtn.addEventListener("click", () => {
+      const fbtn = document.getElementById('flashcardFloatingToggle');
+      if (fbtn) fbtn.classList.remove('hidden');
+
       welcome.style.display = "none";
       main.style.display = "block";
+      appStarted = true;
+      const evt = new Event("app-started");
+      document.dispatchEvent(evt);
+      const floatBtn = document.getElementById("flashcardFloatingToggle");
+      if (floatBtn) floatBtn.classList.remove("hidden");
     });
   }
-
   // Category buttons
   document.querySelectorAll(".category-btn").forEach((btn) => {
     btn.addEventListener("click", () => {
@@ -1247,6 +1464,11 @@ document.addEventListener("DOMContentLoaded", () => {
         recomputeOrderedIds();
         renderAll();
       }
+    });
+  });
+  document.querySelectorAll('input[name="quizOrder"]').forEach(radio => {
+    radio.addEventListener('change', function() {
+      renderAll();
     });
   });
 
@@ -1317,3 +1539,6 @@ document.addEventListener("DOMContentLoaded", () => {
   initPWAInstall();
 });
 
+function toggleMobileMode() {
+  document.body.classList.toggle('flashcard-mode');
+}
