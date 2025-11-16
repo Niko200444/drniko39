@@ -175,7 +175,55 @@
         <div class="side-panel-header">
           <h2><i class="fa fa-chart-pie"></i> Nəticələr</h2>
         </div>
+<!-- ... mövcud kod ... -->
 
+<!-- Quiz filterlərindən dərhal sonra əlavə edin -->
+<div class="quiz-order-toggle" style="display:flex;align-items:center;gap:10px;margin:16px 0;">
+  <label style="display:flex;align-items:center;gap:4px;">
+    <input type="radio" name="quizOrder" value="sequential" checked />
+    <span>Ardıcıl</span>
+  </label>
+  <label style="display:flex;align-items:center;gap:4px;">
+    <input type="radio" name="quizOrder" value="random" />
+    <span>Random</span>
+  </label>
+</div>
+
+<!-- ... mövcud kod ... -->
+
+<script>
+// filepath: c:\Users\elesn\OneDrive\Masaüstü\quiz\app.js
+// ... mövcud kod ...
+
+let quizOrder = "sequential"; // default
+
+document.querySelectorAll('input[name="quizOrder"]').forEach(radio => {
+  radio.addEventListener('change', function() {
+    quizOrder = this.value;
+    renderQuiz();
+  });
+});
+
+// renderQuiz funksiyasında sualları sıralamağa uyğunlaşdırın:
+function renderQuiz() {
+  let questions = filteredQuestions.slice(); // filteredQuestions sizin əsas array-dir
+
+  if (quizOrder === "random") {
+    questions = shuffleArray(questions);
+  }
+  // ... qalan render kodunuz ...
+}
+
+// Sadə shuffle funksiyası:
+function shuffleArray(arr) {
+  return arr
+    .map(value => ({ value, sort: Math.random() }))
+    .sort((a, b) => a.sort - b.sort)
+    .map(({ value }) => value);
+}
+
+// ... mövcud kod ...
+</script>
         <section class="side-section">
           <h3>Ümumi statistika</h3>
           <div id="statsInfo" class="stats-info"></div>
