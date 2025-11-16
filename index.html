@@ -1,232 +1,223 @@
 <!DOCTYPE html>
 <html lang="az">
 <head>
-  <link rel="stylesheet" href="assets/css/style.css">
-  <meta charset="UTF-8">
-  <title>Nikomuu</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <!-- PWA Meta Tags -->
-  <meta name="theme-color" content="#2563eb">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="default">
-  <meta name="apple-mobile-web-app-title" content="Quiz App">
-  <meta name="mobile-web-app-capable" content="yes">
-  <meta name="msapplication-TileColor" content="#2563eb">
-  <meta name="msapplication-tap-highlight" content="no">
-  
-  <!-- PWA Manifest -->
-  <link rel="manifest" href="manifest.json">
-  
-  <!-- Apple Touch Icons -->
-  <link rel="apple-touch-icon" href="icon-152x152.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="96x96" href="icon-96x96.png">
-  <link rel="apple-touch-icon" sizes="128x128" href="icon-128x128.png">
-  <link rel="apple-touch-icon" sizes="144x144" href="icon-144x144.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="icon-152x152.png">
-  <link rel="apple-touch-icon" sizes="192x192" href="icon-192x192.png">
-  <link rel="apple-touch-icon" sizes="384x384" href="icon-384x384.png">
-  <link rel="apple-touch-icon" sizes="512x512" href="icon-512x512.png">
-  
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" sizes="16x16" href="icon-16x16.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="icon-32x32.png">
-  <link rel="icon" type="image/png" sizes="72x72" href="icon-72x72.png">
-  <link rel="icon" type="image/png" sizes="96x96" href="icon-96x96.png">
-  <link rel="icon" type="image/png" sizes="128x128" href="icon-128x128.png">
-  <link rel="icon" type="image/png" sizes="144x144" href="icon-144x144.png">
-  <link rel="icon" type="image/png" sizes="152x152" href="icon-152x152.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="icon-192x192.png">
-  <link rel="icon" type="image/png" sizes="384x384" href="icon-384x384.png">
-  <link rel="icon" type="image/png" sizes="512x512" href="icon-512x512.png">
-  
-  <!-- Əlyazma şrift üçün Google Fonts əlavə et -->
-  
-  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
-
-  
-  <!-- Firebase SDK -->
-  
-  
-  
+  <meta charset="UTF-8" />
+  <title>DR NİKO – ETS Quiz</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <!-- PWA -->
+  <link rel="manifest" href="manifest.webmanifest" />
+  <meta name="theme-color" content="#020617" />
 </head>
 <body>
-  <!-- Başlanğıc Ekranı -->
-  <div id="welcomeScreen">
-    <button id="startBtn">
-      DR NİKO
-    </button>
-  </div>
+  <!-- Dark mode button -->
+  <button id="darkModeToggle" class="floating-dark-btn">
+    <i class="fa fa-moon"></i>
+    <span>Qaranlıq rejim</span>
+  </button>
 
-  <!-- Qalan hissə -->
-  <div id="mainContent" style="display:none;">
-    <!-- İstifadəçi giriş paneli -->
-    <div id="userInfo" style="display:none; margin-bottom:20px;"></div>
-    <div id="syncStatus" style="text-align:center; margin-bottom:10px; font-weight:bold; color:#2563eb;"></div>
-    
-    <!-- Giriş düyməsi (əgər istifadəçi daxil deyilsə) -->
-    <div id="loginPrompt" style="text-align:center; margin-bottom:20px; padding:15px; background:linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); border-radius:12px; border:1px solid #f59e0b;">
-      <h3 style="margin-top:0; color:#d97706;"><i class="fa fa-cloud"></i> Multi-Device Sync</h3>
-      <p style="color:#92400e; margin-bottom:15px;">Fərqli cihazlarda davam etmək üçün Google hesabınızla daxil olun</p>
-      <button onclick="signInWithGoogle()" style="background:linear-gradient(135deg, #4285f4 0%, #34a853 100%); color:#fff; border:none; padding:12px 24px; border-radius:8px; cursor:pointer; font-weight:bold; font-size:1.1em;">
-        <i class="fa fa-google"></i> Google ilə daxil ol
+  <!-- Admin login button -->
+  <button id="adminLoginBtn" class="floating-admin-btn">
+    <i class="fa fa-user-shield"></i>
+    <span>Admin girişi</span>
+  </button>
+
+  <!-- Welcome screen -->
+  <div id="welcomeScreen" class="welcome-screen">
+    <div class="welcome-card">
+      <h1>DR NİKO</h1>
+      <p></p>
+      <button id="startBtn" class="primary-btn">
+        <i class="fa fa-play"></i> Başla
       </button>
     </div>
-    <a href="add.html" class="btn primary">➕ Sual əlavə et</a>
-    <!-- Kateqoriya seçimi -->
-    <div id="categoryContainer" style="display:flex; flex-direction:column; align-items:center; margin-bottom:30px;">
-      <h2 style="font-size:2.2em; margin-bottom:20px;">Kateqoriya seçin</h2>
-       <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;">
-        <button id="cat-farm" data-category="ux.json" onclick="selectCategory('ux.json')" class="category-btn"><i class="fa fa-flask"></i>Uşaq sağlamlığı</button>
-      </div>
-       <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;">
-        <button id="cat-tecili" data-category="kardio.json" onclick="selectCategory('kardio.json')" class="category-btn"><i class="fa fa-heartbeat"></i>Kardio bombə </button>
-      </div>
-      <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;">
-        <button id="cat-farm" data-category="farm.json" onclick="selectCategory('farm.json')" class="category-btn"><i class="fa fa-flask"></i> Seçim (gizli) </button>
-      </div>
-      <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;">
-        <button id="cat-patfiz" data-category="patfiz.json" onclick="selectCategory('patfiz.json')" class="category-btn"><i class="fa fa-heartbeat"></i> PATFİZ</button>
-      </div>
-      <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;">
-        <button id="cat-patfiz2" data-category="patfiz2.json" onclick="selectCategory('patfiz2.json')" class="category-btn"><i class="fa fa-brain"></i> PATFIZ2</button>
-      </div>
-      <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;">
-        <button id="cat-mikrob1" data-category="mikrob1.json" onclick="selectCategory('mikrob1.json')" class="category-btn"><i class="fa fa-heartbeat"></i> MIKROB1</button>
-      </div>
-      <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;">
-        <button id="cat-mikrob2" data-category="mikrob2.json" onclick="selectCategory('mikrob2.json')" class="category-btn"><i class="fa fa-heartbeat"></i> MIKROB2</button>
-      </div>
-      <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;">
-        <button id="cat-patan" class="category-btn" onclick="togglepatanSubcats()"><i class="fa fa-microscope"></i> PATAN</button>
-      </div>
-      <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;">
-        <button id="cat-norfiz1" data-category="norfiz1.json" onclick="selectCategory('norfiz1.json')" class="category-btn"><i class="fa fa-heartbeat"></i> NORFIZ1</button>
-      </div>
-      <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;">
-        <button id="cat-norfiz2" data-category="norfiz2.json" onclick="selectCategory('norfiz2.json')" class="category-btn"><i class="fa fa-heartbeat"></i> NORFIZ2</button>
-      </div>
-      a
-      <!-- MİKROB üçün alt kateqoriyalar (başlanğıcda gizli) -->
-<div id="patanSubcats" style="display:none;align-items:center;gap:10px;margin-bottom:10px; margin-left:30px; flex-direction:column; width:100%;">
-  <div style="display:flex; gap:10px; width:100%;">
-    <button data-category="patan1a.json" onclick="selectCategory('patan1a.json')" class="category-btn" style="width:100%;"><i class="fa fa-dna"></i> PATAN1</button>
-    <button data-category="patan2a.json" onclick="selectCategory('patan2a.json')" class="category-btn" style="width:100%;"><i class="fa fa-virus"></i> PATAN2</button>
-    <button data-category="patandyes.json" onclick="selectCategory('patandyes.json')" class="category-btn" style="width:100%;"><i class="fa fa-bacteria"></i> DYES</button>
   </div>
-  <div style="margin-top:8px;">
-    <button id="patan-all-btn" class="category-btn" onclick="selectCategory('patan-all')" style="background:#22c55e;"><i class="fa fa-layer-group"></i> BÜTÜN PATAN</button>
-  </div>
-</div>
 
-      <!-- BÜTÜN kateqoriyalar üçün düymə -->
-      <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;">
-        <button id="cat-all" class="category-btn" onclick="selectCategory('all-categories')" style="background:linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%); color:#1e293b; font-weight:bold;"><i class="fa fa-globe"></i> BÜTÜN KATEQORİYALAR</button>
+  <!-- Main content -->
+  <div id="mainContent" class="main-content" style="display:none;">
+    <header class="top-bar">
+      <div class="logo">
+        <span class="logo-main">DR NİKO</span>
+        <span class="logo-sub"></span>
       </div>
-      
-      <!-- Bölgü tənzimləmə paneli (başlanğıcda gizli) -->
-      <div id="distributionPanel" style="display:none; margin-top:20px; padding:20px; background:linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%); border-radius:16px; border:1px solid rgba(37,99,235,0.1);">
-        <h3 style="margin-top:0; color:#2563eb; text-align:center;"><i class="fa fa-cogs"></i> Sual Bölgüsü Tənzimləməsi</h3>
-        
-        <div style="margin-bottom:15px;">
-          <label style="display:block; margin-bottom:8px; font-weight:bold; color:#374151;">
-            Hər neçə sualda bölgü yoxlanılsın:
-            <input id="distributionInterval" type="number" min="5" max="50" value="10" style="width:60px; margin-left:8px; padding:4px; border-radius:4px; border:1px solid #ccc;">
+
+      <div class="top-actions">
+        <div id="questionCountContainer" class="top-control">
+          <label for="questionsPerPage">Səhifədə sual:</label>
+          <select id="questionsPerPage">
+            <option value="5">5</option>
+            <option value="10" selected>10</option>
+            <option value="20">20</option>
+          </select>
+        </div>
+
+        <div id="searchContainer" class="top-control">
+          <i class="fa fa-search"></i>
+          <input id="searchInput" type="text" placeholder="Sual və ya cavabda axtar..." />
+        </div>
+
+        <div id="statsTiny" class="top-control tiny-stats">
+          <span id="tinyTotal">0</span> sual ·
+          <span id="tinyAnswered">0</span> cavab ·
+          <span id="tinyCorrect">0</span> düzgün
+        </div>
+      </div>
+    </header>
+
+    <div class="layout">
+      <!-- Left: categories -->
+      <aside class="categories">
+        <h2 class="section-title">
+          <i class="fa fa-layer-group"></i> Kateqoriyalar
+        </h2>
+        <div class="category-list">
+          <button class="category-btn" data-category="ux.json">
+            <i class="fa fa-baby"></i> Uşaq sağlamlığı
+          </button>
+          <button class="category-btn" data-category="tecili.json">
+            <i class="fa fa-ambulance"></i> Təcili
+          </button>
+          <button class="category-btn" data-category="plastik.json">
+            <i class="fa fa-flask"></i> Plastik
+          </button>
+          <button class="category-btn" data-category="torakal.json">
+            <i class="fa fa-heartbeat"></i> Torakal
+          </button>
+          <button class="category-btn" data-category="patfiz2.json">
+            <i class="fa fa-brain"></i> PATFİZ 2
+          </button>
+          <button class="category-btn" data-category="patan1a.json">
+            <i class="fa fa-dna"></i> PATAN 1
+          </button>
+          <button class="category-btn" data-category="patan2a.json">
+            <i class="fa fa-virus"></i> PATAN 2
+          </button>
+          <button class="category-btn" data-category="patandyes.json">
+            <i class="fa fa-bacteria"></i> DYES
+          </button>
+          <button class="category-btn" data-category="mikrob1.json">
+            <i class="fa fa-microchip"></i> MİKROB 1
+          </button>
+          <button class="category-btn" data-category="mikrob2.json">
+            <i class="fa fa-microchip"></i> MİKROB 2
+          </button>
+          <button class="category-btn" data-category="norfiz1.json">
+            <i class="fa fa-microchip"></i> NORFİZ 1
+          </button>
+          <button class="category-btn" data-category="norfiz2.json">
+            <i class="fa fa-microchip"></i> NORFİZ 2
+          </button>
+        </div>
+
+        <div id="categoryResetContainer" class="reset-block">
+          <button id="categoryResetBtn" class="secondary-btn">
+            <i class="fa fa-undo"></i> Bu kateqoriyanı sıfırla
+          </button>
+          <button id="clearAllBtn" class="danger-link">
+            <i class="fa fa-bomb"></i> Bütün məlumatları təmizlə
+          </button>
+        </div>
+      </aside>
+
+      <!-- Center: quiz -->
+      <main class="quiz-area">
+        <!-- İmtahan paneli -->
+         
+        <div class="exam-bar">
+          <div id="examStatusText" class="exam-status">
+            Praktika rejimindəsən və ya imtahana başlaya bilərsən.
+          </div>
+          <div class="exam-controls-inline">
+            <span id="examTimer" class="exam-timer hidden">00:00</span>
+            <button id="examStartBtn" type="button" class="exam-btn hidden">
+              <i class="fa fa-play"></i> İmtahana başla
+            </button>
+            <button id="examFinishBtn" type="button" class="exam-btn secondary hidden">
+              <i class="fa fa-flag-checkered"></i> İmtahanı bitir
+            </button>
+          </div>
+        </div>
+
+        <div id="examSummary" class="exam-summary hidden"></div>
+
+        <!-- Mobil rejim -->
+        <div class="mobile-mode-toggle">
+          <label>
+            <input type="checkbox" id="singleQuestionModeToggle" />
+            <span>Mobil rejim: 1 sual ekranda</span>
           </label>
         </div>
-        
-        <div id="categoryDistribution" style="display:grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap:12px;">
-          <!-- Kateqoriyalar burada dinamik olaraq əlavə olunacaq -->
+
+        <!-- Filterlər -->
+        <div class="quiz-filters">
+          <button class="quiz-filter-btn active" data-filter="all">Bütün suallar</button>
+          <button class="quiz-filter-btn" data-filter="wrong">Yalnız səhv suallar</button>
+          <button class="quiz-filter-btn" data-filter="flagged">Yalnız flagli suallar</button>
+          <button class="quiz-filter-btn" data-filter="noted">Qeydli suallar</button>
         </div>
-        
-        <div style="text-align:center; margin-top:15px;">
-          <button onclick="applyDistribution()" style="background:#10b981; color:#fff; border:none; padding:10px 20px; border-radius:8px; cursor:pointer; font-weight:bold;">
-            <i class="fa fa-check"></i> Tətbiq Et
-          </button>
-          <button onclick="resetDistribution()" style="background:#6b7280; color:#fff; border:none; padding:10px 20px; border-radius:8px; cursor:pointer; margin-left:10px; font-weight:bold;">
-            <i class="fa fa-refresh"></i> Sıfırla
-          </button>
+
+        <div id="quizContainer" class="quiz-container">
+          <div class="empty-hint">
+            <div class="emoji">👋</div>
+            <p>Başlamaq üçün soldan bir kateqoriya seç</p>
+          </div>
         </div>
-      </div>
-    </div>
-    <!-- Axtarış Paneli -->
-    <div class="search-container" id="searchContainer" style="display:none;">
-      <div style="margin-bottom:10px; color:#666; font-size:0.9em;">🔍 Axtarış üçün yazın və ya Enter düyməsinə basın</div>
-      <input id="searchInput" type="text" placeholder="Axtar..." onkeyup="handleSearchInput(event)">
-      <button onclick="performSearch()"><i class="fa fa-search"></i> Axtar</button>
-      <button onclick="clearSearch()"><i class="fa fa-times"></i> Təmizlə</button>
-    </div>
-    
-    <!-- Sual sayı seçimi -->
-    <div id="questionCountContainer" style="display:none; text-align:center; margin: 20px 0;">
-      <div style="display:flex; justify-content:center; align-items:center; gap:20px; flex-wrap:wrap;">
-        <label style="font-size:1.1em;">
-          Səhifədə neçə sual göstərilsin:
-          <input id="questionsPerPageInput" type="number" min="1" max="100" value="10" style="width:60px; font-size:1em; margin-left:8px;">
-        </label>
-        <label style="font-size:1.1em;">
-          Sual aralığı :
-          <input id="questionRangeInput" type="text" placeholder="1-50" style="width:80px; font-size:1em; margin-left:8px; padding:4px 8px; border-radius:4px; border:1px solid #ccc;">
-        </label>
-      </div>
-    </div>
-    
-    <div class="main-container">
-      
-      <!-- Kateqoriya sıfırlama düyməsi -->
-<div id="categoryResetContainer" style="display:none; text-align:right; margin-bottom:18px; display:flex; align-items:center; gap:12px;">
-  <button id="categoryResetBtn" class="reset-btn"><i class="fa fa-refresh"></i> Reset</button>
-  <div style="position:relative;">
-    <button id="orderModeBtn" class="reset-btn" style="background:#2563eb;"><i class="fa fa-sort"></i> Sıralama: <span id="orderModeLabel">ARDICIL</span></button>
-    <!-- Gələcək seçim üçün sadə menyu -->
-    <div id="orderModeMenu" style="display:none; position:absolute; right:0; top:110%; background:#fff; border-radius:8px; box-shadow:0 2px 12px rgba(0,0,0,0.13); z-index:10;">
-      <div class="order-mode-option" data-mode="ARDICIL" style="padding:10px 24px; cursor:pointer;">ARDICIL</div>
-      <div class="order-mode-option" data-mode="RANDOM" style="padding:10px 24px; cursor:pointer;">RANDOM</div>
+
+        <div id="pageNavigation" class="page-nav"></div>
+      </main>
+
+      <!-- Right: side panel -->
+      <aside class="side-panel" id="sidePanel">
+        <div class="side-panel-header">
+          <h2><i class="fa fa-chart-pie"></i> Nəticələr</h2>
+        </div>
+
+        <section class="side-section">
+          <h3>Ümumi statistika</h3>
+          <div id="statsInfo" class="stats-info"></div>
+        </section>
+
+        <section class="side-section">
+          <h3>Səhv suallar</h3>
+          <div id="wrongQuestionsList" class="mini-list"></div>
+        </section>
+
+        <section class="side-section">
+          <h3>İşarələnmiş (flag)</h3>
+          <div id="flaggedQuestionsList" class="mini-list"></div>
+        </section>
+
+        <section class="side-section">
+          <h3>Qeydli suallar</h3>
+          <div id="notedQuestionsList" class="mini-list"></div>
+        </section>
+
+        <section class="side-section">
+          <h3>Təkrar səhvlər</h3>
+          <div id="repeatedMistakesList" class="mini-list"></div>
+        </section>
+
+        <section class="side-section">
+          <h3>Dəyişmiş suallar (ADMIN)</h3>
+          <p class="side-help">
+            Redaktə olunmuş sualların nömrəsini və qısa açıqlamasını görəcəksən.
+            Hər sual üçün <b>"Dəyişdir"</b> düyməsi ilə orijinal / yeni versiya arasında keçid edə bilərsən.
+          </p>
+          <div id="editedQuestionsList" class="mini-list"></div>
+        </section>
+      </aside>
+
+      <!-- Yan panel üçün ox -->
+      <button id="sidePanelToggle" class="side-toggle" type="button">
+        <i class="fa fa-chevron-right"></i>
+      </button>
     </div>
   </div>
-  <button id="adaptiveModeBtn" class="reset-btn" style="background:#10b981;"><i class="fa fa-brain"></i> Adaptiv: <span id="adaptiveModeLabel">OFF</span></button>
-  <button id="flashcardModeBtn" class="reset-btn" style="background:#8b5cf6;"><i class="fa fa-credit-card"></i> Flashcard: <span id="flashcardModeLabel">OFF</span></button>
-  
-  <!-- Məlumat idarəetmə düymələri -->
-  <div style="position:relative;">
-    <button id="dataMenuBtn" class="reset-btn" style="background:#f59e0b;"><i class="fa fa-database"></i> Məlumat</button>
-    <div id="dataMenu" style="display:none; position:absolute; right:0; top:110%; background:#fff; border-radius:8px; box-shadow:0 2px 12px rgba(0,0,0,0.13); z-index:10; min-width:150px;">
-      <div class="data-menu-option" onclick="exportData()" style="padding:10px 16px; cursor:pointer; border-bottom:1px solid #eee;"><i class="fa fa-download"></i> Export</div>
-      <div class="data-menu-option" onclick="importData()" style="padding:10px 16px; cursor:pointer; border-bottom:1px solid #eee;"><i class="fa fa-upload"></i> Import</div>
-</div>
-      <div id="quizContainer"></div>
-      <div id="pageNavigation" class="page-navigation"></div>
-    </div>
 
-    <!-- Yan Panel: Proqres, Səhv və İşarələnmiş Suallar -->
-    <div id="sidePanel" class="side-panel">
-      <h2>Statistika</h2>
-      <div id="statsInfo"></div>
-    
-      <div id="progressInfo"></div>
-      <h2>Səhvlər</h2>
-      <div id="wrongQuestionsList" class="wrong-questions-list"></div>
-      <h2>FLAG</h2>
-      <div id="flaggedQuestionsList" class="flagged-questions-list"></div>
-      <h2>TƏKRARLANAN SƏHVLƏR</h2>
-      <div id="repeatedMistakesList" class="repeated-mistakes-list"></div>
-    </div>
-    <div class="toggle-button" id="toggleButton" onclick="toggleSidePanel()">☰</div>
-  </div>
-  <!-- Bura qədər əsas content-in bağlanması üçün </div> var -->
-  <div id="sideOverlay" class="side-overlay" style="display:none;"></div>
-
-  
-  <script type="module" src="assets/js/firebase-init.js"></script>
-  <script src="assets/js/app.js"></script>
-  <script type="module" src="assets/js/fb-bridge.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>
-
-
-
-
