@@ -1,0 +1,802 @@
+[
+  {
+    "question": "Tipik ‘quş dimdiyi’ görünüşü olan xəstədə diaqnozu təsdiqləmək və mərhələni qiymətləndirmək üçün ən informativ müayinə hansıdır?",
+    "answers": [
+      "Ezofaqomanometriya",
+      "Ezofaqoqrafiya",
+      "ÜİQUS (USM)",
+      "Qan qazlarının analizi",
+      "pH-metriya"
+    ]
+  },
+  {
+    "question": "Axalaziyanın I mərhələsi üçün daha xarakterik olan tapıntı hansıdır?",
+    "answers": [
+      "Kardial hissənin daimi olmayan spazmı, genişlənmənin olmaması",
+      "Qida borusunun S-vari genişlənməsi",
+      "Kardial sfinkterin stabil spazmı və genişlənmə",
+      "Kardial kanalın üzvi çapıq darlığı",
+      "Qida borusunun qısalması"
+    ]
+  },
+  {
+    "question": "Endoskopiyada kardial sfinkter üfürülən havanın təsirindən açılmır, lakin endoskopun ucu ilə cüzi təzyiq etməklə mədəyə keçmək olur. Bu mənzərə daha çox nəyə uyğundur?",
+    "answers": [
+      "Axalaziya",
+      "Peptik striktura",
+      "Psevdoaxalaziya",
+      "Diffuz ezofageal spazm",
+      "Skleroderma"
+    ]
+  },
+  {
+    "question": "Psevdoaxalaziyaya güclü şübhə olduqda və ilkin biopsiya mənfidirsə, növbəti addım üçün ən yararlı üsul hansıdır?",
+    "answers": [
+      "Endoskopik ultrasəs (EUS) ilə subepitelial infiltrasiyanın yoxlanması",
+      "Yenidən pH-metriya",
+      "Yalnız müşahidə",
+      "Dərhal pnevmatik dilatasiya",
+      "Qida borusunun rentgenokimoqrafiyası"
+    ]
+  },
+  {
+    "question": "Aşağıdakılardan hansı müalicə üsulu aşağı ezofageal sfinkterin sirkulyar əzələ liflərini mexaniki yırtmaqla təsir göstərir?",
+    "answers": [
+      "Pnevmatik dilatasiya",
+      "Nitratlar",
+      "Kalsium kanal blokerləri",
+      "Botulinium toksini",
+      "Prokinetiklər"
+    ]
+  },
+  {
+    "question": "‘Megaezofagus’ olan xəstədə pnevmatik dilatasiyadan əvvəl hansı yanaşma məsləhətdir?",
+    "answers": [
+      "Əvvəlcədən 1–bir neçə gün maye pəhriz",
+      "Yüksək dozalı steroid",
+      "Profilaktik traxeostomiya",
+      "Geniş spektrli antifunqal",
+      "Heç biri lazım deyil"
+    ]
+  },
+  {
+    "question": "Pnevmatik dilatasiya zamanı balonun üfürülmə təzyiqi və müddəti barədə doğru yanaşma hansıdır?",
+    "answers": [
+      "360–775 mm c.süt. arası və bir neçə saniyədən 5 dəqiqəyə qədər dəyişə bilər",
+      "Həmişə 100 mm c.süt., 10 dəqiqə",
+      "Yalnız 300 mm c.süt., 60 saniyə",
+      "Təzyiq qeyri-vacibdir",
+      "Heç vaxt 5 dəqiqəni keçməz"
+    ]
+  },
+  {
+    "question": "Pnevmatik dilatasiyadan sonra perforasiya riski üçün rutin nəzarət məqsədilə bəzi mərkəzlər hansı müayinədən istifadə edir?",
+    "answers": [
+      "Suya həll olan kontrastla flüoroskopik yoxlama",
+      "Standart KT",
+      "MRT",
+      "Bronxoskopiya",
+      "Qan kulturası"
+    ]
+  }
+]
+[
+  {
+    "question": "Axalaziyanın ilk disfagiya tutmalarının çox vaxt hansı tetiklə əlaqəsi qeyd olunur?",
+    "answers": [
+      "Psixo-emosional travma və ya xroniki əsəb gərginliyi",
+      "Qida zəhərlənməsi",
+      "Yüksək hərarət",
+      "Kəskin fiziki travma",
+      "Hipertoniya tutması"
+    ]
+  },
+  {
+    "question": "Axalaziyada ‘aerofagiya’ hansı məqsədlə müşahidə olunur?",
+    "answers": [
+      "Qida borusunun təzyiqini artırıb qidanın keçməsinə kömək etmək üçün",
+      "Qıcqırmanı azaltmaq üçün",
+      "Mədə boşalmasını sürətləndirmək üçün",
+      "Ağciyər ventilyasiyasını artırmaq üçün",
+      "Ürəkbulanmanı azaltmaq üçün"
+    ]
+  },
+  {
+    "question": "Axalaziyalı xəstələrin qidalanma zamanı qəbul etdiyi kompensator davranış üçün ən xarakterik olanı seçin:",
+    "answers": [
+      "Döş qəfəsini və ya boynunu əllə sıxmaq, ayaqüstə qidalanmaq",
+      "Yeməkdən dərhal sonra uzanmaq",
+      "Çoxlu qazlı içki qəbul etmək",
+      "Yüksək dozalı antasidlər içmək",
+      "Daim çox isti yemək yemək"
+    ]
+  },
+  {
+    "question": "Aşağıdakılardan hansı radioloji üsul axalaziyada qida borusu divarının tonusu haqqında əlavə məlumat verərək differensial diaqnostikaya kömək edir?",
+    "answers": [
+      "Rentgenokimoqrafiya",
+      "Rentgenoqrafiya (birqat kontrast)",
+      "MRT",
+      "KT",
+      "PET"
+    ]
+  },
+  {
+    "question": "Axalaziyanın I mərhələsi üçün radioloji olaraq daha uyğun təsvir hansıdır?",
+    "answers": [
+      "Kardial sfinkterin ləng açılması, qida borusu diametrinin normal olması",
+      "Qida borusunun aydın genişlənməsi və ‘quş dimdiyi’",
+      "S-vari qida borusu və mədədə qaz qovuğunun olmaması",
+      "Kardial kanalın üzvi çapıq daralması",
+      "Qida borusu qısalması və ağır periezofagit"
+    ]
+  },
+  {
+    "question": "Endoskopiyada qastroezofageal zonadan keçərkən ‘bərklik’ hiss edilməsi daha çox nəyə işarədir?",
+    "answers": [
+      "Psevdoaxalaziya (şiş infiltrasiyası)",
+      "Peptik striktura",
+      "Axalaziya",
+      "Skleroderma",
+      "Reflüks-ezofagit"
+    ]
+  },
+  {
+    "question": "Axalaziyada endoskopik ultrasəsin (EUS) klinik faydası hansıdır?",
+    "answers": [
+      "Psevdoaxalaziyada subepitelial şiş infiltrasiyasını göstərmək və botulinum toksini yeridilməsini dəqiqləşdirmək",
+      "pH-metriyanın əvəz olunması",
+      "Rentgenokimoqrafiyanın əvəz olunması",
+      "Manometriya nəticələrini hesablamaq",
+      "Mədənin qaz qovuğunu ölçmək"
+    ]
+  },
+  {
+    "question": "Axalaziyada gecə requrgitasiyası (‘yaş yastıq’) hansı mərhələlər üçün səciyyəvidir?",
+    "answers": [
+      "III–IV mərhələlər",
+      "I mərhələ",
+      "II mərhələ",
+      "Yalnız əməliyyatdan sonra",
+      "Heç biri"
+    ]
+  }
+]
+[
+  {
+    "question": "Axalaziyanın əsas patofizioloji xüsusiyyəti hansı kombinasiyada daha düzgün ifadə olunub?",
+    "answers": [
+      "Qida borusunun peristaltikasının olmaması və udmaya cavab olaraq AES-in tam boşalmaması",
+      "Qida borusunun hiperperistaltikası və AES-in hipertoniyası",
+      "Qida borusunun peristaltikasının artması və AES-in hipotoniyası",
+      "Qida borusunun diskineziyası və pilor sfinkterinin spazmı",
+      "Qida borusunun hipersensitivliyi və kardiyanın genişlənməsi"
+    ]
+  },
+  {
+    "question": "Axalaziyanın epidemiologiyası barədə ən doğru ifadə hansıdır?",
+    "answers": [
+      "Hər 100 000 nəfərdən təxminən 8-də rast gəlinir və ən çox 20–40 yaş arasında, cinslər arasında fərq yoxdur",
+      "Qadınlarda kişilərdən 3 dəfə çox rast gəlinir, əsasən yeni doğulmuşlarda",
+      "Yalnız 60 yaşdan yuxarı şəxslərdə rast gəlinir, qadınlarda daha çoxdur",
+      "İnsidens 1/100 000-dir və yalnız Afrikada geniş yayılıb",
+      "Uşaqlarda və yeniyetmələrdə digər yaş qruplarına nisbətən daha çoxdur"
+    ]
+  },
+  {
+    "question": "Axalaziyanın klassik simptom triadasına aid olan hansıdır?",
+    "answers": [
+      "Disfagiya, ürəkbulanma olmadan requrgitasiya, döş sümüyü arxasında ağrı",
+      "Döş ağrısı, qıcqırma, melena",
+      "Qusma, qıcqırma, səs tutulması",
+      "Disfagiya, ürəkbulanma ilə qusma, epiqastral ağrı",
+      "Diareya, qıcqırma, çəki artması"
+    ]
+  },
+  {
+    "question": "Axalaziyada ‘paradoksal disfagiya’ nə deməkdir?",
+    "answers": [
+      "Bərk qidanın mayelərə nisbətən daha asan keçməsi",
+      "Yalnız mayelərə qarşı disfagiya",
+      "Yalnız bərk qidalara qarşı disfagiya",
+      "Udma zamanı ağrının artması",
+      "Qidanın udlaqda ilişməsi hissi"
+    ]
+  },
+  {
+    "question": "Axalaziyanın gecə ‘yaş yastıq’ simptomu nəyi göstərir?",
+    "answers": [
+      "Yuxu zamanı qida borusu möhtəviyyatının ağıza axmasını",
+      "Yuxu zamanı qıcqırma tutmalarını",
+      "Yuxuda tər ifrazının artmasını",
+      "Yuxu zamanı təngnəfəsliyin yaranmasını",
+      "Yuxu zamanı aritmiyanın olmasını"
+    ]
+  },
+  {
+    "question": "Axalaziya zamanı respirator ağırlaşmalar üçün doğru olanı seçin:",
+    "answers": [
+      "Pnevmoniya və ağciyər absesi baş verə bilər",
+      "Heç vaxt aspirasiya olmur",
+      "Yalnız bronxial astma yaranır",
+      "Yalnız hemoptiziya tipikdir",
+      "Ağciyər ağırlaşmaları yalnız əməliyyatdan sonra olur"
+    ]
+  },
+  {
+    "question": "Axalaziyanın III mərhələsində rentgenoloji hansı əlamət daha xarakterikdir?",
+    "answers": [
+      "Qida borusunun ‘quş dimdiyi/siçan quyruğu’ görünüşü və peristaltikanın pozulması",
+      "Kardial kanalın genişlənmiş ‘huni’ şəklində görünməsi",
+      "Mədədə qaz qovuğunun böyüməsi",
+      "Selikli qişa relyefinin tam itməsi",
+      "Qida borusunun diametrinin azalması"
+    ]
+  },
+  {
+    "question": "Axalaziyanın III–IV mərhələsində tipik radioloji tapıntılardan biri:",
+    "answers": [
+      "Mədədə qaz qovuğunun olmaması",
+      "Mədədə qaz qovuğunun böyüməsi",
+      "Qida borusunda hava-maye səviyyəsinin yoxluğu",
+      "Mədənin boşalmasının sürətlənməsi",
+      "Qida borusunun qısalması"
+    ]
+  },
+  {
+    "question": "Axalaziyanın manometrik xüsusiyyəti hansı cavabda düzgün göstərilmişdir?",
+    "answers": [
+      "AES-in natamam boşalması və peristaltikanın olmaması",
+      "AES-in hiperboşalması və güclü peristaltika",
+      "AES təzyiqinin azalması və hipoperistaltika",
+      "AES hipertoniyası və hiperperistaltika",
+      "AES hipotoniyası və normal peristaltika"
+    ]
+  },
+  {
+    "question": "Axalaziyada endoskopiyanın məhdudiyyəti nədən ibarətdir?",
+    "answers": [
+      "Düzgün diaqnoz xəstələrin yalnız 1/3-dən azında qoyulur",
+      "Həmişə diaqnozu təsdiq edir",
+      "Əksər hallarda AES-i keçirə bilmir",
+      "Rentgenoqrafiyadan daha həssasdır",
+      "Psevdoaxalaziyanı istisna edə bilmir"
+    ]
+  },
+  {
+    "question": "Psevdoaxalaziyaya şübhə üçün hansı klinik xüsusiyyət uyğundur?",
+    "answers": [
+      "Yaş >50, simptomların <1 ildə sürətlə inkişafı və >7 kq çəki itkisi",
+      "20–30 yaş, simptomların ləng gedişi",
+      "Qıcqırmanın güclü olması",
+      "Uşaqlıqdan olan disfagiya",
+      "Anamnezdə allergiyalar"
+    ]
+  },
+  {
+    "question": "Axalaziyanın farmakoloji müalicəsinə dair doğru ifadəni seçin:",
+    "answers": [
+      "İzosorbid dinitrat (5–10 mq, dil altı, yeməkdən əvvəl) AES təzyiqini 90 dəq ərzində ~66% azalda bilər",
+      "Antasidlər əsas müalicədir və uzunmüddətli remissiya verir",
+      "Nitratlar yalnız gecə qəbul edildikdə təsirlidir",
+      "β2-aqonistlər AES təzyiqini artırır",
+      "Kalsium kanal blokerləri kontrendikedir"
+    ]
+  },
+  {
+    "question": "Botulinium toksininin axalaziyada tətbiqi ilə bağlı düzgün olan:",
+    "answers": [
+      "Aşağı AES təzyiqini təqribən 33% azaldır və 66% xəstədə 6 aya qədər yaxşılaşma verir",
+      "Təsiri daimi olub təkrar inyeksiyalar tələb etmir",
+      "Yalnız gənc xəstələrdə uyğundur",
+      "İnfiltrasiya dozası 20 vahiddir və bir nöqtəyə yeridilir",
+      "Pnevmatik dilatasiyadan daha ucuzdur"
+    ]
+  },
+  {
+    "question": "Pnevmatik dilatasiya zamanı ən çox rast gəlinən ağırlaşma hansıdır?",
+    "answers": [
+      "Qida borusunun perforasiyası (1–5%)",
+      "Qanaxma",
+      "Aritmiya",
+      "Pilor stenozu",
+      "Aspirasiya"
+    ]
+  },
+  {
+    "question": "Pnevmatik dilatasiyadan sonra kiçik/intramural perforasiya şübhəsi olduqda ilkin yanaşma:",
+    "answers": [
+      "Ağızdan qidanı dayandırmaq, IV antibiotiklər və müşahidə",
+      "Təcili ezofaqoektomiya",
+      "Yüksək dozalı steroidlər",
+      "Dərhal balonla yenidən dilatasiya",
+      "Heç bir tədbir görməmək"
+    ]
+  },
+  {
+    "question": "Axalaziyanın patoloji anatomiyasında hansı tapıntı daha xarakterikdir?",
+    "answers": [
+      "Auerbach kələfində qanqlionar hüceyrələrin itməsi və saya əzələdə kollagenin artması",
+      "Yalnız selikli qişada iltihab",
+      "Hialinizasiya və yağ nekrozu",
+      "Limfa düyünlərinin hiperplaziyası",
+      "Yalnız mukoza səviyyəsində metaplaziya"
+    ]
+  },
+  {
+    "question": "Axalaziyanın B.V. Petrovskinin təsnifatına görə II mərhələdə hansı doğrudur?",
+    "answers": [
+      "Stabil spazm və qida borusunun zəif genişlənməsi",
+      "Qida borusu genişlənmir, yalnız keçici spazmlar var",
+      "Üzvi çapıq dəyişiklikləri və aydın genişlənmə",
+      "Kəskin çapıq stenozu və S-vari forma",
+      "Periezofagit və fibroz mediastinit hər zaman mövcuddur"
+    ]
+  }
+]
+[
+  {
+    "question": "Postqastrorezeksion sindromların çoxunda əsas patofizioloji baza nədir?",
+    "answers": [
+      "Mədənin boşalma mexanikası və peristaltikasının pozulması",
+      "Mədə turşusunun hiperproduksiyası",
+      "Qaraciyər sirrozu",
+      "Pilor kanalının anadangəlmə qısalığı",
+      "Pankreas çatışmazlığı"
+    ]
+  },
+  {
+    "question": "Postrezeksion sindromların diaqnostikasında ilkin yanaşmada hansı iki müayinə əsas rol oynayır?",
+    "answers": [
+      "Bariumla yuxarı YQT rentgenoloji müayinəsi və endoskopiya",
+      "KT və MRT",
+      "USM və EKG",
+      "PET/KT və manometriya",
+      "pH-metriya və spirometriya"
+    ]
+  },
+  {
+    "question": "Əməliyyatdan illər sonra yeni simptomları olan xəstədə hansı ehtimal diqqətlə araşdırılmalıdır?",
+    "answers": [
+      "Bədxassəli proses (qalan mədə güdülündə xərçəng)",
+      "Mədəcik fibrilasiyası",
+      "Yalnız funksional pozğunluq",
+      "Apendisit",
+      "Pnevmoniya"
+    ]
+  },
+  {
+    "question": "Gətirici ilgək sindromunun tipik ağrısı necə xarakterizə olunur?",
+    "answers": [
+      "Sağ yuxarı kvadrant ağrısı və ödlü qusmadan sonra yüngülləşmə",
+      "Sol hipokondrdda küt ağrı, qidanı yedikdən 6–7 saat sonra",
+      "Belə ağrı olmur",
+      "Diffuz kramplar və qazla yüngülləşmə",
+      "Ağrı yalnız fiziki gərginliklə yaranır"
+    ]
+  },
+  {
+    "question": "Erkən dempinq sindromun əsas patogenez həlqələrindən biri hansıdır?",
+    "answers": [
+      "Hiperosmolyar möhtəviyyatın sürətlə nazik bağırsağa keçməsi və damar daxilindən bağırsaq mənfəzinə maye keçidi",
+      "Mədənin hipertoniyası",
+      "Qida borusunun spazmı",
+      "Pilor stenozu",
+      "Öd turşularının azalması"
+    ]
+  },
+  {
+    "question": "Erkən dempinq sindromunda hansının ifrazı artaraq vazomotor simptomlara töhfə verir?",
+    "answers": [
+      "Serotonin, VIP, bradikinin, neyrotenzin və s.",
+      "Kortizol və aldosteron",
+      "TSH və prolaktin",
+      "Adrenalin və noradrenalin",
+      "HMG-CoA reduktaza"
+    ]
+  },
+  {
+    "question": "Erkən dempinqdə tipik klinik tablo hansı kombinasiyada daha uyğundur?",
+    "answers": [
+      "Qidanı yedikdən dərhal sonra zəiflik, tərləmə, ürəkdöyünmə, uzanmaq istəyi",
+      "Qidanı yedikdən 1.5–2 saat sonra hipotoniya və tərləmə",
+      "Yalnız gecə qusma",
+      "Yalnız qarında şişkinlik",
+      "Heç biri"
+    ]
+  },
+  {
+    "question": "Erkən dempinqin ağırlıq dərəcələrindən hansında tutmalar hər qida qəbulundan sonra 2–3 saata qədər davam edir və bəzən sinkope olur?",
+    "answers": [
+      "Ağır dərəcə",
+      "Yüngül dərəcə",
+      "Orta dərəcə",
+      "Proqressiv remissiya",
+      "Subklinik forma"
+    ]
+  },
+  {
+    "question": "Erkən dempinqin diaqnostikasında istifadə oluna bilən provokasion test:",
+    "answers": [
+      "50%-li qlükoza məhlulunun oral qəbulu ilə plazma həcminin azalmasını izləmə",
+      "D-ksiloz testi",
+      "Urea breath test",
+      "Seroloji antitel paneli",
+      "Fekal kalprotektin"
+    ]
+  },
+  {
+    "question": "Erkən dempinq sindromunda konservativ müalicənin əsas sütunu hansıdır?",
+    "answers": [
+      "Aşağı karbohidrat pəhrizi və bərk–duru fraksiyaların ayrılması",
+      "Yüksək karbohidrat pəhrizi",
+      "Tam aclıq",
+      "Yüksək yağlı pəhriz",
+      "Yalnız antasidlər"
+    ]
+  },
+  {
+    "question": "Erkən dempinqdə pəhrizə baxmayaraq simptomlar davam edərsə hansı dərman faydalı ola bilər?",
+    "answers": [
+      "Oktreotid (qida öncəsi 50–100 μg s.c.)",
+      "Metoklopramid",
+      "Loperamid",
+      "Atenolol",
+      "Amitriptilin"
+    ]
+  },
+  {
+    "question": "Dempinq sindromu üçün cərrahi seçimlərdən biri hansıdır?",
+    "answers": [
+      "Y-şəkilli Roux rekonstruksiyası və ya jejunal interpozisiya",
+      "Fundoplikasiya",
+      "Heller miotomiyası",
+      "Appendektomiya",
+      "Heç biri"
+    ]
+  },
+  {
+    "question": "Xroniki qastroparezdə ağrı və ürəkbulanmanın tipik zamanlaması:",
+    "answers": [
+      "Günün sonuna yaxın, bir neçə dəfə qida qəbulundan sonra",
+      "Qidadan dərhal sonra",
+      "Yuxu zamanı",
+      "Səhərlər acqarına",
+      "Fiziki yüklənmədən sonra"
+    ]
+  },
+  {
+    "question": "Qastroparezli xəstənin qusuntusunda bir neçə gün əvvəlki qida qalıqlarının görünməsi nəyi göstərir?",
+    "answers": [
+      "Gecikmiş boşalma (qastroparez)",
+      "Afferent ilgək sindromu",
+      "Gecikmiş dempinq",
+      "Pilor stenozu olmayan reflüks",
+      "Heç biri"
+    ]
+  },
+  {
+    "question": "Qələvi reflüks-qastrit üçün səciyyəvi aparıcı şikayət hansıdır?",
+    "answers": [
+      "Epiqastral yandırıcı ağrı və ödlü qusma",
+      "Yalnız gecə hipoglisemiya",
+      "Disfagiya",
+      "Sağ qabırğaaltıda küt ağrı",
+      "Qaraciyər sirrozu əlamətləri"
+    ]
+  },
+  {
+    "question": "Qələvi reflüks-qastritdə konservativ yanaşmada hansı vasitənin təsiri zəifdir və nə məqsədlə verilir?",
+    "answers": [
+      "Xolestiramin – öd duzlarını birləşdirmək üçün, lakin təsiri zəifdir",
+      "PPI – turşunu tam bloklamaq üçün",
+      "Antibiotik – daimi eradikasiya üçün",
+      "Metformin – hipoglisemiyanı önləmək üçün",
+      "Heç biri"
+    ]
+  },
+  {
+    "question": "Qələvi reflüks-qastritin seçim cərrahi müalicəsi:",
+    "answers": [
+      "Y-şəkilli Roux rekonstruksiyası (~50 sm ilgək)",
+      "Heller miotomiyası",
+      "Dor fundoplikasiyası",
+      "Piloroplastikanın genişləndirilməsi",
+      "Heç biri"
+    ]
+  },
+  {
+    "question": "Postvaqotomik ishalın tipik xüsusiyyəti:",
+    "answers": [
+      "Gecələr də baş verə bilər və qida ilə əlaqəsi olmaya bilər",
+      "Yalnız qidadan dərhal sonra olur",
+      "Qanlı ishalla gedir",
+      "Yalnız qadınlarda rast gəlinir",
+      "Heç vaxt bədən çəkisi itirmir"
+    ]
+  },
+  {
+    "question": "Postvaqotomik ishalın konservativ müalicəsində tövsiyə:",
+    "answers": [
+      "Aşağı maye tərkibli, sellüloza ilə zəngin pəhriz və kiçik porsiyalarla tez-tez qidalanma",
+      "Yüksək mayeli pəhriz",
+      "Tam aclıq",
+      "Yalnız loperamid",
+      "Heç biri"
+    ]
+  },
+  {
+    "question": "Postvaqotomik ishalda hansı dərman kombinasiyası faydalı ola bilər?",
+    "answers": [
+      "Benzoheksonium (qısa kurs) və xolestiramin",
+      "PPİ + klaritromisin",
+      "Metformin və PPI",
+      "Dabigatran",
+      "Heç biri"
+    ]
+  },
+  {
+    "question": "Postvaqotomik ishalın cərrahi korreksiyası üçün təsvir olunan üsullardan biri:",
+    "answers": [
+      "Jejunumun 10 sm-lik seqmentinin antiperistaltik yerləşdirilməsi (Treitzdən ~100 sm distal)",
+      "Fundoplikasiya",
+      "Heller miotomiyası",
+      "Qastrektomiya",
+      "Heç biri"
+    ]
+  },
+  {
+    "question": "Oktreotidin postvaqotomik ishalla bağlı rolu barədə düzgün olan:",
+    "answers": [
+      "İshal və dempinqdə vazomotor/GİT simptomlarını azalda bilər",
+      "Effektsizdir",
+      "Yalnız intravenoz verilir",
+      "Yalnız pediatrik xəstələrdə istifadə olunur",
+      "Mədə boşalmasını sürətləndirir"
+    ]
+  },
+  {
+    "question": "Roux ilgəyi sindromunda diaqnostikada hansı müayinə xüsusilə faydalıdır?",
+    "answers": [
+      "Radionuklid skanerlə mədə boşalmasının qiymətləndirilməsi",
+      "KT perfuziya",
+      "Qan qazı analizi",
+      "Manometriya",
+      "Seroloji testlər"
+    ]
+  },
+  {
+    "question": "Roux sindromunda hansı farmakoloji yanaşma barədə məlumat verilir?",
+    "answers": [
+      "Eritromisin qısa müddətdə mədə boşalmasını sürətləndirə bilər",
+      "PPI-lər mədə boşalmasını sürətləndirir",
+      "Metformin faydalıdır",
+      "Heç biri",
+      "Yalnız loperamid"
+    ]
+  },
+  {
+    "question": "Roux rekonstruksiyasından sonra mədə boşalmasının əhəmiyyətli azalması hansı vəziyyətdə daha çox qeyd olunmuşdur?",
+    "answers": [
+      "Trunkal vaqal denervasiya edilən hallarda",
+      "Trunkal vaqal denervasiya olmayanlarda",
+      "Heç vaxt",
+      "Yalnız uşaqlarda",
+      "Yalnız Bilrot-I sonrası"
+    ]
+  },
+  {
+    "question": "Piloroplastika sonrası ağır erkən dempinqdə hansı cərrahi addım yaxşı nəticə verə bilər?",
+    "answers": [
+      "Piloroplastikanın ləğvi",
+      "Fundoplikasiya",
+      "Apendektomiya",
+      "Heller miotomiyası",
+      "Heç biri"
+    ]
+  },
+  {
+    "question": "Bilrot-II əməliyyatından sonra dempinq davam edirsə, hansı rekonstruksiya variantları təsvir olunur?",
+    "answers": [
+      "Bilrot-I-ə konversiya və ya Y-şəkilli Roux anastomozu",
+      "Yalnız fundoplikasiya",
+      "Heller miotomiyası",
+      "Qastrektomiya",
+      "Heç biri"
+    ]
+  },
+  {
+    "question": "Gecikmiş dempinq sindromunun əsas mexanizmi və yanaşması barədə düzgün olan:",
+    "answers": [
+      "Əsasən postprandial hipoqlikemiya; pəhrizlə çox zaman nəzarət olunur",
+      "İnsulinoma ilə bağlıdır və cərrahidir",
+      "Yalnız erkən vazomotor formanın davamıdır",
+      "Yeganə müalicə oktreotiddir",
+      "Pəhrizin rolu yoxdur"
+    ]
+  }
+]
+[
+  {
+    "question": "Leyomiomanın EUS görüntüsünə ən uyğun təsvir hansıdır?",
+    "answers": [
+      "Aşağı exosıxlıqlı intramural törəmə",
+      "Yüksək exosıxlıqlı intralüminal polip",
+      "Kalsifikatlı ekstramural kütlə",
+      "Yalnız mukoza səviyyəsində səthi defekt",
+      "Yüksək damarlaşmalı hemangioma"
+    ]
+  },
+  {
+    "question": "Qida borusu polipi ilə bağlı hansı ifadə doğrudur?",
+    "answers": [
+      "Ağıza çıxaraq tənəffüs yolunu tuta bilər; bəzən axalaziya və ya xərçənglə səhv salınır",
+      "Bariumlu müayinədə həmişə tipik görünür",
+      "Heç vaxt qanamaz",
+      "Yalnız endoskopik polipektomiya kifayətdir və residiv olmaz",
+      "Ən çox uşaqlarda rast gəlinir"
+    ]
+  },
+  {
+    "question": "Qida borusu polipi üçün tövsiyə olunan əsas cərrahi müdaxilə hansıdır?",
+    "answers": [
+      "Lateral servikal ezofaqotomiya və əsasın rezeksiyası",
+      "Transoral laser",
+      "Yalnız skleroterapiya",
+      "Endovaskulyar embolizasiya",
+      "Kardial rezeksiyasız enukleasiya"
+    ]
+  },
+  {
+    "question": "Aşağıdakılardan hansının tək başına rast gəlinməsi Barret qida borusu diaqnozu üçün yetərli DEYİL?",
+    "answers": [
+      "Z-xəttinin 2 sm proksimala yer dəyişməsi",
+      "Metaplaziyaya uğramış epiteldə qədəhəbənzər hüceyrələrin aşkarlanması",
+      "‘Alov dili’ görünüşü ilə birlikdə hədəfli biopsiyalar",
+      "Uzunmüddətli QERX fonu",
+      "Hiatal yırtıqla assosiasiya"
+    ]
+  },
+  {
+    "question": "Barret qida borusunda xromoendoskopiyanın (2% Lüqol) təsir mexanizmi barədə doğru təsvir hansıdır?",
+    "answers": [
+      "Metaplaziyaya uğramış selikli qişa boz rəngə boyanır; normal sahələrdə bu effekt olmur",
+      "Normal selikli qişa boyanır, metaplaziyaya uğramış sahələr boyanmır",
+      "Heç birini boyamır",
+      "Yalnız displazi sahələrini boyayır",
+      "Yalnız mədənin epiteli boyanır"
+    ]
+  },
+  {
+    "question": "Endoskopik selikli qişa rezeksiyası (EMR) zamanı perforasiya riskini azaltmaq üçün hansı addım tətbiq olunur?",
+    "answers": [
+      "Submukozaya fizioloji məhlul və ya adrenalin (1:100000) yeridilir",
+      "Heç bir maye yeridilmir",
+      "Yüksək gücdə lazerlə dərin kəsilir",
+      "Qazla genişləndirilir",
+      "Profilaktik stent"
+    ]
+  },
+  {
+    "question": "Barret epitelinin endoskopik destruksiya metodlarına aid OLMAYAN variantı seçin:",
+    "answers": [
+      "Radiofrekans ablasiya",
+      "Fotodinamik terapiya",
+      "Arqon lazeri",
+      "Multipolyar elektrokoaqulyasiya",
+      "Krioterapiya"
+    ]
+  },
+  {
+    "question": "Yastı-hüceyrəli xərçəngin hansı makroskopik forması daha çox OBSTRUKSİYA ilə xarakterizə olunur?",
+    "answers": [
+      "Göbələyəbənzər (polipoid)",
+      "Xoralaşan",
+      "İnfiltrativ",
+      "Qranulyar",
+      "Eroziv"
+    ]
+  },
+  {
+    "question": "Distant metastazların təyini üçün sensitivliyi KT-dan daha yüksək olan üsul hansıdır?",
+    "answers": [
+      "PET",
+      "EUS",
+      "MRT",
+      "Bariumlu ezofaqoqrafiya",
+      "Flüoroskopiya"
+    ]
+  },
+  {
+    "question": "Qida borusu xərçənginin erkən limfa yayılmasını izah edən morfoloji xüsusiyyət hansıdır?",
+    "answers": [
+      "Seliqli qişa və əzələ qatında limfa damarlarının olması",
+      "Selikli qişada limfa damarlarının olmaması",
+      "Yalnız selikaltı qatda limfa damarları",
+      "Yalnız hematogen yayılma",
+      "Limfa axarının olmaması"
+    ]
+  }
+]
+[
+  {
+    "question": "Leyomiomanın konservativ izlənməsini əsaslandıran amillərin ən düzgün kombinasiyası hansıdır?",
+    "answers": [
+      "Tipik intramural görünüş, zəif böyümə, aşağı maliqnizasiya riski və EUS ilə nəzarət imkanı",
+      "Sürətli böyümə, yüksək maliqnizasiya riski, qeyri-tipik görüntü",
+      "Həmişə simptomsuzdur və müayinə gərək deyil",
+      "Yüksək qanaxma riski və selikaltı kalsinatların olmaması",
+      "Yalnız endoskopik polipektomiya kifayətdir"
+    ]
+  },
+  {
+    "question": "Qida borusu polipinin təhlükəli klinik ssenarisi üçün ən uyğun ifadə:",
+    "answers": [
+      "Ağıza qədər çıxaraq hava yolunu tuta və asfiksiya törədə bilər",
+      "Yalnız qarın ağrısı yaradır",
+      "Yalnız gizli qanaxma verir",
+      "Heç vaxt disfagiya yaratmır",
+      "Əsasən uşaqlarda rast gəlinir"
+    ]
+  },
+  {
+    "question": "Barret qida borusunun vizual endoskopik nişanəsi kimi hansı təsvir daha uyğundur?",
+    "answers": [
+      "Kardiodan proksimala uzanan qırmızımtıl ‘alov dilləri’",
+      "Diffuz ağ mukoza",
+      "Dərin xora divarları",
+      "Mukoza altında kalsinatlar",
+      "Polipoid lezyonlar"
+    ]
+  },
+  {
+    "question": "Barret qida borusunda diaqnostik qızıl standart meyar hansıdır?",
+    "answers": [
+      "Metaplaziyaya uğramış epiteldə qədəhəbənzər hüceyrələrin aşkarlanması",
+      "Z-xəttinin 2 sm proksimala yer dəyişməsi",
+      "Endoskopik ‘alov dilləri’ olması",
+      "Hiatal yırtığın olması",
+      "Ezofagit dərəcəsi"
+    ]
+  },
+  {
+    "question": "Barret qida borusunda xromoendoskopiyanın (2% Lüqol) təsir mexanizmi nədir?",
+    "answers": [
+      "Metaplaziyaya uğramış selikli qişa boz rəngə boyanır",
+      "Normal selikli qişa boyanır, metaplaziya boyanmır",
+      "Heç biri boyanmır",
+      "Yalnız displazi sahələri boyanır",
+      "Yalnız mədə epiteli boyanır"
+    ]
+  },
+  {
+    "question": "Endoskopik rezeksiyada perforasiya riskini azaltmaq üçün hansı addım tövsiyə olunur?",
+    "answers": [
+      "Submukozaya fizioloji məhlul və ya adrenalin (1:100000) yeridilməsi",
+      "Heç bir maye yeridilməməsi",
+      "Daha dərin kəsilərək sürətli bitirmə",
+      "Yalnız krioterapiya",
+      "Yalnız proton nasosu inhibitorları"
+    ]
+  },
+  {
+    "question": "Barret qida borusunda Z-xəttinin 2 sm-ə qədər proksimala yer dəyişməsi barədə doğru yanaşma:",
+    "answers": [
+      "Təkbaşına diaqnostik deyil; hədəfli, sirkulyar çoxsaylı biopsiya lazımdır",
+      "Təkbaşına Barrett üçün sübutdur",
+      "Barretin inkarı üçün sübutdur",
+      "Yalnız metilen abısı ilə təsdiqlənir",
+      "Biopsiya göstəriş deyil"
+    ]
+  },
+  {
+    "question": "Termiki ablasiyanın çatışmazlıqları içində hansısı qeyd olunur?",
+    "answers": [
+      "Striktura və təkrar müdaxilə ehtiyacı; bəzən displazi ocaqları normal epitel altında qala bilər",
+      "Heç vaxt striktura yaratmır",
+      "Bir prosedurla tam sağalma verir",
+      "Re-epitelizasiya turş mühitdə daha yaxşıdır",
+      "Heç bir üstünlüyü yoxdur"
+    ]
+  }
+]
