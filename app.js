@@ -18,13 +18,16 @@ function saveJSON(key, value) {
   }
 }
 
+
+
+
 // Global state
 let allQuestions = [];
 let currentCategory = null;
 let currentPage = 1;
 let questionsPerPage = 10;
 let baseQuestionsPerPage = 10;
-let singleQuestionMode = false;
+let singleQuestionMode = false;   // Flashcard üçün ON/OFF
 let searchQuery = "";
 let filterMode = "all"; // all | wrong | flagged | noted
 
@@ -37,14 +40,18 @@ let questionNotes = {}; // id -> "text"
 
 let isAdmin = false;
 
-// İmtahan state (imtahanda sual sayı və vaxtı seçə biləsən deyə genişləndirdim)
+// Flashcard sıralama
+let flashOrderMode = "sequential"; // "sequential" | "random"
+let orderedIds = []; // flashcard rejimində göstərmə sırası
+
+// İmtahan state
 let exam = {
   running: false,
-  durationSec: 1800, // default 30 dəqiqə (sonra prompt-la dəyişəcəyik)
+  durationSec: 1800,
   endTime: null,
   timerId: null,
   lastResult: null, // { total, answered, correct, wrong }
-  questionIds: []   // imtahanda istifadə olunan sualların id-ləri
+  questionIds: []
 };
 
 // Helpers
@@ -74,8 +81,7 @@ function shuffleArray(arr) {
   return a;
 }
 
-// JSON-da düzgün cavab həmişə A-dadır (yəni answers[0])
-// Biz isə ekranda variantları random qarışdırırıq və correctIndex-i yenidən hesablayırıq
+// JSON-da düzgün cavab həmişə A-dadır (answers[0]) – ekranda random
 function normalizeQuestion(raw, index) {
   const originalAnswers = Array.isArray(raw.answers) ? raw.answers.slice() : [];
   const correctAnswer = originalAnswers[0] || "";
@@ -130,6 +136,7 @@ function updateQuestionsPerPageFromSelect() {
     questionsPerPage = baseQuestionsPerPage;
   }
   currentPage = 1;
+  recomputeOrderedIds(); // flashcard sırası dəyişə bilər
   renderAll();
 }
 
@@ -154,20 +161,13 @@ function computeStats() {
   return { total, answered, correct, wrong, flagged: flaggedQuestions.length };
 }
 
-// Rendering
-function renderAll() {
-  renderQuiz();
-  renderPagination();
-  renderSidePanel();
-  renderTinyStats();
-}
+// ======== Flashcard köməkçilər ========
 
-// Filter: search + wrong/flagged/noted + imtahan sualları
-function getFilteredQuestions() {
+// hazırki filtrlənmiş suallar (id sırası ilə)
+function getFilteredQuestionsRaw() {
   let list = allQuestions.slice();
   const query = searchQuery.trim().toLowerCase();
 
-  // Axtarış filteri
   if (query) {
     list = list.filter((q) => {
       if (q.question && q.question.toLowerCase().includes(query)) return true;
@@ -178,7 +178,6 @@ function getFilteredQuestions() {
     });
   }
 
-  // Rejim filteri
   if (filterMode === "wrong") {
     list = list.filter((q) => wrongQuestions.includes(q.id));
   } else if (filterMode === "flagged") {
@@ -187,7 +186,6 @@ function getFilteredQuestions() {
     list = list.filter((q) => !!questionNotes[q.id]);
   }
 
-  // Əgər imtahan gedirsə (və ya bitibsə), yalnız imtahana seçilmiş sualları göstər
   if ((exam.running || exam.lastResult) && Array.isArray(exam.questionIds) && exam.questionIds.length) {
     list = list.filter((q) => exam.questionIds.includes(q.id));
   }
@@ -195,6 +193,46 @@ function getFilteredQuestions() {
   return list;
 }
 
+// flashcard üçün göstərmə sırasını qur
+function recomputeOrderedIds() {
+  const list = getFilteredQuestionsRaw().map(q => q.id);
+  if (!singleQuestionMode) {
+    orderedIds = list;
+    return;
+  }
+  if (flashOrderMode === "random") {
+    orderedIds = shuffleArray(list);
+  } else {
+    orderedIds = list; // ardıcıl
+  }
+  // cari səhifəni 1-ə çək
+  currentPage = 1;
+}
+
+// Filtrlənmiş suallar (səhifələmə ilə)
+function getFilteredQuestions() {
+  const rawList = getFilteredQuestionsRaw();
+
+  // Flashcard aktivdirsə sıralamaya hörmət edək
+  let list = rawList;
+  if (singleQuestionMode) {
+    const idSet = new Set(orderedIds);
+    list = rawList.filter(q => idSet.has(q.id))
+                  .sort((a,b) => orderedIds.indexOf(a.id) - orderedIds.indexOf(b.id));
+  }
+
+  return list;
+}
+
+function renderAll() {
+  renderQuiz();
+  renderPagination();
+  renderSidePanel();
+  renderTinyStats();
+  updateFlashcardUI();
+}
+
+// Rendering
 function renderQuiz() {
   const container = document.getElementById("quizContainer");
   if (!container) return;
@@ -217,6 +255,13 @@ function renderQuiz() {
         <p>Bu axtarış / rejim üçün sual tapılmadı.</p>
       </div>`;
     return;
+  }
+
+  // Səhifələmə
+  if (singleQuestionMode) {
+    questionsPerPage = 1;
+  } else {
+    questionsPerPage = baseQuestionsPerPage;
   }
 
   const maxPage = Math.max(1, Math.ceil(filtered.length / questionsPerPage));
@@ -292,18 +337,11 @@ function renderQuiz() {
 
       if (answerInfo) {
         if (exam.running) {
-          // İmtahan gedərkən yalnız seçilmiş cavabı neytral işarələ
-          if (idx === answerInfo.index) {
-            btn.classList.add("exam-selected");
-          }
+          if (idx === answerInfo.index) btn.classList.add("exam-selected");
         } else {
-          // Normal (praktika və ya imtahan bitəndən sonra) – doğru/səhv rənglə
           if (idx === answerInfo.index) {
-            if (idx === q.correctIndex) {
-              btn.classList.add("correct");
-            } else {
-              btn.classList.add("wrong");
-            }
+            if (idx === q.correctIndex) btn.classList.add("correct");
+            else btn.classList.add("wrong");
           }
         }
       }
@@ -321,7 +359,6 @@ function renderQuiz() {
     const actions = document.createElement("div");
     actions.className = "question-actions";
 
-    // Flag button
     const flagBtn = document.createElement("button");
     flagBtn.className = "icon-btn";
     if (flaggedQuestions.includes(q.id)) flagBtn.classList.add("flagged");
@@ -329,14 +366,12 @@ function renderQuiz() {
     flagBtn.addEventListener("click", () => toggleFlag(q.id));
     actions.appendChild(flagBtn);
 
-    // Show correct button
     const showBtn = document.createElement("button");
     showBtn.className = "icon-btn";
     showBtn.innerHTML = `<i class="fa fa-check-circle"></i> Düzgün cavab`;
     showBtn.addEventListener("click", () => toggleCorrectAnswer(q.id));
     actions.appendChild(showBtn);
 
-    // Note button
     const noteBtn = document.createElement("button");
     noteBtn.className = "icon-btn";
     if (questionNotes[q.id]) noteBtn.classList.add("has-note");
@@ -344,7 +379,6 @@ function renderQuiz() {
     noteBtn.addEventListener("click", () => toggleNoteEditor(q.id));
     actions.appendChild(noteBtn);
 
-    // Əgər bu sual səhv siyahısındadırsa – çıxarma düyməsi
     if (wrongQuestions.includes(q.id)) {
       const rmWrongBtn = document.createElement("button");
       rmWrongBtn.className = "icon-btn";
@@ -353,7 +387,6 @@ function renderQuiz() {
       actions.appendChild(rmWrongBtn);
     }
 
-    // Edit button (admin)
     const editBtn = document.createElement("button");
     editBtn.className = "icon-btn admin-only";
     editBtn.innerHTML = `<i class="fa fa-pen"></i> Redaktə (admin)`;
@@ -367,22 +400,15 @@ function renderQuiz() {
     noteSpan.className = "note-pill";
 
     let noteText = "";
+    const answerInfoNow = selectedAnswers[q.id];
     if (exam.running) {
       noteText = "İmtahan gedir – düzgün/səhv imtahan bitəndə görünəcək.";
-    } else if (answerInfo) {
-      noteText =
-        answerInfo.index === q.correctIndex
-          ? "✅ Düzgün cavab vermisən"
-          : "❌ Bu sualda səhvin var idi";
+    } else if (answerInfoNow) {
+      noteText = answerInfoNow.index === q.correctIndex ? "✅ Düzgün cavab vermisən" : "❌ Bu sualda səhvin var idi";
     } else {
-      if (filterMode === "all") {
-        noteText = "Cavab seçmək üçün variantlardan birinə kliklə";
-      } else {
-        noteText = "Bu rejimdə sualları yenidən 0-dan işləyirsən";
-      }
+      noteText = filterMode === "all" ? "Cavab seçmək üçün variantlardan birinə kliklə" : "Bu rejimdə sualları yenidən 0-dan işləyirsən";
     }
     noteSpan.textContent = noteText;
-
     info.appendChild(noteSpan);
     footer.appendChild(info);
 
@@ -402,11 +428,8 @@ function renderQuiz() {
     const saveBtn = noteBlock.querySelector("button");
     saveBtn.addEventListener("click", () => {
       const val = textarea.value.trim();
-      if (val) {
-        questionNotes[q.id] = val;
-      } else {
-        delete questionNotes[q.id];
-      }
+      if (val) questionNotes[q.id] = val;
+      else delete questionNotes[q.id];
       saveCategoryState();
       renderAll();
     });
@@ -416,9 +439,16 @@ function renderQuiz() {
     const correctDiv = document.createElement("div");
     correctDiv.id = "correct-answer-" + q.id;
     correctDiv.className = "correct-answer-text";
-    correctDiv.textContent =
-      "Düzgün cavab: " + (q.answers[q.correctIndex] || "");
+    correctDiv.textContent = "Düzgün cavab: " + (q.answers[q.correctIndex] || "");
     card.appendChild(correctDiv);
+
+    // Flashcard rejimində swipe ipucu
+    if (singleQuestionMode) {
+      const hint = document.createElement("div");
+      hint.className = "swipe-hint";
+      hint.innerHTML = "◀️ sağa/sola sürüşdür: növbəti/əvvəlki";
+      card.appendChild(hint);
+    }
 
     container.appendChild(card);
   });
@@ -676,15 +706,10 @@ function onAnswerClick(id, index) {
   const q = allQuestions.find((qq) => qq.id === id);
   if (!q) return;
 
-  // Cavabı yadda saxla (rəngləmə və imtahan üçün)
   selectedAnswers[id] = { index };
 
-  // YALNIZ səhv cavabda "səhvlər" siyahısına düşür
-  // Düzgün cavab verəndə avtomatik çıxmır!
   if (index !== q.correctIndex) {
-    if (!wrongQuestions.includes(id)) {
-      wrongQuestions.push(id);
-    }
+    if (!wrongQuestions.includes(id)) wrongQuestions.push(id);
     questionWrongCount[id] = (questionWrongCount[id] || 0) + 1;
   }
 
@@ -703,7 +728,6 @@ function toggleFlag(id) {
   renderQuiz();
 }
 
-// Səhv siyahısından yalnız özün çıxarırsan
 function removeFromWrong(id) {
   if (!wrongQuestions.includes(id)) return;
   if (!confirm("Bu sualı 'səhv suallar' siyahısından çıxarmaq istəyirsən?")) return;
@@ -776,10 +800,7 @@ function editQuestion(id) {
   }
 
   let defaultLetter = String.fromCharCode(65 + q.correctIndex);
-  const letterInput = prompt(
-    "Düzgün cavabın hərfini yaz (A, B, C, ...):",
-    defaultLetter
-  );
+  const letterInput = prompt("Düzgün cavabın hərfini yaz (A, B, C, ...):", defaultLetter);
   if (letterInput === null) return;
 
   const letter = letterInput.trim().toUpperCase();
@@ -791,25 +812,11 @@ function editQuestion(id) {
 
   const before = editedQuestions[id]
     ? editedQuestions[id].before
-    : {
-        question: q.question,
-        answers: q.answers.slice(),
-        correctIndex: q.correctIndex
-      };
+    : { question: q.question, answers: q.answers.slice(), correctIndex: q.correctIndex };
 
-  const after = {
-    question: newQuestionText.trim(),
-    answers: newAnswers,
-    correctIndex: idx
-  };
+  const after = { question: newQuestionText.trim(), answers: newAnswers, correctIndex: idx };
 
-  editedQuestions[id] = {
-    id,
-    before,
-    after,
-    active: "after",
-    updatedAt: Date.now()
-  };
+  editedQuestions[id] = { id, before, after, active: "after", updatedAt: Date.now() };
 
   q.question = after.question;
   q.answers = after.answers.slice();
@@ -820,18 +827,14 @@ function editQuestion(id) {
   saveCategoryState();
   renderAll();
 
-  alert(
-    "Sual uğurla redaktə olundu və 'Dəyişmiş suallar' bölməsinə əlavə edildi."
-  );
+  alert("Sual uğurla redaktə olundu və 'Dəyişmiş suallar' bölməsinə əlavə edildi.");
 }
 
 // Bu funksiya: wrong/flagged rejiminə keçəndə həmin rejimdəki sualların cavabını sıfırlayır
 function resetAnswersForCurrentFilter() {
   const filtered = getFilteredQuestions(); // filterMode artıq dəyişib
   filtered.forEach((q) => {
-    if (selectedAnswers[q.id]) {
-      delete selectedAnswers[q.id]; // yalnız cavab rəngi silinir
-    }
+    if (selectedAnswers[q.id]) delete selectedAnswers[q.id];
   });
   saveCategoryState();
 }
@@ -842,48 +845,31 @@ function resetAllAnswersInCategory() {
   saveCategoryState();
 }
 
-// İmtahan start: burda sənə sual sayı və dəqiqə soruşuram
+// İmtahan start/finish (heç nəyi dəyişmədim)
 function startExam() {
-  if (!currentCategory) {
-    alert("Əvvəlcə soldan bir kateqoriya seç.");
-    return;
-  }
+  if (!currentCategory) { alert("Əvvəlcə soldan bir kateqoriya seç."); return; }
   if (exam.running) return;
 
   const totalQuestions = allQuestions.length;
-  if (!totalQuestions) {
-    alert("Bu kateqoriyada sual tapılmadı.");
-    return;
-  }
+  if (!totalQuestions) { alert("Bu kateqoriyada sual tapılmadı."); return; }
 
-  // Müddət (dəqiqə)
   let minutesStr = prompt("İmtahan müddəti (dəqiqə):", "30");
   if (minutesStr === null) return;
   let minutes = parseInt(minutesStr, 10);
   if (isNaN(minutes) || minutes <= 0) minutes = 30;
 
-  // Sual sayı
-  let countStr = prompt(
-    `İmtahanda neçə sual olsun? (1 - ${totalQuestions})`,
-    String(totalQuestions)
-  );
+  let countStr = prompt(`İmtahanda neçə sual olsun? (1 - ${totalQuestions})`, String(totalQuestions));
   if (countStr === null) return;
   let qCount = parseInt(countStr, 10);
   if (isNaN(qCount) || qCount <= 0) qCount = totalQuestions;
   if (qCount > totalQuestions) qCount = totalQuestions;
 
-  if (
-    !confirm(
-      `İmtahan başlayır: ${qCount} sual, ${minutes} dəqiqə.\nMövcud cavabların silinəcək. Davam edək?`
-    )
-  )
-    return;
+  if (!confirm(`İmtahan başlayır: ${qCount} sual, ${minutes} dəqiqə.\nMövcud cavabların silinəcək. Davam edək?`)) return;
 
   exam.running = true;
   exam.lastResult = null;
   exam.durationSec = minutes * 60;
 
-  // İmtahan üçün random sual seçimi
   const shuffledIds = shuffleArray(allQuestions.map((q) => q.id));
   exam.questionIds = shuffledIds.slice(0, qCount);
 
@@ -906,14 +892,10 @@ function startExam() {
   renderAll();
 }
 
-// İmtahanı bitir (manual=true → özün bitirirsən, false → vaxt bitir)
 function finishExam(manual) {
   if (!exam.running) return;
   exam.running = false;
-  if (exam.timerId) {
-    clearInterval(exam.timerId);
-    exam.timerId = null;
-  }
+  if (exam.timerId) { clearInterval(exam.timerId); exam.timerId = null; }
 
   let list = allQuestions;
   if (Array.isArray(exam.questionIds) && exam.questionIds.length) {
@@ -922,9 +904,7 @@ function finishExam(manual) {
   }
   const total = list.length;
 
-  let answered = 0,
-    correct = 0,
-    wrong = 0;
+  let answered = 0, correct = 0, wrong = 0;
 
   list.forEach((q) => {
     const ans = selectedAnswers[q.id];
@@ -954,17 +934,10 @@ async function selectCategory(filename) {
   exam.running = false;
   exam.lastResult = null;
   exam.questionIds = [];
-  if (exam.timerId) {
-    clearInterval(exam.timerId);
-    exam.timerId = null;
-  }
+  if (exam.timerId) { clearInterval(exam.timerId); exam.timerId = null; }
 
-  document
-    .querySelectorAll(".category-btn")
-    .forEach((btn) => btn.classList.remove("selected"));
-  const activeBtn = document.querySelector(
-    `.category-btn[data-category="${filename}"]`
-  );
+  document.querySelectorAll(".category-btn").forEach((btn) => btn.classList.remove("selected"));
+  const activeBtn = document.querySelector(`.category-btn[data-category="${filename}"]`);
   if (activeBtn) activeBtn.classList.add("selected");
 
   const container = document.getElementById("quizContainer");
@@ -984,6 +957,7 @@ async function selectCategory(filename) {
 
     loadCategoryState();
     applyEditedQuestions();
+    recomputeOrderedIds();
 
     renderAll();
     updateExamUI();
@@ -1014,10 +988,7 @@ function resetCurrentCategory() {
   exam.running = false;
   exam.lastResult = null;
   exam.questionIds = [];
-  if (exam.timerId) {
-    clearInterval(exam.timerId);
-    exam.timerId = null;
-  }
+  if (exam.timerId) { clearInterval(exam.timerId); exam.timerId = null; }
 
   localStorage.removeItem(storageKey("selectedAnswers"));
   localStorage.removeItem(storageKey("wrongQuestions"));
@@ -1026,6 +997,7 @@ function resetCurrentCategory() {
   localStorage.removeItem(storageKey("editedQuestions"));
   localStorage.removeItem(storageKey("questionNotes"));
 
+  recomputeOrderedIds();
   renderAll();
   updateExamUI();
 }
@@ -1039,10 +1011,7 @@ function clearAllData() {
   exam.running = false;
   exam.lastResult = null;
   exam.questionIds = [];
-  if (exam.timerId) {
-    clearInterval(exam.timerId);
-    exam.timerId = null;
-  }
+  if (exam.timerId) { clearInterval(exam.timerId); exam.timerId = null; }
 
   location.reload();
 }
@@ -1051,7 +1020,6 @@ function clearAllData() {
 function adminLoginPrompt() {
   const pwd = prompt("Admin parolu:");
   if (pwd === null) return;
-  // Sadə, lokal parol – istəsən özün dəyişə bilərsən
   if (pwd === "drniko") {
     isAdmin = true;
     localStorage.setItem("quiz_isAdmin", "true");
@@ -1118,8 +1086,91 @@ function updateDarkButtonUI() {
   }
 }
 
+// ===== Flashcard UI və Naviqasiya =====
+function updateFlashcardUI() {
+  const controls = document.getElementById("flashcardControls");
+  const body = document.body;
+  if (singleQuestionMode) {
+    body.classList.add("flashcard-mode");
+    if (controls) controls.classList.remove("hidden");
+  } else {
+    body.classList.remove("flashcard-mode");
+    if (controls) controls.classList.add("hidden");
+  }
+
+  // Sayğac
+  const filtered = getFilteredQuestions();
+  const counter = document.getElementById("cardCounter");
+  if (counter && filtered.length) {
+    counter.textContent = `${currentPage}/${Math.max(1, Math.ceil(filtered.length / questionsPerPage))}`;
+  }
+}
+
+function goNextCard() {
+  const filtered = getFilteredQuestions();
+  const maxPage = Math.max(1, Math.ceil(filtered.length / questionsPerPage));
+  currentPage = Math.min(maxPage, currentPage + 1);
+  renderAll();
+}
+function goPrevCard() {
+  currentPage = Math.max(1, currentPage - 1);
+  renderAll();
+}
+
+function attachSwipeHandlers() {
+  const area = document.getElementById("quizContainer");
+  if (!area) return;
+
+  let startX = 0, startY = 0, isTouch = false;
+  area.addEventListener("touchstart", (e) => {
+    if (!singleQuestionMode) return;
+    isTouch = true;
+    const t = e.touches[0];
+    startX = t.clientX; startY = t.clientY;
+  }, {passive:true});
+
+  area.addEventListener("touchend", (e) => {
+    if (!singleQuestionMode || !isTouch) return;
+    const t = e.changedTouches[0];
+    const dx = t.clientX - startX;
+    const dy = t.clientY - startY;
+    if (Math.abs(dx) > 40 && Math.abs(dy) < 40) {
+      if (dx < 0) goNextCard(); else goPrevCard();
+    }
+    isTouch = false;
+  });
+
+  // Klaviatura oxları
+  document.addEventListener("keydown", (e) => {
+    if (!singleQuestionMode) return;
+    if (e.key === "ArrowRight") goNextCard();
+    else if (e.key === "ArrowLeft") goPrevCard();
+  });
+}
+
+// ===== PWA Install düyməsi =====
+let deferredPrompt = null;
+function initPWAInstall() {
+  const btn = document.getElementById("installBtn");
+  window.addEventListener("beforeinstallprompt", (e) => {
+    e.preventDefault();
+    deferredPrompt = e;
+    if (btn) btn.classList.remove("hidden");
+  });
+  if (btn) {
+    btn.addEventListener("click", async () => {
+      if (!deferredPrompt) return;
+      deferredPrompt.prompt();
+      await deferredPrompt.userChoice;
+      deferredPrompt = null;
+      btn.classList.add("hidden");
+    });
+  }
+}
+
 // Init
 document.addEventListener("DOMContentLoaded", () => {
+ 
   // Start button
   const startBtn = document.getElementById("startBtn");
   const welcome = document.getElementById("welcomeScreen");
@@ -1139,22 +1190,19 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Quiz filter düymələri (bütün / səhv / flagli / qeydli)
+  // Quiz filter düymələri
   document.querySelectorAll(".quiz-filter-btn").forEach((btn) => {
     btn.addEventListener("click", () => {
       const mode = btn.getAttribute("data-filter") || "all";
       filterMode = mode;
-
-      // Səhv və ya flagli rejimə keçəndə hər dəfə test 0-dan başlasın
-      if (mode === "wrong" || mode === "flagged") {
-        resetAnswersForCurrentFilter();
-      }
+      if (mode === "wrong" || mode === "flagged") resetAnswersForCurrentFilter();
 
       document.querySelectorAll(".quiz-filter-btn").forEach((b) =>
         b.classList.toggle("active", b === btn)
       );
 
       currentPage = 1;
+      recomputeOrderedIds();
       renderAll();
     });
   });
@@ -1162,10 +1210,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Questions per page
   const select = document.getElementById("questionsPerPage");
   if (select) {
-    const saved = parseInt(
-      localStorage.getItem("quiz_questionsPerPage") || "10",
-      10
-    );
+    const saved = parseInt(localStorage.getItem("quiz_questionsPerPage") || "10", 10);
     if (!isNaN(saved)) {
       baseQuestionsPerPage = saved;
       questionsPerPage = saved;
@@ -1174,20 +1219,28 @@ document.addEventListener("DOMContentLoaded", () => {
     select.addEventListener("change", updateQuestionsPerPageFromSelect);
   }
 
-  // Single question mode (mobil)
+  // Single question mode (flashcard)
   const sqToggle = document.getElementById("singleQuestionModeToggle");
   if (sqToggle) {
     sqToggle.addEventListener("change", () => {
       singleQuestionMode = sqToggle.checked;
-      if (singleQuestionMode) {
-        questionsPerPage = 1;
-      } else {
-        questionsPerPage = baseQuestionsPerPage;
-      }
+      questionsPerPage = singleQuestionMode ? 1 : baseQuestionsPerPage;
       currentPage = 1;
+      recomputeOrderedIds();
       renderAll();
     });
   }
+
+  // Order mode radio (Ardıcıl/Random)
+  document.querySelectorAll('input[name="orderMode"]').forEach((r) => {
+    r.addEventListener("change", () => {
+      flashOrderMode = r.value;
+      if (singleQuestionMode) {
+        recomputeOrderedIds();
+        renderAll();
+      }
+    });
+  });
 
   // Search
   const searchInput = document.getElementById("searchInput");
@@ -1195,6 +1248,7 @@ document.addEventListener("DOMContentLoaded", () => {
     searchInput.addEventListener("input", () => {
       searchQuery = searchInput.value || "";
       currentPage = 1;
+      recomputeOrderedIds();
       renderAll();
     });
   }
@@ -1205,7 +1259,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const clearBtn = document.getElementById("clearAllBtn");
   if (clearBtn) clearBtn.addEventListener("click", clearAllData);
 
-  // Yan panel toggle (ox düyməsi)
+  // Yan panel toggle
   const sideToggle = document.getElementById("sidePanelToggle");
   if (sideToggle) {
     sideToggle.addEventListener("click", () => {
@@ -1216,7 +1270,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // İmtahan düymələri
   const examStartBtn = document.getElementById("examStartBtn");
   if (examStartBtn) {
-    examStartBtn.classList.remove("hidden"); // kateqoriya seçiləndə UI özü yenilənəcək
+    examStartBtn.classList.remove("hidden");
     examStartBtn.addEventListener("click", () => startExam());
   }
   const examFinishBtn = document.getElementById("examFinishBtn");
@@ -1241,10 +1295,16 @@ document.addEventListener("DOMContentLoaded", () => {
   // Tiny stats
   renderTinyStats();
 
-  // Service worker (əgər əvvəl PWA hissəsini eləmişdinsə)
+  // Flashcard swipe/keys
+  attachSwipeHandlers();
+
+  // Service worker
   if ("serviceWorker" in navigator) {
     navigator.serviceWorker
       .register("sw.js")
       .catch((err) => console.warn("Service worker qeydiyyatdan keçmədi:", err));
   }
+
+  // PWA install
+  initPWAInstall();
 });
