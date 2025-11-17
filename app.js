@@ -210,7 +210,7 @@ function getFilteredQuestionsRaw(){
   if (filterMode === "flagged") list = list.filter(q=>flaggedQuestions.includes(q.id));
   if (filterMode === "noted")   list = list.filter(q=>!!questionNotes[q.id]);
 
-  // Normal rejimdə random sıralama üçün stabil sıra saxlayırıq (flashcard deyil)
+  // Normal rejim random sıralama
   if (!singleQuestionMode){
     const orderRadio = document.querySelector('input[name="quizOrder"]:checked');
     if (orderRadio && orderRadio.value === "random"){
@@ -254,6 +254,8 @@ function renderQuiz(){
     return;
   }
 
+  const maskActive = (filterMode === "wrong" || filterMode === "flagged");
+
   questionsPerPage = singleQuestionMode ? 1 : baseQuestionsPerPage;
   const maxPage = Math.max(1, Math.ceil(filtered.length / questionsPerPage));
   if (currentPage > maxPage) currentPage = maxPage;
@@ -281,7 +283,9 @@ function renderQuiz(){
     header.appendChild(title); header.appendChild(meta); card.appendChild(header);
 
     const answersDiv = document.createElement("div"); answersDiv.className="answers";
-    const info = selectedAnswers[q.id];
+
+    // MASK: wrong/flagged filtrində əvvəlki seçimləri göstərməmə
+    const info = maskActive ? null : selectedAnswers[q.id];
     const selIdx = _resolveSelectedIndex(q, info);
 
     q.answers.forEach((ans, idx)=>{
@@ -324,7 +328,7 @@ function renderQuiz(){
     const pill = document.createElement("span"); pill.className="note-pill";
     if (exam.running) pill.textContent="İmtahan gedir – nəticə imtahandan sonra görünəcək.";
     else if (info && selIdx!==-1) pill.textContent = (selIdx===q.correctIndex) ? "✅ Düzgün cavab vermisən" : "❌ Bu sualda səhvin var idi";
-    else pill.textContent="Cavab seçmək üçün variantlardan birinə kliklə";
+    else pill.textContent = maskActive ? "Bu baxışda cavablar gizlədilib" : "Cavab seçmək üçün variantlardan birinə kliklə";
     infoPillWrap.appendChild(pill);
     footer.appendChild(infoPillWrap);
 
@@ -498,7 +502,7 @@ function startExam(){
   exam.questionIds = shuffledIds.slice(0, qCount);
   exam.endTime = Date.now() + exam.durationSec*1000;
 
-  // İmtahan zamanı nizamlılıq üçün cavabları təmizləyirik (tələbin xaricindədir; istəsən bunu da saxlayım)
+  // Qeyd: İmtahan üçün hazırkı davranış cavabları təmizləyir (istəsən, bunu da maskaya çevirərik).
   selectedAnswers = {}; saveCategoryState();
 
   if (exam.timerId) clearInterval(exam.timerId);
@@ -532,8 +536,13 @@ function finishExam(manual){
 function updateQuestionCardVisuals(id){
   const q = allQuestions.find(qq=>qq.id===id); if(!q) return;
   const card = document.getElementById("question-"+id); if(!card) return;
+
+  const maskActive = (filterMode === "wrong" || filterMode === "flagged");
+
   const buttons = card.querySelectorAll(".answers .answer-btn");
-  const info = selectedAnswers[id]; const selIdx = _resolveSelectedIndex(q, info);
+  const info = maskActive ? null : selectedAnswers[id];
+  const selIdx = _resolveSelectedIndex(q, info);
+
   buttons.forEach((btn, idx)=>{
     btn.classList.remove("correct","wrong","exam-selected");
     if (info){
@@ -541,25 +550,26 @@ function updateQuestionCardVisuals(id){
       else if (idx===selIdx){ (idx===q.correctIndex?btn.classList.add("correct"):btn.classList.add("wrong")); }
     }
   });
+
   const pill = card.querySelector(".question-footer .note-pill");
   if (pill){
     if (exam.running) pill.textContent="İmtahan gedir – nəticə imtahandan sonra görünəcək.";
     else if (info && selIdx!==-1) pill.textContent = (selIdx===q.correctIndex) ? "✅ Düzgün cavab vermisən" : "❌ Bu sualda səhvin var idi";
-    else pill.textContent="Cavab seçmək üçün variantlardan birinə kliklə";
+    else pill.textContent = maskActive ? "Bu baxışda cavablar gizlədilib" : "Cavab seçmək üçün variantlardan birinə kliklə";
   }
 }
 
 function onAnswerClick(id, index){
   const q = allQuestions.find(qq=>qq.id===id); if (!q) return;
 
-  // Seçimi mətni ilə saxlayırıq ki, cavabların sırasi dəyişsə də itirməyək.
+  // Dərhal yadda saxla (əsl cavablar heç vaxt itmir)
   selectedAnswers[id] = { index, value: q.answers[index], updatedAt: Date.now() };
 
   if (index !== q.correctIndex){
     if (!wrongQuestions.includes(id)) wrongQuestions.push(id);
     questionWrongCount[id] = (questionWrongCount[id]||0)+1;
   }
-  saveCategoryState(); // vacib: dərhal persist
+  saveCategoryState();
 
   updateQuestionCardVisuals(id);
   renderTinyStats(); renderSidePanel();
@@ -596,13 +606,13 @@ function toggleEditedVersion(id){
   } else {
     e.active="after"; q.question=e.after.question; q.answers=e.after.answers.slice(); q.correctIndex=e.after.correctIndex;
   }
-  delete selectedAnswers[id]; // niyə: sualın məzmunu dəyişib, əvvəlki seçim səhv ola bilər
+  delete selectedAnswers[id];
   saveCategoryState(); renderAll();
 }
 
-// IMPORTANT: Bu funksiya artıq cavabları SİLMİR (no-op).
+// Bu funksiya cavabları SİLMİR
 function resetAnswersForCurrentFilter(){
-  // intentionally empty – seçilmiş cavablar yalnız "Kateqoriyanı sıfırla" ilə silinir.
+  // no-op
 }
 
 function resetAllAnswersInCategory(){
@@ -614,7 +624,6 @@ function selectCategory(filename){
   currentPage = 1;
   filterMode = "all";
 
-  // İmtahanı dayandır
   exam.running=false; exam.lastResult=null; exam.questionIds=[];
   if (exam.timerId){ clearInterval(exam.timerId); exam.timerId=null; }
 
@@ -632,7 +641,6 @@ function selectCategory(filename){
     allQuestions = (data||[]).map((q, idx)=>normalizeQuestion(q, idx+1));
     loadCategoryState();
     applyEditedQuestions();
-    // Flashcard sıra parametri hər kateqoriyada yenilənir
     flashOrderMode = getSelectedQuizOrder();
     recomputeOrderedIds();
     renderAll(); updateExamUI();
@@ -651,11 +659,10 @@ function resetCurrentCategory(){
   if (!currentCategory) return;
   if (!confirm("Bu kateqoriyadakı nəticələri sıfırlamaq istəyirsən? (Qeyd və flag saxlanacaq)")) return;
 
-  // YALNIZ nəticələr
   selectedAnswers = {};
   wrongQuestions = [];
   questionWrongCount = {};
-  editedQuestions = {}; // (istəsən bunu saxlaya da bilərik)
+  editedQuestions = {};
 
   exam.running=false; exam.lastResult=null; exam.questionIds=[];
   if (exam.timerId){ clearInterval(exam.timerId); exam.timerId=null; }
@@ -664,7 +671,6 @@ function resetCurrentCategory(){
   localStorage.removeItem(storageKey("wrongQuestions"));
   localStorage.removeItem(storageKey("questionWrongCount"));
   localStorage.removeItem(storageKey("editedQuestions"));
-  // QƏSDƏN saxlanır: flaggedQuestions, questionNotes
 
   recomputeOrderedIds(); renderAll(); updateExamUI();
 }
@@ -767,7 +773,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
       singleQuestionMode = !singleQuestionMode;
       const sqToggleEl = document.getElementById("singleQuestionModeToggle");
       if (sqToggleEl) sqToggleEl.checked = singleQuestionMode;
-      flashOrderMode = getSelectedQuizOrder(); // WHY: UI ilə sinxron
+      flashOrderMode = getSelectedQuizOrder();
       questionsPerPage = singleQuestionMode ? 1 : baseQuestionsPerPage;
       currentPage = 1;
       recomputeOrderedIds();
@@ -793,12 +799,11 @@ document.addEventListener("DOMContentLoaded", ()=>{
     btn.addEventListener("click", ()=>{ const file=btn.getAttribute("data-category"); if(file) selectCategory(file); });
   });
 
-  // Filtr – artıq cavabları SİLMİR
+  // Filtr düymələri (artıq cavabları silmir, yalnız maska)
   document.querySelectorAll(".quiz-filter-btn").forEach((btn)=>{
     btn.addEventListener("click", ()=>{
       const mode = btn.getAttribute("data-filter") || "all";
       filterMode = mode;
-
       document.querySelectorAll(".quiz-filter-btn").forEach(b=> b.classList.toggle("active", b===btn));
       currentPage=1; recomputeOrderedIds(); renderAll();
     });
@@ -826,7 +831,6 @@ document.addEventListener("DOMContentLoaded", ()=>{
     });
   }
 
-  // YALNIZ quizOrder istifadə olunur (orderMode ləğv edildi)
   document.querySelectorAll('input[name="quizOrder"]').forEach(r=>{
     r.addEventListener('change', ()=>{
       renderAll();
@@ -866,7 +870,6 @@ document.addEventListener("DOMContentLoaded", ()=>{
   }
   initPWAInstall();
 
-  // İlk yükləmədə flashcard sırası UI ilə sinxron
   flashOrderMode = getSelectedQuizOrder();
 });
 
