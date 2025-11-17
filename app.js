@@ -119,6 +119,9 @@ let singleQuestionMode = false;
 let searchQuery = "";
 let filterMode = "all"; // all | wrong | flagged | noted
 
+// Mask: wrong/flagged filtrinə girəndə bir dəfə cavabları gizlət, ilk klikdə aç
+let maskMode = { active:false, cleared:false };
+
 let selectedAnswers = {};
 let wrongQuestions = [];
 let flaggedQuestions = [];
@@ -254,7 +257,7 @@ function renderQuiz(){
     return;
   }
 
-  const maskActive = (filterMode === "wrong" || filterMode === "flagged");
+  const maskActive = (maskMode.active && !maskMode.cleared);
 
   questionsPerPage = singleQuestionMode ? 1 : baseQuestionsPerPage;
   const maxPage = Math.max(1, Math.ceil(filtered.length / questionsPerPage));
@@ -284,7 +287,7 @@ function renderQuiz(){
 
     const answersDiv = document.createElement("div"); answersDiv.className="answers";
 
-    // MASK: wrong/flagged filtrində əvvəlki seçimləri göstərməmə
+    // MASK: wrong/flagged daxilində ilk açılışda cavab gizlədilir; klikdən sonra görünür
     const info = maskActive ? null : selectedAnswers[q.id];
     const selIdx = _resolveSelectedIndex(q, info);
 
@@ -537,7 +540,7 @@ function updateQuestionCardVisuals(id){
   const q = allQuestions.find(qq=>qq.id===id); if(!q) return;
   const card = document.getElementById("question-"+id); if(!card) return;
 
-  const maskActive = (filterMode === "wrong" || filterMode === "flagged");
+  const maskActive = (maskMode.active && !maskMode.cleared);
 
   const buttons = card.querySelectorAll(".answers .answer-btn");
   const info = maskActive ? null : selectedAnswers[id];
@@ -562,7 +565,7 @@ function updateQuestionCardVisuals(id){
 function onAnswerClick(id, index){
   const q = allQuestions.find(qq=>qq.id===id); if (!q) return;
 
-  // Dərhal yadda saxla (əsl cavablar heç vaxt itmir)
+  // Dərhal yadda saxla
   selectedAnswers[id] = { index, value: q.answers[index], updatedAt: Date.now() };
 
   if (index !== q.correctIndex){
@@ -570,6 +573,11 @@ function onAnswerClick(id, index){
     questionWrongCount[id] = (questionWrongCount[id]||0)+1;
   }
   saveCategoryState();
+
+  // WRONG/FLAGGED rejimində ilk klikdə maskanı aç
+  if (maskMode.active && !maskMode.cleared){
+    maskMode.cleared = true; // WHY: həmin baxışda seçimin görünməsi üçün
+  }
 
   updateQuestionCardVisuals(id);
   renderTinyStats(); renderSidePanel();
@@ -623,6 +631,7 @@ function selectCategory(filename){
   currentCategory = filename;
   currentPage = 1;
   filterMode = "all";
+  maskMode = { active:false, cleared:false }; // yeni kateqoriyada maskanı sıfırla
 
   exam.running=false; exam.lastResult=null; exam.questionIds=[];
   if (exam.timerId){ clearInterval(exam.timerId); exam.timerId=null; }
@@ -799,11 +808,15 @@ document.addEventListener("DOMContentLoaded", ()=>{
     btn.addEventListener("click", ()=>{ const file=btn.getAttribute("data-category"); if(file) selectCategory(file); });
   });
 
-  // Filtr düymələri (artıq cavabları silmir, yalnız maska)
+  // Filtr düymələri → maskanı qur
   document.querySelectorAll(".quiz-filter-btn").forEach((btn)=>{
     btn.addEventListener("click", ()=>{
       const mode = btn.getAttribute("data-filter") || "all";
       filterMode = mode;
+      // Yalnız wrong/flagged üçün maskanı aktivləşdir, cleared=false
+      maskMode.active  = (mode === "wrong" || mode === "flagged");
+      maskMode.cleared = false;
+
       document.querySelectorAll(".quiz-filter-btn").forEach(b=> b.classList.toggle("active", b===btn));
       currentPage=1; recomputeOrderedIds(); renderAll();
     });
