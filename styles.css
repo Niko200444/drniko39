@@ -369,3 +369,59 @@ body.dark-mode .edit-area{ background:rgba(15,23,42,0.98); }
 .user-badge img{ width:28px; height:28px; border-radius:999px; object-fit:cover; border:1px solid rgba(148,163,184,0.4); }
 .link-btn{ background:none; border:none; color:var(--accent); cursor:pointer; text-decoration:underline; font-size:0.9rem; }
 .hidden{ display:none !important; }
+
+
+/* (focus mode removed) */
+body.focus-mode .top-bar,
+body.focus-mode .categories,
+body.focus-mode .side-panel,
+body.focus-mode .quiz-filters,
+body.focus-mode #pageNavigation,
+body.focus-mode .exam-bar,
+body.focus-mode .exam-summary,
+body.focus-mode .flashcard-controls { display: none !important; }
+
+body.focus-mode .layout{ grid-template-columns: minmax(0, 1fr); }
+body.focus-mode .quiz-container{
+  min-height: calc(100vh - 90px);
+  display:flex; align-items:center; justify-content:center;
+  padding: 12px;
+}
+body.focus-mode .question{
+  width: 100%; max-width: 760px;
+  min-height: 60vh;
+  display:flex; flex-direction:column;
+  justify-content: center;
+  margin: 0;
+  background:#fff;
+  box-shadow:none;
+}
+body.focus-mode .question-meta,
+body.focus-mode .question-footer,
+body.focus-mode .note-block,
+body.focus-mode .correct-answer-text { display:none !important; }
+
+/* Focus: de-saturate and simplify */
+body.focus-mode { background:#ffffff; }
+body.focus-mode .answer-btn{ background:#fff; border-color:#e5e7eb; box-shadow:none; }
+body.focus-mode .answer-letter{ background:#e5e7eb; color:#0f172a; }
+body.focus-mode .floating-dark-btn,
+body.focus-mode .floating-admin-btn,
+body.focus-mode .floating-flashcard-btn { display:none !important; }
+/* Keep focus toggle visible to exit */
+.floating-focus-btn {position: fixed; right: 18px; top: 18px; z-index:1002; padding:10px 14px; border-radius:999px; border:none; cursor:pointer; font-size:0.95rem; font-weight:700; display:flex; align-items:center; gap:8px; color:#fff; background:linear-gradient(135deg,#0ea5e9,#6366f1); box-shadow:0 16px 30px rgba(14,165,233,0.25);}
+.floating-focus-btn:hover{ transform:translateY(-1px); box-shadow:0 20px 36px rgba(14,165,233,0.32); }
+body.dark-mode .floating-focus-btn{ background:linear-gradient(135deg,#22c55e,#4f46e5); box-shadow:0 16px 30px rgba(34,197,94,0.28); }
+
+/* === Micro animations === */
+/* 1) Fade-slide for questions on render */
+@keyframes fadeSlide {
+  from { opacity:0; transform: translateY(8px); }
+  to   { opacity:1; transform: translateY(0); }
+}
+/* fade-slide removed */ .question { animation: fadeSlide 0.28s ease-out; }
+
+}
+body.dark-mode .answer-btn .ripple { background: rgba(79,70,229,0.55); }
+
+/* 3) Subtle pressed state */
