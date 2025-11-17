@@ -834,21 +834,67 @@ function updateExamUI() {
 }
 
 // Actions
+
+// --- Update only one question card's visuals (no full rerender) ---
+function updateQuestionCardVisuals(id){
+  const q = allQuestions.find(qq => qq.id === id);
+  if (!q) return;
+  const card = document.getElementById("question-" + id);
+  if (!card) return;
+
+  // update answer buttons
+  const buttons = card.querySelectorAll(".answers .answer-btn");
+  const info = selectedAnswers[id];
+  buttons.forEach((btn, idx)=>{
+    btn.classList.remove("correct","wrong","exam-selected");
+    if (info){
+      if (exam.running){
+        if (idx === info.index) btn.classList.add("exam-selected");
+      } else if (idx === info.index){
+        if (idx === q.correctIndex) btn.classList.add("correct");
+        else btn.classList.add("wrong");
+      }
+    }
+  });
+
+  // update footer note text
+  const notePill = card.querySelector(".question-footer .note-pill");
+  if (notePill){
+    let text = "";
+    if (exam.running){
+      text = "İmtahan gedir – düzgün/səhv imtahan bitəndə görünəcək.";
+    } else if (info){
+      text = info.index === q.correctIndex ? "✅ Düzgün cavab vermisən" : "❌ Bu sualda səhvin var idi";
+    } else {
+      text = "Cavab seçmək üçün variantlardan birinə kliklə";
+    }
+    notePill.textContent = text;
+  }
+}
+
 function onAnswerClick(id, index) {
   const q = allQuestions.find((qq) => qq.id === id);
   if (!q) return;
 
+  // save selection
   selectedAnswers[id] = { index };
 
+  // wrong tracking
   if (index !== q.correctIndex) {
     if (!wrongQuestions.includes(id)) wrongQuestions.push(id);
     questionWrongCount[id] = (questionWrongCount[id] || 0) + 1;
   }
 
   saveCategoryState();
-  renderAll();
-}
 
+  // Only update visuals of this card (no full re-render)
+  updateQuestionCardVisuals(id);
+
+  // Update tiny stats + side panel counts/lists
+  renderTinyStats();
+  renderSidePanel();
+}
+;
 function toggleFlag(id) {
   if (flaggedQuestions.includes(id)) {
     flaggedQuestions = flaggedQuestions.filter((x) => x !== id);
