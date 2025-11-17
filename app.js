@@ -1,3 +1,5 @@
+// filepath: /mnt/data/app.js
+
 // Sadə localStorage helper-lər
 function loadJSON(key, fallback) {
   try {
@@ -64,6 +66,33 @@ function updateAuthUI(){
   }
 }
 
+// ===== Deterministic shuffle (index mismatch problemini həll edir) =====
+function hashString(s){
+  // djb2
+  let h = 5381;
+  for (let i=0;i<s.length;i++){ h = ((h<<5)+h) + s.charCodeAt(i); h |= 0; }
+  return h >>> 0;
+}
+// Mulberry32 PRNG
+function mulberry32(a){
+  return function(){
+    a |= 0; a = a + 0x6D2B79F5 | 0;
+    let t = Math.imul(a ^ a >>> 15, 1 | a);
+    t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t;
+    return ((t ^ t >>> 14) >>> 0) / 4294967296;
+  };
+}
+// Fisher–Yates with seeded RNG
+function stableShuffle(arr, seed){
+  const a = arr.slice();
+  const rnd = mulberry32(seed);
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(rnd() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
 // Local state to object
 function collectLocalState(){
   const data = {};
@@ -115,8 +144,6 @@ function debounce(fn, wait) {
 }
 
 const saveRemoteStateDebounced = debounce(saveRemoteState, 1500);
-
-
 
 
 // Global state
@@ -184,7 +211,7 @@ function formatTime(totalSec) {
   return String(m).padStart(2, "0") + ":" + String(s).padStart(2, "0");
 }
 
-// Random qarışdırma
+// Random qarışdırma (artıq istifadə etmirik, sabit shuffle istifadə olunur)
 function shuffleArray(arr) {
   const a = arr.slice();
   for (let i = a.length - 1; i > 0; i--) {
@@ -194,11 +221,15 @@ function shuffleArray(arr) {
   return a;
 }
 
-// JSON-da düzgün cavab həmişə A-dadır (answers[0]) – ekranda random
+// JSON-da düzgün cavab həmişə A-dadır (answers[0]) – ekranda SABİT random
 function normalizeQuestion(raw, index) {
   const originalAnswers = Array.isArray(raw.answers) ? raw.answers.slice() : [];
   const correctAnswer = originalAnswers[0] || "";
-  const shuffled = shuffleArray(originalAnswers);
+
+  // SABİT shuffle: sual və cavabların məzmunundan seed
+  const seed = hashString((raw.question || "") + "|" + originalAnswers.join("||"));
+  const shuffled = stableShuffle(originalAnswers, seed);
+
   let correctIndex = shuffled.indexOf(correctAnswer);
   if (correctIndex === -1) correctIndex = 0;
 
@@ -254,7 +285,15 @@ function updateQuestionsPerPageFromSelect() {
   renderAll();
 }
 
-// Stats helpers
+// Stats helpers (index → mətni map edərək sayırıq)
+function _resolveSelectedIndex(q, answerInfo){
+  if (!answerInfo) return -1;
+  if (typeof answerInfo.value === "string") {
+    const idx = q.answers.indexOf(answerInfo.value);
+    return idx >= 0 ? idx : (typeof answerInfo.index === "number" ? answerInfo.index : -1);
+  }
+  return (typeof answerInfo.index === "number") ? answerInfo.index : -1;
+}
 function computeStats() {
   const total = allQuestions.length;
   const answered = Object.keys(selectedAnswers).length;
@@ -265,11 +304,10 @@ function computeStats() {
     const id = Number(idStr);
     const q = allQuestions.find((qq) => qq.id === id);
     if (!q) continue;
-    if (answerInfo.index === q.correctIndex) {
-      correct++;
-    } else {
-      wrong++;
-    }
+    const selIdx = _resolveSelectedIndex(q, answerInfo);
+    if (selIdx === -1) continue;
+    if (selIdx === q.correctIndex) correct++;
+    else wrong++;
   }
 
   return { total, answered, correct, wrong, flagged: flaggedQuestions.length };
@@ -452,6 +490,8 @@ function renderQuiz() {
     answersDiv.className = "answers";
 
     const answerInfo = selectedAnswers[q.id];
+    // seçilmiş index-i mətndən tap
+    const selectedIdxResolved = _resolveSelectedIndex(q, answerInfo);
 
     q.answers.forEach((ans, idx) => {
       const btn = document.createElement("button");
@@ -469,9 +509,9 @@ function renderQuiz() {
 
       if (answerInfo) {
         if (exam.running) {
-          if (idx === answerInfo.index) btn.classList.add("exam-selected");
+          if (idx === selectedIdxResolved) btn.classList.add("exam-selected");
         } else {
-          if (idx === answerInfo.index) {
+          if (idx === selectedIdxResolved) {
             if (idx === q.correctIndex) btn.classList.add("correct");
             else btn.classList.add("wrong");
           }
@@ -533,10 +573,11 @@ function renderQuiz() {
 
     let noteText = "";
     const answerInfoNow = selectedAnswers[q.id];
+    const selIdxNow = _resolveSelectedIndex(q, answerInfoNow);
     if (exam.running) {
       noteText = "İmtahan gedir – düzgün/səhv imtahan bitəndə görünəcək.";
-    } else if (answerInfoNow) {
-      noteText = answerInfoNow.index === q.correctIndex ? "✅ Düzgün cavab vermisən" : "❌ Bu sualda səhvin var idi";
+    } else if (answerInfoNow && selIdxNow !== -1) {
+      noteText = selIdxNow === q.correctIndex ? "✅ Düzgün cavab vermisən" : "❌ Bu sualda səhvin var idi";
     } else {
       noteText = filterMode === "all" ? "Cavab seçmək üçün variantlardan birinə kliklə" : "Bu rejimdə sualları yenidən 0-dan işləyirsən";
     }
@@ -845,12 +886,14 @@ function updateQuestionCardVisuals(id){
   // update answer buttons
   const buttons = card.querySelectorAll(".answers .answer-btn");
   const info = selectedAnswers[id];
+  const selIdx = _resolveSelectedIndex(q, info);
+
   buttons.forEach((btn, idx)=>{
     btn.classList.remove("correct","wrong","exam-selected");
     if (info){
       if (exam.running){
-        if (idx === info.index) btn.classList.add("exam-selected");
-      } else if (idx === info.index){
+        if (idx === selIdx) btn.classList.add("exam-selected");
+      } else if (idx === selIdx){
         if (idx === q.correctIndex) btn.classList.add("correct");
         else btn.classList.add("wrong");
       }
@@ -863,8 +906,8 @@ function updateQuestionCardVisuals(id){
     let text = "";
     if (exam.running){
       text = "İmtahan gedir – düzgün/səhv imtahan bitəndə görünəcək.";
-    } else if (info){
-      text = info.index === q.correctIndex ? "✅ Düzgün cavab vermisən" : "❌ Bu sualda səhvin var idi";
+    } else if (info && selIdx !== -1){
+      text = selIdx === q.correctIndex ? "✅ Düzgün cavab vermisən" : "❌ Bu sualda səhvin var idi";
     } else {
       text = "Cavab seçmək üçün variantlardan birinə kliklə";
     }
@@ -876,10 +919,10 @@ function onAnswerClick(id, index) {
   const q = allQuestions.find((qq) => qq.id === id);
   if (!q) return;
 
-  // save selection
-  selectedAnswers[id] = { index };
+  // seçimi həm index, həm də mətni ilə saxla (index-mismatchin qarşısı)
+  selectedAnswers[id] = { index, value: q.answers[index], updatedAt: Date.now() };
 
-  // wrong tracking
+  // wrong tracking (niyə: təkrar səhv statistikasını qorumaq)
   if (index !== q.correctIndex) {
     if (!wrongQuestions.includes(id)) wrongQuestions.push(id);
     questionWrongCount[id] = (questionWrongCount[id] || 0) + 1;
@@ -894,7 +937,7 @@ function onAnswerClick(id, index) {
   renderTinyStats();
   renderSidePanel();
 }
-;
+
 function toggleFlag(id) {
   if (flaggedQuestions.includes(id)) {
     flaggedQuestions = flaggedQuestions.filter((x) => x !== id);
@@ -1123,8 +1166,10 @@ function finishExam(manual) {
   list.forEach((q) => {
     const ans = selectedAnswers[q.id];
     if (!ans) return;
+    const selIdx = _resolveSelectedIndex(q, ans);
+    if (selIdx === -1) return;
     answered++;
-    if (ans.index === q.correctIndex) correct++;
+    if (selIdx === q.correctIndex) correct++;
     else wrong++;
   });
 
