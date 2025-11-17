@@ -1232,29 +1232,37 @@ async function selectCategory(filename) {
   }
 }
 
+// ==== HELPER: Yan paneldəki “Sıralama” seçimini oxu (flashcard üçün də) ====
+function getSelectedQuizOrder(){
+  const r = document.querySelector('input[name="quizOrder"]:checked');
+  return r ? r.value : 'sequential';
+}
+
 // Reset & clear
 function resetCurrentCategory() {
   if (!currentCategory) return;
-  if (!confirm("Bu kateqoriyadakı nəticələri sıfırlamaq istəyirsən?")) return;
+  if (!confirm("Bu kateqoriyadakı nəticələri sıfırlamaq istəyirsən? (Qeyd və flag saxlanacaq)")) return;
 
+  // YALNIZ nəticələri sıfırla — qeyd və flag toxunulmur
   selectedAnswers = {};
   wrongQuestions = [];
-  flaggedQuestions = [];
   questionWrongCount = {};
   editedQuestions = {};
-  questionNotes = {};
+  // flaggedQuestions və questionNotes saxlanır
 
   exam.running = false;
   exam.lastResult = null;
   exam.questionIds = [];
   if (exam.timerId) { clearInterval(exam.timerId); exam.timerId = null; }
 
+  // Yalnız nəticə ilə bağlı localStorage açarlarını sil
   localStorage.removeItem(storageKey("selectedAnswers"));
   localStorage.removeItem(storageKey("wrongQuestions"));
-  localStorage.removeItem(storageKey("flaggedQuestions"));
   localStorage.removeItem(storageKey("questionWrongCount"));
   localStorage.removeItem(storageKey("editedQuestions"));
-  localStorage.removeItem(storageKey("questionNotes"));
+  // flaggedQuestions və questionNotes saxlanır:
+  // localStorage.removeItem(storageKey("flaggedQuestions"));
+  // localStorage.removeItem(storageKey("questionNotes"));
 
   recomputeOrderedIds();
   renderAll();
@@ -1470,6 +1478,8 @@ document.addEventListener("DOMContentLoaded", () => {
       singleQuestionMode = !singleQuestionMode;
       const sqToggleEl = document.getElementById("singleQuestionModeToggle");
       if (sqToggleEl) sqToggleEl.checked = singleQuestionMode;
+      // Flashcard rejiminə keçəndə yan paneldəki sıralama seçimini tətbiq et
+      flashOrderMode = getSelectedQuizOrder(); // <-- vacib: UI ilə sinxron
       questionsPerPage = singleQuestionMode ? 1 : baseQuestionsPerPage;
       currentPage = 1;
       recomputeOrderedIds();
@@ -1540,6 +1550,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (sqToggle) {
     sqToggle.addEventListener("change", () => {
       singleQuestionMode = sqToggle.checked;
+      flashOrderMode = getSelectedQuizOrder(); // <-- flashcard sırası UI-dan götürülür
       questionsPerPage = singleQuestionMode ? 1 : baseQuestionsPerPage;
       currentPage = 1;
       recomputeOrderedIds();
@@ -1547,7 +1558,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Order mode radio (Ardıcıl/Random)
+  // Order mode radio (Ardıcıl/Random) — yan paneldəki “Sıralama” (flashcard-da da keçərlidir)
   document.querySelectorAll('input[name="orderMode"]').forEach((r) => {
     r.addEventListener("change", () => {
       flashOrderMode = r.value;
@@ -1559,7 +1570,14 @@ document.addEventListener("DOMContentLoaded", () => {
   });
   document.querySelectorAll('input[name="quizOrder"]').forEach(radio => {
     radio.addEventListener('change', function() {
+      // Normal rejim üçün dərhal təsir edir
       renderAll();
+      // Flashcard rejimi üçün də eyni seçimi tətbiq et
+      flashOrderMode = getSelectedQuizOrder(); // <-- yeni
+      if (singleQuestionMode) {
+        recomputeOrderedIds();
+        renderAll();
+      }
     });
   });
 
@@ -1628,6 +1646,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // PWA install
   initPWAInstall();
+
+  // İlk yükləmədə flashcard sırasını UI ilə sinxron et
+  flashOrderMode = getSelectedQuizOrder(); // <-- yeni
 });
 
 function toggleMobileMode() {
