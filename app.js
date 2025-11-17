@@ -1188,7 +1188,7 @@ function clearAllData() {
 function adminLoginPrompt() {
   const pwd = prompt("Admin parolu:");
   if (pwd === null) return;
-  if (pwd === "drniko") {
+  if (pwd === "justmee") {
     isAdmin = true;
     localStorage.setItem("quiz_isAdmin", "true");
     updateAdminButtonUI();
