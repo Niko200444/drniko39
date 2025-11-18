@@ -627,6 +627,227 @@ function resetAllAnswersInCategory(){
   selectedAnswers = {}; saveCategoryState();
 }
 
+// ---------- Admin: EDIT QUESTION (ADDED) ----------
+// filepath: /mnt/data/app.js
+/* ==== QALAN KOD EYNİDİR — yalnız EDIT hissəsi aşağıda dəyişdirilib ==== */
+
+// ... (yuxarıdakı bütün kod eyni saxlanılıb)
+
+/* ---------- Admin: EDIT QUESTION (INLINE) ---------- */
+function editQuestion(id){
+  if (!isAdmin){ alert("Bu funksiya yalnız admin üçündür."); return; }
+
+  const q = allQuestions.find(qq => qq.id === id);
+  if (!q){ alert("Sual tapılmadı."); return; }
+
+  const card = document.getElementById("question-"+id);
+  if (!card){ alert("UI tapılmadı."); return; }
+  if (card.querySelector(".edit-form")) return; // artıq açılıbsa
+
+  // Mövcud hissələri gizlət
+  const answersDiv = card.querySelector(".answers");
+  const footer = card.querySelector(".question-footer");
+  const noteBlock = card.querySelector("#note-"+id);
+  const correctDiv = card.querySelector("#correct-answer-"+id);
+  [answersDiv, footer, noteBlock, correctDiv].forEach(el=>{ if (el) el.style.display="none"; });
+
+  // Inline editoru qur
+  const form = buildInlineEditor(q, {
+    onCancel: ()=>{
+      if (answersDiv) answersDiv.style.display="";
+      if (footer) footer.style.display="";
+      if (noteBlock) noteBlock.style.display="";
+      if (correctDiv) correctDiv.style.display="";
+      form.remove();
+    },
+    onSave: (payload)=>{
+      const { question, answers, correctIndex } = payload;
+
+      // editedQuestions before/after yaz
+      const curQ = q.question;
+      const curAnswers = q.answers.slice();
+      const curCorrect = q.correctIndex;
+
+      if (!editedQuestions[id]){
+        editedQuestions[id] = {
+          id,
+          active: "after",
+          before: { question: curQ, answers: curAnswers, correctIndex: curCorrect },
+          after:  { question, answers, correctIndex }
+        };
+      } else {
+        // first time if previous before is missing, ensure it's current
+        if (!editedQuestions[id].before){
+          editedQuestions[id].before = { question: curQ, answers: curAnswers, correctIndex: curCorrect };
+        }
+        editedQuestions[id].after = { question, answers, correctIndex };
+        editedQuestions[id].active = "after";
+      }
+
+      // Live-a tətbiq et
+      q.question = question;
+      q.answers = answers.slice();
+      q.correctIndex = correctIndex;
+
+      delete selectedAnswers[id];
+      saveCategoryState();
+
+      // Kartı yenidən göstər
+      renderAll();
+    }
+  });
+
+  // Header-dən sonra daxil et
+  const header = card.querySelector(".question-header");
+  if (header && header.nextSibling) card.insertBefore(form, header.nextSibling);
+  else card.appendChild(form);
+}
+
+// Köməkçi: inline editor UI
+function buildInlineEditor(q, handlers){
+  const form = document.createElement("div");
+  form.className = "edit-form";
+  form.style.border = "1px dashed var(--border)";
+  form.style.borderRadius = "8px";
+  form.style.padding = "12px";
+  form.style.marginTop = "10px";
+  form.style.background = "var(--panel-bg, rgba(0,0,0,0.03))";
+
+  // Sual mətni
+  const qLabel = document.createElement("div");
+  qLabel.style.fontWeight = "600";
+  qLabel.style.marginBottom = "6px";
+  qLabel.textContent = "Sual mətni";
+  const qInput = document.createElement("textarea");
+  qInput.rows = 2;
+  qInput.value = q.question || "";
+  qInput.style.width = "100%";
+  qInput.style.boxSizing = "border-box";
+  qInput.style.marginBottom = "10px";
+
+  // Cavab siyahısı wrapper
+  const answersWrap = document.createElement("div");
+  answersWrap.className = "edit-answers-wrap";
+
+  // Header (radio + cavab + sil)
+  const head = document.createElement("div");
+  head.style.display = "grid";
+  head.style.gridTemplateColumns = "24px 1fr 32px";
+  head.style.gap = "8px";
+  head.style.alignItems = "center";
+  head.style.fontSize = "12px";
+  head.style.opacity = "0.8";
+  head.style.margin = "6px 0";
+  head.innerHTML = `<span>✔</span><span>Cavab</span><span></span>`;
+
+  answersWrap.appendChild(head);
+
+  // Row yaradan helper
+  const makeRow = (text, checked)=>{
+    const row = document.createElement("div");
+    row.style.display = "grid";
+    row.style.gridTemplateColumns = "24px 1fr 32px";
+    row.style.gap = "8px";
+    row.style.alignItems = "center";
+    row.style.marginBottom = "6px";
+
+    const radio = document.createElement("input");
+    radio.type = "radio"; radio.name = "correctAnswer";
+    radio.checked = !!checked;
+
+    const input = document.createElement("input");
+    input.type = "text"; input.value = text || "";
+    input.placeholder = "Cavab variantı";
+    input.style.width = "100%";
+
+    const delBtn = document.createElement("button");
+    delBtn.type = "button";
+    delBtn.className = "icon-btn";
+    delBtn.innerHTML = `<i class="fa fa-trash"></i>`;
+    delBtn.title = "Sətiri sil";
+    delBtn.addEventListener("click", ()=>{
+      // WHY: ən az 2 cavab şərtini qorumaq üçün sonradan yoxlanacaq
+      row.remove();
+    });
+
+    row.appendChild(radio);
+    row.appendChild(input);
+    row.appendChild(delBtn);
+    return row;
+  };
+
+  // Mövcud cavabları doldur
+  if (Array.isArray(q.answers) && q.answers.length){
+    q.answers.forEach((a, i)=>{
+      answersWrap.appendChild(makeRow(a, i===q.correctIndex));
+    });
+  } else {
+    answersWrap.appendChild(makeRow("", true));
+    answersWrap.appendChild(makeRow("", false));
+  }
+
+  // Variant əlavə et
+  const addBtn = document.createElement("button");
+  addBtn.type = "button";
+  addBtn.className = "icon-btn";
+  addBtn.style.marginTop = "6px";
+  addBtn.innerHTML = `<i class="fa fa-plus-circle"></i> Variant əlavə et`;
+  addBtn.addEventListener("click", ()=>{
+    answersWrap.appendChild(makeRow("", false));
+  });
+
+  // Action düymələri
+  const actions = document.createElement("div");
+  actions.style.display = "flex";
+  actions.style.gap = "8px";
+  actions.style.marginTop = "12px";
+
+  const cancelBtn = document.createElement("button");
+  cancelBtn.type = "button";
+  cancelBtn.className = "icon-btn";
+  cancelBtn.innerHTML = `<i class="fa fa-times"></i> İmtina`;
+  cancelBtn.addEventListener("click", ()=> handlers.onCancel && handlers.onCancel());
+
+  const saveBtn = document.createElement("button");
+  saveBtn.type = "button";
+  saveBtn.className = "icon-btn";
+  saveBtn.innerHTML = `<i class="fa fa-save"></i> Yadda saxla`;
+  saveBtn.addEventListener("click", ()=>{
+    const question = (qInput.value||"").trim();
+    const rows = Array.from(answersWrap.querySelectorAll("div")).filter(div=>div!==head);
+    const answers = [];
+    let correctIndex = -1;
+
+    rows.forEach((row, idx)=>{
+      const [radio, input] = row.querySelectorAll("input");
+      const val = (input.value||"").trim();
+      if (val){ answers.push(val); if (radio.checked) correctIndex = answers.length-1; }
+    });
+
+    if (!question){ alert("Sual mətni boş ola bilməz."); return; }
+    if (answers.length < 2){ alert("Ən azı 2 cavab olmalıdır."); return; }
+    if (correctIndex < 0){ alert("Düzgün cavabı seç."); return; }
+
+    handlers.onSave && handlers.onSave({ question, answers, correctIndex });
+  });
+
+  actions.appendChild(saveBtn);
+  actions.appendChild(cancelBtn);
+
+  // Montaj
+  form.appendChild(qLabel);
+  form.appendChild(qInput);
+  form.appendChild(answersWrap);
+  form.appendChild(addBtn);
+  form.appendChild(actions);
+
+  return form;
+}
+
+// Inline handlerlərin globaldan çağırılması üçün
+window.editQuestion = editQuestion;
+
+
 function selectCategory(filename){
   currentCategory = filename;
   currentPage = 1;
