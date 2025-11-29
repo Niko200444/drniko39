@@ -551,3 +551,7 @@ body.focus-mode .answer-btn{ font-size: 1.02rem !important; }
   .question-text{ font-size: 1.10rem !important; }
   .answer-btn, .correct-answer-text{ font-size: 1.00rem !important; }
 }
+/* === Focus mode: cavab düymələri klik fix === */
+body.focus-mode .question { position: relative; z-index: 1; } /* why: üst qatla örtülməsin */
+body.focus-mode .answers,
+body.focus-mode .answer-btn { pointer-events: auto; } /* why: klik keçsin */
