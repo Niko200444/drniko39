@@ -571,3 +571,23 @@ body.focus-mode .answer-btn{ font-size: 1.02rem !important; }
 body.focus-mode .question { position: relative; z-index: 1; } /* why: üst qatla örtülməsin */
 body.focus-mode .answers,
 body.focus-mode .answer-btn { pointer-events: auto; } /* why: klik keçsin */
+/* === Dark mode + Focus mode bir yerdə düzgün görünsün === */
+
+/* Body fonu – ağ olmasın, qaranlıq qalqsın */
+body.dark-mode.focus-mode{
+  background: #020617; /* səndəki dark background-la eyni */
+}
+
+/* Cavab düymələrinin default halı – amma yalnız adi cavablar üçün */
+/* correct / wrong / exam-selected rənglərinə toxunmuruq */
+body.dark-mode.focus-mode .answer-btn:not(.correct):not(.wrong):not(.exam-selected){
+  background: rgba(15,23,42,0.98);
+  border-color: rgba(75,85,99,0.95);
+  color: #e5e7eb;
+}
+
+/* A/B/C dairəsi */
+body.dark-mode.focus-mode .answer-letter{
+  background: rgba(75,85,99,0.8);
+  color:#e5e7eb;
+}
