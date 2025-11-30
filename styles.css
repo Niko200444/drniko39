@@ -393,7 +393,7 @@ body.focus-mode .question{
   display:flex; flex-direction:column;
   justify-content: center;
   margin: 0;
-  background:#fff;
+  background:#050303;
   box-shadow:none;
 }
 body.focus-mode .question-meta,
