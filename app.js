@@ -1921,3 +1921,113 @@ async function refreshCloudEditedPreview(){
   }
   setTimeout(()=> refreshCloudEditedPreview(), 0);
 })();
+// /mnt/data/app.js
+/* ====== PUBLIC (readable-by-everyone) EDITED QUESTIONS ====== */
+/* Firestore: publicAppState/state -> { data: { "<quiz_<cat>_editedQuestions>": { ... } }, updatedAt } */
+
+// Public doc ref (no auth required to read if rules allow)
+function getPublicEditedDocRef(){
+  try{
+    if (!firebaseAvailable()) return null;
+    if (!FB.app) FB.app = firebase.initializeApp(window.FIREBASE_CONFIG);
+    if (!FB.db)  FB.db  = firebase.firestore();
+    return FB.db.collection("publicAppState").doc("state");
+  }catch{ return null; }
+}
+
+// Read whole public payload (safe for anonymous)
+async function fetchPublicEditedRaw(){
+  const ref = getPublicEditedDocRef(); if (!ref) return { data:{}, updatedAt:null };
+  const snap = await ref.get();
+  if (!snap.exists) return { data:{}, updatedAt:null };
+  const d = snap.data() || {};
+  return { data: (d.data||{}), updatedAt: d.updatedAt || null };
+}
+
+// Write ONLY current category's editedQuestions to public (merge)
+async function savePublicEditedForCurrentCategory(){
+  try{
+    const ref = getPublicEditedDocRef(); if (!ref) return;
+    const key = storageKey("editedQuestions");
+    const payload = { data: {} };
+    payload.data[key] = editedQuestions || {};
+    await ref.set({ 
+      data: payload.data, 
+      updatedAt: firebase.firestore.FieldValue.serverTimestamp() 
+    }, { merge: true });
+  }catch(e){
+    // WHY: public yazı qaydaları deploymentdə idarə olunur; uğursuz olsa app dayanmasın
+    console.warn("Public save failed:", e && e.message ? e.message : e);
+  }
+}
+
+/* ====== UI WIRING: Cloud list should read from PUBLIC, no login needed ====== */
+// REPLACE: refreshCloudEditedPreview -> public read (no FB.user check)
+async function refreshCloudEditedPreview(){
+  const list = document.getElementById("cloudEditedQuestionsList");
+  const status = document.getElementById("cloudStatus");
+  if (status) status.textContent = "Bulud · yüklənir…";
+  if (list) { list.classList.remove("empty"); list.innerHTML = ""; }
+  try{
+    if (!firebaseAvailable()){
+      if (list){ list.classList.add("empty"); list.textContent = "Firebase konfiqurasiya olunmayıb"; }
+      if (status) status.textContent = "Bulud · —";
+      return;
+    }
+    const remote = await fetchPublicEditedRaw(); // << public doc
+    // Only this category's map
+    const key = storageKey("editedQuestions");
+    const raw = (remote && remote.data) ? remote.data[key] : {};
+    const map = (typeof raw === "string") ? _parseJSONMaybe(raw) : (raw || {});
+    renderCloudEditedList(map, remote && remote.updatedAt);
+  }catch(e){
+    if (list){ list.classList.add("empty"); list.textContent = "Yükləmə xətası"; }
+    if (status) status.textContent = "Bulud · —";
+  }
+}
+
+/* ====== HOOK INTO ADMIN SAVE: also push to PUBLIC ====== */
+// Patch: call savePublicEditedForCurrentCategory() after local save
+(function patchEditQuestionPublicSave(){
+  // keep original reference
+  const _origEditQuestion = window.editQuestion;
+  if (typeof _origEditQuestion !== "function") return;
+
+  window.editQuestion = function(id){
+    // wrap to inject onSave handler patch
+    const beforeRenderAll = renderAll; // keep pointer
+
+    // Monkey-patch buildInlineEditor -> onSave
+    const _origBuild = window.buildInlineEditor;
+    if (typeof _origBuild === "function"){
+      window.buildInlineEditor = function(q, handlers){
+        const h = Object.assign({}, handlers);
+        const userOnSave = h.onSave;
+        h.onSave = (payload)=>{
+          // run original onSave first (writes editedQuestions locally)
+          if (typeof userOnSave === "function") userOnSave(payload);
+          // then push to PUBLIC (async, fire-and-forget)
+          try{ savePublicEditedForCurrentCategory(); }catch{}
+          // nothing else changes
+        };
+        const form = _origBuild(q, h);
+        // restore to avoid double-wrapping other calls
+        window.buildInlineEditor = _origBuild;
+        return form;
+      };
+    }
+    // call original flow
+    return _origEditQuestion(id);
+  };
+})();
+
+/* ====== WIRING FOR REFRESH BUTTON (idempotent) ====== */
+(function(){
+  const btn = document.getElementById("cloudRefreshBtn");
+  if (btn && !btn.__wired){
+    btn.__wired = true;
+    btn.addEventListener("click", ()=> refreshCloudEditedPreview());
+  }
+  // Auto-load once
+  setTimeout(()=> refreshCloudEditedPreview(), 0);
+})();
