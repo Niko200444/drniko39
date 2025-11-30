@@ -1849,3 +1849,75 @@ document.addEventListener("DOMContentLoaded", ()=>{
 
 // Mobile helper
 function toggleMobileMode(){ document.body.classList.toggle('flashcard-mode'); }
+// ---------- Cloud Edited Questions (Firebase) — preview & apply (ADDED) ----------
+function _getRemoteEditedForCurrentCategory(remoteData){
+  try{
+    const data = remoteData && remoteData.data ? remoteData.data : (remoteData || {});
+    const key = storageKey("editedQuestions");
+    const raw = data[key];
+    const map = (typeof raw === "string") ? _parseJSONMaybe(raw) : raw;
+    return (map && typeof map === "object") ? map : {};
+  }catch{ return {}; }
+}
+
+function renderCloudEditedList(remoteEditedMap, updatedAt){
+  const list = document.getElementById("cloudEditedQuestionsList");
+  const status = document.getElementById("cloudStatus");
+  if (status){
+    try{
+      const ts = updatedAt && updatedAt.toDate ? updatedAt.toDate().getTime() : updatedAt;
+      status.textContent = "Bulud · " + (ts ? prettyTime(ts) : "—");
+    }catch{ status.textContent = "Bulud · —"; }
+  }
+  if (!list) return;
+  list.innerHTML = "";
+  const entries = Object.values(remoteEditedMap||{}).sort((a,b)=> (a.id||0)-(b.id||0));
+  if (!entries.length){
+    list.classList.add("empty");
+    list.textContent = "Göstəriləcək dəyişiklik yoxdur";
+    return;
+  }
+  list.classList.remove("empty");
+  entries.forEach(e=>{
+    const btn = document.createElement("button");
+    btn.className = "mini-pill";
+    btn.textContent = "#" + e.id;
+    const newQ = e && e.after && e.after.question ? String(e.after.question) : "";
+    if (newQ) btn.title = newQ.slice(0,96);
+    btn.addEventListener("click", ()=>{
+      editedQuestions[e.id] = Object.assign({}, e, { active: "after" });
+      applyEditedQuestions();
+      saveCategoryState();
+      renderAll();
+    });
+    list.appendChild(btn);
+  });
+}
+
+async function refreshCloudEditedPreview(){
+  const list = document.getElementById("cloudEditedQuestionsList");
+  const status = document.getElementById("cloudStatus");
+  if (status) status.textContent = "Bulud · yüklənir…";
+  if (list) { list.classList.remove("empty"); list.innerHTML = ""; }
+  try{
+    if (!FB.user || !FB.db){
+      if (list){ list.classList.add("empty"); list.textContent = "Giriş tələb olunur"; }
+      if (status) status.textContent = "Bulud · —";
+      return;
+    }
+    const remote = await fetchRemoteStateRaw(); // { data, updatedAt }
+    const map = _getRemoteEditedForCurrentCategory(remote);
+    renderCloudEditedList(map, remote && remote.updatedAt);
+  }catch(e){
+    if (list){ list.classList.add("empty"); list.textContent = "Yükləmə xətası"; }
+    if (status) status.textContent = "Bulud · —";
+  }
+}
+(function(){
+  const btn = document.getElementById("cloudRefreshBtn");
+  if (btn && !btn.__wired){
+    btn.__wired = true;
+    btn.addEventListener("click", ()=> refreshCloudEditedPreview());
+  }
+  setTimeout(()=> refreshCloudEditedPreview(), 0);
+})();
