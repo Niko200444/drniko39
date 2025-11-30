@@ -404,6 +404,22 @@ body.focus-mode .correct-answer-text { display:none !important; }
 /* Focus: de-saturate and simplify */
 body.focus-mode { background:#ffffff; }
 body.focus-mode .answer-btn{ background:#fff; border-color:#e5e7eb; box-shadow:none; }
+/* Fokus modda: seçilmiş / düzgün / səhv cavabların rəngi itməsin */
+body.focus-mode .answer-btn.exam-selected{
+  border-color: rgba(59,130,246,0.8);
+  background: rgba(59,130,246,0.08);
+}
+
+body.focus-mode .answer-btn.correct{
+  border-color: rgba(16,185,129,0.75);
+  background: rgba(16,185,129,0.08);
+}
+
+body.focus-mode .answer-btn.wrong{
+  border-color: rgba(239,68,68,0.85);
+  background: rgba(239,68,68,0.06);
+}
+
 body.focus-mode .answer-letter{ background:#e5e7eb; color:#0f172a; }
 body.focus-mode .floating-dark-btn,
 body.focus-mode .floating-admin-btn,
