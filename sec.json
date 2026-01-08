@@ -1,4 +1,714 @@
 [
+ {
+    "question": "Pankreasın adacıq şişləri arasında xoşxassəli ehtimalı ən yüksək olan hansıdır?",
+    "answers": [
+      "İnsulinoma",
+      "VİP-oma",
+      "Qastrinoma",
+      "Qlükaqonoma",
+      "Somatostatinoma"
+    ]
+  },
+  {
+    "question": "Aşağıdakı patalogiyalardan hansında hipoqlikemiya əsas əlamətdir?",
+    "answers": [
+      "insulinoma",
+      "seratoninoma",
+      "somatostatinoma",
+      "qastrinoma",
+      "qlükaqonoma"
+    ]
+  },
+  {
+    "question": "Хora, sеkrеtor diarеya aşağıdakı patalogiyalardan hansı üçün хaraktеrikdir?",
+    "answers": [
+      "qastrinoma",
+      "seratoninoma",
+      "qlükaqonoma",
+      "somatostatinoma",
+      "insulinoma"
+    ]
+  },
+  {
+    "question": "Hansı adacıq şişi daha çoх pankreasın baş nahiyəsində rast gəlinir?",
+    "answers": [
+      "qastrinoma",
+      "seratoninoma",
+      "somatostatinoma",
+      "qlükaqonoma",
+      "insulinoma"
+    ]
+  },
+  {
+    "question": "Aşağıdakı halların hansında yemək qəbulu qastrin səviyyəsini daha çox artırır?",
+    "answers": [
+      "Qastrinoma",
+      "Hiperasid qastrit.",
+      "Atrofik qastrit",
+      "Hipoasid qastrit",
+      "G-hüceyrə atrofiyası"
+    ]
+  },
+  {
+    "question": "Döş sümüyü arxası ur üçün xarakterik deyil:",
+    "answers": [
+      "Vidaci cuxurda gözlə görünən pulsasiya",
+      "Traxeyanın yerdəyişməsi",
+      "Çiyin nahiyəsinin venalarının genişlənməsi",
+      "K/T zamanı qida borusunun yerdəyişməsi",
+      "Disfaqiya"
+    ]
+  },
+  {
+    "question": "Döş sümüyü arxası ur üçün xarakterik olmayan klinik əlamət:",
+    "answers": [
+      "qanhayxırma",
+      "T4 dəyişməsi",
+      "quru öskürək",
+      "TSH səviyyəsinin dəyişməsi",
+      "səsin dəyişməsi"
+    ]
+  },
+  {
+    "question": "Diffuz toksiki ur zamanı əsas əməliyyat növü sayılır:",
+    "answers": [
+      "Qalxanvarı vəzin tam cıxarılması",
+      "Qalxanvarı vəzin boyun hissəsinin rezeksiyası",
+      "Enukleasiya",
+      "Linfa düyünlərinin cıxarılması",
+      "Hemistrumektomiya"
+    ]
+  },
+  {
+    "question": "Tireotoksik uru olan xəstədə əməliyyatdan sonra rast gəlinməyən ağırlaşma:",
+    "answers": [
+      "Ekzoftalmın inkişafı",
+      "Paratireoid vəzilərinin zədələnməsi",
+      "Afoniya",
+      "Əməliyyat yarasından qanaxma",
+      "Yaranın irinləməsi"
+    ]
+  },
+  {
+    "question": "Tireotoksikoz zamanı mütləq müayinə olunmalıdır:",
+    "answers": [
+      "Qanda triyodtironin və tetrayodtironin",
+      "Qan zərdabında dəmir",
+      "Qanda kortizol",
+      "Qan zərdabında transaminaza",
+      "C-reaktiv zülal"
+    ]
+  },
+  {
+    "question": "Qalxanabənzər vəzin aşağıdakı xəstəliyi bir qayda olaraq konservativ müalicə olunur:",
+    "answers": [
+      "Ağırlaşmamış kəskin tireoidit",
+      "Düyünlü zob",
+      "Qalxanvarı vəzin sisti",
+      "Qalxanvarı vəzin absesi",
+      "Qalxanvarı vəzin xərçəngi"
+    ]
+  },
+  {
+    "question": "Diffuz toksiki ur zamanı “göz simptomu” deyil:",
+    "answers": [
+      "Mari simptomu",
+      "Delrimpl simptomu",
+      "Mebius simptomu",
+      "Ştelvaq simptomu",
+      "Qrefe simptomu"
+    ]
+  },
+  {
+    "question": "Urun rast gəlməyən lokalizasiyasını göstərin:",
+    "answers": [
+      "İntratraxeal",
+      "Dilin kökündə",
+      "Dilaltı",
+      "Döş sümüyü arxası",
+      "Döş daxili"
+    ]
+  },
+  {
+    "question": "Ridel zobu üçün hansı morfoloji əlamət uyğundur:",
+    "answers": [
+      "Fibroz tireoidit",
+      "Kolloid zob",
+      "Adenokarsinoma",
+      "Limfoid infiltrasiya",
+      "İnterstisial ödem"
+    ]
+  },
+  {
+    "question": "” Göz simptomları” (Delrinpli, Ştelvaq, Mebius, Qrefe) qalxanvarı vəzin hansı xəstəliyində rast gəlinir:",
+    "answers": [
+      "Qrevs xəstəliyi",
+      "Kəskin tireoidit yaxud strumit",
+      "Xaşimato xəstəliyi",
+      "Ridel zobu",
+      "Qranulematoz tireoidit"
+    ]
+  },
+  {
+    "question": "Tireotoksikozu olan xəstələrə xas olmayan əlamət:",
+    "answers": [
+      "Bədən çəkisinin artması",
+      "İstilik hissiyatı",
+      "Taxikardiya",
+      "Sinir sisteminin oyanıqlığı",
+      "T-400"
+    ]
+  },
+  {
+    "question": "Ur:",
+    "answers": [
+      "Endokrin xəstəlikdir",
+      "Onkoloji xəstəlikdir",
+      "Nevroloji xəstəlikdir",
+      "Sistem xəstəliyidir",
+      "İnfeksion xəstəlikdir"
+    ]
+  },
+  {
+    "question": "Tireotoksikoz zamanı rast gəlinən əsas simptomokompleks:",
+    "answers": [
+      "Qalxanvarı vəzin ölçüsünün böyüməsi, taxikardiya, ekzoftalm",
+      "Taxikardiya, dərinin ödemli olması, tormozlanma",
+      "Ekzoftalm, əsas mübadilənin enməsi, yüksək hərarət",
+      "Anemiya, enoftalm, hərarətin enməsi",
+      "“Baraban çubuqları” formasında barmaqlar, ptoz, mioz"
+    ]
+  },
+  {
+    "question": "Qalxanvarı vəzin şişi, sisti, kalsifikatı, fibrozu, qansızmaları zamanı “soyuq düyünləri” hansı müayinə metodu ilə aşkar etmək olar:",
+    "answers": [
+      "Radionuklid skenləşdirmə",
+      "EEQ",
+      "FEQDS",
+      "Bronxoskopiya",
+      "Rentgen"
+    ]
+  },
+  {
+    "question": "Qalxanvarı vəzin rezeksiyası zamanı qayıdan sinirinin zədələnməsi əməliyyatdan sonrakı dövrdə özünü hansı klinik əlamətlə göstərəcəkdir?",
+    "answers": [
+      "Afoniya və tənəffüsün çətinləşməsi",
+      "Udma aktının pozulması",
+      "Ptoz",
+      "Hipersalivasiya",
+      "Ekzoftalm"
+    ]
+  },
+  {
+    "question": "Qalxanvarı vəzin labarotor müayinə metodu deyil:",
+    "answers": [
+      "Qanda amilazanın təyini",
+      "Vəzin hormonlarının yoxlanılması və tireotrop rilizinq-hormonla sınaq",
+      "Əsas mübadilənin yoxlanılması (kolorimetriya)",
+      "Qanda zülalla birləşmiş yodun səviyyəsi",
+      "Yod 131-lə müayinə"
+    ]
+  },
+  {
+    "question": "Toksiki adenoma zamanı cərrahi müalicə:",
+    "answers": [
+      "Qalxanvarı vəzin müvafiq payının rezeksiyası",
+      "Qalxanvarı vəzin boyun hissəsinin rezeksiyası",
+      "Enukleasiya",
+      "Qalxanvarı vəzin hər iki payının total çıxarılması",
+      "İki tərəfli subtotal, subfassial rezeksiya"
+    ]
+  },
+  {
+    "question": "Radionuklid skenləşdirmə diaqnostikası ilə aşkar etmək olar:",
+    "answers": [
+      "İsti ocaqları",
+      "Yemək borusunun deformasiyası",
+      "Traxeyanın deformasiyasını",
+      "Medioasteniti",
+      "Tireotoksikozun dərəcəsini"
+    ]
+  },
+  {
+    "question": "Qalxanvarı vəzin hormonlarının yaranması üçün əsas komponentlər:",
+    "answers": [
+      "Yod",
+      "Kalsium",
+      "Fosfor",
+      "Dəmir",
+      "Sink"
+    ]
+  },
+  {
+    "question": "Tireotoksikoz zamanı göz (qapaqlarında) ətrafında piqmentasiyanın (dərinin tündləşməsi) olması:",
+    "answers": [
+      "Ellinek simptomu",
+      "Mebius simptomu",
+      "Delprimpl simptomu",
+      "Qrefe simptomu",
+      "Ştelvaq simptomu"
+    ]
+  },
+  {
+    "question": "Qalxanvarı vəzin xərçəngi zamanı əsas müalicə metodu:",
+    "answers": [
+      "Cərrahi",
+      "Antibiotikoterapiya",
+      "Dinamiki müşahidə",
+      "Medikamentoz",
+      "Fizioterapiya"
+    ]
+  },
+  {
+    "question": "Traxeomalyasiya zamanı əməlyyatdan sonrakı erkən dövrdə baş verən ağırlaşma:",
+    "answers": [
+      "Asfiksiya",
+      "Sarılıq",
+      "Bədən hərarətinin yüksəlməsi",
+      "A/T yüksəlməsi",
+      "Yuxululuq"
+    ]
+  },
+  {
+    "question": "Radikal tireoidektomiyadan sonra hansı xəstəlik inkişaf edir:",
+    "answers": [
+      "Miksedema",
+      "Ridel zobu",
+      "Tireotoksikoz",
+      "Qalxanvarı vəzin xərçəngi",
+      "Şəkərli diabet"
+    ]
+  },
+  {
+    "question": "Qalxanvarı vəzin fiziki müayinə üsulu deyil:",
+    "answers": [
+      "USM",
+      "Boyun dairəsinin ölçülməsi",
+      "Baxış",
+      "Palpasiya",
+      "Obyektiv müayinə"
+    ]
+  },
+  {
+    "question": "Hiperparatireoidizm zamanı hansı mübadılə pozulur:",
+    "answers": [
+      "Kalsium-fosfor",
+      "Kalium",
+      "Natrium",
+      "Dəmir",
+      "Sink"
+    ]
+  },
+  {
+    "question": "Aşağıdakı xəstəliklərdən hansı tireotoksikozun ən çox rast gələn səbəbidir?",
+    "answers": [
+      "Graves xəstəliyi",
+      "Haşimoto xəstəliyi",
+      "Ridel zobu",
+      "De-Kerven tiroiditi",
+      "Tiroid şişi"
+    ]
+  },
+  {
+    "question": "Graves xəstəliyi aşağıdakı göz əlamətlərindən hansını törətmir ?",
+    "answers": [
+      "Iridosiklit",
+      "Konvergensiyanın zəifləməsi",
+      "Göz yarığının geniş açılması",
+      "Ekzoftalm",
+      "Supraorbital şişkinlik"
+    ]
+  },
+  {
+    "question": "Hipertireoz ilə hipotireozu differensiasiya edərkən hansı əlamətin əhəmiyyəti yoxdur?",
+    "answers": [
+      "Tiroid vəzin ölçüsü",
+      "Qanda T3 və T4 miqdarı",
+      "Qanda TSH miqdarı",
+      "Nəbzin sayı",
+      "Ekzoftalm"
+    ]
+  },
+  {
+    "question": "Graves xəstəliyi ilə əlaqədar hansı ifadə yanlışdır ?",
+    "answers": [
+      "Yod çatışmazlığı nəticəsində meydana gəlir",
+      "Ekzoftalm rast gəlir",
+      "Taxikardiya olur",
+      "TSH reseptorlarına qarşı anticisimlər vəzi stimulyasiya edir",
+      "Vəzi diffuz şəkildə böyüyür"
+    ]
+  },
+  {
+    "question": "Tiroid xəstəliklərinin ilkin diaqnostikasında hansı müayinə mütləq deyil?",
+    "answers": [
+      "İncə iynə biopsiyası",
+      "Tiroid hormonları",
+      "Qalxanabənzər vəzin rentqen müayinə",
+      "Klinik müayinə",
+      "USM"
+    ]
+  },
+  {
+    "question": "Tireotoksik kriz ilə əlaqədar hansı ifadə doğru deyil?",
+    "answers": [
+      "Qanda tiroid hormonlarının birdən-birə azalması nəticəsində baş verir",
+      "Prednizolon, antitirod dərmanlar və intensiv terapiya lazım gəlir",
+      "Müalicə almayan hipertireozlu xəstələrdə rast gələ bilir",
+      "Hipertiroidizmi olan xəstələrdə əməliyyatlardan, travmadan, infeksiyalardan sonra baş verə bilir",
+      "Hipertermiya, taxikardiya və hərəki oyanıqlıq əlamətləri ilə biruzə verir"
+    ]
+  },
+  {
+    "question": "Qalxanabənzər vəzi əməliyyatlarından sonra hansı ağırlaşma rast gəlməz?",
+    "answers": [
+      "Hiperkalsiemiya",
+      "Qıcolma",
+      "Qayıdan qırtlaq sinirin zədələnməsi",
+      "Tireotoksik kriz",
+      "Hematoma"
+    ]
+  },
+  {
+    "question": "Hiperparatiroidizm zamanı qanda nə yüksəlir?",
+    "answers": [
+      "kalsium",
+      "tiroksin",
+      "TSH",
+      "yod",
+      "kalium"
+    ]
+  },
+  {
+    "question": "Böyrək daşı xəstəliyi yanaşı olaraq hansı xəstəliklə birgə daha çox rast gəlinir?",
+    "answers": [
+      "Hiperparatiroidizm",
+      "Endemik ur",
+      "Qreyves xəstəliyi",
+      "Hipoparatiroidizm",
+      "Haşimoto uru"
+    ]
+  },
+  {
+    "question": "Endemik urda aşağıdakı hormonlardan hansının miqdarı arta bilər?",
+    "answers": [
+      "TSH",
+      "Bilirubin",
+      "Parathormon",
+      "Estrogen",
+      "Proqesteron"
+    ]
+  },
+  {
+    "question": "Bu xəstəliklərdən hansı anadangəlmədir?",
+    "answers": [
+      "Kretinizm",
+      "Sporadik ur",
+      "Ridel uru",
+      "Toksiki ur",
+      "Haşimoto uru"
+    ]
+  },
+  {
+    "question": "Autoimmun tiroiditlərin diaqnostikasında qanda olan əsas göstərici nədir?",
+    "answers": [
+      "Anti-TPO-nun yüksək olması",
+      "Tireoqlobulinin aşağı olması",
+      "T3-ün yüksək olması",
+      "Parathormonun yüksək olması",
+      "T4-ün yüksək olması"
+    ]
+  },
+  {
+    "question": "Plummer (tireotoksiki adenoma) xəstəliyinin diaqnostik göstəricisi deyil?",
+    "answers": [
+      "anti-TPO-nun yüksək olması",
+      "Ssintoqrafiyada “isti” düyün",
+      "T3-ün yüksək olması",
+      "T4-ün yüksək olması",
+      "TSH-ın aşağı olması"
+    ]
+  },
+  {
+    "question": "Graves xəstəliyində əsas əməliyyat növü sayılır:",
+    "answers": [
+      "Total tiroidektomiya",
+      "Lobektomiya",
+      "İstmusektomiya",
+      "Enukleasiya",
+      "limfatik düyünlərin cıxarılması"
+    ]
+  },
+  {
+    "question": "Tireotoksik ur olan xəstədə əməliyyatdan sonra spesifik olmayan ağırlaşma:",
+    "answers": [
+      "İnsult",
+      "Tireotoksik kriz",
+      "Əməliyyat yarasından qanaxma",
+      "Yaranın irinləməsi",
+      "Afoniya"
+    ]
+  },
+  {
+    "question": "Tireotoksikoz zamanı ilkin olaraq müayinə olunmalıdır:",
+    "answers": [
+      "Qanda triyodtironin və tetrayodtironin",
+      "Qanda kortizol",
+      "Qan zərdabında dəmir",
+      "Qan zərdabında transaminaza",
+      "C-reaktiv zülal"
+    ]
+  },
+  {
+    "question": "Miksedema yaranır:",
+    "answers": [
+      "Qalxanabənzər vəzin hipofunksiyasında",
+      "Tireotoksikozda",
+      "Qalxanvari vəzin “soyuq” düyünündə",
+      "Papilyar xərçəngdə",
+      "Kəskin tireoiditdə"
+    ]
+  },
+  {
+    "question": "Tireotoksikoz zamanı rast gəlinən üç əsas simptomokompleks :",
+    "answers": [
+      "Qalxanvarı vəzin ölçüsünün böyüməsi, taxikardiya, ekzoftalm",
+      "Ekzoftalm, əsas mübadilənin enməsi, yüksək hərarət",
+      "Taxikardiya, dərinin ödemli olması, apatiya",
+      "Anemiya, enoftalm, hərarətin enməsi",
+      "“Baraban çubuqları” formasında barmaqlar, ptoz, mioz"
+    ]
+  },
+  {
+    "question": "Qalxanvarı vəzin şişi, sisti, kalsifikatı, fibrozu, qansızmaları zamanı “soyuq düyünləri” hansı müayinə metodu ilə aşkar etmək olar:",
+    "answers": [
+      "Radionuklid skenləşdirmə",
+      "Elektroensefaloqrafiya",
+      "Endoskopiya",
+      "Bronxoskopiya",
+      "Rentgenoloji"
+    ]
+  },
+  {
+    "question": "Qalxanvarı vəzin rezeksiyası zamanı yuxarı qırtlaq sinirinin zədələnməsi əməliyyatdan sonrakı dövrdə özünü hansı klinik əlamətlə göstərəcəkdir?",
+    "answers": [
+      "Afoniya və “çeçəmə”",
+      "Hipersalivasiya",
+      "Ekzoftalm",
+      "Ptoz",
+      "Udma aktının pozulması"
+    ]
+  },
+  {
+    "question": "Kəskin mastitin törədicilərinə hansı aid deyil:",
+    "answers": [
+      "Micobacterium tuberculosis",
+      "Bağırsaq çöpləri",
+      "Candida",
+      "Streptokokklar",
+      "Stafilokokklar"
+    ]
+  },
+  {
+    "question": "Doğuşdan sonrakı mastitlərin infiltrativ mərhələsində nə etmək lazımdır?",
+    "answers": [
+      "Konservativ müalicə",
+      "Radial kəsiklərin aparılması",
+      "Şüa terapiyası",
+      "Mastektomiya",
+      "Sektoral rezeksiya"
+    ]
+  },
+  {
+    "question": "Süd vəzinin xərçəngində Peyti üsulu ilə mastektomiya Holsted əməliyyatından nə ilə fərqlənir?",
+    "answers": [
+      "Böyük döş əzələsinin saxlanması",
+      "Böyük döş əzələsinin çıxarılması",
+      "Hər iki döş əzələsinin çıxarılması",
+      "Kəsik xəttinə görə",
+      "Körpücüküstü limfa düyünlərinin çıxarılması"
+    ]
+  },
+  {
+    "question": "Süd vəzisinin xərçəngi zamanı istifadə olunmur:",
+    "answers": [
+      "splenektomiya",
+      "hormonterapiya",
+      "şüa terapiyası",
+      "kimyəvi terapiya",
+      "mastektomiya"
+    ]
+  },
+  {
+    "question": "Süd vəzilərinə baxış zamanı əhəmiyyət kəsb etmir:",
+    "answers": [
+      "xəstənin yaşı",
+      "süd vəzilərinin giləsinin geriyə dartılması",
+      "süd vəzilərinin dərisində «apelsin qabığı» tipli ödem",
+      "süd vəzilərinin forması, yerləşməsi, hərəkətliyi",
+      "süd vəzilərinin üzərindəki dərinin rəngi"
+    ]
+  },
+  {
+    "question": "Retromammar absesin açılmasında istifadə olunan kəsik:",
+    "answers": [
+      "süd vəzisinin aşağı kənarından aypara çəklində aparılan kəsik",
+      "Iltihabi infiltrat üzərindən radiar istiqamətdə aparılan kəsik",
+      "Süd vəzisinin lateral səthi boyunca aparılan kəsik",
+      "Süd vəzisinin medial səthi boyunca aparılan kəsik",
+      "areola və dərinin sərhədində aparılan kəsik"
+    ]
+  },
+  {
+    "question": "Mastit daha çox təsadüf olunur:",
+    "answers": [
+      "süd əmizdirən qadınlarda",
+      "cinsi yetişgənlik dövründə olan yeniyetmələrdə",
+      "qoca və yaşlı qadınlarda",
+      "menopauza dövründə",
+      "40 yaşdan sora"
+    ]
+  },
+  {
+    "question": "Mastitlər zamanı infeksiya üçün daha çox giriş qapısıdır:",
+    "answers": [
+      "döş giləsinin çatları",
+      "döş qəfəsinin süd vəzisinə yaxın olan yaraları",
+      "boyun nahiyyəsinin yaraları",
+      "qabırğaların zədələnməsi",
+      "qoltuqaltı nahiyyənin limfa düyünləri"
+    ]
+  },
+  {
+    "question": "Kəskin mastit -:",
+    "answers": [
+      "Iltihabi prosesdir",
+      "Dishormonal prosesdir",
+      "Anadangəlmə prosesdir",
+      "Onkoloji prosesdir",
+      "Autoimmun prosesdir"
+    ]
+  },
+  {
+    "question": "Süd vəzisinin xərçəngi daha az metastaz verir.",
+    "answers": [
+      "beyinə",
+      "parasternal limfa düyünlərinə",
+      "körpücükaltı limfa düyünlərinə",
+      "körpücüküstü limfa dyünlərinə",
+      "qoltuqaltı limfa düyünlərinə"
+    ]
+  },
+  {
+    "question": "Süd vəzisinin xərçəngi üçün xarakterik deyildir:",
+    "answers": [
+      "Mebius simptomu",
+      "xoralaşma",
+      "gilənin geriyə dartılması",
+      "şişəbənzər törəmənin əllənməsi",
+      "«portağal qabığı» simptomu"
+    ]
+  },
+  {
+    "question": "Mastitlər zamanı radiar kəsiklərin aparılmasının məqsədi:",
+    "answers": [
+      "irinin effektiv axınının təmin olunması",
+      "süd vəzisində xərçəngin yaranmasının profilaktikası",
+      "süd axarlarını zədələnməkdən qorumaq",
+      "orqanın innervasiyasının qorunması",
+      "kelloid çapıqların yaranmasının profilaktikası"
+    ]
+  },
+  {
+    "question": "Klinikaya sağ süd vəzisinin yuxarı lateral kvadratında bərk düyünün olması şikayəti ilə qadın müraciət etmişdir. Diaqnozun dəqiq qoyulması üçün hansı müayinənin aparılması daha məqsədə uyğundur?",
+    "answers": [
+      "punksion biopsiyanın",
+      "termoqrafiyanın",
+      "duktoqrafiyanın",
+      "limfoqrafiyanın",
+      "döş qəfəsinin rentgen müayinəsi"
+    ]
+  },
+  {
+    "question": "19 yaşlı xəstə həkimə sağ süd vəzində olan, aybası önü dövrdə şiddətlənən ağrı şikayəti ilə müraciət etmişdir. Baxış zamanı hər iki süd vəzi düzgün quruluşlu, simmetrikdir. Gilə və dəri örtüyü dəyişiksizdir. Palpasiya zamanı kiçik danəli törəmə fonunda 6 sm diametrində dəri və gilə ilə əlaqəsi olmayan, bərk, hərəkətli, dəqiq konturları olan şiş aşkarlanmışdır. Regionar limfa düyünləri böyüməyib. Müalicə taktikası:",
+    "answers": [
+      "Sektoral rezeksiya",
+      "Antibiotikoterapiya",
+      "Şüa müalicəsi",
+      "Kimyəvi terapiya",
+      "Peyti əməliyyatı"
+    ]
+  },
+  {
+    "question": "51 yaşlı xəstədə sağ süd vəzi infiltratlaşmış, bərkimiş və həcmcə böyümüşdür. Dərisi nahamar, kənarları diləbənzər qırmızı ləkələrlə örtülmüşdür. Gilə dartılmış və deformasiyaya uğramışdır. Sizin diaqnoz?",
+    "answers": [
+      "Qızılyeləbənzər xərçəng",
+      "Zirehli xərçəng",
+      "Kəskin mastit",
+      "Solid xərçəng",
+      "Pecet xərçəngi"
+    ]
+  },
+  {
+    "question": "Xəstədə ilkin müayinələrdə qalxanabənzər vəzidə tək düyün, USM-də 4 sm-lik heterogen düyün, hormonlar normal səviyyələrdə tapılır. İlk növbədə hansını seçərsiniz?",
+    "answers": [
+      "İynə biopsiyası və cərrahi müalicə",
+      "Yod tərkibli dərmanlarla müalicə",
+      "Radioaktiv yod",
+      "L-tiroksin müalicəsi",
+      "Radioizotop müayinənin nəticəsinə görə qərar verərəm"
+    ]
+  },
+  {
+    "question": "61 yaşlı xəstə zəiflik, kəskin yorğunluqdan, ümumi vəziyyətinin pisləşməsindən şikayət edir. 15 il əvvəl qalxanvarı vəzdə 1 sm diametrli düyün aşkarlanıb. Son 3 ayda düyün 3 dəfə böyümüşdür. Palpasiya zamanı törəmənin səthi kələ-kötür, konsistensiyası bərkdir. Bu hansı xəstəlikdən şübhələnməyə əsasdır?",
+    "answers": [
+      "Maliqnizasiya etmiş düyünlü zob",
+      "Ridel zobu",
+      "Toksiki zob",
+      "Xaşimato zobu",
+      "Kəskin tireodit"
+    ]
+  },
+  {
+    "question": "Qalxanabənzər vəzin rezeksiyasından sonra xəstədə afoniya müşahidə olunur. Hansı fəsad baş verib?",
+    "answers": [
+      "Qayıdan qırtlaq sinirinin zədələnməsi",
+      "Diafraqmal sinirin zədələnməsi",
+      "Qalxanabənzər ətraf vəzilərin zədələnməsi",
+      "Azan sinirin zədələnməsi",
+      "Üclü sinirinin zədələnməsi"
+    ]
+  },
+  {
+    "question": "Qalxanvarı vəzin rezeksiyası zamanı yuxarı qırtlaq siniri zədələnmişdir. Əməliyyatdan sonrakı dövrdə baş verən klinik əlaməti qeyd edin:",
+    "answers": [
+      "Afoniya və tənəffüsün çətinləşməsi",
+      "Udma aktının pozulması",
+      "Ekzoftalm",
+      "Hipersalivasiya",
+      "Ptoz"
+    ]
+  },
+  {
+    "question": "Süd vəzi xərçənginin diaqnozunda daha çox əhəmiyyət kəsb edən müayinəni qeyd edin:",
+    "answers": [
+      "Ekssizion biopsiya",
+      "Mammoqrafiya",
+      "Sutkalıq sidikdə estrogenlərin təyini",
+      "USM",
+      "Qanda katexolaminlərin təyini"
+    ]
+  },
+  {
+    "question": "30 yaşlı qadın qıcıqlanma, ağlamağa meyllilik, ürəkdöyünmə, yorğunluq, zəiflik, əllərdə tərləmə, arıqlamadan şikayət edir. Xəstəliyin başlamasını psixi travma ilə əlaqələndirir. Diaqnozu dəqiqləşdirmək üçün müayinə metodlarını qeyd edin:",
+    "answers": [
+      "Tiroid hormonların təyini",
+      "Qida borusunun rentgenoskopiyası",
+      "K/T",
+      "EKQ",
+      "Elektrokimoqrafiya"
+    ]
+  },
   {
     "question": "Hipotonik mədədə udulmuş tüklərdən əmələ gələn yad cisim:",
     "answers": [
@@ -1240,3 +1950,4 @@
     ]
   }
 ]
+
