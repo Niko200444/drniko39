@@ -78,14 +78,18 @@
         <span class="logo-sub"></span>
       </div>
 
-  <div class="top-actions">
-        <div id="questionCountContainer" class="top-control">
-          <label for="questionsPerPage">Səhifədə sual:</label>
-          <select id="questionsPerPage">
-            <option value="5">5</option>
-            <option value="10" selected>10</option>
-            <option value="20">20</option>
-            <input type="number" id="questionsPerPage" min="1" max="100" value="10" step="1">
+<div id="questionCountContainer" class="top-control">
+  <label for="questionsPerPage">Səhifədə sual:</label>
+  
+  <input type="number" id="questionsPerPage" list="questionOptions" placeholder="Sayı seçin və ya yazın" min="1">
+
+  <datalist id="questionOptions">
+    <option value="5">
+    <option value="10">
+    <option value="20">
+    <option value="50">
+  </datalist>
+</div>
           </select>
         
         <button id="installBtn" class="secondary-btn pwa-install hidden" title="Proqram kimi quraşdır">
