@@ -1,2982 +1,2063 @@
 [
   {
-    "question": "Ağciyər xərçəngi:",
+    "question": "Fizioterapiya nədir?",
     "answers": [
-      "tənəffüs yollarının selikli qışasının bədxassəli xəstəliyidir",
-      "ağciyər epitelinin metaplaziyasıdır",
-      "ağciyərin limfatik aparatın bədxassəli xəstəliyi",
-      "ağciyərin alveolaların sistem xəstəliyidir",
-      "ağciyər damarlarının bədxassəli xəstəliyidir"
+      "Təbii amillərlə müalicə",
+      "İqlimlə müalicə",
+      "Elektrik cərəyanı ilə müalicə",
+      "Mineral sularla müalicə",
+      "Palçıqla müaliçə"
     ]
   },
   {
-    "question": "Dünyada bədxassəli şişlərlə ölümün strukturasında ağciyər xərcəngi kişilərdə:",
+    "question": "Göstərilən xəstəliklərdən hansı fiziki üsullarla müalicəyə göstərişdir?",
     "answers": [
-      "1-ci yer tutur",
-      "23-cü yer tutur",
-      "2-ci yer tutur",
-      "3-cü yer tutur",
-      "8-ci yer tutur"
+      "Hipertoniya xəstəliyi, II mərhələ",
+      "Stenokardiya III funksional sinif",
+      "Kaxeksiya",
+      "Anemiya",
+      "Psixomotor oyanıqlarla gedən psixozlar"
     ]
   },
   {
-    "question": "Ağciyər xərçənginə çox rast gəlinir:",
+    "question": "Göstərilən xəstəliklərdən hansı fiziki üsullarla müalicəyə əks göstərişdir?",
     "answers": [
-      "kişilərdə",
-      "yeniyetmələrdə",
-      "20-30 yaş arası",
-      "usaqlarda",
-      "qadinlarda"
+      "Bəd xassəli şişlər",
+      "II tip Şəkərli diabet",
+      "Bronxial astma",
+      "Mədənin xora xəstəliyi, yarımkəskin dövr",
+      "Ekzema"
     ]
   },
   {
-    "question": "Klinik-anatomik təsnifatına görə ağciyər xərçəngi aşağıdakı formalardan ibarətdir:",
+    "question": "Göstərilənlərdən hansı fiziki amillərlə müalicənin üstünlüklərinə aid deyildir?",
     "answers": [
-      "adenokarsinoma və yastı hüceyrəli xərcəng",
-      "mediastinal və periferik xərcəng",
-      "xırda və iri hüceyrəli",
-      "ekzofit və endofit",
-      "mərkəzi, periferik və atipik"
+      "Onkoloji xəstəliklərin yaranmasının qarşısını alır",
+      "Xroniki xəstəliklərin remissiya dövrünü uzadır",
+      "Bilavasitə patoloji prosesə təsir göstərir",
+      "Müalicə qeyri – invaziv üsulla aparılır",
+      "Dərman xəstəliyi və allergiya törətmir"
     ]
   },
   {
-    "question": "Pankost xərçəngi aiddir:",
+    "question": "Göstərilənlərin hansından fizioterapiyada istifadə olunmur?",
     "answers": [
-      "ağciyərin periferik xərçənginə",
-      "xırda hüceyrəli xərçəngə, ağciyərin sarkomasına",
-      "atipik xərçəngə",
-      "bronxoalveolyar xərçəngə",
-      "mərkəzi xərçəngə"
+      "Duz",
+      "Gil",
+      "Palçıq",
+      "Qum",
+      "Buz"
     ]
   },
   {
-    "question": "Ağciyər xərçəngin əsas histoloji formaları:",
+    "question": "İkincili profilaktikada məqsəd nədir?",
     "answers": [
-      "adenokarsinoma, yastıhüceyrəli xərcəng və xırdahüceyrəli xərçəng",
-      "angiosarkoma, xırdahüceyrəli xərçəng",
-      "irihüceyrəli xərçəng, sarkoma",
-      "fibromioma, miosarkoma",
-      "limfoma"
+      "Xəstəliklərin proqressivləşməsinin qarşısının alınması",
+      "Sümük toxumasında mübadiləni ğücləndirmək",
+      "İtirilmiş əmək qabiliyyətinin bərpa olunması",
+      "Mübadilə proseslərinin intensivliyinin qarşısının alınması",
+      "Xəstəliklərin kəskin mərhələdə müalicəsini aparmaq"
     ]
   },
   {
-    "question": "Ağciyər xərçənginin mediastinal forması aiddir:",
+    "question": "Fiziki amillərlə ikincili profilaktikanın təşkilində nə nəzərdə tutulmalıdır?",
     "answers": [
-      "ağciyər xərçənginin atipik formasına",
-      "periferik formasına",
-      "Pankost xərçənginə",
-      "xırdahüceyrəli xərçəngə",
-      "mərkəzi formasına"
+      "Elektroişıq müalicə şöbəsinin olması",
+      "Dərman müalicəsinin olması",
+      "Cərrahi əməliyyat otаğının olması",
+      "Reanimasiya şöbəsinin olması",
+      "Funksional diaqnostika şöbəsinin olması"
     ]
   },
   {
-    "question": "Ağciyər xərçəngində adenokarsinoma histoloji variant kimi ən çox rast gəlinir:",
+    "question": "Qalvanizasiyada hansı cərəyandan istifadə olunur?",
     "answers": [
-      "qadınlarda",
-      "kişilərdə",
-      "yaşlı adamlarda",
-      "yeniyetmələrdə",
-      "uşaqlarda"
+      "Aşağı gərginlikli, zəif şiddətə malik sabit cərəyan",
+      "Yüksək tezlikli və gərginlikli cərəyan",
+      "Zəif gücə malik yüksək gərginlikli dəyişən cərəyan",
+      "Ultrayüksək tezlikli cərəyan",
+      "Aşağı tezlikli, zəif gücə malik impuls cərəyanı"
     ]
   },
   {
-    "question": "İnkişaf formalarına görə ağciyər xərçəngi ayrılır:",
+    "question": "Aşağıda göstərilənlərdən hansı yüksək elektrik keçiriciliyinə malikdir?",
     "answers": [
-      "endobronxial, peribronxial, qarışıq",
-      "yastihüceyrəli xərçəng, adenokarsinoma",
-      "iri-və xirdahüceyrəli xərçəng",
-      "mufto-polipə bənzər",
-      "nəlbəkiyə bənzər və xoralı"
+      "Qan",
+      "Dəri",
+      "Dərialtı piy",
+      "Sümük",
+      "Qığırdaq"
     ]
   },
   {
-    "question": "Ağciyər xərçənginin əsas simptomları:",
+    "question": "Qalvanizasiya göstərilən effektlərdən hansına malikdir?",
     "answers": [
-      "öskürək, qanhayxırma, döş qəfəsində ağrılar",
-      "baş ağrıları, öskürək, hemiparez",
-      "qıcqırma, sarılıq, döş qəfəsində ağrılar",
-      "sianoz, taxikardiya, ətraflarda keyləşmə",
-      "zəiflik, hıçqırma"
+      "Damargenişləndirici",
+      "Hipokoaqulyasiya edici",
+      "Bakterisid",
+      "Hiperkoaqulyqsiya edici",
+      "Damardaraldıcı"
     ]
   },
   {
-    "question": "Ağciyər xərçəngi zamanı paraneoplastik sindroma aiddir:",
+    "question": "Qalvanizasiyanın ölçü vahidi nədir?",
     "answers": [
-      "”saat şüşələri və baraban çöpləri simptomları”",
-      "Horner simptomu",
-      "”moruq jelesi” simptomu",
-      "”qalop ritmi” simptomu",
-      "qanhayxırma"
+      "Milliamper",
+      "Coul",
+      "Vatt/sm2",
+      "Millitesla",
+      "Eritem doza"
     ]
   },
   {
-    "question": "Pankost xərçəngə aiddir :",
+    "question": "Qalvanizasiyada istifadə olunan cərəyanın gərginliyi nə qədər olur?",
     "answers": [
-      "ptoz, mioz, enoftalm",
-      "baş ağrıları və ishal",
-      "öskürək və paraneoplastik sindrom",
-      "tənginəfəslik və qanhayxırma",
-      "döş qəfəsində ağrılar və alt dodağın sianozu"
+      "80 V-dək",
+      "160 V-dək",
+      "220 V-dək",
+      "110 V-dək",
+      "90 V-dək"
     ]
   },
   {
-    "question": "Ağciyər xərçənginin simptomsuz gedişatı ən çox rast gəlinir:",
+    "question": "Yerli qalvanizasiya zamanı cərəyanın qəbul olunacaq sıxlığı nə qədər olur?",
     "answers": [
-      "periferik xərçəngdə",
-      "mediastinal formalı ağciyər xərçəngində",
-      "yastı hüceyrəli xərçəngdə",
-      "endobronxial xərçəngdə",
-      "mərkəzi xərçəngdə"
+      "0,1- mA –dək",
+      "0,03 mA-dək",
+      "0,8 mA –dək",
+      "2 – 5 mA – dək",
+      "0,05- mA – dək"
     ]
   },
   {
-    "question": "Mərkəzi ağciyər xərçəngində əsas müayinə üsulu aşağıdakıdır:",
+    "question": "Qalvanizasiya zamanı döşəkçələr nə ilə isladılır?",
     "answers": [
-      "bronxoskopiya biopsiya ilə",
-      "selektiv angoqrafiya",
-      "bronxoqrafiya",
-      "ultrasəs müayinəsi",
-      "radioizotop müayinə"
+      "Adi şirin su ilə",
+      "Distillə olunmuş su ilə",
+      "Dimeksidlə",
+      "Fizioloji məhlulla",
+      "Spirtlə"
     ]
   },
   {
-    "question": "Ağciyər xərçənginin hansı formasında bronxoskopiya üsulu daha dəqiq və informativdir:",
+    "question": "Hansı hallarda qalvanizasiyanın verilməsi yol verilməzdir?",
     "answers": [
-      "mərkəzi xərçəngində",
-      "ağciyər xərçənginin mediastinal formasında",
-      "periferik xərçəngində",
-      "pnevmoniyayabənzər xərçəngində",
-      "baş beyinə metastazlar zamanı"
+      "Qadağan olunmuş lokalizasiya yoxdur",
+      "Kişi cinsi orqanlarına",
+      "Qadın cinsi orqanlarına",
+      "Ürək nahiyyəsinə köndələn",
+      "Başa alın-ənsə metodu ilə"
     ]
   },
   {
-    "question": "Ağciyər xərçəngi zamanı hormonal aktivliyin yüksək olması xarakterikdir:",
+    "question": "Dərman elektroforezi üçün əksər pereparatların optimal konsentrasiyası nə qədər olmalıdır?",
     "answers": [
-      "xırdahüceyrəli xərçəngə",
-      "yastıhüceyrəli xərçəngə",
-      "ağciyərin mediastinal xərçənginə",
-      "Pankost xərçənginə",
-      "ağciyərin sarkomasına"
+      "2 – 5%",
+      "25% və daha çox",
+      "10 – 15%",
+      "5 – 10 %",
+      "1% - dək"
     ]
   },
   {
-    "question": "Ağciyər xərçəngi zamanı radikal əməliyyatlar aşağıdakılardır:",
+    "question": "Bir elektroforez prosedurası zamanı dərman maddəsi haraya daxil olur?",
     "answers": [
-      "pulmonektomiya və lobektomiya",
-      "torakotomiya",
-      "mediastinotomiya",
-      "seqmentektomiya və ağciyərin kökünün limfadisseksiyası",
-      "ağciyərin atipik rezeksiyası"
+      "Epidermis və dermanın üst qatına",
+      "Dəri altı piy qatına",
+      "Əzələ qatına",
+      "Qan damarların",
+      "Yalnız epidermisə"
     ]
   },
   {
-    "question": "Ağciyərin baş bronxun xərçəngi zamanı radikal əməliyyat aşağıdakıdır:",
+    "question": "Qalvanik cərəyanın təsirindən hansı biofiziki effektlər yaranır?",
     "answers": [
-      "pulmonektomiya",
-      "laparotomiya",
-      "torakotomiya",
-      "lobektomiya",
-      "seqmentektomiya"
+      "İon konsentrasiyasının dəyişilməsi",
+      "Qaz boşalması effekti, qütbləşmiş ionların yaranması",
+      "Biomolekulların rəqsi və dövri hərəkətləri",
+      "Sərbəst radikalların əmələ gəlməsi",
+      "Mexaniki rəqslər"
     ]
   },
   {
-    "question": "Şüa müalicəsi ağciyər xərçəngində daha effektivdir:",
+    "question": "Dərman elektroforezi ilə dərmanların orqanizmə yeridilməsinin digər üsullardan hansı fərqli üstünlüyə malik deyildir?",
     "answers": [
-      "yastıhüceyrəli variantda",
-      "metastatik plevritdə",
-      "ağciyərin hemangiomasında",
-      "sarkomada",
-      "adenokarsinomada"
+      "Mümkün ola biləcək allergik reaksiyaların olmaması",
+      "Dəridə dərman maddəsinin “depo” – sunun yaranması",
+      "Yeridilən dərman maddələrinin “təmiz” (qatışıqsız) halda olması",
+      "Ümumi toksiki təsirin olmaması",
+      "Dərman maddəsinin bilavasitə patoloji proses nahiyyəsinə yeridilməsi"
     ]
   },
   {
-    "question": "Ağız boşluğuna aid deyil:",
+    "question": "Hansı xəstələrə dərman elektroforezi göstərişdir?",
     "answers": [
-      "dilin kökü",
-      "ağız boşluğunun dibi",
-      "sərt və yumşaq damaq",
-      "çənə və əng sümüklərinin alveolyar çıxıntısı",
-      "dilin hərəkətli hissəsi"
+      "Ağ ciyərlərin xroniki qeyri-spesifik xəstəlikləri",
+      "Kəskin mikrob ekzeması zamanı",
+      "Dəri tamlığının böyük ərazidə pozulmaları zamanı",
+      "Qanaxmaya meyllik olarsa",
+      "Kəskin psixozlar"
     ]
   },
   {
-    "question": "Hansı virus ağız boşluğu xərçənginin əmələ gəlməsinə təsir edir:",
+    "question": "Elektroyuxu terapiyasında müalicə hansı tezlik diapazonunda verilir?",
     "answers": [
-      "insan papilloma virusu (HPV)",
-      "insan immunodefisit virusu (HİV)",
-      "insan herpes virusu (HHV)",
-      "Epşteyn-Barr virusu (EBV)",
-      "hepatit B və C virusu (HVB, HVC)"
+      "1 - 160 Hs",
+      "2000 HS və daha çox",
+      "600 – 1000 Hs",
+      "1000 – 1500 Hs",
+      "!50 - 350 HS"
     ]
   },
   {
-    "question": "Ağız boşluğu xərçənginin risk amillərinə aid deyil:",
+    "question": "Transkranial elektroanalgeziya müalicə üsulunda hansı tezlikli cərəyandan istifadə olunur?",
     "answers": [
-      "ultrabənövşəyi şüalar",
-      "ağız boşluğunda qalvanizm prosesi",
-      "travmalar",
-      "alkoqol",
-      "siqaretçəkmə"
+      "160 – 2000 Hs",
+      "110 kHs",
+      "13,56 MHs",
+      "2000 – 4000 MHs",
+      "150 – 500 Hs"
     ]
   },
   {
-    "question": "Ağız boşluğunun obliqat xərçəngönü xəstəliklərinə hansı aiddir:",
+    "question": "Transkranial elektroanalgeziya hansı müalicəvi effektə malikdir?",
     "answers": [
-      "Keyr eritroplaziyası",
-      "şüadan sonrakı stomatit",
-      "qırmızı qurdeşənəyi və qırmızı yastı dəmirovun eroziv xoralı və hiperkeratotik formaları",
-      "leykoplagiya",
-      "papillomatoz"
+      "Antiabstinent",
+      "İmmunodepressiv",
+      "Hipokoaquləedici",
+      "Miostimuləedici",
+      "Damardaraldıcı"
     ]
   },
   {
-    "question": "Ağız boşluğunun fakultativ xərçəngönü xəstəliklərinə hansı aid deyil:",
+    "question": "Transkranial elektroanalgeziya ilə müalicəyə əks göstərişdir?",
     "answers": [
-      "Bouen xəstəliyi",
-      "qırmızı qurdeşənəyi və qırmızı yastı dəmirovun eroziv xoralı və hiperkeratotik formaları",
-      "şüadan sonrakı stomatit",
-      "leykoplagiya",
-      "papillomatoz"
+      "Epilepsiya",
+      "Ürəyin işemik xəstəliyi, gərginlik stenokardiyası I-II FS",
+      "Yuxu pozğunluqları",
+      "Meteopatik reaksiyalar",
+      "Alkoqol abstinensiyası"
     ]
   },
   {
-    "question": "Ağız boşluğu xərçənginin xoşxassəli şişlərinə aiddir:",
+    "question": "Transkranial elektroanalgeziya ilə müalicəyə göstərişdir?",
     "answers": [
-      "adenokarsinoma",
-      "melanoma",
-      "sarkoma",
-      "yastıhüceyrəli xərçəng",
-      "papilloma"
+      "Kauzalgiya və fantom ağrılar",
+      "Ürək ritminin pozğunluqları",
+      "Doğuş sancıları",
+      "Kəskin miokard infarktı",
+      "Böyrək sancıları"
     ]
   },
   {
-    "question": "Ağız boşluğu xərçənginin bədxassəli şişlərinə ən çox təsadüf edilən histoloji forması hansıdır:",
+    "question": "Elektroyuxu terapiyasında elektrodlar nə cür yerləşdirilir?",
     "answers": [
-      "adenokarsinoma",
-      "bazalhüceyrəli xərçəng",
-      "sarkoma",
-      "melanoma",
-      "yastıhüceyrəli xərçəng"
+      "Göz – mastoidal",
+      "Alın - ənsə",
+      "Bitemporal",
+      "Göz – onurğanın yuxarı boyun nahiyyəsi",
+      "Alın – mastoidal"
     ]
   },
   {
-    "question": "Ağız boşluğu xərçəngi ən çox hansı orqanda rast gəlinir:",
+    "question": "Elektroyuxu terapiyasında müalicənin davam etmə müddəti nə qədər olur?",
     "answers": [
-      "dildə",
-      "çənə və əng sümüklərinin alveolyar çıxıntısı",
-      "yanaq",
-      "ağız dibində",
-      "sərt və yumşaq damaq"
+      "30 – 60 dəq",
+      "60 120 dəq",
+      "40 – 80 dəq",
+      "5 – 10 dəq",
+      "15 – 20 dəq"
     ]
   },
   {
-    "question": "Ağız boşluğu xərçəngi üçün daha xarakterikdir:",
+    "question": "Elektroyuxu ilə müalicəyə hansı xəstəlik göstərişdir?",
     "answers": [
-      "əsasən limfogen metastazvermə",
-      "əsasən şişin gedişi boyu metastazvermə",
-      "əsasən implantasion metastazvermə",
-      "əsasən limfo-hematogen metastazvermə",
-      "əsasən hematogen metastazvermə"
+      "Ürəyin işemik xəstəliyi gərginlik stenokardiyası I funksional sinif",
+      "Qlaukoma",
+      "Araxnoidit",
+      "Epilepsiya",
+      "İsteriya"
     ]
   },
   {
-    "question": "Dilin xərçənginin 0 mərhələsinə hansı aiddir:",
+    "question": "Elektroyuxu ilə müalicəyə hansı xəstəlik əks göstərişdir?",
     "answers": [
-      "T2N1M0",
-      "T4N3M0",
-      "T1N0M0",
-      "TisN0M0",
-      "T3N2M0"
+      "Konyuktivit",
+      "Enurez",
+      "Bronxial astma",
+      "Parodontoz",
+      "Ekzema"
     ]
   },
   {
-    "question": "Ağız boşluğu xərçənginin erkən mərhələsində (T1 – T2) hansı müalicə metodundan istifadə olunmur:",
+    "question": "Diadinamoterapiyada orqanizmə hansı cərəyanla müalicəvi təsir edilir?",
     "answers": [
-      "hormonal müalicə",
-      "kriodestruksiya",
-      "kombinəolunmuş müalicə",
-      "fotodinamik terapiya",
-      "cərrahi müalicə"
+      "Yarımsinusoidal formalı alçaq tezlikli impuls cərəyanla",
+      "Ultrayüksək tezlikli cərəyanla",
+      "Daimi fasiləsiz elektrik cərəyanla",
+      "Dəyişən sinusoidal cərəyanla",
+      "Yüksək tezlikli impuls cərəyanla"
     ]
   },
   {
-    "question": "Ağız boşluğu xərçənginin kompleks müalicəsi nəyi nəzərdə tutur:",
+    "question": "Amplipuls müalicə üsulunda aparıcı amil hansıdır?",
     "answers": [
-      "cərrahi + şüa + kimyəvi müalicə",
-      "lazer cərrahiyyəsi + fotodinamik terapiya",
-      "polikimyəvi müalicə",
-      "cərrahi + fotodinamik terapiya",
-      "cərrahi + şüa"
+      "Aşağı tezlikli rəqslərlə modulə olunan, sinusoidal formalı impuls cərəyanı",
+      "Sabit cərəyan",
+      "Düzbucaq formalı impuls cərəyanı",
+      "Az şiddətə malik, yüksək tezlikli və gərginlikli cərəyan",
+      "Yüksək tezlikli dəyişən cərəyan"
     ]
   },
   {
-    "question": "Ağız boşluğu xərçənginin hansı mərhələsində sağalma nadir hallarda mümkündür:",
+    "question": "Amplipulsterapiya zamanı hansı müalicəvi effekti almaq mümkündür?",
     "answers": [
-      "I mərhələ",
-      "II mərhələ",
-      "III mərhələ",
-      "residiv şiş",
-      "IV mərhələdə"
+      "Analgetik",
+      "İltihabəleyhinə",
+      "Yuxugətirici",
+      "Venatonuslandırıcı",
+      "Diaforetik"
     ]
   },
   {
-    "question": "Bədxassəli şişlərlə xəstələnmənin strukturunda dünyada birinci yeri hansı onkoloji xəstəlik tutur:",
+    "question": "Amplipusterapiya hansı hallarda istifadə olunur istifadə olunur?",
     "answers": [
-      "ağciyər xərçəngi",
-      "mədə xərçəngi",
-      "qaraciyər xərçəngi",
-      "süd vəzisi xərçəngi",
-      "kolorektal xərçəng"
+      "Periferik parezlərdə",
+      "Nevrasteniyada",
+      "Varikoz xəstəliyində",
+      "Öd daşı xəstəliyi zamanı xolestazda",
+      "Epilepsiyada"
     ]
   },
   {
-    "question": "Dünyada mədə xərçəngi ilə ən yüksək xəstələnmə göstəriciləri olan ölkələr:",
+    "question": "Amplipulsterapiyaya əks göstərişdir:",
     "answers": [
-      "Yaponiya, Çin və Braziliya",
-      "Uqanda, İslandiya və Polşa",
-      "Kanada, Avstraliya və Danimarka",
-      "İsrail, ABŞ və Hindistan",
-      "ABŞ, Braziliya və Hindistan"
+      "Tomboflebit",
+      "Xroniki daşsız xolesistit",
+      "Şəkərli diabet orta ağırlıq",
+      "Hipertonoya xəstəliyi II mərhələ",
+      "Obliterasiya edici endarteriit"
     ]
   },
   {
-    "question": "Azərbaycanda bədxasəli şişlərlə xəstələnmənin ümumi strukturunda (2001-ci il, hər iki cins üzrə) birinci yeri hansı xəstəlik tutur:",
+    "question": "Bir neçə sahəyə amplipuls təyinatı zamanı proseduranın müddəti nəqədər olmalıdır?",
     "answers": [
-      "süd vəzi xərçəngi",
-      "prostar vəzi xərçəngi",
-      "ağciyər xərçəngi",
-      "kolorektal xərçəng",
-      "mədə xərçəngi"
+      "15 – 20 dəq",
+      "30 – 40 dəq",
+      "5 – 10 dəq",
+      "10 – 15 dəq",
+      "20 – 30 dəq"
     ]
   },
   {
-    "question": "Azərbaycanda qadınlarda bədxasəli şişlərlə xəstələnmənin ümumi strukturunda birinci yeri hansı xəstəlik tutur:",
+    "question": "Drsonvalla müalicəyə əks göstərişdir:",
     "answers": [
-      "süd vəzi xərçəngi",
-      "ağciyər xərçəngi",
-      "qalxanabənzər vəzin xərçəngi",
-      "kolorektal xərçəng",
-      "mədə xərçəngi"
+      "Qanayan yaralar",
+      "Ürəyin işemik xəstəliyi, I-II funksional sinif",
+      "Gicişən dermatozlar",
+      "Trofiki xoralar",
+      "Bronxial astma"
     ]
   },
   {
-    "question": "Azərbaycanda 0-29 yaş intervalında bədxasəli şişlərlə xəstələnmənin ümumi strukturunda (hər iki cins üzrə) birinci yeri hansı xəstəlik tutur:",
+    "question": "Darsonvalla müalicəyə göstərişdir:",
     "answers": [
-      "süd vəzi xərçəngi",
-      "ağciyər xərçəngi",
-      "hemoblastozlar",
-      "kolorektal xərçəng",
-      "mədə xərçəngi"
+      "Uzun müddət sağalmayan yaralar və yavaş qranulyasiya olunan xoralar",
+      "Ürəyin işemik xəstəliyi, gərginlik stenokardiyası IV funksional sinif",
+      "Kəskin radikulalgiya",
+      "Periferik parezlər zamanı əzələ atrofiyası",
+      "Mədənin xora xəstəliyinin kəskin dövrü"
     ]
   },
   {
-    "question": "Azərbaycanda bədxassəli şişlərdən ölüm göstəricisi ölümün səbəbləri arasında neçənci yeri tutur:",
+    "question": "İnterferens cərəyanların hansı müalicəvi təsiri vardır?",
     "answers": [
-      "ikinci",
-      "üçüncü",
-      "dörduncü",
-      "beşinci",
-      "birinci"
+      "Periferik qan dövranını fəallaşdırır",
+      "Sinir lifinin keçiriciliyini bərpa edir",
+      "Toxumaların trofikasını yaxşılaşdırır",
+      "Desensibilizəedici təsir göstərir",
+      "Bakterisid təsir göstərir"
     ]
   },
   {
-    "question": "Azərbaycanda kişilər arasında bədxassəli şişlərdən ölümün ümumi strukturunda ilk birinci iki yeri hansı onkoloji xəstəliklər tutur:",
+    "question": "İnterferens terapiya hansı xəstəliklərdə göstərişdir?",
     "answers": [
-      "mədə xərçəngi və ağciyər xərçəngi",
-      "prostar vəzi xərçəngi və mədəaltı vəzi xərçəngi",
-      "ağciyər xərçəngi və prostat vəzi xərçəngi",
-      "kolorektal xərçəng və mədə xərçəngi",
-      "kolorektal xərçəng və dəri xərçəngi"
+      "Oynaqların degerativ distrofik xəstəlikləri",
+      "Tromboflebit",
+      "Hemartrozla müşayiət olunan yenicə baş vermiş oynaqdaxili zədələnmələr",
+      "Qanaxmaya meyllik",
+      "Kəskin irinli iltihabi xəstəliklər"
     ]
   },
   {
-    "question": "Azərbaycanda aşağı yaş qrupları (0-29) arasında (hər iki cins üzrə) bədxassəli şişlərdən ölümün ümumi strukturunda ilk birinci iki yeri hansı onkoloji xəstəliklər tutur:",
+    "question": "Elektrodiaqnostikanın aparılması üçün hansı cərəyandan istifadə olunur?",
     "answers": [
-      "hemoblastozlar və sinir sisteminin bədxassəli şişləri",
-      "mədəaltı vəzi xərçəngi və sinir sisteminin bədxassəli şişləri",
-      "hemoblastozlar və mədəaltı vəzi xərçəngi",
-      "mədə xərçəngi və uşaqlıq boynu xərçəngi",
-      "süd vəzi xərçəngi və kolorektal xərçəng"
+      "Qalvanik",
+      "İmpuls",
+      "Eksponensial",
+      "Sinusoidal",
+      "Yarımsinusoidal"
     ]
   },
   {
-    "question": "Aşağıdakılardan hansı bədxassəli şişlərin birincili profilaktikası tədbirlərinə aid deyil:",
+    "question": "Ultrayüksək tezlikli elektrik sahəsi ilə təsirdə nədən istifadə olunur?",
     "answers": [
-      "xərçəngönü xəstəliklərin aşkar edilməsi",
-      "məişətdə və istehsalatda havanın təmizliyinin saxlanması",
-      "rasional qidalanma komponentləri",
-      "siqaretçəkmə ilə mübarizə",
-      "havanın çirklənməsi ilə mübarizə"
+      "Kondensator lövhəciklər",
+      "İşıqlandırıcı",
+      "İnduktor kabel",
+      "Qurğuşun elektrodlar",
+      "Şüalandırıcı"
     ]
   },
   {
-    "question": "Aşağıdakı onkoloji xəstəliklərin hansının etiologiyasında siqaretçəkmənin rolu əsas deyildir:",
+    "question": "Ultrayüksək tezlikli terapiya hansı müalicəvi effektə malikdir?",
     "answers": [
-      "qaraciyər xərçəngi",
-      "sidik kisəsi xərçəngi",
-      "qırtlaq xərçəngi",
-      "dodaq xərçəngi",
-      "ağciyər xərçəngi"
+      "Damargenişləndirici",
+      "Hemolitik",
+      "Miostimulyasiya edici",
+      "Bakterisid",
+      "Sedativ"
     ]
   },
   {
-    "question": "Papanikolau üsulu ilə müayinə hansı onkoloji xəstəliklərin skrininqində aparılır:",
+    "question": "Ultrayüksək tezlikli terapiyanı iltihabın hansı mərhələsində təyin etmək olar?",
     "answers": [
-      "mədə xərçəngində",
-      "ağciyər xərçəngində",
-      "dəri xərçəngində",
-      "qaraciyər xərçəngində",
-      "uşaqliq boynu və uşaqlıq yolu xərçəngində"
+      "İltihabın istənilən mərhələsində",
+      "İltihabi proseslərdə təyin olunmur",
+      "Yalnız iltihabın eksudasiya mərhələsində",
+      "Yalnız iltihabın proliferasiya mərhələsində",
+      "Yalnız iltihabın alterasiya mərhələsində"
     ]
   },
   {
-    "question": "Süd vəzi xərçənginin skrininqində ən effektiv müayinə mütodu hansıdır:",
+    "question": "Ultrayüksək tezlikli sahə ilə hansı nahiyyəyə təsir zamanı immunosupressiv effekt alınır?",
     "answers": [
-      "mammoqrafiya",
-      "baxış (inspeksiya)",
-      "immunohistokimyəvi müayinə",
-      "sitoloji müayinə",
-      "palpasiya"
+      "Böyrəküstü vəzlər",
+      "Qalxanabənzər vəz",
+      "Mədəaltı vəz",
+      "Dalaq",
+      "Cinsi vəzlər"
     ]
   },
   {
-    "question": "Onkoloji xəstələr neçə klinik qrupa bölünür:",
+    "question": "Ultrayüksək tezlikli –terapiya hansı xəstəlik əks göstərişdir ?",
     "answers": [
-      "1",
-      "2",
-      "3",
-      "5",
-      "4"
+      "İrinli haymorit punksiyaya qədər",
+      "Hidradenit",
+      "Don vurma II dərəcə",
+      "Hipertoniya xəstəliyi II mərhələ",
+      "Bronxial astma"
     ]
   },
   {
-    "question": "II klinik qrupuna hansı onkoloji xəstələr daxil edilir:",
+    "question": "Alçaq tezlikli maqnitoterapiya hansı xəstəlikdə göstərişdir?",
     "answers": [
-      "spesifik müalicəyə ehtiyacı olan onkoloji xəstələr",
-      "bədxassəli şişdən sağalmış şəxslər",
-      "palliativ müalicəyə ehtiyacı olan onkoloji xəstələr",
-      "xərçəngönü xəstəliyi olan xəstələr",
-      "bədxassəli şişə şübhə olan xəstələr"
+      "Obliterasiya edici endoartrit",
+      "Kalkulyoz xolesistit",
+      "Hemorroy",
+      "Hipertoniya xəstəliyi III mərhələ",
+      "Kəskin rinit"
     ]
   },
   {
-    "question": "III klinik qrupuna hansı onkoloji xəstələr daxil edilir:",
+    "question": "Alçaq tezlikli maqnitoterapiya əks göstərişdir?",
     "answers": [
-      "bədxassəli şişdən sağalmış şəxslər",
-      "radikal müalicəyə ehtiyacı olan onkoloji xəstələr",
-      "palliativ müalicəyə ehtiyacı olan onkoloji xəstələr",
-      "spesifik müalicəyə ehtiyacı olan onkoloji xəstələr",
-      "bədxassəli şişə şübhə olan xəstələr"
+      "Epilepsiya",
+      "Hipertoniya xəstəliyi II dər",
+      "Kardial tipli neyrosirkulyator distonoya",
+      "Reyno xəstəliyi",
+      "Prostatit"
     ]
   },
   {
-    "question": "IV klinik qrupuna hansı onkoloji xəstələr daxil edilir:",
+    "question": "Alçaq tezlikli maqnitoterapiya hansı xəstəlikdə göstərişdir?",
     "answers": [
-      "palliativ və ya simptomatik müalicəyə ehtiyacı olan onkoloji xəstələr",
-      "spesifik müalicəyə ehtiyacı olan onkoloji xəstələr",
-      "radikal müalicəyə ehtiyacı olan onkoloji xəstələr",
-      "xərçəngönü xəstəliyi olan xəstələr",
-      "bədxassəli şişə şübhə olan xəstələr"
+      "Ürəyin işemik xəstəliyi I-II funksional sinif",
+      "Bağırsaqların atoniyası",
+      "Pankreonekroz",
+      "Babasil",
+      "Spastik kolit"
     ]
   },
   {
-    "question": "III klinik qrupda olan xəstədə residiv və ya metastaz aşkar edilərsə xəstə hansi klinik qrupa keçirilə bilər:",
+    "question": "Desimetr dalğalı terapiyada hansı cərəyandan istifadə olunur?",
     "answers": [
-      "II və ya IV",
-      "Ib",
-      "yalnız IV",
-      "yalnız II",
-      "Ia"
+      "İfrat yüksək tezlikli elektromaqnit sahəsi",
+      "Alçaq gərginlikli sabit elektrik cərəyanı",
+      "Ultrayüksək tezlikli elektrik sahəsi",
+      "Yüksək gərginlikli dəyişən cərəyan",
+      "Yüksək gərginlikli daimi elektrik sahəsi"
     ]
   },
   {
-    "question": "II klinik qrupda olan xəstə müalicə olunaraq sağaldıqdan sonra hansı klinik qrupa keçirilir:",
+    "question": "Desimetr diapazonlu elektromaqnit rəqslərini hansı toxuma strukturları daha çox udur?",
     "answers": [
-      "III",
-      "Iib",
-      "IIa",
-      "Ib",
-      "Ia"
+      "Parenximatoz orqanlar",
+      "Oynaqların bağ aparatı",
+      "Sümük toxuması",
+      "Dəri",
+      "Dəri altı piy təbəqəsi"
     ]
   },
   {
-    "question": "Eftanaziya nədir:",
+    "question": "Uzundalğalı ultrabənövşəyi şüalarla müalicəyə hansı xəstəlik göstərişdir?",
     "answers": [
-      "sağalmayan xəstəni əzablardan xilas etmək məqsədilə özünün və ya qohumlarının xahişi ilə süni yolla qəsdən oldürmək",
-      "sağalmayan xəstələrin “yüngül ölüm” aktının qarşısını almaq",
-      "sağalmayan xəstənin əzabverici ağrılarını yüngülləşdirmək üçün narkotik analgetiklərin verilməsindən imtina etmək",
-      "sağalmayan xəstənin əzablarını azaltmaq üçün şikəstedici əməliyyatların aparılması",
-      "əzabverici ağrıların farmokoloji metodlarla aradan qaldırılması"
+      "Astenik sindrom",
+      "Yayılmış frunkulyoz",
+      "Qara ciyərin sirrozu",
+      "Malyariya",
+      "Hipertireoz"
     ]
   },
   {
-    "question": "Kimyəvi dərman preparatlarının daxilə per os qəbulu kimyəvi dərman preparatlarının hansı yeridilmə üsuluna aiddir:",
+    "question": "İnfraqırmızı şüalarla müalicəyə hansı xəstəlik əks göstərişdir?",
     "answers": [
-      "neoadyuvant kimyəvi terapiya",
-      "lokal kimyəvi terapiya",
-      "sistem kimyəvi terapiya",
-      "adyuvant kimyəvi terapiya",
-      "regional kimyəvi terapiya"
+      "Hamiləlk",
+      "Çapıqlar",
+      "Don vurma",
+      "Nevralgiya",
+      "Yataq yaraları"
     ]
   },
   {
-    "question": "Kimyəvi dərman preparatlarının əzələ daxilinə yeridilməsi kimyəvi dərman preparatlarının hansı yeridilmə üsuluna aiddir:",
+    "question": "İnfraqırmızı şüalarla müalicə hansı halda göstərişdir?",
     "answers": [
-      "sistem kimyəvi terapiya",
-      "adyuvant kimyəvi terapiya",
-      "neoadyuvant kimyəvi terapiya",
-      "lokal kimyəvi terapiya",
-      "regional kimyəvi terapiya"
+      "Spastik parez",
+      "Aktiv vərəm",
+      "Kəskin irinli proseslər",
+      "Qanaxma",
+      "Hamiləlik"
     ]
   },
   {
-    "question": "Kimyəvi dərman preparatlarının yüksək dozada tam təcrid edilmiş damara yeridilməsi kimyəvi dərman preparatlarının hansı yeridilmə üsuluna aiddir:",
+    "question": "Xromoterapiya nədir?",
     "answers": [
-      "neoadyuvant kimyəvi terapiya",
-      "adyuvant kimyəvi terapiya",
-      "lokal kimyəvi terapiya",
-      "sistem kimyəvi terapiya",
-      "regional kimyəvi terapiya"
+      "Optik diapazonlu gorünən şüalarla müalicə",
+      "Elektromaqnit dalğları ilə müalicə",
+      "Qiymətli daşlarla müalicə",
+      "Lazer şüaları ilə müalicə",
+      "Uzun dalğalı ültrabənövşəyi şüalarla müalicə"
     ]
   },
   {
-    "question": "Kimyəvi dərman preparatlarının assit və ya plevrit olduqda seroz boşluqlara yeridilməsi kimyəvi dərman preparatlarının hansı yeridilmə üsuluna aiddir:",
+    "question": "Xromoterapiyaya hansı xəstəliklər əks göstərişdir?",
     "answers": [
-      "lokal kimyəvi terapiya",
-      "neoadyuvant kimyəvi terapiya",
-      "regional kimyəvi terapiya",
-      "adyuvant kimyəvi terapiya",
-      "sistem kimyəvi terapiya"
+      "Fotooftalmiya",
+      "Yeni doğulmuşların sarılığı",
+      "Yorğunluq",
+      "Yaralar",
+      "Nevrozlar"
     ]
   },
   {
-    "question": "Kimyəvi dərman preparatlarının beyin qişaları zədələndikdə intratekal yeridilməsi kimyəvi dərman preparatlarının hansı yeridilmə üsuluna aiddir:",
+    "question": "Şüa enerjisinin görünən spektrinin orqanizmə təsiri hansılardır?",
     "answers": [
-      "lokal kimyəvi terapiya",
-      "neoadyuvant kimyəvi terapiya",
-      "adyuvant kimyəvi terapiya",
-      "sistem kimyəvi terapiya",
-      "regional kimyəvi terapiya"
+      "İstilik, psixoemosional",
+      "Hipotenziv",
+      "Stimuləedici",
+      "Hipertenziv",
+      "Dehidratasiyaedici"
     ]
   },
   {
-    "question": "Kimyəvi dərman müalicəsinin cərrahi əməliyyatdan əvvəl aparılması necə adlanır:",
+    "question": "Ortadalğalı ultrabənövşəyi şüalanma necə dozalaşdırılır?",
     "answers": [
-      "lokal kimyəvi terapiya",
-      "sistem kimyəvi terapiya",
-      "regional kimyəvi terapiya",
-      "adyuvant kimyəvi terapiya",
-      "neoadyuvant kimyəvi terapiya"
+      "Biodoza ilə",
+      "Vt/sm2- lə",
+      "Dəqiqə ilə",
+      "mTl- ilə",
+      "Lükslə"
     ]
   },
   {
-    "question": "Kimyəvi dərman müalicəsinin radikal cərrahi əməliyyatdan sonra aparılması necə adlanır:",
+    "question": "Suberitem dozada ultrabənövşəyi şüalarla müalicəyə göstəriş hansıdır?",
     "answers": [
-      "adyuvant kimyəvi terapiya",
-      "lokal kimyəvi terapiya",
-      "sistem kimyəvi terapiya",
-      "regional kimyəvi terapiya",
-      "neoadyuvant kimyəvi terapiya"
+      "Astenik sindrom",
+      "Qırmızı qurdeşənəyi",
+      "Kəskin irinli iltihabi xəstəliklər",
+      "Hemorragik vaskulit",
+      "Hipertireoz"
     ]
   },
   {
-    "question": "Hansı nümunə “sitostatik+antidot” kombinasiyasına uyğundur:",
+    "question": "Suberitem dozada ümumi ultrabənövşəyi şüalanmanın hansı müalicəvi effekti vardır?",
     "answers": [
-      "Metotreksat+leykovorin",
-      "Paklitaksel+dosetaksel",
-      "Vinkristin+leykovorin",
-      "Sisplatin+karboplatin",
-      "Oksaliplatin+sisplatin"
+      "Analgetik",
+      "Hipotenziv",
+      "Metabolik",
+      "İltihabəleyhinə",
+      "Vitaminəmələgətirmə"
     ]
   },
   {
-    "question": "Kimyəvi dərman preparatlarının effektliyi ÜST şkalası üzrə qiymətləndirilirkən 4 həftədən az olmayan müddətdə bütün zədələnmə ocaqlarının yox olması necə qiymətləndirilir:",
+    "question": "Ultrabənövşəyi eritemanın inkişafının əsasında nə dayanır?",
     "answers": [
-      "tam effekt",
-      "proqressivləşmə",
-      "stabilizasiya",
-      "subklinik effekt",
-      "hissəvi effekt"
+      "Zülalların fotolizi",
+      "Fotosintez",
+      "Fotobiosintez",
+      "Fotoreaktivasiya",
+      "Toxumaların polyarizasiyası"
     ]
   },
   {
-    "question": "Kimyəvi dərman preparatlarının effektliyi ÜST şkalası üzrə qiymətləndirilirkən yeni zədələnmə ocaqları olmadan 25% dən çox olmamaqla böyümə necə qiymətləndirilir:",
+    "question": "Qanın ultrabənövşəyi şüalarla şüalandırılmış autotransfuziyasına əks göstəriş hansıdır?",
     "answers": [
-      "stabilizasiya",
-      "proqressivləşmə",
-      "subklinik effekt",
-      "tam effekt",
-      "hissəvi effekt"
+      "Beyin qan dövranının kəskin pozğunluğu",
+      "Sepsis",
+      "Furunkulyoz",
+      "ÜİX, gərginlik stenokardiyası II funksional sinif",
+      "Uzun müddət sağalmayan yaralar"
     ]
   },
   {
-    "question": "Kimyəvi dərman preparatlarının effektliyi ÜST şkalası üzrə qiymətləndirilirkən bir şiş ocağının 25%-dən çox böyüməsi necə qiymətləndirilir:",
+    "question": "Qısadalğalı ultrabənövşəyi şüalarla yerli müalicəyə göstəriş hansıdır?",
     "answers": [
-      "proqressivləşmə",
-      "hissəvi effekt",
-      "stabilizasiya",
-      "subklinik effekt",
-      "tam effekt"
+      "Burunudlaq və qulaq xəstəlikləri",
+      "Ekzema",
+      "Ağ ciyər vərəmi",
+      "Daxili üzvlərin kəskin iltihabi xəstəlikləri",
+      "Neyrodermit"
     ]
   },
   {
-    "question": "Kimyəvi dərman preparatlarının ən çox təsadüf edilən toksiki təsiri hansıdır:",
+    "question": "Lazer şüaları hansı müalicəvi effektə malikdir?",
     "answers": [
-      "kardiotoksiki təsir",
-      "mədə-bağırsaq traktına toksiki təsir",
-      "sümüklərin zədələnməsi",
-      "ağciyərə toksiki təsir",
-      "hemopoezin pozulması"
+      "Regionar qan dövranını yaxşılaşdırmaq",
+      "Qanın laxtalanmasını artırmaq",
+      "Spazmolitik effekt törətmək",
+      "Əzələləri yığmaq",
+      "Venoz damar divarının tonusunu artırmaq"
     ]
   },
   {
-    "question": "Antrasiklinlərlə müalicə zamanı ən çox təsadüf edilən toksiki təsiri hansıdır:",
+    "question": "Ocağı səthdə yerləşən kəskin ağrılar zamanı hansı müalicə üsulundan istifadə etmək olar?",
     "answers": [
-      "kardiotoksiki təsir",
-      "sümüklərin zədələnməsi",
-      "mədə-bağırsaq traktına toksiki təsir",
-      "hemopoezin pozulması",
-      "ağciyərə toksiki təsir"
+      "Dərman elektroforezi",
+      "Maqnitoterapiya",
+      "Yerli darsonvalizasiya",
+      "Ultrafonoforez",
+      "Lazerterapiyası"
     ]
   },
   {
-    "question": "Hansı kimyəvi dərman preparatlarının kardiotoksiki təsiri daha güclüdür:",
+    "question": "Xroniki agrı zamanı hansı fiziki üsuldan istifadə etmək olar?",
     "answers": [
-      "antrasiklinlər",
-      "vinka preparatları",
-      "karbamid törəmələri",
-      "platin preparatları",
-      "alkilləşdiricilər"
+      "İstilik terapiyası",
+      "İnfraqırmızı şüalar",
+      "Suberitem dozada ultrabənövşəyi şüalar",
+      "Aşağı intensivlikli UYT- terapiya",
+      "Krioterapiya"
     ]
   },
   {
-    "question": "Hansı kimyəvi dərman preparatınlarına allergik reaksiyalar daha çox təsadüf edilir:",
+    "question": "İdman təbabəti - ...",
     "answers": [
-      "Taksanlar və L-asparginaza",
-      "Vinkristin və vinblastin",
-      "Siklofosfan və ifosfamid",
-      "5 ftorurasil və kapesitabin",
-      "Karboplatin və sisplatin"
+      "fiziki məşğələlərin orqanizmə göstərdiyi təsirin tibbi-biloji aspeklərini öyrənən elmdir.",
+      "idmançıların hərbi hazırlığını öyrənən tibbi-biloji elmdir.",
+      "bədən tərbiyəsi dərslərinin təşkil olunmasını təmin edən sahədir.",
+      "idman qurğularının təchizatını təşkil edən sahədir.",
+      "idman yarışlarını təşkil edən tibbi fəndir."
     ]
   },
   {
-    "question": "Kimyəvi dərman müalicəsi zamanı kolonistimuledicilərin istifadəsinə göstəriş hansıdır:",
+    "question": "İdman təbabətinin məqsədi nədir?",
     "answers": [
-      "neytropeniya",
-      "leykositoz",
-      "meqaloblastik anemiya",
-      "trombositopeniya",
-      "fol turşusu defisitli anemiya"
+      "İdmançılara yüksək idman naliyyətlərinin qazanılmasında köməklik etməkdir.",
+      "Bədən tərbiyəsi vasitəsilə idmançıları yarışlara hazır olmasını təmin etməkdir.",
+      "İdmançıların sosial problemlərini həll etməkdir.",
+      "İdmanda hüquqi məsələləri həll etməyə köməklik etməkdir.",
+      "İdman yarışlarında mükafat fondlarının yaradılmasıdır."
     ]
   },
   {
-    "question": "Bisfosfonatlarla müalicəyə göstəriş nədir:",
+    "question": "İdman təbabətinin vəzifələrinə hansı aid deyil?",
     "answers": [
-      "sümük metastazlarının olması",
-      "beyin metastazlarının olması",
-      "peritoneal karsinomatozis",
-      "qaraciyər metastazlarının olması",
-      "ağciyər metastazlarının olması"
+      "İdman yarışlarında mükafatların təsis edilməsi.",
+      "İdman yarışlarının tibbi təminatı.",
+      "Bədən tərbiyəsi ilə məşqul olanların tibbi qruplara bölünməsi.",
+      "İdmançıların tibbi müayinəsi.",
+      "İdmançılarda travmaların qarşısının alınması."
     ]
   },
   {
-    "question": "Dəri melanoması hansı hüceyrələrdən inkişaf edir:",
+    "question": "MBT nə deməkdir?",
     "answers": [
-      "melanoblastlardan",
-      "həm melanositlərdən, həm də melanoblastlardan",
-      "melanositlərdən",
-      "həm nevus hüceyrələrindən, həm də melanoblastlardan",
-      "nevus hüceyrələrindən"
+      "Müalicə bədən tərbiyəsı.",
+      "Maraqlı bilik təcrübəsi.",
+      "Mülki bərpa təbabəti.",
+      "Müalicə bədən təmizliyi.",
+      "Milli bədən tərbiyəsı."
     ]
   },
   {
-    "question": "Dünyada melanoma ilə ən yüksək xəstələnmə göstəriciləri harada qeydə alınır:",
+    "question": "MBT anlayışına nə aid deyil?",
     "answers": [
-      "Avstraliyada",
-      "Çində",
-      "Vyetnamda",
-      "Yaponiyada",
-      "Türkiyədə"
+      "İdman təbabəti.",
+      "Fiziki reabilitasiya.",
+      "Müalicə üsulu.",
+      "Kinezoterapiya.",
+      "Reabilitasiya."
     ]
   },
   {
-    "question": "Dəri melanomasına bədənin hansı nahiyyəsində daha çox təsadüf edilir:",
+    "question": "MBT anlayışına hansı termin aid deyil?",
     "answers": [
-      "aşağı ətraflarda",
-      "baş və boyun nahiyəsində",
-      "gövdədə",
-      "yuxarı ətraflarda",
-      "üz nahiyəsində"
+      "Refleksoterapiya.",
+      "Fiziki reabilitasiya.",
+      "Massaj.",
+      "Mexanoterapiya.",
+      "Kinezoterapiya."
     ]
   },
   {
-    "question": "İnsan papilloması virusunun hansı tiplərinin dəri xərçənginin əmələ gəlməsində rolu var:",
+    "question": "Fiziki reabilitasiya hansı terminin sinonimidir?",
     "answers": [
-      "16-cı və 18-ci",
-      "39-cu və 45-ci",
-      "33-cü və 35-ci",
-      "6 -cı və 11-ci",
-      "31-ci və 35-ci"
+      "Müalicə bədən tərbiyəsi.",
+      "Fizioterapiya.",
+      "İdman təbabəti.",
+      "Refleksoterapiya.",
+      "Bədən tərbiyəsi."
     ]
   },
   {
-    "question": "Yastı hüceyrəli dəri xərçəngi ən çox hansı yolla metastaz verir:",
+    "question": "İdman təbabəti tibbin hansı sahəsinin inkişafı nəticəsində yaranmışdır?",
     "answers": [
-      "limfogen",
-      "implantasion",
-      "hematogen",
-      "limfoimplantasion",
-      "kontakt"
+      "Bədən tərbiyəsi və idmanla məşqul olan şəxslər üzərində həkim nəzarəti.",
+      "Hərbi-səhra təbabəti.",
+      "Ailə təbabəti.",
+      "Fizioterapiya",
+      "Müalicə bədən tərbiyəsi."
     ]
   },
   {
-    "question": "Dəri xərçənginin əmələ gəlməsinə səbəb olan əsas amillərə aid edilmir:",
+    "question": "İdman təbabətinin ölkəmizdə yaranmasının başlanması hansı dövrə aiddir?",
     "answers": [
-      "siqaretçəkmə",
-      "immunosupressiya",
-      "peşə zərərləri",
-      "ultrabənövşəyi şüalar",
-      "dəridə müxtəlif mənşəli çapıq toxuması"
+      "1920-ci illər.",
+      "2000-ci illər.",
+      "1960-ci illər.",
+      "1950-ci illər.",
+      "1940-ci illər."
     ]
   },
   {
-    "question": "Dərinin obliqat xərçəngönü xəstəliyinə aid edilir:",
+    "question": "Bədən tərbiyəsi və idmanla məşqul olan şəxslər üzərində həkim nəzarəti ölkəmizdə kimin təşəbbüsü ilə yaranmışdır?",
     "answers": [
-      "piqmentli kserodermiya",
-      "qırmızı qurd eşənəyi",
-      "keratoz",
-      "dəri buynuzu",
-      "radiasion dermatoz"
+      "N. Semaşko",
+      "M. Topçupaşov",
+      "M.F.Axundov",
+      "V. Lenin",
+      "M. Lomonosov"
     ]
   },
   {
-    "question": "Dəri xərçənginin ən çox rast gəlindiyi nahiyə hansıdır:",
+    "question": "Kinezoterapiya hansı terminin sinonimidir?",
     "answers": [
-      "baş-boyun nahiyəsi",
-      "gövdə nahiyəsi",
-      "kürək nahiyəsi",
-      "aşağı ətraflar",
-      "yuxarı ətraflar"
+      "Müalicə bədən tərbiyəsi.",
+      "Refleksoterapiya.",
+      "Fizioterapiya.",
+      "Bədən tərbiyəsi.",
+      "İdman təbabəti."
     ]
   },
   {
-    "question": "Dəri xərçənginin diaqnostikasında hansı müayinə metodundan istifadə edilmir:",
+    "question": "Neçənci ildən başlayaraq idmanda dopinglərin qəbulu qadağan olunmuşdur?",
     "answers": [
-      "endoskopik",
-      "KT",
-      "histoloji",
-      "sitoloji",
-      "kliniki"
+      "1961",
+      "1900",
+      "1941",
+      "1990",
+      "1979"
     ]
   },
   {
-    "question": "Alt dodaq xərçənginin risk amillərinə hansı aid deyil:",
+    "question": "Azərbaycanda hansı müəssələrdə idman təbabəti üzrə mütəxəssislər ştatda nəzərdə tutulmayıb?",
     "answers": [
-      "yod çatışmazlığı",
-      "virus infeksiyası (herpes zoster)",
-      "anadangəlmə praqmatizm",
-      "travmalar",
-      "zərərli adətlər (siqaretçəkmə və s.)"
+      "Şəhər və uşaq poliklinikaları.",
+      "Uşaq və yeniyetmələr üçün idman məktəbləri.",
+      "İdman federasiyalarının tibb müəssisələri.",
+      "Həkim nəzarəti kabinetləri.",
+      "Həkim-bədən tərbiyəsi dispanserləri."
     ]
   },
   {
-    "question": "Alt dodağın obliqat xərçəngönü xəstəliyinə aiddir:",
+    "question": "Azərbaycanın qabaqcıl idmançıları hansı müəssisədə dispanser qeydiyyatında olmalıdırlar?",
     "answers": [
-      "papilloma",
-      "qırmızı qurd eşənəyinin və qırmızı yastı dəmirovun eroziv və hiperkeratotik formaları",
-      "keratoakantoma",
-      "leykoplagiya",
-      "Manqanotti xeyliti"
+      "Respublika idman tibb mərkəzində.",
+      "Endoklinoloji dispanserdə.",
+      "Şəhər polinikalarında.",
+      "Uşaq polinikalarında.",
+      "İdman qurğularının həkim nəzarəti kabnetində."
     ]
   },
   {
-    "question": "Alt dodağın fakultativ xərçəngönü xəstəliyinə aid deyildir:",
+    "question": "İdman təbabətinin əsas məqsədini göstərin.",
     "answers": [
-      "papilloma",
-      "leykoplagiyalar",
-      "dəri buynuzu",
-      "Bouen xəstəliyi",
-      "xeylitlər"
+      "İdmançılara yüksək nailiyyətlərin qazanılmasında köməklik edilməsi.",
+      "İdmançıların sosial problemlərinin həll edilməsi.",
+      "İdmançıların təhsilinin artırılması.",
+      "İdman yarışlarını təşkil edilməsi.",
+      "İdmançılar arasında mükafat fondunun bölüşdürülməsı."
     ]
   },
   {
-    "question": "Alt dodaq xərçənginin əsas histoloji forması hansıdır:",
+    "question": "İdman həkiminin vəzifə borclarına hansı aid deyil?",
     "answers": [
-      "sarkoma",
-      "melanoma",
-      "adenokarsinoma",
-      "bazalhüceyrəli xərçəngi",
-      "yastıhüceyrəli xərçəngi"
+      "İdman yarışlarında mükafat fondunu təsis etmək.",
+      "İdman yarışlarının keçırilən yerlərə sanitar nəzarətini təşkil etmək.",
+      "İdmançıların qidalanmasına nəzarət etmək.",
+      "İdmançılarda travmaların qarşısını almaq.",
+      "İdmançıları müayinədən keçirmək."
     ]
   },
   {
-    "question": "Alt dodaq xərçəngi ən çox hansı yolla metastaz verir:",
+    "question": "İdman həkiminin vəzifə borclarına hansı aiddir?",
     "answers": [
-      "limfogen",
-      "limfo-hematogen",
-      "gedişi boyu",
-      "implantasion",
-      "hematogen"
+      "İdmançılarda travmaların qarşısını almaq.",
+      "İdman yarışlarının təşkil edilməsi.",
+      "İdmançıların sosial problemlərinin həll edilməsi.",
+      "İdmançıların təhsilinin artırılmasını təmin etmək.",
+      "İdman yarışlarında mükafat fondunu təsis etmək."
     ]
   },
   {
-    "question": "Alt dodaq xərçənginin hematogen metastazlarına əsasən hansı orqanda rast gəlinir:",
+    "question": "İdmanda qadağan olunmuş dərman priparatları hansılardır?",
     "answers": [
-      "ağciyərdə",
-      "böyrəklərdə",
-      "sümüklərdə",
-      "baş-beyində",
-      "qaraciyərdə"
+      "Dopinqlər.",
+      "Krebs dövranı turşuları.",
+      "Vitaminlər.",
+      "Adaptogenlər",
+      "Biostimulyatorlar."
     ]
   },
   {
-    "question": "III mərhələ alt dodaq xərçəngi hansıdır:",
+    "question": "Hansı farmakoloji qrupun preparatları dopinq sayılmır?",
     "answers": [
-      "T2N1M0",
-      "T4N0M0",
-      "T1N0M0",
-      "T4N2M0",
-      "T2N0M0"
+      "Antibiotiklər.",
+      "Trankvilizatorlar.",
+      "Hormonlar.",
+      "Anestetiklər.",
+      "Analgetiklər."
     ]
   },
   {
-    "question": "Hansı müayinə metodundan alt dodaq xərçənginin diaqnostikasında istifadə olunmur:",
+    "question": "Hansı farmakoloji qrupun preparatları dopinq sayılır?",
     "answers": [
-      "radioizotop müayinə",
-      "baxış və palpasiya",
-      "boynun ultrasəs müayinəsi",
-      "morfoloji müayinə",
-      "xeyloskopiya"
+      "Analgetiklər.",
+      "Sulfanilamidlər.",
+      "Vitaminlər.",
+      "Biostimulyatorlar.",
+      "Antibiotiklər."
     ]
   },
   {
-    "question": "Alt dodaq xərçənginin III mərhələsində hansı müalicə metodundan istifadə olunur:",
+    "question": "Yarış qabağı hansı metodun tətbiq olunması qadağandır?",
     "answers": [
-      "müştərək şüa müalicəsi (distansion qammaterapiya + toxumadaxili şüa müalicəsi)",
-      "ultrasəs cərrahiyyəsi",
-      "lazer destruksiyası",
-      "fotodinamik müalicə",
-      "kriodestruksiya"
+      "Eritrositlərin autotransfuziyası.",
+      "Ultrasəs müayinəsi.",
+      "Məşq rejiminin dəyişdirilməsi.",
+      "Masaj.",
+      "Cəkinin təcili azaldılması."
     ]
   },
   {
-    "question": "Hepatosellular xərçəng hansı hüceyrələrdən başlanğıc götürür:",
+    "question": "Hansı növ idman yarışlarında cinsə nəzarət təşkil olunmalıdır?",
     "answers": [
-      "qaraciyərin hepatosellular hüceyrələrindən",
-      "onikibarmaq bağırsağın qədəhəbənzər hüceyrələrindən",
-      "Kupfer hüceyrələrindən",
-      "qaraciyərdaxili stroması hüceyrələrdən",
-      "qaracirərdaxili xolangocellular hüceyrələrdən"
+      "Qadınlar arasında dünya çempionatlarında.",
+      "Tennis, üzgücülük üzrə kişilər arasında yarışlarda.",
+      "Uşaqlar arasında iri miqyaslı yarışlarda.",
+      "Kişilər arasında Paraolimpiya oyunlarında.",
+      "Kişilər arasında dünya çempionatlarında."
     ]
   },
   {
-    "question": "Qaraciyərin ən çox təsadüf edilən birincili bədxassəli şişi hansıdır:",
+    "question": "Cəkinin sürətlə azaldılması idmanın hansı növlərində tətbiq olunur?",
     "answers": [
-      "hepatosellular xərçəng",
-      "qaraciyərin hemangioangiosarkoması",
-      "qaraciyərin birincili limfoması",
-      "qaraciyərin angiosarkoması",
-      "xolangiosellular xərçəng"
+      "Boks, ğüləş.",
+      "Futbol, voleybol.",
+      "Tennis, üzgücülük.",
+      "Yüngül atletika.",
+      "Basketbol, həndbol."
     ]
   },
   {
-    "question": "Hepatosellular xərçəngin yaranmasında rol oynayan ən potensial amil hansıdır:",
+    "question": "Dopinqlər nədir?",
     "answers": [
-      "B virus hepatiti",
-      "avitaminoz",
-      "A virus hepatiti",
-      "davamlı alkoqol qəbulu",
-      "qurd invaziyaları"
+      "İdmanda ədalət prinsipini pozan qadağan olunmuş dərman preparatlarıdır.",
+      "İdmanda qadağan olunmuş vasitə və metodlardır.",
+      "Yeni dərman preparatlarıdır.",
+      "Adaptogenlərdir.",
+      "İdmançıların nəaliyyətlərini artıran ziyansız dərman preparatlarıdır."
     ]
   },
   {
-    "question": "Hepatosellular xərçəngin hematogen metastazı aşağıdakı orqanlardan ən çox hansında inkişaf edir:",
+    "question": "Adaptogenlər nədir?",
     "answers": [
-      "ağciyərlərdə",
-      "böyrəklərdə",
-      "baş beyində",
-      "mədəaltı vəzidə",
-      "sümüklərdə"
+      "İdmançıların nəaliyyətlərini artıran, lakin idmanda ədalət prinsipini pozmayan preparatlardır.",
+      "Adaptiv genləri ləğv edən preparatlar.",
+      "Adaptiv genləri pozan preparatlar.",
+      "Genlərə müsbət təsir göstərən preparatlar.",
+      "Adaptasiyanı yaxşılaşdiran preparatlar."
     ]
   },
   {
-    "question": "Aşağıdakı şiş markerlərindən hansı hepatosellular xərçəng olan xəstələrin çoxunda qan plazmasında yüksəlir:",
+    "question": "Ümumdünya səhiyyə təşkilatının nizamnaməsinə əsasən “Sağlamlıq-...",
     "answers": [
-      "CA 125",
-      "CA 19-9",
-      "AFP",
-      "PSA",
-      "CEA"
+      "təkcə xəstəlik və fiziki qüsurların olmaması deyil, tam fiziki, psixi və sosial rahatlıqdır.",
+      "təkcə xəstəlik və fiziki qüsurların olmaması deyil, tam fiziki, maddi və sosial rahatlıqdır.",
+      "təkcə xəstəlik və fiziki qüsurların olmaması deyil, tam əqli, psixi və sosial rahatlıqdır.",
+      "xəstəliklərin olmamasıdır.",
+      "xəstəlik və fiziki qüsurlarınrin olmamasıdır."
     ]
   },
   {
-    "question": "55 yaşlı kişi xəstə qaraciyərin sol payında 2.0 sm şişə görə qaraciyər rezeksiyası əməliyyatına məruz qalmışdır. Əməliyyatönü dövrdə uzaq orqanlarda metastaz əlamətləri aşkar edilməmişdir. Rezektatın patohistoloji müayinəsində böyük ölçüsü 1.9 sm olan hepatosellular xərçəng təsdiqlənmiş və regional limfa düyünlərində metastaz aşkar edilməmişdir. Prosesin TNM sistemi ilə mərhələsi hansıdır:",
+    "question": "Sağlamlıq anlayışı nədir?",
     "answers": [
-      "T1N0M0",
-      "T2N1M0",
-      "T3N0M0",
-      "T1N1M0",
-      "T2N0M0"
+      "Sağlamlıq təkcə xəstəlik və fiziki qüsurların olmaması deyil, tam fiziki, psixi və sosial rahatlıqdır.",
+      "Sağlamlıq təkcə xəstəlik və fiziki qüsurların olmaması deyil, tam əqli, psixi və sosial rahatlıqdır.",
+      "Sağlamlıq psixi və sosial rahatlıqdır.",
+      "Sağlamlıq təkcə xəstəlik və fiziki qüsurların olmamasıdır.",
+      "Sağlamlıq təkcə xəstəlik və fiziki qüsurların olmaması deyil, tam fiziki, maddi və sosial rahatlıqdır."
     ]
   },
   {
-    "question": "Erkən kolorektal xərçəng nədir:",
+    "question": "Sağlamlığın qorunması üçün insan nə etməlidir?",
     "answers": [
-      "selikli qışada yaxud selikaltı qatda məhdudlaşan karsinomadır",
-      "seroz qata sirayət edən karsinomadır",
-      "adenomatoz polipdir",
-      "selikaltı və əzələ qışalarına sirayət edən karsinomadır",
-      "yoğun bağırsağın xoşxassəli şişidir"
+      "Sağlam həyat tərzi sürməlidir.",
+      "Maksimal gərginliklə məşq etməlidir.",
+      "İfrat dərəcədə qidalanmalıdır.",
+      "Hipokinetik həyat tərzi sürməlidir.",
+      "İmmunodepressant qəbul etməlidir."
     ]
   },
   {
-    "question": "Yoğun bağırsaq xərçənginin əmələ gəlməsində hansı qidalanma amilin rolu əhəmiyyətlidir:",
+    "question": "Yalnız dopinqlərdən ibarət olan dərmanlar sırasını seçın:",
     "answers": [
-      "ət məhsullarının, heyvani yağların çoxluğu",
-      "birki mənşəli qidaların çoxluğu",
-      "ət məhsullarının azlığı",
-      "heyvanı yağıarın azlığı",
-      "bitki yağların çoxluğu"
+      "Anestezin, Analgin, Retabolil.",
+      "Penicillin, Sulfadimezin, Əzvay.",
+      "Anestezin, Mildronat, Aspirin.",
+      "Aminazin, Efedrin, Jenşen.",
+      "Aktovegin, Streptocid, Analgin."
     ]
   },
   {
-    "question": "Yoğun bağırsağın xərçəngönü xəstəlikləri:",
+    "question": "Yalnız adaptogenlərdən ibarət olan dərmanlar sırasını seçın:",
     "answers": [
-      "yoğun bağırsağın adenomatoz polipləri",
-      "hipertoniya",
-      "paraproktit",
-      "xroniki appendisit",
-      "düz bağırsağın prolapsı"
+      "Aktovegin, Əzvay, Jenşen.",
+      "Aktovegin, Streptocid, Analgin.",
+      "Anestezin, Mildronat, Aspirin.",
+      "Penicillin, Sulfadimezin, Əzvay.",
+      "Aminazin, Efedrin, Jenşen."
     ]
   },
   {
-    "question": "Yoğun bağırsaq xərçənginin ən çox rast gələn histoloji variantı:",
+    "question": "Kennet Kuperə əsasən uzun müddətli hipokineziyadan sonra hansı hərəkətlərdən rasional hərəkət rejmini başlamaq tövsiyə edilir?",
     "answers": [
-      "adenokarsinoma",
-      "differensasiya olunmayan xərçəng",
-      "melanoma",
-      "yastıhüceyrəli karsinoma",
-      "sarkoma"
+      "Gəzinti.",
+      "İdman oyunları.",
+      "Hoppanma.",
+      "Üzgüçülük.",
+      "Qaçış."
     ]
   },
   {
-    "question": "Yoğun bağırsaq xərçəngi implantasion yolla metastaz verir:",
+    "question": "Kennet Kuperə əsasən uzun müddətli hipokineziyadan sonra gəzintiləri hansı məsafədən başlamaq tövsiyə edilir?",
     "answers": [
-      "peritona",
-      "dəriyə",
-      "qaraciyərə",
-      "ağciyərlərə",
-      "baş-beyinə"
+      "1,5 km.",
+      "20 km.",
+      "5 km.",
+      "3 km.",
+      "10 km."
     ]
   },
   {
-    "question": "Yoğun bağırsaq xərçəngi limfogen yolla metastaz verir:",
+    "question": "Kennet Kuperə əsasən uzun müddətli hipokineziyadan sonra rasional hərəkət rejiminin ilk 3 ayında nəbzin sayı məşq zamanı hansı tezlikdə olmalıdır?",
     "answers": [
-      "regionar limfa düyünlərinə",
-      "yumşaq toxumaya",
-      "divararalığına",
-      "peritonarxası nahiyəyə",
-      "sümüyə"
+      "110-120 vurğu/dəq.",
+      "180-200 vurğu/dəq.",
+      "150-160 vurğu/dəq.",
+      "130-140 vurğu/dəq.",
+      "200-230 vurğu/dəq."
     ]
   },
   {
-    "question": "Yoğun bağırsaq xərçəngi ən çox hematogen yolla metastaz verir:",
+    "question": "Müasir insanlarda hipokineziyanın yayılma səbəblərinə aid deyil:",
     "answers": [
-      "qaraciyərə",
-      "böyrəküstü vəzə",
-      "qalxanvari vəzə",
-      "dalağa",
-      "mədəaltı vəzə"
+      "Ekoloji problemlərin yaranması.",
+      "Təhsilin inkişafı.",
+      "Nəqliyyatın inkişafı.",
+      "Elmi-texniki tərəqqi.",
+      "Tənbəllik."
     ]
   },
   {
-    "question": "Yoğun bağırsaq xərçəngi T2 (şişin invaziya dərəcəsi) hansıdır:",
+    "question": "Kennet Kuperə əsasən rasional məşq etdikdə kişilər həftədə neçə xal toplanmalıdır?",
     "answers": [
-      "şiş əzələ qişasına infiltrasiya edir",
-      "şiş selikli qişaya infiltrasiya edir",
-      "şiş bütün qişalara infiltrasiya edir",
-      "şiş toxuması təyin edilmir",
-      "şiş qonşu orqanlara sirayət edir"
+      "10-15",
+      "25-26",
+      "35-40",
+      "5-10",
+      "27-30"
     ]
   },
   {
-    "question": "Yoğun bağırsaq xərçənginin ən çox rast gələn lokalizasiyası:",
+    "question": "Kennet Kuperə əsasən rasional məşq etdikdə qadınlar həftədə neçə xal toplanmalıdır?",
     "answers": [
-      "siqmayabənzər bağırsaq",
-      "enənçənbər bağırsaq",
-      "qalxançənbər bağırsaq",
-      "çənbərbağırsağın qaraciyər əyriliyi",
-      "kor bağırsaq"
+      "25",
+      "40",
+      "10",
+      "15",
+      "20"
     ]
   },
   {
-    "question": "Yoğun bağırsaq xərçənginin makroskopik görünüşünə görə qənaətbəxş proqnozu olan forma:",
+    "question": "Aerob məşğələlər hansılardır?",
     "answers": [
-      "ekzofit",
-      "“üzüyəbənzər” forma",
-      "ekzo-enzofit",
-      "endofit",
-      "nəlbəkiyəbənzər forma"
+      "Bir neçə dəqiqədən 1 saatadək orta sürətlə fasiləsiz gəzinti",
+      "Trenajorlarda 1 saat fasilələrlə işləmək.",
+      "Trenajorlarda maksimal yükləmələrlə işləmək.",
+      "Bir neçə dəqiqədən 1 saatadək maksimal sürətlə fasiləli gəzinti.",
+      "Bir neçə dəqiqədən 1 saatadək maksimal sürətlə qaçış."
     ]
   },
   {
-    "question": "Yoğun bağırsaq xərçənginin toksikoanemik forması ən çox rast gəlinir:",
+    "question": "Anaerob məşğələlər hansılardır?",
     "answers": [
-      "çənbərbağırsağın sağ yarısının şişlərində",
-      "siqmayabənzər bağırsağın şişlərində",
-      "düz bağırsağın şişlərində",
-      "çənbərbağırsağın sol yarısının şişlərində",
-      "köndələnçənbərbağırsağın şişlərində"
+      "Trenajorlarda maksimal yükləmələrlə işləmək.",
+      "Trenajorlarda 1 saat fasiləsiz orta gərginliklə işləmək.",
+      "Bir neçə dəqiqədən 1 saatadək orta sürətlə fasiləsiz gəzinti",
+      "Bir neçə dəqiqədən 1 saatadək orta sürətlə qaçış.",
+      "Bir neçə dəqiqədən 1 saatadək orta sürətlə fasiləsiz üzmək."
     ]
   },
   {
-    "question": "Yoğun bağırsaq xərçənginin obturasion forması ən çox rast gəlinir:",
+    "question": "Aerob məşğələlərin təsiri altında qanda xolesterinin miqdarı:",
     "answers": [
-      "çənbərbağırsağın sol yarısının şişlərində",
-      "düz bağırsağın şişlərində",
-      "köndələnçənbər bağırsağın orta 1/3 hissəsinnin şişlərində",
-      "köndələnçənbər bağırsağın proksimal hissəsinin şişlərində",
-      "kor bağırsağın şişlərində"
+      "azalır",
+      "tədricən artır",
+      "artır",
+      "sürətlə artır.",
+      "dəyişmır"
     ]
   },
   {
-    "question": "Yoğun bağırsaq xərçəngi zamanı istifadə olunan Meyo klinikasının sxemi:",
+    "question": "Anaerob məşğələlərin təsiri altında qanda xolesterinin miqdarı:",
     "answers": [
-      "Flüorurasil + leykovorin",
-      "Doksorubisin + mitomisin",
-      "Doksorubisin + sis-platin",
-      "Teqafür + mitomisin",
-      "Oksaliplatin + leykovorin"
+      "artır",
+      "sürətlə azalır.",
+      "tədricən azalır",
+      "dəyişmır",
+      "azalır"
     ]
   },
   {
-    "question": "Yoğun bağırsaq xərçəngi zamanı müştərək əməliyyatlara aiddir:",
+    "question": "Kennet Kuperə əsasən məşqetdirici qaçış zamanı 57 yaşlı qadın üçün nəbzin tövsiyə olunan sayı neçə olmalıdır?",
     "answers": [
-      "sağtərəli hemikolektomiya + xolesistektomiya",
-      "soltərfli hemikolektomiya",
-      "sağtərəli hemikolektomiya",
-      "çənbərbağirsaqğin subtotal rezeksiyasi",
-      "çanağin evisserasiyasi"
+      "123",
+      "120",
+      "145",
+      "130",
+      "135"
     ]
   },
   {
-    "question": "Yoğun bağırsaq xərçəngi zamanı ən mühüm müayinə metodu:",
+    "question": "Kennet Kuperə əsasən məşqetdirici qaçış zamanı 58 yaşlı kişi üçün nəbzin tövsiyə olunan sayı neçə olmalıdır?",
     "answers": [
-      "endoskopiya + biopsiya",
-      "abdominal USM",
-      "qanda CEA-nın təyini",
-      "irriqoskopiya",
-      "abdominal KT"
+      "122",
+      "160",
+      "155",
+      "138",
+      "135"
     ]
   },
   {
-    "question": "Düz bağırsaq xərçənginə görə aparılan aşağıdakı cərrahi əməliyyatlardan hansı düz bağırsağın sfinkter aparatının tamamən götürülməsi ilə nəticələnir:",
+    "question": "Rasional məşq prinsiplərini seçin: 1) Rasionallıq; 2) Müntəzənlik; 3) Cəldlik; 4) Fərdilik; 5) Gərginlik; 6) Tədricilik.",
     "answers": [
-      "Miles əməliyyatı (düz bağırsağın qarın-aralıq ekstirpasıyası)",
-      "düz bağırsağın qarın-anal rezeksiyası",
-      "düz bağırsağın ön rezeksiyası",
-      "düz bağırsağın aşağı ön rezeksiyası",
-      "Hartmann əməliyyatı"
+      "1,5,6",
+      "2,3,6",
+      "1,3,5",
+      "2,3,5",
+      "2,4,6"
     ]
   },
   {
-    "question": "Yoğun bağırsaq xərçənginin klinik formalarına aiddir:",
+    "question": "Rasional məşqin fərdilik prinsipinin mənası.",
     "answers": [
-      "bütün cavablar düzgündür",
-      "enterokolitik forma",
-      "dispeptik forma",
-      "obturasion forma",
-      "toksikoanemik forma"
+      "Fiziki yükün orqanizmin funksional imkanlarına və səhhətinə uyğun secilməsidir.",
+      "Rasional məşq prinsiplərinin hamısının tətbiq olunmasıdır.",
+      "Məşqlər arasında eyni müddətli fasilələrin tətbiq olunmasıdır.",
+      "Fiziki yükün fərdin arzu və istəklərinə uyğun olmamasıdır.",
+      "Rasionda fərdi xüsusiyətlərin nəzərə alınmasıdır."
     ]
   },
   {
-    "question": "Bağırsaq keçməzliyi əlamətləri çənbərbağırsaq xərçənginin hansı klinik forması üçün xarakterikdir:",
+    "question": "Rasional məşqin tədricilik prinsipi nəyi nəzərdə tutur?",
     "answers": [
-      "obturasion forma",
-      "enterekolitik forma",
-      "toksikoanemik forma",
-      "psevdoiltihabi forma",
-      "dispeptik forma"
+      "Fiziki yükün dozasının tədricən artmasını.",
+      "Fiziki yükün dozasının tədricən artıb-azalmasını.",
+      "Fasilələrin tətbiq olunmasını.",
+      "Fiziki yükün dozasının fasilələrlə artıb-azalmasını.",
+      "Fiziki yükün dozasının tədricən azalmasını."
     ]
   },
   {
-    "question": "Çənbərbağırsaq xərçənginin toksikoanemik forması üçün daha çox xarakterikdir:",
+    "question": "Rasional məşqin müntəzəmlik prinsipi nəyi nəzərdə tutur?",
     "answers": [
-      "hipoxrom anemiya",
-      "mədə-bağırsaq diskomfortu",
-      "patoloji ifrazatlar",
-      "qarında ağrılar",
-      "bağırsaq keçməzliyi"
+      "Məşqlər arasındakı fasilələrin bir-birinə bərabər olmasını.",
+      "Fiziki yükün dozasının tədricən dəyişməsini.",
+      "Məşqlər arasındakı fasilələrin azalmasını.",
+      "Məşqlər arasındakı fasilələrin artıb-azalmasını.",
+      "Məşqlər arasındakı fasilələrin qeyri bərabər olmasını."
     ]
   },
   {
-    "question": "Yoğun bağırsaq xərçəngində G3 simvolu nəyi göstərir:",
+    "question": "Rasional məşqin sistematiklik prinsipi nəyi nəzərdə tutur?",
     "answers": [
-      "şişin aşağı differensiasiya dərəcəsini",
-      "şişin orta differensiasiya dərəcəsini",
-      "differensiasiya olunmamış şişin",
-      "şişin yüksək differensiasiya dərəcəsini",
-      "heç bir cavab düzgün deyil"
+      "Mütəmadi olaraq məşqlərin tətbiq olunmasını.",
+      "Fiziki yükün dozasının tədricən artmasını.",
+      "Fiziki yükün dozasının tədricən dəyişməsinı.",
+      "Məşqlər arasındakı fasilələrin artıb-azalmasını.",
+      "Məşqlər arasındakı fasilələrin qeyri bərabər olmasını."
     ]
   },
   {
-    "question": "Yoğun bağırsaq xərçəngi zamanı qanda CEA-nın təyin edilməsi müstəsna proqnostik əhəmiyyətə malikdir:",
+    "question": "Fiziki məşğələlərin bioloji roluna nə aid deyil?",
     "answers": [
-      "dinamik olaraq cərrahi əməliyyatdan əvvəl və sonra",
-      "şişin bağırsağın qalınlığı boyu transmural yayılma dərəcəsini müəyyənləşdirmək üçün",
-      "cərrahi əməliyyat zamanı",
-      "xərçəngönü xəstəliklərin diaqnostikası üçün",
-      "erkən kolorektal xərçənginin aşkar edilməsi üçün"
+      "Kinezofiliyanın yaranması.",
+      "Akselerasiya.",
+      "Əzələ sevinci hissinin yaranması.",
+      "Fəal uzunömürlülüyün təmin olunması.",
+      "Hipokineziyanın qarşısının alınması."
     ]
   },
   {
-    "question": "Xəstə klinikaya yoğun bağırsaq keçməzliyi ilə daxil olmuşdur. Aparılan müayinələrdən xəstədə anemiya, s-vari bağırsağın xərçəngi aşkarlanmışdır. Bu zaman:",
+    "question": "Fiziki məşğələlərin bioloji roluna nə aiddir?",
     "answers": [
-      "siqmostoma qoyulmalı",
-      "soltərəfli hemikolektomiya icra edilməli",
-      "s-vari bağırsağın rezeksiyası aparılmalı",
-      "Hartman əməliyyatı aparmalı",
-      "sağtərəfli hemikolektomiya icra edilməli"
+      "Fəal uzun ömürlüyün təmin olunması.",
+      "Həddən artıq fiziki gərginlik.",
+      "Həddən artıq məşq olunma.",
+      "Hipotrofiya.",
+      "Kinezofiliyanın yaranması."
     ]
   },
   {
-    "question": "Xəstə 60 yaşında ümumi zəiflik, qarında ağrı, köp şikayətləri ilə daxil olmuşdur. Aparılan müayinələrdən xəstədə çənbərbağırsağın dalaq əyriliyinin T1N0M0 mərhələli xərçəngi aşkar edilmişdir. Cərrahın taktikası:",
+    "question": "Akselerasiyanın səbəbini əks etdirən nəzəriyyələrə nə aid deyil?",
     "answers": [
-      "soltərəfli hemikolektomiya",
-      "s-varı bağırsağın rezeksiyası",
-      "Miles əməliyyatı",
-      "Hartman əməliyyatı",
-      "sağtərəfli hemikolektomiya"
+      "Hipokineziya nəzəriyyəsi.",
+      "Urbanizasiya nəzəriyyəsi.",
+      "Suni işıqlama nəzəriyyəsi.",
+      "Radiodalğa nəzəriyyəsi.",
+      "Geterolokal kəbinlər nəzəriyyəsi."
     ]
   },
   {
-    "question": "Yoğun bağırsaq xərçənginin epidemiologiyası baxımından aşağıdakılardan hansı doğrudur:",
+    "question": "Praktiki sağlam insanlarda hipokineziyanın qarşısını almaq üçün hansı vasitəyə üstünlük verilməlidir?",
     "answers": [
-      "yoğun bağırsaq xərçənginin rastgəlmə tezliyi yaş artdıqca artır",
-      "yoğun bağırsaq xərçəngi hər iki cinsin nümayəndələri arasında eyni tezliklə rast gəlinir, yaş artdıqca rastgəlmə tezliyi azalır",
-      "yoğun bağırsaq xərçənginin rastgəlmə tezliyində yaş və cins baxımından heç bir fərq yoxdur",
-      "yoğun bağırsaq xərçəngi kişilərdə qadınlara nisbətən az rast gəlinir, yaş artdıqca rastgəlmə tezliyi azalır",
-      "yoğun bağırsaq xərçəngi kişilərdə qadınlara nisbətən daha çox rast gəlinir, yaş artdıqca rastgəlmə tezliyi azalır"
+      "Fiziki məşqələlər.",
+      "Kinezofiliya.",
+      "Psixoloji stimiliyatorlar.",
+      "Massaj.",
+      "Elektrik stimiliyatorlar."
     ]
   },
   {
-    "question": "Kolorektal xərçəng səbəbindən asılı olmayaraq ən çox hansı xərçəngönü xəstəlikdən inkişaf edir:",
+    "question": "Ciddi yataq rejmində xəstədə hipokineziyanın qarşısını almaq üçün hansı vasitələrin istifadə olunması tövsiyə olunmalıdır?",
     "answers": [
-      "adenomatoz poliplərdən",
-      "Kron xəstəliyindən",
-      "qeyri-spesifik xoralı kolitdən",
-      "xroniki kolitdən",
-      "Peutz-Yeghers sindromundan"
+      "Massaj, elektrik miostimulyatorlar",
+      "Elektrik və psixoloji stimiliyatorlar.",
+      "İdman məşğələləri",
+      "Təbbi amillər.",
+      "Massaj, psixoloji stimiliyatorlar."
     ]
   },
   {
-    "question": "Lynch sindromu hansı genin anadangəlmə mutasiyası nəticəsində inkişaf edir:",
+    "question": "Elektrik miostimuliyatorlar nə üçün tövsiyə olunmalıdır?",
     "answers": [
-      "MMR gen ailəsinin",
-      "APC geninin",
-      "K-ras geninin",
-      "P53 geninin",
-      "CDH geninin"
+      "Xəstələrdə hipokineziyanın qarşısını almaq üçün.",
+      "Osteoporozun qarşısını almaq üçün.",
+      "Sümükləri möhkəmləndirmək üçün.",
+      "Təlimatçının vaxtına qənaət etmək üçün.",
+      "İnsanların vaxtına qənaət etmək üçün."
     ]
   },
   {
-    "question": "Ailəvi adenomatoz polipoz sindromu hansı genin anadangəlmə mutasiyası nəticəsində inkişaf edir:",
+    "question": "Qeyri-spesifik rezistentlik –",
     "answers": [
-      "APC geninin",
-      "CDH geninin",
-      "K-ras geninin",
-      "MMR gen ailəsinin",
-      "P53 geninin"
+      "Orqanizmin müxtəlif təsiredici amillərə qarşı davamlılığıdır",
+      "Spesitikasiyalı davamlılıqdır.",
+      "Müxtəlif rezistorların tətbiqidir.",
+      "Orqanizmin bir amilə qarşı davamlılığıdır.",
+      "Orqanizmin xəstəlik törədicisinə qarşı davamlılığıdır."
     ]
   },
   {
-    "question": "Ailəvi adenomatoz polipoz sindromu nə ilə səciyyələnir:",
+    "question": "Stress reaksiyasının mərhələlərinin düzgün ardıcıllığını seçin: 1) Təşviş 2) Tükənmə 3) Həyacan 4) Müqavimət 5) Başlanqıc.",
     "answers": [
-      "yoğun bağırsağın autosom-resessiv yolla ötürülmə tərzinə malik adenomatoz polipozu və mərkəzi sinir sisteminin şişi ilə",
-      "əsasən nazik bağırsağı zədələməklə qastrointestinal traktın autosom-dominant yolla natamam irsi ötürülmə potensialına malik hamartomatoz polipozu və mukokutaneoz piqmentasiya ilə",
-      "mədə-bağırsaq traktının çoxsaylı retension polipləri ilə",
-      "yoğun bağırsağın autosom-domunant yolla irsən ötürülən adenomatoz polipozu, yumşaq toxuma və sümük şişləri ilə",
-      "yoğun bağırsaqda autosom-domunant yolla irsən ötürülən çoxsaylı adenomatoz poliplərin olması ilə"
+      "3, 4, 2",
+      "1, 3, 2",
+      "5, 4, 3",
+      "5, 2, 4",
+      "5, 2, 3"
     ]
   },
   {
-    "question": "Gardner sindromu nə ilə səciyyələnir:",
+    "question": "İdmancılarda stress reaksiyasının hansı mərhələsi arzu olunan sayılır?",
     "answers": [
-      "yoğun bağırsağın autosom-domunant yolla irsən ötürülən adenomatoz polipozu, yumşaq toxuma və sümük şişləri ilə",
-      "mədə-bağırsaq traktının çoxsaylı retension polipləri ilə",
-      "əsasən nazik bağırsağı zədələməklə qastrointestinal traktın bağırsağın hamartomatoz polipozu və mukokutaneoz piqmentasiya ilə",
-      "yoğun bağırsaqda autosom-domunant yolla irsən ötürülən çoxsaylı adenomatoz poliplərin olması ilə",
-      "yoğun bağırsağın autosom-resessiv yolla ötürülmə tərzinə malik adenomatoz polipozu və mərkəzi sinir sisteminin şişi ilə"
+      "Müqavimət.",
+      "Başlanqıc.",
+      "Həyacan.",
+      "Tükənmə.",
+      "Təşviş."
     ]
   },
   {
-    "question": "Turcot sindromu nə ilə səciyyələnir:",
+    "question": "Hansı vasıtələr idmançılarda stress reaksiyasının tükənmə mərhələsinin qarşısını almaq üçün tövsiyə olunur?",
     "answers": [
-      "yoğun bağırsağın autosom-resessiv yolla ötürülmə tərzinə malik adenomatoz polipozu və mərkəzi sinir sisteminin şişi ilə",
-      "yoğun bağırsağın autosom-domunant yolla irsən ötürülən adenomatoz polipozu, yumşaq toxuma və sümük şişləri ilə",
-      "yoğun bağırsaqda autosom-domunant yolla irsən ötürülən çoxsaylı adenomatoz poliplərin olması ilə",
-      "əsasən nazik bağırsağı zədələməklə qastrointestinal traktın bağırsağın hamartomatoz polipozu və mukokutaneoz piqmentasiya ilə",
-      "mədə-bağırsaq traktının çoxsaylı retension polipləri ilə"
+      "Adaptogenlər.",
+      "Sedativ maddələr.",
+      "Psixotrop maddələr.",
+      "Analgetiklər",
+      "Dopinqlər."
     ]
   },
   {
-    "question": "Peutz-Yeghers sindromu nə ilə səciyyələnir:",
+    "question": "Yüksək temperaturlu hava rejiminə idmançıların adaptasiyası üçün hansı maddə tövsiyə edilir?",
     "answers": [
-      "əsasən nazik bağırsağı zədələməklə qastrointestinal traktın bağırsağın hamartomatoz polipozu və mukokutaneoz piqmentasiya ilə",
-      "mədə-bağırsaq traktının çoxsaylı retension polipləri ilə",
-      "yoğun bağırsağın autosom-domunant yolla irsən ötürülən adenomatoz polipozu, yumşaq toxuma və sümük şişləri ilə",
-      "yoğun bağırsaqda autosom-domunant yolla irsən ötürülən çoxsaylı adenomatoz poliplərin olması ilə",
-      "yoğun bağırsağın autosom-resessiv yolla ötürülmə tərzinə malik adenomatoz polipozu və mərkəzi sinir sisteminin şişi ilə"
+      "Kəhraba turşusu",
+      "Amidopirin.",
+      "Hipotermik maddələr.",
+      "Analgin.",
+      "Alma turşusu"
     ]
   },
   {
-    "question": "Lynch sindromu nə ilə səciyyələnir:",
+    "question": "Akselerasiyanın mənfi nəticələrini seçin: 1) piylənmə 2) kriminal elementlərə qoşulma 3) daxili orqanların funksional imkanlarının geriləməsi 4) ürək çatışmazlığı 5) tənəffüs çatışmazlığı",
     "answers": [
-      "yoğun bağırsağın autosom-domunant yolla irsən ötürülən adenomatoz polipozu, yumşaq toxuma və sümük şişləri ilə",
-      "yoğun bağırsaqda autosom-domunant yolla irsən ötürülən çoxsaylı adenomatoz poliplərin olması ilə",
-      "yoğun bağırsağın autosom-resessiv yolla ötürülmə tərzinə malik adenomatoz polipozu və mərkəzi sinir sisteminin şişi ilə",
-      "əsasən nazik bağırsağı zədələməklə qastrointestinal traktın bağırsağın hamartomatoz polipozu və mukokutaneoz piqmentasiya ilə",
-      "yoğun bağırsaqda MMR geninin anadangəlmə mutasiyasının səbəb olduğu irsi-qeyri polipoz kolorektal xərçəngin inkişafı ilə"
+      "2,3",
+      "1,4",
+      "1,4,5",
+      "1,5",
+      "4,5"
     ]
   },
   {
-    "question": "Yoğun bağırsaq zamanı periton səthində olan metastazlar – peritoneal karsinomatoz hansı mexanizmlə inkişaf edir:",
+    "question": "Fiziki məşğələlərin təsiri altında ümumi işgüzarlığın artması aşağıdakı mərhələlərdən hansı ardıcıllıqla baş verir? 1) Fermetlərin aktivliyinin artması. 2) Fermetlərin miqdarının artması. 3) Enerji ilə zəngin maddələrin mitoxondriyalarda toplanması.",
     "answers": [
-      "implantasion",
-      "kontakt",
-      "intramural",
-      "limfogen",
-      "hematogen"
+      "3,2,1",
+      "2,1,3",
+      "3,1,2",
+      "1,2,3",
+      "2,3,1"
     ]
   },
   {
-    "question": "S-vari bağırsağın mənfəzini sirkulyar daraltmış, əzələ qişasına sirayət etmiş xərçəng T kateqoriyasının hansı qiyməti ilə qiymətləndirilir:",
+    "question": "Kinezoterapiyanın sinonimini seçin:",
     "answers": [
-      "T2",
-      "T4",
-      "T3",
-      "Tis",
-      "T1"
+      "Müalicə bədən tərbiyəsi.",
+      "Kinezofiliya.",
+      "Akineziya.",
+      "Bədən tərbiyyəsi.",
+      "Hipokineziya."
     ]
   },
   {
-    "question": "Yoğun bağırsaq xərçənginin TNM təsnifatında TX nəyi səciyyələndirir:",
+    "question": "Müalicə bədən tərbiyəsinin sinonimini seçin:",
     "answers": [
-      "ilkin ocağın qiymətləndirilə bilməməsini",
-      "birincili şişin aşkar edilə bilməməsini",
-      "şişin selikli qişa hüdudunda məhdudlaşmasını",
-      "şişin bazal membranı keçməməsini",
-      "şişin selikaltı qatda məhdudlaşmasını"
+      "Kinezoterapiya",
+      "Bədən tərbiyyəsi.",
+      "Akineziya.",
+      "Kinezofiliya.",
+      "Hipokineziya."
     ]
   },
   {
-    "question": "Düz bağırsaq xərçəngi zamanı neoadyuvant radioterapiyaya dair aşağıdakılardan hansı doğrudur:",
+    "question": "Fiziki reabilitasiyanı hansı mütəxəssis həyata keçirir?",
     "answers": [
-      "neoadyuvant radioterapiya düz bağırsaq xərçəngində effektivdir və lokal residiv tezliyini azaldır",
-      "düz bağırsaq xərçəngi zamanı neoadyuvant radioterapiya yalnız yaşlı xəstələrdə tətbiq edilməlidir",
-      "neoadyuvant radioterapiya düz bağırsağın yalnız yuxarı ampulyar hissənin xərçəngi zamanı tətbiq edilir",
-      "düz bağırsaq xərçəngi zamanı neoadyuvant radioterapiya yalnız cavan xəstələrdə tətbiq edilməlidir",
-      "neoadyuvant radioterapiya düz bağırsaq xərçənginin effektiv deyildir və aparılması tövsiyə edilmir"
+      "Müalicə bədən tərbiyəsi həkimi.",
+      "Ftiziatr.",
+      "Məşqçi.",
+      "Fizika mütəxəssisi.",
+      "Reanimatoloq."
     ]
   },
   {
-    "question": "Endokrin orqanları arasında ən çox şiş rast gəlinən orqan hansıdır:",
+    "question": "Fiziki reabilitasiyanın aparılması hansı mütəxəssislərin vəzifə borclarına aid deyil?",
     "answers": [
-      "qalxanabənzər vəzi",
-      "böyrəküstü vəzi",
-      "mədəaltı vəzi",
-      "hipofiz vəzi",
-      "timus vəzi"
+      "Reanimatoloq.",
+      "Masajist.",
+      "Müalicə bədən tərbiyyəsi təlimatçısı.",
+      "Kinezoterapist.",
+      "Müalicə bədən tərbiyyəsi həkimi."
     ]
   },
   {
-    "question": "Qalxanabənzər vəzi xərçənginin bütün bədxassəli şişləri orta hesabla neçə faizini təşkil edir:",
+    "question": "Reabilitasiyanın hansı aspektlərini tibb işçiləri həyata keçirir?",
     "answers": [
-      "2%-ə qədər",
-      "11%-ə qədər",
-      "9%-ə qədər",
-      "7%-ə qədər",
-      "5%-ə qədər"
+      "Fiziki",
+      "Hüquqi",
+      "Metodik",
+      "Təcrübəvi",
+      "Peşə"
     ]
   },
   {
-    "question": "Qalxanabənzər vəzi xərçəngi ilə ən yüksək xəstələnmə səviyyəsi hansı yaşlarda müşahidə edilir:",
+    "question": "Tibbi reabilitasiyanın mahiyyəti nədir?",
     "answers": [
-      "40-60 F) epitelial hüceyrələrdən G) qeyri-epitelial hüceyrələrdən",
-      "70-80",
-      "60-70",
-      "20-30",
-      "30-40"
+      "sağlamlığın və əmək qabiliyyətinin bərpasına yönəldilmiş müalicə metodların tətbiqi.",
+      "xəstənin kliniki ölüm halından qurtulmasına yönəldilmiş metodların tətbiqi.",
+      "xəstənin bütün bacarıqlarının bərpası.",
+      "xəstənin bioloji ölüm halından qurtulmasına yönəldilmiş metodların tətbiqi.",
+      "müasir diaqnostik üsulların tətbiqi."
     ]
   },
   {
-    "question": "Qalxanabənzər vəzi xərçənginin hansı histoloji formaları daha 175. Qalxanabənzər vəzi xərçənginin risk amillərinə aid deyil:",
+    "question": "Fiziki reabilitasiyanın mahiyyəti nədir?",
     "answers": [
-      "ultrabənövşəyi şüalar",
-      "genetik meyillik",
-      "ionizəedici radiasiya",
-      "hormonal amil",
-      "alimentar yod çatışmazlığı"
+      "bədən tərbiyəsi vasitələri ilə xəstənin funksional vəziyyətinin yaxşılaşdırılması.",
+      "xəstənin bioloji ölüm halından qurtulması.",
+      "xəstənin kliniki ölüm halından qurtulması.",
+      "müasir metodlarla diaqnostika əsasında göstəriş olan müalicəvi otların tətbiqi.",
+      "xəstənin psixoloji durumunun bərpası."
     ]
   },
   {
-    "question": "Qalxanabənzər vəzin şişönü xəstəliklərinə aid deyil:",
+    "question": "İdman təbabətinin iş formalarına aid deyil",
     "answers": [
-      "düyünlü ur",
-      "toksiki ur",
-      "qalxanvari vəzin adenoması",
-      "xroniki tireoidit",
-      "teratoma"
+      "İdmançıların nailiyyətlərinin qiymətləndirilməsi.",
+      "Bədən tərbiyəsi və idman üzrə həkim məsləhətləri.",
+      "Həkim-pedaqoji müşahidələri.",
+      "Bədən tərbiyəsi və idmanla məşqul olan şəxslərin həkim müayinəsi.",
+      "Bədən tərbiyəsi və idmanla məşqul olanların dispanserizasiyası."
     ]
   },
   {
-    "question": "Qalxanabənzər vəzin “C” hüceyrələrində hansı şiş inkişaf edir:",
+    "question": "İdman təbabətinin iş formalarına aid deyil",
     "answers": [
-      "medullyar xərçəng",
-      "anaplastik (differensiasiya olunmayan) xərçəng",
-      "yastıhüceyrəli xərçəng",
-      "papillyar adenokarsinoma",
-      "follikulyar adenokarsinoma"
+      "İdman qurğularının avadanlıqla təchiz edilməsi.",
+      "İdmançılar və bədən tərbiyəçiləri arasında sanitar marif işi.",
+      "Bədən tərbiyəsi və idman tədbirlərinin tibbi-sanitar təmini.",
+      "İdman travmatizminin və pataloji vəziyyətlərin profilaktikası.",
+      "Bədən tərbiyəsi və idman tədbirləri aparılan yerlərə və onların şəraitinə sanitar nəzarət."
     ]
   },
   {
-    "question": "Qalxanabənzər vəzin papillyar və follikulyar xərçəngi hansı hüceyrələrdən inkişaf edir:",
+    "question": "İdman təbabətinin iş formalarına aid deyil",
     "answers": [
-      "A və B hüceyrələrindən",
-      "epitelial hüceyrələrdən",
-      "qeyri-epitelial hüceyrələrdən",
-      "maliqnizasiya olunmayan epitel hüceyrələrdən",
-      "C hüceyrələrindən"
+      "İdmançıların naıliyyətlərinin qiymətləndirilməsi.",
+      "Bədən tərbiyəsi və idman sahəsində tibbi bioloji elmi tədqiqatlar.",
+      "Bədən tərbiyəsi və idman tədbirlərinin tibbi-sanitar təmini.",
+      "Əhali arasında bədən tərbiyəsi və idmanın sağlamlaşdırıcı təsirinin təbliğ olunması.",
+      "Reabilitasiya tədbirlərinin təşkili və həyata keçirilməsi."
     ]
   },
   {
-    "question": "Qalxanabənzər vəzi xərçənginin hansı histoloji formaları daha çox təsadüf edilir:",
+    "question": "Həkim-pedaqoji müşahidə hansı məqsəd ilə aparılır.",
     "answers": [
-      "papillyar",
-      "yastıhüceyrəli xərçəng",
-      "anaplastik xərçəng",
-      "medullyar xərçəng",
-      "follikulyar adenokarsinoma"
+      "Fiziki məşğələlərin orqanizmə göstərdiyi təsirin öyrənilməsi.",
+      "Obyektiv reaksiyaların qeydə alınması.",
+      "Sağlamlıq vəziyyətinin təyin edilməsi",
+      "Diaqnozun düzgun qiymətləndirilməsi.",
+      "Patoloji vəziyyətin öyrənilməsi."
     ]
   },
   {
-    "question": "Qalxanabənzər vəzin anaplastik xərçəngi T1N0M1 hansı mərhələyə müvafiqdir:",
+    "question": "İdman təbabəti termini nə deməkdir?",
     "answers": [
-      "IVc mərhələ",
-      "III mərhələ",
-      "IVa mərhələ",
-      "I mərhələ",
-      "II mərhələ"
+      "Ümumi klinik və profilaktik təbabətin bir hissəsi olub, fiziki məşqələlərin insan orqanizminə göstərilən təsirin tibbi-bioıoji aspektlərini öyrənir.",
+      "İdmançıların sosial problemlərini həll edən tibbi sahə.",
+      "İdman və bədən tərbiyəsi ilə məşqul olan bütün kontingentlərin sosial təminat sistemi.",
+      "Xəstəliklərin erkən əlamətlərinin müəyyən edilməsi.",
+      "Yüksək dərəcəli dmançıların müalicəsi."
     ]
   },
   {
-    "question": "Qalxanabənzər vəzin hansı xərçəngi aqressiv gedişə malikdir:",
+    "question": "İdman təbabətinin məqsədi nədən ibarətdir?",
     "answers": [
-      "anaplastik xərçəng",
-      "follikulyar xərçəng",
-      "medullyar xərçəng",
-      "yastıhüceyrəli xərçəng",
-      "papillyar xərçəng"
+      "Əhalinin fiziki məşqələlər vasitəsi ilə sağlamlığının möhkəmləndirilməsi və idmançılara yüksək nailiyyətlərin əldə edilməsində yardımçı olmaq.",
+      "Müalicə-profilaktika müəssələrində müalicə bədən tərbiyəsi üzrə metodik- təşkilati idarəetmə.",
+      "İdmançıların sosial problemlərini həlli.",
+      "Travma və xəstəliklərdən sonra idmancılara bərpa tədbirlərin təşkili və aparılması.",
+      "İdman və bədən tərbiyəsi ilə məşqul olan bütün kontingentlərin sosial təminatı."
     ]
   },
   {
-    "question": "Qalxanabənzər vəzin hansı xərçəngi ən ləng gedişə malikdir:",
+    "question": "İdman təbabətində neçə iş forması mövcuddur?",
     "answers": [
-      "yastıhüceyrəli xərçəng",
-      "anaplastik xərçəng",
-      "medullyar xərçəng",
-      "follikulyar xərçəng",
-      "papillyar xərçəng"
+      "11",
+      "14",
+      "12",
+      "9",
+      "16"
     ]
   },
   {
-    "question": "Qalxanabənzər vəzin “gizli” xərçəngi özünü nə ilə göstərir:",
+    "question": "İdman təbabətində həkim müayinəsi formalarına aid deyil?",
     "answers": [
-      "boyun limfa düyünündə və ya uzaq orqanlarda olan metastazlarla",
-      "digər endokrin orqanların (böyrəküstü vəzi, qalxanabənzər ətraf vəzi) şişləri ilə birgə",
-      "xəstəliyin sürətli və infiltrativ inkişafı ilə",
-      "qalxanabənzər vəzidə olan törəmə ilə",
-      "Sippl sindromu (diareya) ilə"
+      "İdmançıların dispanser müşahidəsi.",
+      "Bədən tərbiyəsi və idmanla məşqul olan şəxslərin profilaktik müayinəsi.",
+      "Bədən tərbiyəsi və idmanla məşqul olan şəxslərin əlavə müayinəsi.",
+      "Bədən tərbiyəsi və idmanla məşqul olan şəxslərin təkrari həkim müayinəsi.",
+      "Bədən tərbiyəsi və idmanla məşqul olan şəxslərin ilkin həkim müayinəsi."
     ]
   },
   {
-    "question": "Qalxanabənzər vəzi xərçənginin diaqnostikasında istifadə olunan əsas diaqnostika metodlarına aid deyildir:",
+    "question": "Bədən tərbiyəsi və idmanla məşqul olan şəxslərin ilkin həkim müayinəsinin aparılmasının məqsədi.",
     "answers": [
-      "endoskopik",
-      "şişin iynə ilə aspirasion biopsiyası (İİAB)",
-      "radioloji (KT, MRT, PET)",
-      "USM",
-      "radionuklid"
+      "Sağlamlıq vəziyyətini , fiziki inkişafını müayinə etmək və tibbi qruplara bölmək.",
+      "İdmançıların funksional vəziyyətinin təyini üslubu, yarışlarda və məşqlərdə idmançıların müşahidə üslubları.",
+      "Bədən tərbiyəsi və idmanla məşqul olan bütün kontingentlərinin sosial təminat sistemi.",
+      "Yüksək ixtisaslı idmançıların xüsusiləşdirilmiş müalicəsi.",
+      "Travma və xəstəliklərdən sonra idmançılara bərpa tədbirlərinin təşkili və aparılması."
     ]
   },
   {
-    "question": "Qan zərdabında kalsitoninin təyini qalxanabənzər vəzin hansı xərçəngində biokimyəvi marker hesab olunur:",
+    "question": "İdman təbabətində həkim məsləhətləri əhalinin hansı kontingent arasında aparılmır?",
     "answers": [
-      "medullyar xərçəng",
-      "anaplastik xərçəng",
-      "follikulyar xərçəng",
-      "papillyar xərçəng",
-      "yastıhüceyrəli xərçəng"
+      "Hərbiçilər.",
+      "Orta və ahıl yaşlılar üçün.",
+      "Qızlar və qadınlar.",
+      "Uşaq və yeniyetmə.",
+      "Valideyinlər."
     ]
   },
   {
-    "question": "Yüksək differensiasiyalı qalxanabənzər vəzi xərçənginin (papillyar və follikulyar) əsas müalicə metodu hansıdır:",
+    "question": "Bədən tərbiyəsi və idman tədbirləri aparılan yerlərə və onların şəraitinə sanitar nəzarətin növləri:",
     "answers": [
-      "cərrahi",
-      "kombinəolunmuş",
-      "kompleks",
-      "kimyəvi",
-      "şüa"
+      "Xəbərdaredici nəzarət.",
+      "Həkim nəzarəti.",
+      "Endokrinoloji nəzarət.",
+      "Həkim-pedaqoji nəzarət.",
+      "Dispanser nəzarəti."
     ]
   },
   {
-    "question": "Tireoidektomiya əməliyyatından sonra qalxanabənzər vəzi xərçənginin onkomarkeri hansıdır:",
+    "question": "Bədən tərbiyəsi və idman tədbirləri aparılan yerlərə və onların şəraitinə sanitar nəzarətin növləri:",
     "answers": [
-      "tireoqlobulin",
-      "T4",
-      "kalsitonin",
-      "TSH",
-      "T3"
+      "Cari nəzarət.",
+      "Laborator-diaqnostik nəzarət.",
+      "Endokrinoloji nəzarət.",
+      "Kliniki nəzarət.",
+      "Ambulator nəzarət."
     ]
   },
   {
-    "question": "Qalxanabənzər vəzin regionar metastazlarının əsas müalicə metodu hansıdır:",
+    "question": "Bədən tərbiyəsi və idman tədbirləri aparılan yerlərə və onların şəraitinə sanitar nəzarətin növləri:",
     "answers": [
-      "cərrahi (boyun disseksiyası)",
-      "kimyəvi",
-      "şüa",
-      "immunoloji",
-      "hormonal"
+      "İdman tikintilərə və qurğularına nəzarət.",
+      "Fitnes məşqçilərinə nəzarət.",
+      "Neft hövzələrinə nəzarət.",
+      "Təhsil binalarına nəzarət.",
+      "Yaşayış binalara nəzarət."
     ]
   },
   {
-    "question": "Qida borusu xərçəngi aşağıdakı toxumadan inkişaf edir:",
+    "question": "Ketle I indeksinin kişilər üçün orta göstəricisi:",
     "answers": [
-      "epitelial toxumadan",
-      "əzələ toxumasından",
-      "adventisiyadan",
-      "limfoid toxumadan",
-      "damarlardan"
+      "350-400 qr/sm.",
+      "450-475 qr/sm.",
+      "325-345qr/sm.",
+      "500-550 qr/sm.",
+      "425-450 qr/sm."
     ]
   },
   {
-    "question": "Qida borusu obliqat xərçəngönü xəstəlikləri aşağıdakılardır:",
+    "question": "Döş qəfəsi indeksinin orta göstəricisi:",
     "answers": [
-      "Barret qida borusu",
-      "qida borusu divertikulu",
-      "göbəlk ezofagiti",
-      "virus ezofagiti",
-      "xroniki ezofagit"
+      "50-55 %",
+      "35-40 %",
+      "60-65 %",
+      "56-60 %",
+      "40-49 %"
     ]
   },
   {
-    "question": "Barret qida borusu xarakterizə olunur:",
+    "question": "Həyat indeksinin qadınlar üçün orta göstəricisi:",
     "answers": [
-      "qida borusunun selikli qişasının bağırsaq metaplaziyası ilə",
-      "qida borusunun leykoplagiyası",
-      "qida borusunun eritroplagiyası",
-      "qida borusunun papilloması",
-      "qida borusu selikli qişanın hiperkeratozu"
+      "55-60 ml/kq.",
+      "65-70 ml/kq.",
+      "61-65 ml/kq.",
+      "35-40 ml/kq.",
+      "45-50 ml/kq."
     ]
   },
   {
-    "question": "Qida borusu xərçənginin əsas histoloji forması aşağıdakıdır:",
+    "question": "Həyat indeksinin kişilər üçün orta göstəricisi:",
     "answers": [
-      "sarkoma",
-      "keçid hüceyrəli xərçəng",
-      "buynuzlaşmayan yasti hüceyrəli xərçəng",
-      "adenokarsinoma",
-      "xırda hüceyrəli xərçəng"
+      "65-70 ml/kq.",
+      "35-40 ml/kq.",
+      "56-60 ml/kq.",
+      "75-80 ml/kq.",
+      "55-60 ml/kq."
     ]
   },
   {
-    "question": "Qida borusu adenokarsinoması ən çox rast gəlinir:",
+    "question": "Əl qüvvəsi indeksinin qadınlar üçün orta göstəricisi:",
     "answers": [
-      "qida borusunun aşağı 1/3 hissəsində",
-      "yuxari 1/3 hissəsində",
-      "orta 1/3 hissəsində",
-      "qida borusunun boyun və yuxarı 1/3 hissəsində",
-      "qida borusunun boyun hissəsində"
+      "48-50 %",
+      "20-25 %",
+      "35-40 %",
+      "40-45 %",
+      "55-60 %"
     ]
   },
   {
-    "question": "Xroniki ezofaqit:",
+    "question": "Əl qüvvəsi indeksinin kişilər üçün orta göstəricisi:",
     "answers": [
-      "qida borusunun fakultativ xərçəngönü xəstəliyidir",
-      "qida borusunun adventisiyasının iltihabı xəstəliyidir",
-      "qida borusunun qeyri – epitelial şişlərinə aiddir.",
-      "obliqant xərçəngönü xəstəliyidir",
-      "qida borusunun xoşxassəli şişidir"
+      "65-80 %",
+      "35-40 %",
+      "30-40 %",
+      "55-6 0%",
+      "48-50 %"
     ]
   },
   {
-    "question": "Qida borusu xərçəngi əsas aşağıdakı yolla metastaz verir:",
+    "question": "İstinad qüvvəsi indeksinin qadınlar üçün orta göstəricisi:",
     "answers": [
-      "limfogen və hematogen yolla",
-      "kontakt yolla",
-      "perinevral yolla",
-      "perivaskulyar yolla",
-      "implantasion yolla"
+      "100-150 %",
+      "70-75 %",
+      "50-55 %",
+      "220-230 %",
+      "65-95 %"
     ]
   },
   {
-    "question": "Qida borusu xərçəngi əsas hematogen yol ilə metastaz verir:",
+    "question": "İstinad qüvvəsi indeksinin kişilər üçün orta göstəricisi:",
     "answers": [
-      "qaraciyərə və ağciyərə",
-      "göbəyə",
-      "divar araliğinin limfa vəzilərinə",
-      "sol körpücüküstü limfa düyünlərinə",
-      "yumurtaliqlara"
+      "200-220 %",
+      "100-150%",
+      "120-130 %",
+      "150-170 %",
+      "120-150 %"
     ]
   },
   {
-    "question": "Qida borusunun yuxarı 1/3 hissəsinin xərçəngi ən çox metastaz verir:",
+    "question": "Sprint qaçışı əsasən hansı fiziki keyfiyyəti formalaşdırır?",
     "answers": [
-      "boyun limfa vəzilərinə, sol körpücüküstü limfa düyünlərinə, divararalığı limfa vəzilərinə",
-      "perikarda",
-      "mədəyə",
-      "paraortal və peritonarxası limfa vəzilərinə",
-      "yumurtalıqlara"
+      "Sürət.",
+      "Yüksək tənzimləmə qabiliyyəti.",
+      "Hərəkətlərin koordinasiyası.",
+      "Yüksək mənimsəmə qabiliyyəti.",
+      "Dözümlülük."
     ]
   },
   {
-    "question": "Qida borusu xərçənginin əsas simptomları:",
+    "question": "Ketle indeksi nəyi nəzərə alır?",
     "answers": [
-      "disfaqiya, döş qəfəsində ağrılar, hipersalivasiya",
-      "epiqastral nahiyədə ağrılar və sarılıq",
-      "qan hayxırma və öskürək",
-      "baş ağrıları və yuxarı ətrafların paresteziyası",
-      "qıcqırma və regurgitasiya"
+      "Boyu, çəkini.",
+      "Ağ ciyərlərin tutum həcmini.",
+      "Döş qəfəsinin əhatə göstəricisini.",
+      "Boyunun əhatə ölçüsünü.",
+      "Döş qəfəsi həcmini."
     ]
   },
   {
-    "question": "Qida borusu xərçənginin ən informativ müayinə metodu:",
+    "question": "Həyat indeksi nəyi nəzərə alır?",
     "answers": [
-      "fibroezofaqoqastroskopiya biopsia ilə",
-      "kontrast rentgenoloji müayinə",
-      "kompyuter tomoqrafiyası",
-      "ultrasəs müaynəsi",
-      "PET"
+      "Ağ ciyərlərin həyat tutumunu, çəkini.",
+      "Budun əhatə ölçüsünü.",
+      "Boyunun əhatə ölçüsünü.",
+      "Boy göstəricisini.",
+      "Döş qəfəsinin əhatə göstəricisini."
     ]
   },
   {
-    "question": "Qida borusu xərçənginin qida borusunun təbəqələrnə invaziya dərəcəsini təyin etmək üçün ən əsaslı müayinə aşağıdakıdır:",
+    "question": "Döş qəfəsi indeksi nəyi nəzərə alır?",
     "answers": [
-      "endoskopik ultrasonoqrafiya",
-      "kompyuter tomoqrafiya",
-      "mediastinoskopiya",
-      "fibroqastroezofaqoskopiya",
-      "PET"
+      "Boyu, çəkini.",
+      "Oturaq vəziyyətdə boyun ölçüsü.",
+      "Döş qəfəsinin həcmini.",
+      "Ağ ciyərlərin tutum həcmini.",
+      "Döş qəfəsinin dairəsi (pauzada), boy uzunluğu."
     ]
   },
   {
-    "question": "Qida borusu xərçənginin qonşu orqanlara sirayət etmə dərəcəsini təyin etmək üçün ən informativ müayinə üsulu aşağıdakıdır:",
+    "question": "Əl qüvvəsi indeksi nəyi nəzərə alır?",
     "answers": [
-      "döş qəfəsinin kompyuter tomoqrafiyası",
-      "ultrasəs müayinəsi",
-      "kontrast rentgenoloji müayinə",
-      "bronxoskopiya",
-      "palpasiya və perkussiya"
+      "İstinad qüvvəsi və çəkini.",
+      "Döş qəfəsinin həcmini və çəkini.",
+      "Spirometriya və çəkini.",
+      "Əl qüvvəsi və çəkini.",
+      "Əl qüvvəsi və boyu."
     ]
   },
   {
-    "question": "Qida borusunun radikal müalicə metodu aşağıdakıdır:",
+    "question": "İstinad qüvvəsi indeksi nəyi nəzərə alır?",
     "answers": [
-      "şüa müalicəsi",
-      "hormonal müalicə",
-      "kimyəvi terapiya",
-      "targent terapiya",
-      "cərrahi müalicə"
+      "Əl qüvvəsi və çəkini.",
+      "İstinad qüvvəsi və əl qüvvəsi.",
+      "Əl qüvvəsini və boyun uzunluğunu.",
+      "Spirometriya və boyun uzunluğunu.",
+      "İstinad qüvvəsi və çəkini."
     ]
   },
   {
-    "question": "Qida borusu xərçəngində əsas cərrahi əməliyyatın həcmi:",
+    "question": "Əl qüvvəsi indeksi nəyi nəzərə alır?",
     "answers": [
-      "qida borusunun rezeksiyası ezofaqoqastroplastika ilə",
-      "ezofaqoqastroanastomoz",
-      "qida borusunun kənari rezeksiyası",
-      "qida borusunun bujlanması",
-      "qatrostoma"
+      "Əl dinamometriyası və çəki.",
+      "Döş qəfəsinin çevrəsinin ölçüsü və çəki.",
+      "Bədən uzunluğu və çəki.",
+      "Boyunun əhatə ölçüsü və çəki.",
+      "İstinad qüvvəsi və çəki."
     ]
   },
   {
-    "question": "Qida borusu xərçəngində aparılan radikal əməliyyatlar hansılardır:",
+    "question": "Bədən çəkisi 60 kq, boyun uzunluğu 175 sm olan kişinin I Ketle indeksini qiymətləndirin:",
     "answers": [
-      "qida borusunun rezeksiyası və ekstirpasiyası",
-      "qastrostomiya",
-      "ezofaqostomiya",
-      "qastrektomiya və pulmonektomiya",
-      "Hartman əməliyyatı"
+      "Orta dərəcədən aşağı.",
+      "Zəif.",
+      "Orta dərəcədən yuxarı.",
+      "Yaxşı.",
+      "Orta."
     ]
   },
   {
-    "question": "Qida borusu xərçəngi zamanı aparılmayan əməliyyat:",
+    "question": "Ağ ciyərlərin həyat tutumu 4000 ml., 60 kq. çəkisi olan kişinin həyat indeksini qiymətləndir:",
     "answers": [
-      "Kenyu-Mails əməliyyatı",
-      "Qavrilyu əməliyyatı",
-      "qida borusunun ekstirpasiyası",
-      "Qarlok əməliyyatı",
-      "Lyuis əməliyyatı"
+      "Orta.",
+      "Yaxşı.",
+      "Zəif.",
+      "Orta dərəcədən aşağı.",
+      "Orta dərəcədən yuxarı."
     ]
   },
   {
-    "question": "Qida borusunun boyun hissəsinin xərçəngində əsas tətbiq olunur.",
+    "question": "Əl qüvvəsi 65 kq., çəkisi 60 kq. olan kişinin əl qüvvəsi indeksini qiymətləndirin:",
     "answers": [
-      "şüa müalicəsi",
-      "targent terapiya",
-      "hormonal terapiya",
-      "kimyəvi terapiya",
-      "cərrahiyə müalicə"
+      "Yaxşı.",
+      "Orta.",
+      "Orta dərəcədən aşağı.",
+      "Orta dərəcədən yuxarı.",
+      "Zəif."
     ]
   },
   {
-    "question": "Qida borusu xərcəngində şüa terapiyasının əsas rejimləri aşagidakılardır:",
+    "question": "İstinad qüvvəsi 150 kq. çəkisi 60 kq olan kişinin istinad qüvvəsi indeksini qiymətləndirin:",
     "answers": [
-      "BOD 2 Qr, ÜOD 60 Qr",
-      "BOD 5 Qr, ÜOD 100 Qr",
-      "BOD 70 Qr, ÜOD 50 Qr",
-      "BOD 1 Qr, ÜOD 10 Qr",
-      "BOD 10 Qr, ÜOD 200 Qr"
+      "Yaxşı.",
+      "Orta dərəcədən yuxarı.",
+      "Orta dərəcədən aşağı.",
+      "Orta.",
+      "Zəif."
     ]
   },
   {
-    "question": "Qida borusu xərcəngində genişlənmiş əməliyyatlar aşağıdakılardır:",
+    "question": "Bədən çəkisi 60 kq, boyun uzunluğu 175 sm olan qadının Ketle indeksini I qiymətləndirin:",
     "answers": [
-      "regional metastazvermə zonaların sistemli limfadisseksiyası",
-      "ezafaqostomiya",
-      "qida borusunun ekstirpasiyası",
-      "Osava-Garlok əməliyyəti",
-      "Lyuis əməliyyatı"
+      "Orta.",
+      "Yaxşı.",
+      "Zəif.",
+      "Orta dərəcədən yuxarı.",
+      "Orta dərəcədən aşağı."
     ]
   },
   {
-    "question": "Qida borusunun III mərhələdə olan xərçəngi zamanı radikal müalicədən sonra 5 illik yaşama göstəriciləri:",
+    "question": "Gençi sınağı üçün kafı nəticəni seçin.",
     "answers": [
-      "10%",
-      "50%",
-      "85%",
-      "70%",
-      "98%"
+      "25 saniyə.",
+      "60 saniyə.",
+      "50saniyə.",
+      "70 saniyə.",
+      "15 saniyə."
     ]
   },
   {
-    "question": "Qida borusu xərcənginin birincili profilaktikasına daxildir:",
+    "question": "Gençi sınağı üçün yaxşı nəticəni seçin.",
     "answers": [
-      "siqaretcəkmənin və spirtli işkilərin sui istifadəsinə qarşı mübarizənin aparılması, qida mədəniyyəti",
-      "flyuoroqrafiya",
-      "Barret qida borusunun müalicəsi",
-      "skrininq + dispanserizasiya",
-      "şişönu xəstəliklərin müalicəsi"
+      "35 saniyə.",
+      "30 saniyə.",
+      "10saniyə.",
+      "25 saniyə.",
+      "20 saniyə."
     ]
   },
   {
-    "question": "Mədə xərçənginin epidemiologiyası baxımından aşağıdakılardan hansı doğrudur:",
+    "question": "Gençi sınağı üçün qeyri kafi nəticəni seçin.",
     "answers": [
-      "mədə xərçəngi kişilərdə qadınlara nisbətən daha çox rast gəlinir, yaş artdıqca rastgəlmə tezliyi artır",
-      "mədə xərçənginin rastgəlmə tezliyində yaş və cins baxımından heç bir fərq yoxdur",
-      "mədə xərçəngi kişilərdə qadınlara nisbətən daha çox rast gəlinir, yaş artdıqca rastgəlmə tezliyi azalır",
-      "mədə xərçəngi kişilərdə qadınlara nisbətən az rast gəlinir, yaş artdıqca rastgəlmə tezliyi artır",
-      "mədə xərçəngi hər iki cinsin nümayəndələri arasında eyni tezliklə rast gəlinir, yaş artdıqca rastgəlmə tezliyi artır"
+      "15 saniyə.",
+      "75 saniyə.",
+      "60saniyə.",
+      "55 saniyə.",
+      "25 saniyə."
     ]
   },
   {
-    "question": "Mədə xərçənginin əmələ gəlməsində aşağıdakılardan hansı irsi gen mutasiyalarının rolu təsdiq edilməmişdir:",
+    "question": "Gençi sınağının nəticəsi 15 san. olduqda necə qiymətləndirilməlidir?",
     "answers": [
-      "BRCA2 gen mutasiyası",
-      "APC gen mutasıyası",
-      "CDH gen mutasiyası",
-      "P53 gen mutasıyası",
-      "MMR gen mutasiyası"
+      "Yaxşı.",
+      "Əla",
+      "Orta.",
+      "Kafi.",
+      "Qeyri kafi."
     ]
   },
   {
-    "question": "Aşağıdakılardan hansı xəstəlik mədənin xərçəngönü xəstəlik kimi təsdiq edilməmişdir:",
+    "question": "Gençi sınağının nəticəsi 40 san. olduqda necə qiymətləndirilməlidir?",
     "answers": [
-      "kəskin hiperasid qastrit",
-      "Menetriye xəstəliyi",
-      "mədənin adenomatoz polipi",
-      "mədənin proksimal şöbələrinin xorası",
-      "xroniki atrofik qastrit"
+      "Yaxşı.",
+      "Orta dərəcədən yuxarı.",
+      "Orta.",
+      "Qeyri kafi.",
+      "Kafi."
     ]
   },
   {
-    "question": "Mədə xərçəngi ən çox mədənin hansı şöbəsindən inkişaf edir:",
+    "question": "Ştange sınağının nəticəsi 35 san. olduqda necə qiymətləndirilməlidir?",
     "answers": [
-      "piloroantral hissədə",
-      "mədənin arxa divarında",
-      "mədənin ön divarında",
-      "mədənin dibində",
-      "böyük əyrilikdə"
+      "Yaxşı.",
+      "Orta.",
+      "Kafi.",
+      "Zəif.",
+      "Qeyri kafi."
     ]
   },
   {
-    "question": "Mədə xərçənginin ən çox rast gəlinən histoloji variantı hansıdır:",
+    "question": "Gençi sınağının nəticəsi 35 san. olduqda necə qiymətləndirilməlidir?",
     "answers": [
-      "adenokarsinoma",
-      "qaşlı üzük hüceyrəli xərçəng",
-      "adenoskvamoz xərçəng",
-      "differensiasiya edməmiş xərçəng",
-      "yastı hüceyrəli xərçəng"
+      "Yaxşı.",
+      "Orta.",
+      "Orta dərəcədən yuxarı.",
+      "Zəif.",
+      "Qeyri kafi."
     ]
   },
   {
-    "question": "Mədə xərçənginin hematogen metastazı ən çox hansı orqanda inkişaf edir:",
+    "question": "Rozental sınağında nədən istifadə edilir?",
     "answers": [
-      "qaraciyərdə",
-      "yumurtaliqda",
-      "böyrəküstü vəzidə",
-      "göbəkdə",
-      "sümüklərdə"
+      "Spirometr.",
+      "Dinamometr.",
+      "Tonometr.",
+      "Veloerqometr.",
+      "Santımetr lenti."
     ]
   },
   {
-    "question": "Mədə xərçənginin yumurtalığa metastazı necə adlanır:",
+    "question": "Rozental sınağında alınan nəticələr ardıcıllığı: 3500, 3600, 3700, 3750, 4100 sm3 necə qiymətləndirilməlidir?",
     "answers": [
-      "Krukenberq metastazı",
-      "Blummer metastazı",
-      "Troisier metastazı",
-      "Virxov metastazı",
-      "Şnitsler metastazı"
+      "Yaxşı.",
+      "Zəif.",
+      "Orta dərəcədən yuxarı.",
+      "Qeyri kafi.",
+      "Kafi."
     ]
   },
   {
-    "question": "Mədə xərçəngi zamanı periton səthində olan metastazlar – peritoneal karsinomatoz hansı mexanizmlə inkişaf edir:",
+    "question": "Rozental sınağında alınan nəticələr ardıcıllığı: 3600, 3600, 3550, 3600, 3600 sm3 olduqda necə qiymətləndirilməlidir?",
     "answers": [
-      "implantasion",
-      "hematogen",
-      "kontakt",
-      "limfogen",
-      "intramural"
+      "Yaxşı.",
+      "Zəif.",
+      "Orta.",
+      "Qeyri kafi.",
+      "Kafi."
     ]
   },
   {
-    "question": "Mədənin antral hissəsindən inkişaf etmiş 30 mm ölçüdə əzələ qişasına sirayət etmiş xərçəng T kateqoriyasının hansı qiyməti ilə qiymətləndirilir:",
+    "question": "Fiziki inkişafından asılı olmayaraq, xəstə şəxslər bədən tərbiyəsi dərsində hansı tibbi qrupda məşqul olmalıdırlar?",
     "answers": [
-      "T3",
-      "T1",
-      "T4",
-      "T2",
-      "Tis"
+      "Xüsusi.",
+      "Əsas.",
+      "Əlavə.",
+      "Hazırlıq.",
+      "Fiziki."
     ]
   },
   {
-    "question": "Mədə xərçənginin TNM təsnifatında Tis nəyi səciyyələndirir:",
+    "question": "Xəstə, fiziki inkişafı yaxşı olan şəxslər bədən tərbiyəsi dərsində hansı tibbi qrupda məşqul olmalıdırlar?",
     "answers": [
-      "şişin bazal membranı keçməməsini",
-      "şişin əzələ qişasına keçmədiyini",
-      "birincili şişin aşkar edilə bilməməsini",
-      "şişin selikli qişa hüdudunda məhdudlaşmasını",
-      "şişin selikaltı qatda məhdudlaşmasını"
+      "Xüsusi.",
+      "Əsas.",
+      "Əlavə.",
+      "Hazırlıq.",
+      "Fiziki."
     ]
   },
   {
-    "question": "62 yaşlı qadın xəstədə şikayətləri əsasında qastroskopiya aparılmış və mədənin distal və orta üçdə bir hissələrini tamamən zədələyən infiltrativ xərçəng aşkar edilmişdir. Qastroskopiya zamanı götürülmiş bioptatın patohistoloji müayinəsində zəif diferensiasiya etmiş adenokarsinoma təsdiq edilmişdir. Xəstədə digər adekvat müayinələr aparıldıqdan sonra (müayinələr əsasında uzaq orqanlarda metastaz aşkar edilməmişdir) qastrektomiya, genişləndirilmiş limfodisseksiya əməliyyatı aparılmışdır. Rezektatın patohistoloji müayinəsində xərçəngin əzələ qişasına sirayət etdiyi və 8 limfa düyünündə metastaz aşkar edilmişdir. Son klinik diaqnozda xərçəngin TNM üzrə mərhələsi necə yazılacaqdır:",
+    "question": "Xəstə, fiziki inkişafı orta olan şəxslər bədən tərbiyəsi dərsində hansı tibbi qrupda məşqul olmalıdırlar?",
     "answers": [
-      "T2N2M0",
-      "T2N2M1",
-      "T3N1M1",
-      "T2N1M0",
-      "T1N2M0"
+      "Xüsusi.",
+      "Hazırlıq.",
+      "Fiziki.",
+      "Əsas.",
+      "Əlavə."
     ]
   },
   {
-    "question": "Seroz qişaya infiltrasiya etmiş mədə xərçəngi T kateqoriyasının hansı qiyməti ilə təsvir edilir:",
+    "question": "Xəstə, fiziki inkişafı zəif olan şəxslər bədən tərbiyəsi dərsində hansı tibbi qrupda məşqul olmalıdırlar?",
     "answers": [
-      "T2",
-      "Tis",
-      "T1",
-      "T3",
-      "T4"
+      "Xüsusi.",
+      "Hazırlıq.",
+      "Əlavə.",
+      "Əsas.",
+      "Fiziki."
     ]
   },
   {
-    "question": "Mədənin hansı şöbəsinin xərçəngi zamanı lokal klinik əlamətlər daha gecikmiş dövrlərdə və daha zəif təzahür edir:",
+    "question": "Xəstə, fiziki inkişafı orta dərəcədən yuxarı olan şəxslər bədən tərbiyəsi dərsində hansı tibbi qrupda məşqul olmalıdırlar?",
     "answers": [
-      "mədə cisminin və dibinin xərçəngi zamanı",
-      "mədənin kardial və subkardial hissələrinin xərçəngi zamanı",
-      "mədənin prepilorik hissəsinin xərçəngi zamanı",
-      "mədənin antral hissəsinin və böyük əyriliyinin xərçəngi zamanı",
-      "mədənin antral hissəsinin xərçəngi zamanı"
+      "Xüsusi.",
+      "Fiziki.",
+      "Əlavə.",
+      "Əsas.",
+      "Hazırlıq."
     ]
   },
   {
-    "question": "İnstrumental müayinələr arasında mədə xərçənginin aşkar edilməsi baxımından ən informativi hansıdır:",
+    "question": "Xəstə, fiziki inkişafı orta dərəcədən aşağı olan şəxslər bədən tərbiyəsi dərsində hansı tibbi qrupda məşqul olmalıdırlar?",
     "answers": [
-      "qastroskopiya",
-      "nüvə-maqnit tomoqrafiyası",
-      "ultrasəs müayinəsi",
-      "kompüter tomoqrafiya",
-      "həzm traktının kontrast rentgenoloji müayinəsi"
+      "Xüsusi.",
+      "Əsas.",
+      "Fiziki.",
+      "Hazırlıq.",
+      "Əlavə."
     ]
   },
   {
-    "question": "Mədə xərçənginin rezektabelliyinin preoperativ dövrdə qiymətləndirməsində aşağıdakı müayinələrdən ən dəqiqi hansıdır:",
+    "question": "061/U formalı tibbi vərəqə hansı kontingent üçün istifadə olunur?",
     "answers": [
-      "kompüter-tomoqrafiya, yaxud maqnit-rezonans tomoqrafiya",
-      "qastroskopiya",
-      "bioptatın patohistoloji müayinəsi",
-      "ultrasəs müayinəsi",
-      "rentgenoloji müayinə"
+      "İdmançılar.",
+      "Yeni doğulmuşlar.",
+      "Xəstə şəxslər.",
+      "Hərbiçilər.",
+      "Təqaüdçülər."
     ]
   },
   {
-    "question": "Mədənin kardial hissəsinin xərçənginə görə aşağıdakı radikal cərrahi əməliyyatlardan hansı aparılır:",
+    "question": "061/U formalı tibbi vərəqə hansı kontingent üçün istifadə olunmur?",
     "answers": [
-      "qastrektomiya, yaxud mədənin proksimal rezeksiyası",
-      "splenektomiya ilə birlikdə qastrektomiya",
-      "mədənin pazvari rezeksiyası",
-      "ezofagogastrektomiya",
-      "mədənin distal subtotal rezeksiyası"
+      "Yeni doğulmuşlar.",
+      "Bədən tərbiyasi ilə məşğul olanlar.",
+      "UYİM yetirmələri.",
+      "Aşağı dərəcəli idmancılar.",
+      "İdmançılar."
     ]
   },
   {
-    "question": "62 yaşlı qadın xəstədə endoskopiyada mədənin orta 1/3 hissəsində xora aşkar edilmışdir. Bioptatın patoloji müayinəsində üzüyəbənzər hüceyrəli xərçəng təsdiq edilmişdir. KT müayinəsi mədə cisminin divarında divar qalınlaşması aşkar etmişdir. Qaraciyər və ağciyərlərdə patoloji dəyişiklik aşkar edilməmişdir. Xəstəyə hansı müalicə üsulu tətbiq edilməlidir:",
+    "question": "061/U formalı tibbi vərəqəyə aşağdakı hissə daxil edilməmişdir:",
     "answers": [
-      "qastrektomiya, genişləndirilmiş limfodisseksiya",
-      "radioterapiya",
-      "müştərək kimyəvi dərman müalicəsi və radioterapiya",
-      "mədənin distal subtotal rezeksiyası, genişləndirilmiş limfodisseksiya",
-      "kimyəvi dərman müalicəsi"
+      "Laborator müayinələr.",
+      "Həkim qərarı.",
+      "Xarici baxış.",
+      "Pasport hissəsi.",
+      "Daxili orqanların müayinəsi."
     ]
   },
   {
-    "question": "Mədədə ən çox rast gəlinən bədxassəli şiş hansıdır:",
+    "question": "061/U formalı tibbi vərəqəyə aşağdakı hissə daxil edilmişdir:",
     "answers": [
-      "xərçəng",
-      "sarkomalar",
-      "limfoma",
-      "melanoma",
-      "karsinoid şişlər"
+      "Həkim qərarı.",
+      "Funksional müayinələr.",
+      "Tənəfüs sisteminin funksional sınaqları.",
+      "Laborator müayinələr.",
+      "Ailə vəziyyəti."
     ]
   },
   {
-    "question": "Borman təsnifatı mədə xərçəngini hansı parametr baxımından variantlara ayırır:",
+    "question": "Massajın üsullarına aid deyil:",
     "answers": [
-      "makroskopik görüntüsünə görə",
-      "Mədənin hansı şöbəsinin zədələnməsinə görə",
-      "şişin mədə divarının dərinliyi boyu infiltrasiyasına görə",
-      "xərçəngin əmələ gəlməsində ekzogen, yaxud endogen amillərin daha əhəmiyyətli rol oynadığını əks etdirən histoarxitektonikaya görə",
-      "mikroskopik xüsusiyyətlərinə görə"
+      "Toxunma.",
+      "Vibrasiya.",
+      "Ovxalama.",
+      "Sürtmə.",
+      "Sığallama."
     ]
   },
   {
-    "question": "Mədə xərçəngi zamanı qastroskopiya klinisisti hansı informasiyalarla təmin edə bilir:",
+    "question": "Müalicə bədən tərbiyəsində istifadə olunan təbii amillərə aid deyil:",
     "answers": [
-      "şişin lokalizasiyası, ölçüsü barədə",
-      "peritoneal karsinomatozun olub olmaması",
-      "reginar limfa düyünlərinin metastatik zədələnib-zədələnməməsi ilə bağlı",
-      "şişin qonşu üzvlərə münasibəti ilə bağlı",
-      "şişin mədə divarının hansı qişasına infiltrasiya etməsi ilə bağlı"
+      "Palcıq proseduraları.",
+      "Yerli su proseduraları.",
+      "Hava proseduraları.",
+      "Günəş proseduraları.",
+      "Ümumi su proseduraları."
     ]
   },
   {
-    "question": "Mədə xərçənginin rezektabelliyinin preoperativ dövrdə qiymətləndirməsində aşağıdakı müayinələrdən ən dəqiqi hansıdır:",
+    "question": "Müalicə bədən tərbiyəsinin tətbiq formalarına aid deyil:",
     "answers": [
-      "kompüter-tomoqrafiya, yaxud maqnit-rezonans tomoqrafiya",
-      "qastroskopiya",
-      "rentgenoloji müayinə",
-      "ultrasəs müayinəsi",
-      "bioptatın patohistoloji müayinəsi"
+      "Psixoterapiya.",
+      "Mexanoterapiya.",
+      "Gəzintilər terrenkur və digər tətbiqi idman hərəkətləri.",
+      "Müalicə gimnastikası.",
+      "Səhər gigiyenik gimnastika."
     ]
   },
   {
-    "question": "Mədə xərçəngindən sağalmanı aşağıdakı müalicə üsullarından hansı təmin edə bilir:",
+    "question": "Müalicə gimnastikası prosedurası neçə hissədən ibarətdir?",
     "answers": [
-      "radikal cərrahi müalicə",
-      "kimyəvi dərman müalicəsi",
-      "radioterapiya",
-      "radioxemoterapiya",
-      "target terapiya"
+      "3 hissədən.",
+      "6 hissədən.",
+      "5 hissədən.",
+      "4 hissədən.",
+      "2 hissədən."
     ]
   },
   {
-    "question": "Mədənin T2N0M0 xərçəngi aşağıdakılardan hansının simvoludur:",
+    "question": "Müalicə gimnastikası prosedurasının ilk hissəsi necə adlandırılır?",
     "answers": [
-      "mədə divarının əzələ qişasına sirayət etmiş, regionar limfa düyünlərinə və uzaq orqanlara metastaz verməmi xərçəngin",
-      "mədə divarının seroz qişasına sirayət etmiş, regionar limfa düyünlərinə və uzaq orqanlara metastaz verməmiş xərçəngin",
-      "mədə divarının selikaltı qatına sirayət etmiş, regionar limfa düyünlərinə və uzaq orqanlara metastaz verməmiş xərçəngin",
-      "qonşu üzvlərə sirayət etmiş, regionar limfa düyünlərinə və uzaq orqanlara metastaz verməmiş mədə xərçənginin",
-      "erkən mədə xərçənginin"
+      "Giriş.",
+      "Dönüş.",
+      "Başlangıc.",
+      "İlkin.",
+      "Çıxış."
     ]
   },
   {
-    "question": "Aşağıdakılardan hansıları süd vəzisi xərçənginin əmələgəlmə amillərinə aid deyil:",
+    "question": "Əsas hissə müalicə gimnastikası prosedurasının neçə % -ni təşkil edir?",
     "answers": [
-      "osteoporoz",
-      "piylənmə",
-      "hipotireoz",
-      "genetik dəyişikliklər",
-      "laktasiyanın pozulması"
+      "50-70 %",
+      "90-100 %",
+      "80-90 %",
+      "40-50 %",
+      "30-40 %"
     ]
   },
   {
-    "question": "Hansı orqanlarda baş verən dəyişiklər süd vəzisi xərşəngi riskini artırır:",
+    "question": "Müalicə gimnastikası prosedurasının son hissəsində hansı hərəkətlər təyin edilmir?",
     "answers": [
-      "bütün cavablar düzgündür",
-      "hipofiz və hipotalamus",
-      "qalxanvarı vəzi",
-      "böyrəküstü vəzilər",
-      "yumurtalıq"
+      "Oyunlar.",
+      "Mexaniki hərəkətlər.",
+      "Korreksiya edici hərəkətlər.",
+      "Tarazlıq hərəkətləri.",
+      "Tonuslandırıcı hərəkətlər."
     ]
   },
   {
-    "question": "Süd vəzisi xərçənginin əmələ gəlməsində hansı genetik amillər rol oynayır:",
+    "question": "Fiziki yükün dozalaşdırılma faktorlarına aid deyil:",
     "answers": [
-      "BRCA1, BRCA2 genlərinin mutasiyaları",
-      "yalnız Kouden xəstəliyi",
-      "yalnız TB-S3 genin mutasiyası",
-      "heç biri",
-      "APC geninin mutasiyası"
+      "Hərəkətlərin amplitudası.",
+      "Kliniki təzəhür.",
+      "Yaş.",
+      "Fiziki hazırlıq.",
+      "Anamnez."
     ]
   },
   {
-    "question": "Süd vəzisi xərçəngini yaradan ekzogen amillər:",
+    "question": "Fiziki yükün dozalaşdırılma faktorlarına aiddir:",
     "answers": [
-      "hipodinamiya, şüalanma, stress",
-      "A, C, E vitaminləri",
-      "anilin boyaları",
-      "fiziki aktivlik",
-      "təbii qida"
+      "Əzələ qrupları.",
+      "Hərəkətlərin sayı.",
+      "Pauzaların müddəti.",
+      "Hərəkətin surəti.",
+      "Cins."
     ]
   },
   {
-    "question": "Süd vəzisi xərçənginin ən geniş yayılmış histoloji forması hansıdır:",
+    "question": "Fiziki yükün dozalaşdırılma prinsiplərinə aiddir:",
     "answers": [
-      "papillyar xərçəng",
-      "infiltrativ paycıq xərçəng",
-      "qeyri- infiltrativ paycıq xərçəng",
-      "qeyri-infiltrativ axardaxili xərçəng",
-      "infiltrativ axardaxili xərçəng"
+      "Əzələ qrupları.",
+      "Funksional sınaqlar.",
+      "Arterial təziq.",
+      "Spirometriya.",
+      "Qoniometriya."
     ]
   },
   {
-    "question": "Aşağıdakilardan hansıları süd vəzisi xərçənginin morfoloji strukturunda çoxluq təşkil edir:",
+    "question": "Ürəyin işemik xəstəliyində müalicə bədən tərbiyəsinin aparılmasına dair əks göstərişlər hansılardır?",
     "answers": [
-      "medullyar xərçəng",
-      "infiltrativ paycıq xərçəng",
-      "tubulyar xərçəng",
-      "qeyri-invaziv və invaziv paycıq xərçəng",
-      "qeyri-invaziv və invaziv axacaq xərçəng"
+      "stenokardiya tutmalarının tez-tez müşahidəsi.",
+      "stenokardiya tutmalarının nadir hallarda müşahidəsi.",
+      "hipertoniya xəstəliyinin II mərhələsi.",
+      "damarların aterosklerozu.",
+      "60 yaşdan yuxarı yaş dövrü."
     ]
   },
+ 
   {
-    "question": "Süd vəzisi xərçənginin kliniki formaları arasında hansılar mövcüddur:",
+    "question": "Xəstəxana şəraitində hansı hərəkət rejimi tətbiq edilmir?",
     "answers": [
-      "düyünlü, diffuz və atipik",
-      "diffuz, atipik və Pecet",
-      "diffuz, atipik və gizli",
-      "düyünlü, diffuz və metastatik",
-      "düyünlü, yayılmış, iltihabi"
+      "qoruyucu rejim.",
+      "III - ümumi genişləndirilmiş rejim.",
+      "II - yarım yataq rejimi.",
+      "I b – yataq rejimi.",
+      "I a - ciddi yataq rejimi."
     ]
   },
   {
-    "question": "Süd vəzisi xərçənginin əsas limfogen metastazvermə yolu:",
+    "question": "Müalicə gimnastikasının tətbiqinə əks göstərişlərə aid deyil:",
     "answers": [
-      "qoltuqaltı yol",
-      "körpücükaltı yol",
-      "parasternal yol",
-      "epiqastral yol",
-      "çarpaz yol"
+      "oyanma və tormozlanma prosesləri arasında tarazlığın pozulması.",
+      "ağır vəziyyət",
+      "tromboflebit.",
+      "qanaxma.",
+      "yüksək hərarət."
     ]
   },
   {
-    "question": "Süd vəzisi xərçənginin əsas metastazvermə yolları aşağıdakılardır:",
+    "question": "Piylənmə zamanı hansı növ məşqlər önəmli deyil?",
     "answers": [
-      "limfogen və hematogen",
-      "implantasion",
-      "yerli invaziya",
-      "hematogen və perinevral",
-      "limfogen və implatasion"
+      "kicik əzələ qrupları üçün gimnastik məşğələlər.",
+      "orta və tez temptə yeriş.",
+      "qaçış.",
+      "trenajorlarda məşqlər.",
+      "hovuzda üzmə."
     ]
   },
   {
-    "question": "Süd vəzisi xərçənginin əsas hematogen metastazvermə orqanları hansılardır:",
+    "question": "Şəkərli diabet xəstəliyində müalicə gimnastikasına göstərişə aiddir:",
     "answers": [
-      "sümük, ağciyər, qaraciyər",
-      "ağciyər, qaraciyər, yumşaq toxuma",
-      "ağciyər, baş beyin, uşaqlıq",
-      "sümük, böyrəklər, qaraciyər",
-      "sümük, ağciyər, mədəaltı vəzi"
+      "kliniki gedişin yüngül forması.",
+      "diabetin ağır forması.",
+      "komadan öncəki vəziyyət.",
+      "kliniki gedişin ağır forması.",
+      "diabetik koma."
     ]
   },
   {
-    "question": "Rotter limfa düyünləri harda yerləşir:",
+    "question": "Travmaların müalicəsi zamanı immobilizasiya dövründə müalicə bədən tərbiyəsinin hansı tətbiq formaları təyin edilir?",
     "answers": [
-      "iki döş əzələsi arasındakı toxumada",
-      "M.Serratus anterior III və IV dişləri nahiyəsində",
-      "parasternal limfa düyünlərində",
-      "süd vəzisi xərçəngində metastazla zədələnmiş bütün limfa düyünlərdə",
-      "kontrlateral qoltuqaltı limfa düyünlərində"
+      "müalicəvi üzgüçülük.",
+      "refleksoterapiya.",
+      "mexanoterapiya.",
+      "massaj.",
+      "müalicəvi gimnastika."
     ]
   },
   {
-    "question": "Süd vəzisi T1N0M0 xərçəngi hansı mərhələyə aiddir:",
+    "question": "Travmaların müalicəsi zamanı immobilizasiya dövründə hansı vasitələr məqsədəuyğun deyil?",
     "answers": [
-      "IV mərhələ",
-      "III mərhələ",
-      "II mərhələ",
-      "I mərhələ",
-      "0 mərhələ"
+      "müalicəvi üzgüçülük.",
+      "müalicəvi gimnastika.",
+      "massaj.",
+      "yarım yataq rejimi.",
+      "mexanoterapiya."
     ]
   },
   {
-    "question": "Süd vəzisi T2N0M0 xərçəngi hansı mərhələyə aiddir:",
+    "question": "Travmalarda müalicə bədən tərbiyəsinin tətbiqi nəyin qarşısını alır?",
     "answers": [
-      "IIa mərhələ",
-      "IIIb mərhələ",
-      "IIIa mərhələ",
-      "Ib mərhələ",
-      "IIb mərhələ"
+      "əzələ atrofiyası və hərəkət məhdudiyyətinin.",
+      "fiziki iş qabiliyyətinin artmasının.",
+      "tromboembolik fəsadların.",
+      "orqanizmin qocalmasının.",
+      "osteoporozun"
     ]
   },
   {
-    "question": "Süd vəzisi T1-2N0-1M0 xərçəngi hansı mərhələyə aiddir:",
+    "question": "Osteoxondrozda müalicə bədən tərbiyəsi proqramına aid deyil:",
     "answers": [
-      "I mərhələ",
-      "IVa mərhələ",
-      "IIIa mərhələ",
-      "IIIb mərhələ",
-      "II mərhələ"
+      "qantellərlə məşqlər.",
+      "masaj.",
+      "dartılmalar.",
+      "müalicəvi gimnastika.",
+      "onurğa üçün dartılmalar."
     ]
   },
   {
-    "question": "Süd vəzisi Thər hansıN3M0 xərçəngi hansı mərhələyə aiddir:",
+    "question": "Skolioz zamanı müalicə bədən tərbiyəsinin müalicə məqsədinə aid deyil:",
     "answers": [
-      "IIIc mərhələ",
-      "IVa mərhələ",
-      "IIIb mərhələ",
-      "IVb mərhələ",
-      "IIIa mərhələ"
+      "onurğa sütununa gərginləşdirici təsir.",
+      "onurğa deformasiyasına korreksiyaedici təsir.",
+      "düzgün qamətin saxlanılması.",
+      "döş qəfəsinə korreksiyaedici təsir.",
+      "əzələ korsetinin möhkəmləndirilməsi."
     ]
   },
   {
-    "question": "Süd vəzisi Thər hansıNhər hansıM1 xərçəngi hansı mərhələyə aiddir:",
+    "question": "I dərəcəlı skolioz xəstəliyində hansı idman növləri göstərişdir?",
     "answers": [
-      "II mərhələ",
-      "IIIc mərhələ",
-      "III mərhələ",
-      "IV mərhələ",
-      "I mərhələ"
-    ]
-  },
-  {
-    "question": "Süd vəzisi xərçənginin diffuz formalarına aiddir:",
-    "answers": [
-      "hamısı",
-      "pansir",
-      "mastitəbənzər",
-      "ödemli-infiltrativ",
-      "qızılyelə bənzər"
-    ]
-  },
-  {
-    "question": "Süd vəzisinin Pecet xərçənginin formalarına aiddir:",
-    "answers": [
-      "hamısı",
-      "xoralı",
-      "şiş",
-      "ekzemayabənzər",
-      "psoriazabənzər"
-    ]
-  },
-  {
-    "question": "Süd vəzisi xərçənginin ən çox rast gəlinən kliniki forması:",
-    "answers": [
-      "düyünlü",
-      "Pecet",
-      "atipik",
-      "nadir",
-      "diffuz"
-    ]
-  },
-  {
-    "question": "Süd vəzisi xərçənginin hansı formasında əsas simptom ödemin olmasıdır:",
-    "answers": [
-      "diffuz",
-      "xoralı",
-      "Pecet",
-      "atipik",
-      "düyünlü"
-    ]
-  },
-  {
-    "question": "Aşağıdakılardan hansı süd vəzisi xərçənginin diffuz formasına aid simptomlardır:",
-    "answers": [
-      "ödem, hiperemiya, sürətli inkişaf",
-      "Keniq simptomu",
-      "Pribram simptomu",
-      "yalnız qoltuqlaltı limfa düyünlərinin böyüməsi",
-      "kiçik ölçülü şişin əllənməsi"
-    ]
-  },
-  {
-    "question": "Keniq simptomu nədir:",
-    "answers": [
-      "ovucla döş qəfəsi arasında şişin əllənməsi",
-      "gilənin dartılması",
-      "umbilikasiya simptomu",
-      "limon qabığı simptomu",
-      "areolanın qalınlaşması"
-    ]
-  },
-  {
-    "question": "Pribram simptomu nədir:",
-    "answers": [
-      "şişin gilə ilə birlikdə hərəkət etməsi",
-      "ovucla döş qəfəsi arasında sıxılan şişin əllənməsi",
-      "umbilikasiya simptomu",
-      "dəridə xoranın əmələ gəlməsi",
-      "limon qabığı simptomu"
-    ]
-  },
-  {
-    "question": "Süd vəzisi xərçəngində Payra simptomu nədir:",
-    "answers": [
-      "şiş üzərində dəridə köndələn büküşün əmələ gəlməsi",
-      "areolanın qalınlaşması",
-      "dəridə xoranın əmələ gəlməsi",
-      "meydança simptomu",
-      "limon qabığı simptomu"
-    ]
-  },
-  {
-    "question": "Süd vəzisi xərçənginin hansı klinik formasında süd vəzisi həcminin kiçilməsi müşahidə olunur:",
-    "answers": [
-      "pansir",
-      "Pecet",
-      "heç biri",
-      "mastitəbənzər",
-      "ödemli infiltrativ"
-    ]
-  },
-  {
-    "question": "Süd vəzisi xərçənginin proqnozu qeyri-qənaətbəxşdir:",
-    "answers": [
-      "düyünlü formasında",
-      "qeyri-invaziv xərçəngə",
-      "hamısında",
-      "Pecet xərçəngində",
-      "diffuz formasında"
-    ]
-  },
-  {
-    "question": "Süd vəzisini xərçənginin mastitəbənzər formasına hansı simptomlar aiddir:",
-    "answers": [
-      "süd vəzisi həcminin böyüməsi, gərginləşməsi, hiperemya və hipertermiya",
-      "süd vəzisinin büzüşməsi",
-      "gilənin dağılması",
-      "xoranın olması",
-      "əllənən şiş"
-    ]
-  },
-  {
-    "question": "Aşağıdakı əməliyyatlardan hansı süd vəzi xərçənginin müalicəsində istifadə olunmur:",
-    "answers": [
-      "körpücüküstü limfadenektomiya",
-      "kvadrantektomiya",
-      "genişləndirilmiş radikal mastektomiya",
-      "sadə mastektomiya",
-      "süd vəzisinin radikal rezeksiyası"
-    ]
-  },
-  {
-    "question": "Müasir dövrdə ən çox istifadə edilən mastektomiya modifikasiyası hansıdır:",
-    "answers": [
-      "Maden üsülü ilə mastektomiya",
-      "sadə mastektomiya",
-      "Urban üsulu ilə mastektomiya",
-      "Peyti-Dayson üsulu ilə mastektomiya",
-      "Xolsted-Mayer üsulu ilə mastektomiya"
-    ]
-  },
-  {
-    "question": "Madden üsulu ilə mastektomiyada hansı strukturlar saxlanılır:",
-    "answers": [
-      "hər iki döş əzələsi, uzun döş siniri, kürəkaltı sinir-damar dəsti",
-      "qoltuqaltı limfa düyünləri, körpücükaltı və böyük döş əzələsi fassiyası",
-      "yalnız böyük döş əzələsi, uzun döş siniri, kürəkaltı limfa düyünləri",
-      "parasfernal limfa düyünləri, Rotter limfa düyünləri",
-      "hər iki döş əzələsi və körpücükaltı limfa düyünləri"
-    ]
-  },
-  {
-    "question": "Madden üsulu ilə mastektomiyanın həcminə daxildir:",
-    "answers": [
-      "süd vəzi dəri ilə, körpücükaltı, qoltuqaltı və kürəkaltı toxuma, döş əzələarası toxuma, əzələüstü fassiya",
-      "süd vəzi dəri ilə, qoltuqaltı limfa düyünləri",
-      "süd vəzi dəri ilə, körpücüküstü və körpücükaltı limfa düyünləri, əzələüstü fassiya",
-      "süd vəzi dəri ilə, körpücükaltı limfa düyünləri",
-      "süd vəzi dəri ilə və Rotter limfa düyünləri"
-    ]
-  },
-  {
-    "question": "Aşağıdakı əməliyyatlardan hansılar süd vəzi xərçənginin orqansaxlayıcı əməliyyatlarına aid deyil:",
-    "answers": [
-      "Urban-Xoldin və Peyti-Dayson əməliyyatı",
-      "kvadrantektomiya",
-      "lampektomiya",
-      "radikal rezeksiya",
-      "sektoral rezeksiya"
-    ]
-  },
-  {
-    "question": "Süd vəzisi xərçəngində əməliyyatönü şüa terapiyasının məqsədləri:",
-    "answers": [
-      "residivlərin profilaktikası, şişin ölçülərinin və bioloji aqressivliyinin azaldılması",
-      "Pecet xərçənginin müalicəsi",
-      "uzaq metastazların müalicəsi",
-      "mastopatiyanın müalicəsi",
-      "şişin qan təchizatının artırılması, damarların sklerozlaşması"
-    ]
-  },
-  {
-    "question": "Süd vəzisi xərçəngində əməliyyatönü şüa terapiyası hansı mərhələdə radikal müalicə proqramında tətbiq edilmir:",
-    "answers": [
-      "T1N0M0; TisN0M0",
-      "T4N2-3M0; T3-4N3M0",
-      "T4N3M0; T3N2M0",
-      "T4N0M0; T3N0M0",
-      "T3N1M0; T3N2M0"
-    ]
-  },
-  {
-    "question": "Süd vəzisi xərçəngində əməliyyatönü irifraksiyalı şüa terapiyasının rejimləri:",
-    "answers": [
-      "həftədə 5 günlük şüalanma, BOD=5Qr olmaqla ÜOD=25Qr",
-      "əməliyyatönü 2 günlük irifraksıyalı + əməliyyatdan sonra radikal proqram üzrə şüa terapiyası",
-      "hiper oksigenasiya ilə birlikdə aparılan şüa terapiyası",
-      "hipertermiya ilə aparılan şüa terapiyası",
-      "həftədə 5 günlük şüalanma ÜOD=60Qr"
-    ]
-  },
-  {
-    "question": "Süd vəzisinin xərçənginin müalicəsində anti-hormonal terapiyanın aparılması üçün əsas şərt:",
-    "answers": [
-      "şişin müsbət hormonal statusu",
-      "uzaq metastazların olması",
-      "şişin III dərəcə bədləşməyə malik olması",
-      "yaşı 35-dən cavan olması",
-      "yaşı 60-dan yuxarı olması"
-    ]
-  },
-  {
-    "question": "Süd vəzi xərçənginin müasir antihormonal müalicə yolları hansılardır:",
-    "answers": [
-      "kastrasiya, antiestrogenlər, aromatazanın inhibitorları",
-      "kastrasiya, kimyəvi dərman müalicəsi, estrogenlər",
-      "kastrasiya, androgenlər, interleykinlər",
-      "kastrasiya, aromataza inhibitorlar, androgenlər",
-      "kastrasiya, estrogenlər, aromatazanın inhibitorları"
-    ]
-  },
-  {
-    "question": "Tamoksifenin standart qəbul dozası:",
-    "answers": [
-      "20 mq/sut. 5 ildən az olmayaraq",
-      "1 mq/sut 3 il ərzində",
-      "2mq/sut 5 il ərzində",
-      "150 mq/sut 3 aya qədər",
-      "10 mq/sut 5 ildən az olmayaraq"
-    ]
-  },
-  {
-    "question": "Süd vəzi xərçəngi zamanı şişin qənaətbəxş proqnozuna imkan yaradan hormonal resepsiyanın sxemi:",
-    "answers": [
-      "ER(+) Pr(+) Her2(-)",
-      "ER(-) Pr(-) Her2(-)",
-      "ER(-) Pr(-) Her2(+)",
-      "ER(+) Pr(-) Her2(+)",
-      "ER(-) Pr(+) Her2(-)"
-    ]
-  },
-  {
-    "question": "Süd vəzisi xərçənginin müalicəsi zamanı hansı preparatların uzunmüddətli qəbulu uşaqlıq cismi xərçənginin əmələ gəlməsi riskini artırır:",
-    "answers": [
-      "tamoksifen",
-      "heç biri",
-      "buserelin",
-      "femara",
-      "anastrozol"
-    ]
-  },
-  {
-    "question": "Bədxassəli şişlərə xas olan əlamət:",
-    "answers": [
-      "cavabların hamısı",
-      "nisbi avtonom böyümə",
-      "residiv və metastaz verməsi",
-      "aydın sərhədlərin olmaması",
-      "hüceyrə və toxuma atipizmi"
-    ]
-  },
-  {
-    "question": "Bədxassəli şişə xas olmayan əlamət:",
-    "answers": [
-      "həqiqi kapsulanın olması",
-      "TNM təsnifatı",
-      "infiltrativ və invaziv böyümə",
-      "nisbi avtonom inkişaf",
-      "morfoloji atipizm"
-    ]
-  },
-  {
-    "question": "Şişləri adlandırmaq üçün hansı ifadələrin istifadə olunmur",
-    "answers": [
-      "“İtis”",
-      "sarkoma",
-      "karsinoma",
-      "“Oma”",
-      "blastoma"
-    ]
-  },
-  {
-    "question": "Epitel toxumasından inkişaf edən bədxassəli şişləri adlandırmaq üçün istifadə olunan kəlmələr:",
-    "answers": [
-      "xərçəng, adenokarsinoma",
-      "sinovioma və fibroma",
-      "xondrosarkoma və osteogen sarkoma",
-      "adenoma və papilloma",
-      "melanoma və sarkoma"
-    ]
-  },
-  {
-    "question": "Şişin stromasına aiddir:",
-    "answers": [
-      "cavabların hamısı düzdür",
-      "limfa damarlar",
-      "qan damarları",
-      "sinir hüceyrələri",
-      "birləşdirici toxuma"
-    ]
-  },
-  {
-    "question": "Xoşxassəli şişlər:",
-    "answers": [
-      "metastaz vermirlər",
-      "qonşu toxumalara invaziya edirlər",
-      "ipsilateral limfa düyünlərinə metastaz verirlər",
-      "infiltrativ inkişaf edirlər",
-      "yerli dağıdıcı xassəyə malikdirlər"
-    ]
-  },
-  {
-    "question": "Bədxassəli şişlər:",
-    "answers": [
-      "residiv və metastazvermə xüsusiyyətləri vardır",
-      "morfoloji və funksional atipizm yoxdur",
-      "kliniki mərhələləri yoxdur",
-      "həqiqi kapsulaya malikdirlər",
-      "yalnız ekspansiv inkişaf edirlər"
-    ]
-  },
-  {
-    "question": "Aşağıdakı şişlərin hansı əzələ toxumasından inkişaf etmirlər:",
-    "answers": [
-      "osteoma və fibroma",
-      "leyomioma",
-      "rabdomioma",
-      "rabdomiosarkoma",
-      "leyomiosarkoma"
-    ]
-  },
-  {
-    "question": "Aşağıdakılardan hansı xoşxassəli şişdir:",
-    "answers": [
-      "fibroadenoma və fibroma",
-      "osteosarkoma və liposarkoma",
-      "sinovial sarkoma və leyomiosarkoma",
-      "limfoqranulematoz və leykoz",
-      "melanoma və xondrosarkoma"
-    ]
-  },
-  {
-    "question": "Residiv nədir:",
-    "answers": [
-      "radikal müalicədən sonra çapıq sahəsində eyni histoloji quruluşa malik şişin inkişafı",
-      "ürək-damar xəstəliklərinin ağırlaşmalarının baş verməsi",
-      "xəstənin kəskin arıqlaması",
-      "radikal müalicədən sonra güdüldə başqa histoloji quruluşa malik şişin inkişafı",
-      "başqa orqanlarda bədxassəli şişin əmələ gəlməsi"
-    ]
-  },
-  {
-    "question": "Xəstə 1989-cu ildə sağ yanağın bazaliomasına görə radikal müalicə almışdır. 2010-cu ildə sol yanaq dərisində eyni morfoloji quruluşa malik şiş əmələ gəlmişdir. Bu:",
-    "answers": [
-      "multisentrik metaxron inkişaf edən şişdir",
-      "unisentrik inkişafdır",
-      "davam edən böyümədir",
-      "metastazdır",
-      "residivdir"
-    ]
-  },
-  {
-    "question": "Aşağıdakılardan hansı metastazdır:",
-    "answers": [
-      "süd vəzi xərçənginin qoltuqaltı limfa düyünlərinə yayılması",
-      "II süd vəzisində başqa histoloji quruluşa malik şişin inkişafı",
-      "limfoqranulematozun inkişafı",
-      "ağciyərdə kiçik hüceyrəli xərçəngin inkişafı",
-      "qaraciyərdə hepatosellülyar xərçəngin inkişafı"
-    ]
-  },
-  {
-    "question": "Hansı yollarla uzaq orqanlara metastaz yayılır:",
-    "answers": [
-      "hematogen və implantasiya",
-      "öd yolları ilə",
-      "kontakt vasitəsilə",
-      "limfogen yolla",
-      "ipsilateral limfatik yolla"
-    ]
-  },
-  {
-    "question": "Sağ süd vəzi xərçənginin sol qoltuqaltı limfa düyünlərinə metastazı:",
-    "answers": [
-      "implantasion metastazdır",
-      "xəstəliyin metaxron inkişafıdır",
-      "xəstəliyin residividir",
-      "kontrlateral limfa düyününə yayılmasıdır",
-      "retroqrad metastazdır"
-    ]
-  },
-  {
-    "question": "Bədxassəli epitel mənşəli şişlər hansı yollarla metastaz verməyə meyillidir:",
-    "answers": [
-      "limfogen",
-      "limfo-hematogen",
-      "limfo-implantasion",
-      "implantasion",
-      "cavabların hamısı düzdür"
-    ]
-  },
-  {
-    "question": "Birləşdirici toxumada inkişaf edən bədxassəli şişlər daha çox hansı yollarla yayılmaya meyillidir:",
-    "answers": [
-      "limfogen",
-      "retroqrad limfogen",
-      "ipsilateral limfogen",
-      "implantasion",
-      "hematogen"
-    ]
-  },
-  {
-    "question": "Uzaq orqanlara metastazlar hansı simvolla tamamlana bilir:",
-    "answers": [
-      "cavabların hamısı düzdür",
-      "Per, Ski",
-      "Mar, Ple",
-      "Hep, Bra",
-      "Pul, Oss"
-    ]
-  },
-  {
-    "question": "TNM sistemində hansı simvol santimetrlə göstərilə bilər:",
-    "answers": [
-      "M",
-      "T və M",
-      "T və N",
-      "N",
-      "T"
-    ]
-  },
-  {
-    "question": "TNM təsnifatında hansı simvollar öyrənilir:",
-    "answers": [
-      "T, N və M",
-      "yalnız N və M",
-      "yalnız M",
-      "yalnız T",
-      "yalnız N"
-    ]
-  },
-  {
-    "question": "T0N1M0 necə şərh olunur:",
-    "answers": [
-      "birincili şiş aşkar olunmur, regionar limfa düyünlərindı metastaz var, uzaq orqanlarda metastaz yoxdur",
-      "xəstədə xərçəngönü xəstəlik var",
-      "orqanizmdə bədxassəli proses yoxdur",
-      "xəstədə xoşxassəli şiş var",
-      "xəstədə leykoz aşkar olunmuşdur"
-    ]
-  },
-  {
-    "question": "Hər iki süd vəzinin xərçəngi zamanı TNM necə təsnif edilir:",
-    "answers": [
-      "hər iki süd vəzi şişi ayrılıqda",
-      "hər iki süd vəzi şişi üçün bir TNM",
-      "N ayrılıqda, T ən böyüyü",
-      "N və T birgə",
-      "T ayrılıqda, N birgə"
-    ]
-  },
-  {
-    "question": "Cüt orqanların bədxassəli şişlərində M kateqoriyası hansı orqanın şişinə aid olduğu təyin olunur:",
-    "answers": [
-      "morfoloji müayinə ilə",
-      "KT",
-      "PET",
-      "qanın biokimyəvi müayinəsi ilə",
-      "MRT"
-    ]
-  },
-  {
-    "question": "Hemoblastozlarda TNM kateqoriyasından istifadə olunurmu:",
-    "answers": [
-      "istifadə olunmur",
-      "Qeyri-Hoçkin sarkomalarında istifadə olunur",
-      "yalnız N simvolunda istifadə olunur",
-      "yalnız T simvolunda istifadə olunur",
-      "istifadə olunur"
-    ]
-  },
-  {
-    "question": "Bədxassəli şişlərin 0 mərhələsi TNM kateqoriyası ilə necə qeyd edilir:",
-    "answers": [
-      "Tin situ N0M0",
-      "T0N1M1",
-      "T1N1M0",
-      "T0N0M1",
-      "T0N1Mx"
-    ]
-  },
-  {
-    "question": "IV mərhələ TNM kateqoriyaları ilə necə qeyd edilir:",
-    "answers": [
-      "T istənilən N istənilən M1",
-      "T3N3M0",
-      "T4bN3M0",
-      "T4aN2M0",
-      "T4N3M0"
-    ]
-  },
-  {
-    "question": "Yumşaq toxuma şişləri inkişaf edir:",
-    "answers": [
-      "bütün cavablar düzgündür",
-      "fibroz toxumadan",
-      "sinovial toxumadan",
-      "əzələ toxumasından",
-      "piy toxumasından"
-    ]
-  },
-  {
-    "question": "Xoşxassəli şişlərin əlamətləri aşağıdakılardır:",
-    "answers": [
-      "bütün cavablar düzgündür",
-      "metastaz vermir",
-      "şişi ətraf toxumadan ayıran kapsulaya malikdir",
-      "ekspansiv ləng inkişaf",
-      "şiş ətraf toxumalara sirayət etmir"
-    ]
-  },
-  {
-    "question": "Bədxassəli şişlərin əlamətləri aşağıdakılardır:",
-    "answers": [
-      "bütün cavablar düzgündür",
-      "sürətli infiltrativ inkişaf",
-      "həqiqi kapsulaya malik deyil",
-      "limfogen metastazvermə",
-      "hematogen metastazvermə"
-    ]
-  },
-  {
-    "question": "Aşağıdakılardan biri xərçəngönü xəstəlik deyil:",
-    "answers": [
-      "adenokarsinoma",
-      "xoşxassəli şişlər",
-      "süd vəzinin axardaxili papilloması",
-      "mədə-bağırsaq traktının polipi",
-      "Bouen xəstəliyi"
-    ]
-  },
-  {
-    "question": "Epitel toxuma mənşəli xoşxassəli şiş aşağıdakıdır:",
-    "answers": [
-      "adenoma",
-      "xondroma",
-      "nevrinoma",
-      "fibroma",
-      "lipoma"
-    ]
-  },
-  {
-    "question": "Epitel toxuma mənşəli bədxassəli şiş aşağıdakıdır:",
-    "answers": [
-      "sarkoma",
-      "fibroma",
-      "adenoma",
-      "leyomioma",
-      "karsinoma (xərçəng)"
-    ]
-  },
-  {
-    "question": "Birləşdirici toxuma mənşəli bədxassəli şiş aşağıdakıdır:",
-    "answers": [
-      "sarkoma",
-      "adenoma",
-      "fibroma",
-      "xərçəng",
-      "xondroma"
-    ]
-  },
-  {
-    "question": "Mezenximal toxuma mənşəli xoşxassəli şiş aşağıdakıdır:",
-    "answers": [
-      "leyomioma",
-      "rabdomiosarkoma",
-      "adenoma",
-      "fibrosarkoma",
-      "sarkoma"
-    ]
-  },
-  {
-    "question": "Aşağıdakı hallarda metastazvermə baş vermir:",
-    "answers": [
-      "karsimoma in situ",
-      "xərçəngin IV mərhələsində",
-      "xərçəngin II-III mərhələsində",
-      "mikroinvaziv xərçəng",
-      "erkən invaziv xərçəng"
-    ]
-  },
-  {
-    "question": "Sitoloji müayinə aparmaq üçün hansı materiallardan istifadə olunur:",
-    "answers": [
-      "bütün cavablar doğrudur",
-      "yuyuntu suyu",
-      "assitik maye",
-      "ifrazat",
-      "yaxma"
-    ]
-  },
-  {
-    "question": "Radikal əməliyyat aparılması mümkün olan şiş belə adlanır:",
-    "answers": [
-      "rezektabel",
-      "qeyri-operabel",
-      "qeyri-rezektabel",
-      "inkurabel",
-      "operabel"
-    ]
-  },
-  {
-    "question": "İnsan üçün kanserogen hesab edilməyən infeksion amili göstərin:",
-    "answers": [
-      "E.Coli",
-      "Helicobacter pylori",
-      "Epşteyn-Barr virusu",
-      "HPV",
-      "B və C virus hepatiti"
-    ]
-  },
-  {
-    "question": "Fiziki kanserogen hesab edilən amili göstərin:",
-    "answers": [
-      "ultrabənövşəyi şüalanma",
-      "benzipren",
-      "nitrozaminlər",
-      "Epşteyn-Barr virusu",
-      "HPV"
-    ]
-  },
-  {
-    "question": "Kimyəvi kanserogen hesab edilməyən amili göstərin:",
-    "answers": [
-      "rentgenoloji şüalanma",
-      "nitrozaminlər",
-      "anilin boyaları",
-      "politsiklik aromatik karbohidratlar",
-      "aromatik aminlər"
-    ]
-  },
-  {
-    "question": "Endogen kanserogen hesab edilməyən amili göstərin:",
-    "answers": [
-      "aflotoksin",
-      "indol",
-      "bəzi hormonlar",
-      "ikincili öd turşuları",
-      "sərbəst radikallar"
-    ]
-  },
-  {
-    "question": "Kanserogenezin mərhələsi hesab edilməyən mərhələni göstərin:",
-    "answers": [
-      "reqressiya mərhələsi",
-      "proqressiya mərhələsi",
-      "promosiya mərhələsi",
-      "inisiasiya və promosiya mərhələsi",
-      "inisiasiya mərhələsi"
-    ]
-  },
-  {
-    "question": "Şişin proqressiyasına təsir göstərməyən amili göstərin:",
-    "answers": [
-      "orqanizmin ürək-damar sisteminin vəziyyəti",
-      "sinir və endokrin sistemlər arasında disbalans",
-      "orqanizmin immun reaksiyasının azalması",
-      "şişəleyhinə immunitetin azalması",
-      "orqanizmdə immunoloji tolerantlığın azalması"
-    ]
-  },
-  {
-    "question": "Epiteldaxili xərçəngin başqa adı belədir:",
-    "answers": [
-      "carsinoma in situ",
-      "invaziv xərçəng",
-      "mikrokarsinoma",
-      "minimal invaziv xərçəng",
-      "mikroinvaziv xərçəng"
-    ]
-  },
-  {
-    "question": "Hansı üsul rentgenoloji müayinə üsuluna aid edilmir:",
-    "answers": [
-      "KT",
-      "ekskretor uroqrafiya",
-      "rentgenopnevmoperitoneum",
-      "angioqrafiya",
-      "PET"
-    ]
-  },
-  {
-    "question": "Hansı orqan və sistemlərin bədxassəli proseslərinin diaqnostikasında radioizotop müayinəsindən istifadə edilmir:",
-    "answers": [
-      "qalxanabənzər vəzinin şişlərində",
-      "böyrək şişlərində",
-      "qaraciyərin birincili və ikincili şişlərində",
-      "bazaliomalar",
-      "sümüklərə metastazlar zamanı"
-    ]
-  },
-  {
-    "question": "Aşağıda sadalananların hansı onkomarker deyil:",
-    "answers": [
-      "HPV",
-      "PSA",
-      "CA 15-3",
-      "AFP",
-      "CEA"
-    ]
-  },
-  {
-    "question": "Müxtəlif orqanların yastı hüceyrəli şişlərin müayinəsində hansı onkomarker daha informativdir:",
-    "answers": [
-      "SCC",
-      "XQ",
-      "AFP",
-      "NSE",
-      "PSA"
-    ]
-  },
-  {
-    "question": "Bədxassəli fibroz-histiositomanın hansı histoloji variantı yoxdur:",
-    "answers": [
-      "alveolyar",
-      "iltihabi",
-      "nəhənghüceyrəli",
-      "pleomorf",
-      "miksoid"
-    ]
-  },
-  {
-    "question": "Rabdomiosarkomanın hansı histoloji variantı yoxdur:",
-    "answers": [
-      "iltihabi",
-      "pleomorf",
-      "alveolyar",
-      "qarışıq",
-      "embrional"
-    ]
-  },
-  {
-    "question": "Mədə xərçənginin yumurtalıqlara olan metastazı göstərin:",
-    "answers": [
-      "Krukenberq",
-      "Snisler",
-      "Şifo",
-      "Rotter",
-      "Virxov"
-    ]
-  },
-  {
-    "question": "Yumurtalıqlara ən çox hansı orqanların xərçəngi metastaz verir:",
-    "answers": [
-      "süd vəzi xərçəngi",
-      "ağciyər xərçəngi",
-      "uşaqlıq boynu xərçəngi",
-      "uşaqlıq cismi xərçəngi",
-      "mədə xərçəngi"
-    ]
-  },
-  {
-    "question": "Krukenberq metastazı nədir:",
-    "answers": [
-      "mədə xərçənginin yumurtalıqlara metastazı",
-      "uşaqlıq cismi xərçənginin ağciyərə metastazı",
-      "süd vəzi xərçənginin endometriuma metastazları",
-      "mədə xərçənginin uşaqlıq boynuna metastazı",
-      "süd vəzi xərçənginin qaraciyərə metastazı"
-    ]
-  },
-  {
-    "question": "Mədə xərçənginin xərçəngönü xəstəliyinə aid deyil:",
-    "answers": [
-      "parazitar infeksiyalar",
-      "H.pylori infeksiyası",
-      "mədə xorası",
-      "xroniki atrofik qastrit",
-      "rezeksiyas olunmuş mədə"
-    ]
-  },
-  {
-    "question": "Mədə xərçənginin “Krukenberq” metastazı dedikdə nə başa düşülür:",
-    "answers": [
-      "yumuralıqlara metastaz",
-      "düz bağırsağa metastaz",
-      "peritona metastaz",
-      "göbəyə metastaz",
-      "öd kisəsinə metastaz"
-    ]
-  },
-  {
-    "question": "Qaraciyər xərçənginin müalicəsinə aid deyil:",
-    "answers": [
-      "total-mezorektal ekssiziya",
-      "mikrodalğa ilə koaqulyasion terapiya",
-      "perikutans sirkə turşu inyeksiyası",
-      "krioablasiya",
-      "radiotezliklə ablasiya"
-    ]
-  },
-  {
-    "question": "Mədənin hansı şöbəsinin xərçəngi zamanı disfagiya əlaməti olur:",
-    "answers": [
-      "kardial",
-      "cism",
-      "polirik",
-      "antral",
-      "mədə dibi"
-    ]
-  },
-  {
-    "question": "Mədənin antral hissəsinin stenozla ağırlaşmış inrezektabel xərçəngi zamanı hansı cərrahi əməliyyat aparılır:",
-    "answers": [
-      "qastroenterostomiya",
-      "total kolektomiya",
-      "proksimal subtotal rezeksiya",
-      "distal subtotal rezeksiya",
-      "qastroektomiya"
-    ]
-  },
-  {
-    "question": "Mədəaltı vəzinin baş hissəsinin xərçəngi zamanı sarılığın hansı növü xarakterikdir:",
-    "answers": [
-      "obstruktiv sarılıq",
-      "heç biri",
-      "parenximatoz hemolitik",
-      "parenximatoz",
-      "hemolitik"
-    ]
-  },
-  {
-    "question": "Düz bağırsağın hansı şöbəsini xərçəngi üçün şüa müalicəsi xarakterikdir:",
-    "answers": [
-      "aşağı ampulyar hissə",
-      "yuxarı ampulyar hissə",
-      "s-vari bağırsaq",
-      "rektosiqmoid nahiyə",
-      "bütün şöbələri üçün xarakterikdir"
-    ]
-  },
-  {
-    "question": "Süd vəzisi xərçənginə görə uzun müddət Tamoksifen qəbul etmiş xəstələrdə hansı orqanın xərçənginin yaranması ehtimalı yüksəkdir:",
-    "answers": [
-      "endometriyanın xərçəngi",
-      "vulvanın xərçəngi",
-      "yumurtalıqların xərçəngi",
-      "uşaqlıq boruları xərçəngi",
-      "uşaqlıq boynu xərçəngi"
-    ]
-  },
-  {
-    "question": "Yoğun bağırsağın polipozunun sümük və yumşaq toxumanın şişi ilə birgə rast gəlinməsi hansı sindroma aiddir:",
-    "answers": [
-      "Gardner sindromu",
-      "Turkо sindromu",
-      "Zolinger-Ellison sindromu",
-      "Peyts-Yegerts sindromu",
-      "Li-Fraumeni sindromu"
-    ]
-  },
-  {
-    "question": "Mədə xərçənginin ən çox rast gəlinən histoloji variantı:",
-    "answers": [
-      "adenokarsinoma",
-      "heç biri",
-      "diferensiya edilməyən xərçəng",
-      "adenoskvamoz xərçəng",
-      "yastıepitel xərçəngi"
-    ]
-  },
-  {
-    "question": "Mədə xərçənginin Borman təsnifatı hansı əlamətlərə görə təyin olunur:",
-    "answers": [
-      "makroskopik",
-      "laborator müayinələrə",
-      "mikroskopik",
-      "heç biri",
-      "anamnez"
-    ]
-  },
-  {
-    "question": "Süd vəzinin axardaxili papillomasının diaqnostikasında əsasən hansı klinik əlamət əhəmiyyət daşıyır:",
-    "answers": [
-      "gilədən gələn qanlı ifrazat",
-      "qoltuqaltı nahiyədə ağrılar",
-      "süd vəzisində əllənən törəmənin olması",
-      "süd vəzisinin dərisinin hiperemiyası",
-      "gilədə xoralaşma"
-    ]
-  },
-  {
-    "question": "Süd vəzi xərçənginin ödemli infiltrativ formasında əsasən hansı müalicə üsulundan istifadə edilir:",
-    "answers": [
-      "kompleks müalicə (NPKT + cərrahi + şüa müalicəsi)",
-      "kimyəvi terapiya",
-      "şüa müalicəsi",
-      "cərrahi müalicə",
-      "kombinəolunmuş müalicə (cərrahi + şüa müalicəsi)"
-    ]
-  },
-  {
-    "question": "Süd vəzi xərçənginin hansı tipi daha qənaətbəxş proqnoza malikdir:",
-    "answers": [
-      "Luminal A",
-      "heç biri",
-      "Luminal B",
-      "Triple neqativ",
-      "Her+"
-    ]
-  },
-  {
-    "question": "Süd vəzi xərçəngində uzaq metastazr hansı mərhələdə olur:",
-    "answers": [
-      "IV mərhələ",
-      "III mərhələ",
-      "IIIC mərhələ",
-      "II mərhələ",
-      "I mərhələ"
-    ]
-  },
-  {
-    "question": "Süd vəzisinin hansı şişləri daha tez maliqnizasiya uğrayır:",
-    "answers": [
-      "adenomalar",
-      "perikanalikulyar fibroadenomalar",
-      "lipomalar",
-      "filloid şişlər",
-      "intrakanalikulyar fibroadenomalar"
+      "üzgüçülük",
+      "sambo",
+      "cudo.",
+      "ağır atletika",
+      "güləş"
     ]
   }
 ]
