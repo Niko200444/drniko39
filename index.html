@@ -42,6 +42,18 @@
  
 </head>
 <body>
+  <!-- Dark mode button -->
+  <button id="darkModeToggle" class="floating-dark-btn">
+    <i class="fa fa-moon"></i>
+    <span>Qaranlıq rejim</span>
+  </button>
+
+  <!-- Admin login button -->
+  <button id="adminLoginBtn" class="floating-admin-btn">
+    <i class="fa fa-user-shield"></i>
+    <span>Admin girişi</span>
+  </button>
+
   <!-- Quick Flashcard toggle -->
 <button id="flashcardFloatingToggle" class="floating-flashcard-btn hidden" title="Flashcard rejimini aç/bağla">
     🗂️ Flashcard
@@ -51,7 +63,7 @@
   <div id="welcomeScreen" class="welcome-screen">
     <div class="welcome-card">
       <h1>DR NİKO</h1>
-      <p>Tibbi suallar, imtahan rejimi və ağıllı təkrar üçün yığcam platforma</p>
+      <p></p>
       <button id="startBtn" class="primary-btn">
         <i class="fa fa-play"></i> Başla
       </button>
@@ -61,90 +73,59 @@
   <!-- Main content -->
   <div id="mainContent" class="main-content" style="display:none;">
     <header class="top-bar">
-      <div class="brand-block" aria-label="Sayt başlığı">
-        <div class="brand-mark">DN</div>
-        <div class="logo">
-          <span class="logo-main">DR NİKO</span>
-          <span class="logo-sub">Rezidentura test platforması</span>
-        </div>
+      <div class="logo">
+        <span class="logo-main">DR NİKO</span>
+        <span class="logo-sub"></span>
       </div>
 
-      <div class="top-actions">
-        <div class="topbar-primary">
-          <div id="searchContainer" class="top-control search-control">
-            <i class="fa fa-search"></i>
-            <input id="searchInput" type="text" placeholder="Sual və ya cavabda axtar..." />
-          </div>
+<div class="top-actions">
+<div id="questionCountContainer" class="top-control">
+<label for="questionsPerPage">Səhifədə sual:</label>
+<select id="questionsPerPage">
+<option value="5">5</option>
+<option value="10" selected>10</option>
+<option value="20">20</option>
+<option value="50">50</option>
+<option value="100">100</option>
+</select> 
+        
+        <button id="installBtn" class="secondary-btn pwa-install hidden" title="Proqram kimi quraşdır">
+          <i class="fa fa-download"></i> Proqram kimi quraşdır
+        </button>
 
-          <button id="focusModeBtn" class="secondary-btn focus-btn" title="Focus Mode">
-            <i class="fa fa-bullseye"></i>
-            <span>Focus</span>
+        <div id="authBox" class="top-control auth-box">
+          <button id="googleSignInBtn" class="secondary-btn">
+            <i class="fa fa-google"></i> Google ilə daxil ol
           </button>
-
-          <div id="statsTiny" class="top-control tiny-stats">
-            <span><strong id="tinyTotal">0</strong> sual</span>
-            <span><strong id="tinyAnswered">0</strong> cavab</span>
-            <span><strong id="tinyCorrect">0</strong> düzgün</span>
+          <div id="userBadge" class="user-badge hidden">
+            <img id="userPhoto" alt="user" />
+            <span id="userName"></span>
+            <button id="signOutBtn" class="link-btn">Çıxış</button>
           </div>
+        
+        <div id="syncControls" class="top-control topbar-compact">
+  <button id="syncUpBtn" class="secondary-btn icon-btn icon-only" title="Yerli → Bulud" aria-label="Yerli → Bulud" disabled>↑</button>
+  <button id="pullDownBtn" class="secondary-btn icon-btn icon-only" title="Bulud → Yerli" aria-label="Bulud → Yerli" disabled>↓</button>
+  <label class="top-toggle" title="Yerli dəyişiklikləri avtomatik buluda yaz">
+    <input type="checkbox" id="autoSyncToggle" />
+    <span>Auto‑sync</span>
+  </label>
+  <span id="syncStatus" class="note-pill"></span>
+</div>
+</div>
+</div>
+
+        <button id="focusModeBtn" class="secondary-btn" title="Focus Mode">🎯 Focus</button>
+        <div id="searchContainer" class="top-control">
+          <i class="fa fa-search"></i>
+          <input id="searchInput" type="text" placeholder="Sual və ya cavabda axtar..." />
         </div>
 
-        <details class="topbar-settings">
-          <summary class="secondary-btn settings-trigger">
-            <i class="fa fa-sliders"></i>
-            <span>Ayarlar</span>
-          </summary>
-
-          <div class="settings-menu">
-            <div class="settings-section-title">Görünüş və idarəetmə</div>
-
-            <button id="darkModeToggle" class="secondary-btn settings-action-btn theme-action-btn" type="button">
-              <i class="fa fa-moon"></i>
-              <span>Qaranlıq rejim</span>
-            </button>
-
-            <button id="adminLoginBtn" class="secondary-btn settings-action-btn admin-action-btn" type="button">
-              <i class="fa fa-user-shield"></i>
-              <span>Admin girişi</span>
-            </button>
-
-            <div class="settings-section-title settings-section-spaced">Platforma ayarları</div>
-            <div id="questionCountContainer" class="top-control setting-row">
-              <label for="questionsPerPage">Səhifədə sual</label>
-              <select id="questionsPerPage">
-                <option value="5">5</option>
-                <option value="10" selected>10</option>
-                <option value="20">20</option>
-                <option value="50">50</option>
-                <option value="100">100</option>
-              </select>
-            </div>
-
-            <button id="installBtn" class="secondary-btn pwa-install hidden" title="Proqram kimi quraşdır">
-              <i class="fa fa-download"></i> Proqram kimi quraşdır
-            </button>
-
-            <div id="authBox" class="top-control auth-box setting-row">
-              <button id="googleSignInBtn" class="secondary-btn">
-                <i class="fa fa-google"></i> Google ilə daxil ol
-              </button>
-              <div id="userBadge" class="user-badge hidden">
-                <img id="userPhoto" alt="user" />
-                <span id="userName"></span>
-                <button id="signOutBtn" class="link-btn">Çıxış</button>
-              </div>
-            </div>
-
-            <div id="syncControls" class="top-control topbar-compact sync-card">
-              <button id="syncUpBtn" class="secondary-btn icon-btn icon-only" title="Yerli → Bulud" aria-label="Yerli → Bulud" disabled>↑</button>
-              <button id="pullDownBtn" class="secondary-btn icon-btn icon-only" title="Bulud → Yerli" aria-label="Bulud → Yerli" disabled>↓</button>
-              <label class="top-toggle" title="Yerli dəyişiklikləri avtomatik buluda yaz">
-                <input type="checkbox" id="autoSyncToggle" />
-                <span>Auto‑sync</span>
-              </label>
-              <span id="syncStatus" class="note-pill"></span>
-            </div>
-          </div>
-        </details>
+        <div id="statsTiny" class="top-control tiny-stats">
+          <span id="tinyTotal">0</span> sual ·
+          <span id="tinyAnswered">0</span> cavab ·
+          <span id="tinyCorrect">0</span> düzgün
+        </div>
       </div>
     </header>
 
