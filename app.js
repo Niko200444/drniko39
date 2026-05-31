@@ -436,6 +436,12 @@ function questionSortValue(id){
   const q = getQuestionById(id);
   return q ? (q.displayNumber || q.id) : Number(id);
 }
+function getCurrentQuestionScope(){
+  return examQuestionSubsetActive() ? getExamQuestionList(allQuestions) : allQuestions;
+}
+function getCurrentQuestionScopeIds(){
+  return new Set(getCurrentQuestionScope().map(q=>String(q.id)));
+}
 function applyEditedQuestions(){
   Object.values(editedQuestions||{}).forEach((e)=>{
     const q = getQuestionById(e.id); if(!q) return;
@@ -451,6 +457,18 @@ function loadCategoryState(){
   questionWrongCount  = loadJSON(storageKey("questionWrongCount"), {});
   editedQuestions     = loadJSON(storageKey("editedQuestions"), {});
   questionNotes       = loadJSON(storageKey("questionNotes"), {});
+}
+function clearQuestionRuntimeState(){
+  allQuestions = [];
+  selectedAnswers = {};
+  wrongQuestions = [];
+  flaggedQuestions = [];
+  questionWrongCount = {};
+  editedQuestions = {};
+  questionNotes = {};
+  orderedIds = [];
+  randomOrderIds = [];
+  activeQuestionId = null;
 }
 function saveCategoryState(){
   saveJSON(storageKey("selectedAnswers"), selectedAnswers);
@@ -472,21 +490,24 @@ function _resolveSelectedIndex(q, info){
   return (typeof info.index==="number") ? info.index : -1;
 }
 function computeStats(){
-  const total = allQuestions.length;
+  const statsQuestions = getCurrentQuestionScope();
+  const statsIds = new Set(statsQuestions.map(q=>String(q.id)));
+  const total = statsQuestions.length;
   let answered=0, correct=0, wrong=0;
   for (const [idStr, info] of Object.entries(selectedAnswers)){
+    if (!statsIds.has(String(idStr))) continue;
     const q = getQuestionById(idStr); if(!q) continue;
     const idx = _resolveSelectedIndex(q, info); if (idx===-1) continue;
     answered++;
     if (idx===q.correctIndex) correct++; else wrong++;
   }
-  const flagged = flaggedQuestions.filter(id=>!!getQuestionById(id)).length;
+  const flagged = flaggedQuestions.filter(id=>statsIds.has(String(id))).length;
   return { total, answered, correct, wrong, flagged };
 }
 
 // ---------- Filtering / ordering ----------
 function examQuestionSubsetActive(){
-  return exam.running && Array.isArray(exam.questionIds) && exam.questionIds.length > 0;
+  return (exam.running || !!exam.lastResult) && Array.isArray(exam.questionIds) && exam.questionIds.length > 0;
 }
 
 function getExamQuestionList(source){
@@ -505,7 +526,7 @@ function getFilteredQuestionsRaw(){
   if (query){
     list = list.filter((q)=>{
       if ((q.question||"").toLowerCase().includes(query)) return true;
-      return (q.answers||[]).some(a=>a.toLowerCase().includes(query));
+      return (q.answers||[]).some(a=>String(a || "").toLowerCase().includes(query));
     });
   }
 
@@ -522,7 +543,6 @@ function getFilteredQuestionsRaw(){
       if (!same) randomOrderIds = shuffleArray(ids);
       list = randomOrderIds.map(id => list.find(q=>String(q.id)===String(id))).filter(Boolean);
     } else {
-    updateSyncControlsUI();
       randomOrderIds = [];
     }
   }
@@ -575,7 +595,7 @@ function setActiveQuestion(id, opts){
 function moveActive(delta){
   const ids = getFilteredIds();
   if (!ids.length) return;
-  let idx = activeQuestionId ? ids.indexOf(activeQuestionId) : -1;
+  let idx = activeQuestionId != null ? ids.findIndex(id=>String(id)===String(activeQuestionId)) : -1;
   if (idx < 0) idx = 0;
   let nextIdx = idx + delta;
   if (nextIdx < 0) nextIdx = 0;
@@ -589,7 +609,6 @@ function moveActive(delta){
     renderAll();
     requestAnimationFrame(()=> setActiveQuestion(nextId));
   } else {
-    updateSyncControlsUI();
     setActiveQuestion(nextId);
   }
   persistProgress();
@@ -658,8 +677,29 @@ function showAllMixEditor(){
     selectAllMixedCategory();
   });
 }
+
+function showQuizStatus(emoji, message){
+  const container = document.getElementById("quizContainer");
+  if (!container) return;
+  const box = document.createElement("div");
+  box.className = "empty-hint";
+  const icon = document.createElement("div");
+  icon.className = "emoji";
+  icon.textContent = emoji;
+  const text = document.createElement("p");
+  text.textContent = message;
+  box.append(icon, text);
+  container.replaceChildren(box);
+}
+
+function confirmLeaveRunningExam(){
+  if (!exam.running) return true;
+  return confirm("İmtahan davam edir. Kateqoriyanı dəyişsən, imtahan ləğv olunacaq. Davam edək?");
+}
+
 async function selectAllMixedCategory(){
   const list = getAllCategoryFiles();
+  if (!confirmLeaveRunningExam()) return;
   if (!allMixConfig || !allMixConfig.length){
     showAllMixEditor();
     return;
@@ -677,18 +717,37 @@ async function selectAllMixedCategory(){
   exam.running=false; exam.lastResult=null; exam.questionIds=[];
   if (exam.timerId){ clearInterval(exam.timerId); exam.timerId=null; }
 
+  showQuizStatus("⏳", "ALL mix yüklənir...");
+  clearQuestionRuntimeState();
+  renderSidePanel();
+  renderTinyStats();
+
   const filesToLoad = allMixConfig.slice();
-  // fetch all jsons
-  const results = await Promise.all(filesToLoad.map(e=>fetch(e.file).then(r=>{
+  let results;
+  try{
+    // fetch all jsons
+    results = await Promise.all(filesToLoad.map(e=>fetch(e.file).then(r=>{
     if (!r.ok) throw new Error('Fayl tapılmadı: '+e.file);
     return r.json();
-  }).then(data=>({file:e.file, weight:e.weight, data}))));
+  }).then(data=>{
+    if (!Array.isArray(data)) throw new Error("JSON massiv deyil: "+e.file);
+    return {file:e.file, weight:e.weight, data};
+  })));
+  }catch(e){
+    console.error(e);
+    showQuizStatus("⚠️", "ALL mix yüklənmədi: " + ((e && e.message) || e));
+    return;
+  }
 
   // Build pool per file
   let rawMerged = [];
+  const shortages = [];
   for (const {file, weight, data} of results){
     const needed = Math.max(0, Math.min(100, weight));
-    const arr = Array.isArray(data)? data.slice():[];
+    const arr = data.slice();
+    if (arr.length < needed){
+      shortages.push(`${file}: ${needed} istəndi, ${arr.length} var`);
+    }
     // random sample needed from arr
     const shuffled = shuffleArray(arr);
     const take = shuffled.slice(0, needed).map(raw=>({
@@ -697,6 +756,10 @@ async function selectAllMixedCategory(){
       sourceIndex: arr.indexOf(raw)
     }));
     rawMerged = rawMerged.concat(take);
+  }
+  if (!rawMerged.length){
+    showQuizStatus("⚠️", "ALL mix üçün yüklənə bilən sual tapılmadı.");
+    return;
   }
 
   // Re-normalize with stable internal ids; displayNumber stays compact for the current mix.
@@ -711,6 +774,14 @@ async function selectAllMixedCategory(){
   flashOrderMode = getSelectedQuizOrder();
   recomputeOrderedIds();
   renderAll(); updateExamUI();
+  queueCloudEditedRefresh();
+
+  if (shortages.length){
+    const warning = "ALL mix: bəzi kateqoriyalarda istədiyin qədər sual yoxdur.\n" + shortages.join("\n");
+    const syncStatus = document.getElementById("syncStatus");
+    if (syncStatus) syncStatus.textContent = warning.replace(/\n/g, " · ");
+    alert(warning);
+  }
 }
 
 // ---------- Render ----------
@@ -859,6 +930,7 @@ function renderSidePanel(){
   const notedList = document.getElementById("notedQuestionsList");
   const repeatedList = document.getElementById("repeatedMistakesList");
   const editedList = document.getElementById("editedQuestionsList");
+  const scopeIds = getCurrentQuestionScopeIds();
 
   const s = computeStats();
   if (statsDiv){
@@ -873,7 +945,7 @@ function renderSidePanel(){
 
   if (wrongList){
     wrongList.innerHTML=""; 
-    const visibleWrong = wrongQuestions.filter(id=>!!getQuestionById(id)).sort((a,b)=>questionSortValue(a)-questionSortValue(b));
+    const visibleWrong = wrongQuestions.filter(id=>scopeIds.has(String(id)) && !!getQuestionById(id)).sort((a,b)=>questionSortValue(a)-questionSortValue(b));
     if (!visibleWrong.length){ wrongList.classList.add("empty"); wrongList.textContent="Səhv sual yoxdur 🎉"; }
     else {
       wrongList.classList.remove("empty");
@@ -883,7 +955,7 @@ function renderSidePanel(){
 
   if (flaggedList){
     flaggedList.innerHTML="";
-    const visibleFlagged = flaggedQuestions.filter(id=>!!getQuestionById(id)).sort((a,b)=>questionSortValue(a)-questionSortValue(b));
+    const visibleFlagged = flaggedQuestions.filter(id=>scopeIds.has(String(id)) && !!getQuestionById(id)).sort((a,b)=>questionSortValue(a)-questionSortValue(b));
     if (!visibleFlagged.length){ flaggedList.classList.add("empty"); flaggedList.textContent="Heç bir sual işarələnməyib"; }
     else {
       flaggedList.classList.remove("empty");
@@ -893,7 +965,7 @@ function renderSidePanel(){
 
   if (notedList){
     notedList.innerHTML="";
-    const ids = Object.keys(questionNotes||{}).filter(id=>!!getQuestionById(id)).sort((a,b)=>questionSortValue(a)-questionSortValue(b));
+    const ids = Object.keys(questionNotes||{}).filter(id=>scopeIds.has(String(id)) && !!getQuestionById(id)).sort((a,b)=>questionSortValue(a)-questionSortValue(b));
     if (!ids.length){ notedList.classList.add("empty"); notedList.textContent="Qeyd olan sual yoxdur"; }
     else {
       notedList.classList.remove("empty");
@@ -903,7 +975,7 @@ function renderSidePanel(){
 
   if (repeatedList){
     repeatedList.innerHTML="";
-    const rep = Object.entries(questionWrongCount||{}).filter(([id,c])=>c>=2 && !!getQuestionById(id)).map(([id,c])=>({id, c}));
+    const rep = Object.entries(questionWrongCount||{}).filter(([id,c])=>c>=2 && scopeIds.has(String(id)) && !!getQuestionById(id)).map(([id,c])=>({id, c}));
     if (!rep.length){ repeatedList.classList.add("empty"); repeatedList.textContent="Təkrar səhv etdiyin sual yoxdur"; }
     else {
       repeatedList.classList.remove("empty");
@@ -913,7 +985,7 @@ function renderSidePanel(){
 
   if (editedList){
     editedList.innerHTML="";
-    const entries = Object.values(editedQuestions||{}).filter(e=>!!getQuestionById(e.id)).sort((a,b)=>questionSortValue(a.id)-questionSortValue(b.id));
+    const entries = Object.values(editedQuestions||{}).filter(e=>scopeIds.has(String(e.id)) && !!getQuestionById(e.id)).sort((a,b)=>questionSortValue(a.id)-questionSortValue(b.id));
     if (!entries.length){ editedList.classList.add("empty"); editedList.textContent=""; }
     else {
       editedList.classList.remove("empty");
@@ -1062,6 +1134,8 @@ function onAnswerClick(id, index){
   if (index !== q.correctIndex){
     if (!idListIncludes(wrongQuestions, id)) wrongQuestions.push(id);
     questionWrongCount[id] = (questionWrongCount[id]||0)+1;
+  } else {
+    wrongQuestions = removeIdFromList(wrongQuestions, id);
   }
   saveCategoryState();
 
@@ -1386,6 +1460,7 @@ window.editQuestion = editQuestion;
 
 
 function selectCategory(filename){
+  if (!confirmLeaveRunningExam()) return;
     // new salt on each category switch so answer order changes
   VIEW_SALT = (Math.random()*4294967296)>>>0;
 currentCategory = filename;
@@ -1404,6 +1479,10 @@ currentCategory = filename;
   const container = document.getElementById("quizContainer");
   if (container) container.innerHTML = `<div class="empty-hint"><div class="emoji">⏳</div><p>Suallar yüklənir...</p></div>`;
 
+  clearQuestionRuntimeState();
+  renderSidePanel();
+  renderTinyStats();
+
   fetch(filename).then(r=>{
     if(!r.ok) throw new Error("Fayl tapılmadı");
     return r.json();
@@ -1414,6 +1493,7 @@ currentCategory = filename;
     flashOrderMode = getSelectedQuizOrder();
     recomputeOrderedIds();
     renderAll(); updateExamUI();
+    queueCloudEditedRefresh();
   }).catch(e=>{
     console.error(e);
     if (container) container.innerHTML = `<div class="empty-hint"><div class="emoji">⚠️</div><p>Faylı yükləmək alınmadı: ${filename}</p></div>`;
@@ -1941,17 +2021,11 @@ document.addEventListener("DOMContentLoaded", ()=>{
 
 // Mobile helper
 function toggleMobileMode(){ document.body.classList.toggle('flashcard-mode'); }
-// ---------- Cloud Edited Questions (Firebase) — preview & apply (ADDED) ----------
-function _getRemoteEditedForCurrentCategory(remoteData){
-  try{
-    const data = remoteData && remoteData.data ? remoteData.data : (remoteData || {});
-    const key = storageKey("editedQuestions");
-    const raw = data[key];
-    const map = (typeof raw === "string") ? _parseJSONMaybe(raw) : raw;
-    return (map && typeof map === "object") ? map : {};
-  }catch{ return {}; }
+function queueCloudEditedRefresh(){
+  if (typeof refreshCloudEditedPreview !== "function") return;
+  setTimeout(()=> refreshCloudEditedPreview(), 0);
 }
-
+// ---------- Cloud Edited Questions (Firebase) — preview & apply (ADDED) ----------
 function renderCloudEditedList(remoteEditedMap, updatedAt){
   const list = document.getElementById("cloudEditedQuestionsList");
   const status = document.getElementById("cloudStatus");
@@ -1988,7 +2062,10 @@ function renderCloudEditedList(remoteEditedMap, updatedAt){
   });
 }
 
-async function refreshCloudEditedPreview(){
+async function refreshCloudEditedPreviewAuthOnlyLegacy(){
+  return refreshCloudEditedPreview();
+}
+/*
   const list = document.getElementById("cloudEditedQuestionsList");
   const status = document.getElementById("cloudStatus");
   if (status) status.textContent = "Bulud · yüklənir…";
@@ -2007,14 +2084,7 @@ async function refreshCloudEditedPreview(){
     if (status) status.textContent = "Bulud · —";
   }
 }
-(function(){
-  const btn = document.getElementById("cloudRefreshBtn");
-  if (btn && !btn.__wired){
-    btn.__wired = true;
-    btn.addEventListener("click", ()=> refreshCloudEditedPreview());
-  }
-  // Public refresh wiring below performs the initial load.
-})();
+*/
 // /mnt/data/app.js
 /* ====== PUBLIC (readable-by-everyone) EDITED QUESTIONS ====== */
 /* Firestore: publicAppState/state -> { data: { "<quiz_<cat>_editedQuestions>": { ... } }, updatedAt } */

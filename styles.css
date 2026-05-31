@@ -398,8 +398,8 @@ body.focus-mode .question{
 }
 body.focus-mode .question-meta,
 body.focus-mode .question-footer,
-body.focus-mode .note-block,
-body.focus-mode .correct-answer-text { display:none !important; }
+body.focus-mode .note-block { display:none !important; }
+body.focus-mode .correct-answer-text.visible { display:block !important; }
 
 /* Focus: de-saturate and simplify */
 body.focus-mode { background:#ffffff; }
