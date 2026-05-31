@@ -437,7 +437,6 @@ body.dark-mode .floating-focus-btn{ background:linear-gradient(135deg,#22c55e,#4
 }
 /* fade-slide removed */ .question { animation: fadeSlide 0.28s ease-out; }
 
-}
 body.dark-mode .answer-btn .ripple { background: rgba(79,70,229,0.55); }
 
 /* 3) Subtle pressed state */

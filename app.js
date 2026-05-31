@@ -389,7 +389,8 @@ let allMixConfig = loadJSON('quiz_all_mix', []);
 // ---------- Helpers ----------
 function storageKey(name){ return currentCategory ? ("quiz_"+currentCategory+"_"+name) : ("quiz_global_"+name); }
 
-function normalizeQuestion(raw, index){
+function normalizeQuestion(raw, index, opts){
+  opts = opts || {};
   const originalAnswers = Array.isArray(raw.answers) ? raw.answers.slice() : [];
   const correctAnswer = originalAnswers[0] || "";
   // Make answer order change on each page load while staying consistent within a single session
@@ -397,11 +398,47 @@ function normalizeQuestion(raw, index){
   const seed = (seedBase ^ SESSION_SALT ^ VIEW_SALT) >>> 0;
   const shuffled = stableShuffle(originalAnswers, seed);
   let correctIndex = Math.max(0, shuffled.indexOf(correctAnswer));
-  return { id:index, question: raw.question||"", answers: shuffled, correctIndex };
+  return {
+    id: opts.id != null ? opts.id : index,
+    displayNumber: opts.displayNumber != null ? opts.displayNumber : index,
+    sourceFile: opts.sourceFile || null,
+    sourceIndex: opts.sourceIndex != null ? opts.sourceIndex : null,
+    question: raw.question||"",
+    answers: shuffled,
+    correctIndex
+  };
+}
+function mixedQuestionId(file, sourceIndex){
+  return hashString(`${file}|${sourceIndex + 1}`) || (sourceIndex + 1);
+}
+function getQuestionById(id){
+  return allQuestions.find(q=>String(q.id) === String(id));
+}
+function idListIncludes(list, id){
+  return _ensureArr(list).some(x=>String(x) === String(id));
+}
+function removeIdFromList(list, id){
+  return _ensureArr(list).filter(x=>String(x) !== String(id));
+}
+function getQuestionByIdOrDisplay(id){
+  const direct = getQuestionById(id);
+  if (direct) return direct;
+  const m = String(id).match(/\d+/);
+  if (!m) return null;
+  const n = parseInt(m[0], 10);
+  return allQuestions.find(q=>q.id === n || q.displayNumber === n) || null;
+}
+function questionDisplayNumber(qOrId){
+  const q = (qOrId && typeof qOrId === "object") ? qOrId : getQuestionById(qOrId);
+  return q ? (q.displayNumber || q.id) : qOrId;
+}
+function questionSortValue(id){
+  const q = getQuestionById(id);
+  return q ? (q.displayNumber || q.id) : Number(id);
 }
 function applyEditedQuestions(){
   Object.values(editedQuestions||{}).forEach((e)=>{
-    const q = allQuestions.find(qq=>qq.id===e.id); if(!q) return;
+    const q = getQuestionById(e.id); if(!q) return;
     const src = e.active==="before" ? e.before : e.after;
     q.question = src.question; q.answers = src.answers.slice(); q.correctIndex = src.correctIndex;
   });
@@ -436,14 +473,15 @@ function _resolveSelectedIndex(q, info){
 }
 function computeStats(){
   const total = allQuestions.length;
-  const answered = Object.keys(selectedAnswers).length;
-  let correct=0, wrong=0;
+  let answered=0, correct=0, wrong=0;
   for (const [idStr, info] of Object.entries(selectedAnswers)){
-    const id = Number(idStr); const q = allQuestions.find(qq=>qq.id===id); if(!q) continue;
+    const q = getQuestionById(idStr); if(!q) continue;
     const idx = _resolveSelectedIndex(q, info); if (idx===-1) continue;
+    answered++;
     if (idx===q.correctIndex) correct++; else wrong++;
   }
-  return { total, answered, correct, wrong, flagged: flaggedQuestions.length };
+  const flagged = flaggedQuestions.filter(id=>!!getQuestionById(id)).length;
+  return { total, answered, correct, wrong, flagged };
 }
 
 // ---------- Filtering / ordering ----------
@@ -471,8 +509,8 @@ function getFilteredQuestionsRaw(){
     });
   }
 
-  if (filterMode === "wrong")   list = list.filter(q=>wrongQuestions.includes(q.id));
-  if (filterMode === "flagged") list = list.filter(q=>flaggedQuestions.includes(q.id));
+  if (filterMode === "wrong")   list = list.filter(q=>idListIncludes(wrongQuestions, q.id));
+  if (filterMode === "flagged") list = list.filter(q=>idListIncludes(flaggedQuestions, q.id));
   if (filterMode === "noted")   list = list.filter(q=>!!questionNotes[q.id]);
 
   // Normal rejim random sıralama
@@ -482,7 +520,7 @@ function getFilteredQuestionsRaw(){
       const ids = list.map(q=>q.id);
       const same = (randomOrderIds.length===ids.length) && ids.every(id=>randomOrderIds.includes(id));
       if (!same) randomOrderIds = shuffleArray(ids);
-      list = randomOrderIds.map(id => list.find(q=>q.id===id)).filter(Boolean);
+      list = randomOrderIds.map(id => list.find(q=>String(q.id)===String(id))).filter(Boolean);
     } else {
     updateSyncControlsUI();
       randomOrderIds = [];
@@ -653,12 +691,21 @@ async function selectAllMixedCategory(){
     const arr = Array.isArray(data)? data.slice():[];
     // random sample needed from arr
     const shuffled = shuffleArray(arr);
-    const take = shuffled.slice(0, needed);
+    const take = shuffled.slice(0, needed).map(raw=>({
+      raw,
+      file,
+      sourceIndex: arr.indexOf(raw)
+    }));
     rawMerged = rawMerged.concat(take);
   }
 
-  // Re-normalize with fresh ids 1..N
-  allQuestions = rawMerged.map((q, idx)=> normalizeQuestion(q, idx+1));
+  // Re-normalize with stable internal ids; displayNumber stays compact for the current mix.
+  allQuestions = rawMerged.map((entry, idx)=> normalizeQuestion(entry.raw, idx+1, {
+    id: mixedQuestionId(entry.file, entry.sourceIndex),
+    displayNumber: idx+1,
+    sourceFile: entry.file,
+    sourceIndex: entry.sourceIndex
+  }));
   loadCategoryState();
   applyEditedQuestions();
   flashOrderMode = getSelectedQuizOrder();
@@ -699,13 +746,13 @@ function renderQuiz(){
 
     const header = document.createElement("div"); header.className = "question-header";
     const title = document.createElement("div");
-    const num = document.createElement("span"); num.className="question-number"; num.textContent = q.id+".";
-    const tt = document.createElement("span"); tt.textContent = q.question;
+    const num = document.createElement("span"); num.className="question-number"; num.textContent = questionDisplayNumber(q)+".";
+    const tt = document.createElement("span"); tt.className = "question-text"; tt.textContent = q.question;
     title.appendChild(num); title.appendChild(tt);
 
     const meta = document.createElement("div"); meta.className="question-meta";
     const wc = questionWrongCount[q.id]||0; if (wc>0){ const s=document.createElement("span"); s.innerHTML=`<i class="fa fa-fire"></i> ${wc} səhv`; meta.appendChild(s); }
-    if (flaggedQuestions.includes(q.id)){ const s=document.createElement("span"); s.innerHTML=`<i class="fa fa-flag"></i> flag`; meta.appendChild(s); }
+    if (idListIncludes(flaggedQuestions, q.id)){ const s=document.createElement("span"); s.innerHTML=`<i class="fa fa-flag"></i> flag`; meta.appendChild(s); }
     if (editedQuestions[q.id]){ const s=document.createElement("span"); s.innerHTML=`<i class="fa fa-pen"></i> dəyişib`; meta.appendChild(s); }
 
     header.appendChild(title); header.appendChild(meta); card.appendChild(header);
@@ -733,7 +780,7 @@ function renderQuiz(){
     const footer = document.createElement("div"); footer.className="question-footer";
     const actions = document.createElement("div"); actions.className="question-actions";
 
-    const flagBtn = document.createElement("button"); flagBtn.className="icon-btn"; if (flaggedQuestions.includes(q.id)) flagBtn.classList.add("flagged");
+    const flagBtn = document.createElement("button"); flagBtn.className="icon-btn"; if (idListIncludes(flaggedQuestions, q.id)) flagBtn.classList.add("flagged");
     flagBtn.innerHTML = `<i class="fa fa-flag"></i> Flag`; flagBtn.addEventListener("click", ()=> toggleFlag(q.id)); actions.appendChild(flagBtn);
 
     const showBtn = document.createElement("button"); showBtn.className="icon-btn";
@@ -742,7 +789,7 @@ function renderQuiz(){
     const noteBtn = document.createElement("button"); noteBtn.className="icon-btn"; if (questionNotes[q.id]) noteBtn.classList.add("has-note");
     noteBtn.innerHTML = `<i class="fa fa-sticky-note"></i> Qeyd`; noteBtn.addEventListener("click", ()=> toggleNoteEditor(q.id)); actions.appendChild(noteBtn);
 
-    if (wrongQuestions.includes(q.id)){
+    if (idListIncludes(wrongQuestions, q.id)){
       const rmWrongBtn = document.createElement("button"); rmWrongBtn.className="icon-btn";
       rmWrongBtn.innerHTML=`<i class="fa fa-minus-circle"></i> Səhv siyahısından çıxar`; rmWrongBtn.addEventListener("click", ()=> removeFromWrong(q.id)); actions.appendChild(rmWrongBtn);
     }
@@ -785,7 +832,7 @@ function renderQuiz(){
     container.appendChild(card);
   });
   const idsOnPage = pageQuestions.map(q=>q.id);
-  if (!activeQuestionId || !idsOnPage.includes(activeQuestionId)){
+  if (!activeQuestionId || !idsOnPage.some(id=>String(id)===String(activeQuestionId))){
     activeQuestionId = idsOnPage[0];
   }
   setActiveQuestion(activeQuestionId, {scroll:false});
@@ -826,52 +873,54 @@ function renderSidePanel(){
 
   if (wrongList){
     wrongList.innerHTML=""; 
-    if (!wrongQuestions.length){ wrongList.classList.add("empty"); wrongList.textContent="Səhv sual yoxdur 🎉"; }
+    const visibleWrong = wrongQuestions.filter(id=>!!getQuestionById(id)).sort((a,b)=>questionSortValue(a)-questionSortValue(b));
+    if (!visibleWrong.length){ wrongList.classList.add("empty"); wrongList.textContent="Səhv sual yoxdur 🎉"; }
     else {
       wrongList.classList.remove("empty");
-      wrongQuestions.forEach(id=>{ const b=document.createElement("button"); b.className="mini-pill"; b.textContent="#"+id; b.addEventListener("click",()=>scrollToQuestion(id)); wrongList.appendChild(b); });
+      visibleWrong.forEach(id=>{ const b=document.createElement("button"); b.className="mini-pill"; b.textContent="#"+questionDisplayNumber(id); b.addEventListener("click",()=>scrollToQuestion(id)); wrongList.appendChild(b); });
     }
   }
 
   if (flaggedList){
     flaggedList.innerHTML="";
-    if (!flaggedQuestions.length){ flaggedList.classList.add("empty"); flaggedList.textContent="Heç bir sual işarələnməyib"; }
+    const visibleFlagged = flaggedQuestions.filter(id=>!!getQuestionById(id)).sort((a,b)=>questionSortValue(a)-questionSortValue(b));
+    if (!visibleFlagged.length){ flaggedList.classList.add("empty"); flaggedList.textContent="Heç bir sual işarələnməyib"; }
     else {
       flaggedList.classList.remove("empty");
-      flaggedQuestions.forEach(id=>{ const b=document.createElement("button"); b.className="mini-pill"; b.textContent="#"+id; b.addEventListener("click",()=>scrollToQuestion(id)); flaggedList.appendChild(b); });
+      visibleFlagged.forEach(id=>{ const b=document.createElement("button"); b.className="mini-pill"; b.textContent="#"+questionDisplayNumber(id); b.addEventListener("click",()=>scrollToQuestion(id)); flaggedList.appendChild(b); });
     }
   }
 
   if (notedList){
     notedList.innerHTML="";
-    const ids = Object.keys(questionNotes||{}).map(Number).sort((a,b)=>a-b);
+    const ids = Object.keys(questionNotes||{}).filter(id=>!!getQuestionById(id)).sort((a,b)=>questionSortValue(a)-questionSortValue(b));
     if (!ids.length){ notedList.classList.add("empty"); notedList.textContent="Qeyd olan sual yoxdur"; }
     else {
       notedList.classList.remove("empty");
-      ids.forEach(id=>{ const b=document.createElement("button"); b.className="mini-pill"; b.textContent="#"+id; b.addEventListener("click",()=>scrollToQuestion(id)); notedList.appendChild(b); });
+      ids.forEach(id=>{ const b=document.createElement("button"); b.className="mini-pill"; b.textContent="#"+questionDisplayNumber(id); b.addEventListener("click",()=>scrollToQuestion(id)); notedList.appendChild(b); });
     }
   }
 
   if (repeatedList){
     repeatedList.innerHTML="";
-    const rep = Object.entries(questionWrongCount||{}).filter(([_,c])=>c>=2).map(([id,c])=>({id:Number(id), c}));
+    const rep = Object.entries(questionWrongCount||{}).filter(([id,c])=>c>=2 && !!getQuestionById(id)).map(([id,c])=>({id, c}));
     if (!rep.length){ repeatedList.classList.add("empty"); repeatedList.textContent="Təkrar səhv etdiyin sual yoxdur"; }
     else {
       repeatedList.classList.remove("empty");
-      rep.sort((a,b)=>b.c-a.c).forEach(it=>{ const b=document.createElement("button"); b.className="mini-pill"; b.textContent=`#${it.id} · ${it.c} dəfə`; b.addEventListener("click",()=>scrollToQuestion(it.id)); repeatedList.appendChild(b); });
+      rep.sort((a,b)=>b.c-a.c || questionSortValue(a.id)-questionSortValue(b.id)).forEach(it=>{ const b=document.createElement("button"); b.className="mini-pill"; b.textContent=`#${questionDisplayNumber(it.id)} · ${it.c} dəfə`; b.addEventListener("click",()=>scrollToQuestion(it.id)); repeatedList.appendChild(b); });
     }
   }
 
   if (editedList){
     editedList.innerHTML="";
-    const entries = Object.values(editedQuestions||{}).sort((a,b)=>a.id-b.id);
+    const entries = Object.values(editedQuestions||{}).filter(e=>!!getQuestionById(e.id)).sort((a,b)=>questionSortValue(a.id)-questionSortValue(b.id));
     if (!entries.length){ editedList.classList.add("empty"); editedList.textContent=""; }
     else {
       editedList.classList.remove("empty");
       entries.forEach(e=>{
         const wrap=document.createElement("div"); wrap.className="edited-item";
         const header=document.createElement("div"); header.className="edited-header";
-        const left=document.createElement("div"); left.textContent="Sual #"+e.id;
+        const left=document.createElement("div"); left.textContent="Sual #"+questionDisplayNumber(e.id);
         const right=document.createElement("div"); right.textContent= e.active==="after" ? "Aktiv: yeni versiya" : "Aktiv: orijinal";
         header.appendChild(left); header.appendChild(right); wrap.appendChild(header);
         const diff=document.createElement("div"); diff.className="edited-diff";
@@ -979,7 +1028,7 @@ function finishExam(manual){
 
 // ---------- Actions ----------
 function updateQuestionCardVisuals(id){
-  const q = allQuestions.find(qq=>qq.id===id); if(!q) return;
+  const q = getQuestionById(id); if(!q) return;
   const card = document.getElementById("question-"+id); if(!card) return;
 
   const maskActive = (maskMode.active && !maskMode.cleared);
@@ -1005,13 +1054,13 @@ function updateQuestionCardVisuals(id){
 }
 
 function onAnswerClick(id, index){
-  const q = allQuestions.find(qq=>qq.id===id); if (!q) return;
+  const q = getQuestionById(id); if (!q) return;
 
   // Dərhal yadda saxla
   selectedAnswers[id] = { index, value: q.answers[index], updatedAt: Date.now() };
 
   if (index !== q.correctIndex){
-    if (!wrongQuestions.includes(id)) wrongQuestions.push(id);
+    if (!idListIncludes(wrongQuestions, id)) wrongQuestions.push(id);
     questionWrongCount[id] = (questionWrongCount[id]||0)+1;
   }
   saveCategoryState();
@@ -1026,14 +1075,14 @@ function onAnswerClick(id, index){
 }
 
 function toggleFlag(id){
-  if (flaggedQuestions.includes(id)) flaggedQuestions = flaggedQuestions.filter(x=>x!==id);
+  if (idListIncludes(flaggedQuestions, id)) flaggedQuestions = removeIdFromList(flaggedQuestions, id);
   else flaggedQuestions.push(id);
   saveCategoryState(); renderSidePanel(); renderQuiz();
 }
 function removeFromWrong(id){
-  if (!wrongQuestions.includes(id)) return;
+  if (!idListIncludes(wrongQuestions, id)) return;
   if (!confirm("Bu sualı 'səhv suallar' siyahısından çıxarmaq istəyirsən?")) return;
-  wrongQuestions = wrongQuestions.filter(x=>x!==id);
+  wrongQuestions = removeIdFromList(wrongQuestions, id);
   saveCategoryState(); renderAll();
 }
 function toggleCorrectAnswer(id){
@@ -1045,14 +1094,13 @@ function toggleNoteEditor(id){
   el.classList.toggle("open");
 }
 function scrollToQuestion(id){
-  // Sanitize id like "677)" -> 677
-  const m = String(id).match(/\d+/);
-  if (!m) return;
-  const qid = parseInt(m[0], 10);
+  const target = getQuestionByIdOrDisplay(id);
+  if (!target) return;
+  const qid = target.id;
 
   // Ensure navigation works across pages and even when filtered out
   const within = getFilteredQuestions();
-  let idx = within.findIndex(q => q.id === qid);
+  let idx = within.findIndex(q => String(q.id) === String(qid));
   if (idx !== -1){
     const targetPage = Math.floor(idx / questionsPerPage) + 1;
     if (currentPage !== targetPage){
@@ -1067,7 +1115,7 @@ function scrollToQuestion(id){
   }
 
   // If not found due to filters/search, temporarily show all
-  const exists = allQuestions.some(q => q.id === qid);
+  const exists = allQuestions.some(q => String(q.id) === String(qid));
   if (!exists) return;
   const prevFilter = filterMode;
   const prevQuery  = searchQuery;
@@ -1076,7 +1124,7 @@ function scrollToQuestion(id){
   syncFilterUI();
   recomputeOrderedIds();
   const allList = getFilteredQuestions();
-  idx = allList.findIndex(q => q.id === qid);
+  idx = allList.findIndex(q => String(q.id) === String(qid));
   if (idx !== -1){
     currentPage = Math.floor(idx / questionsPerPage) + 1;
     renderAll();
@@ -1093,7 +1141,7 @@ function scrollToQuestion(id){
   syncFilterUI();
 }function toggleEditedVersion(id){
   const e = editedQuestions[id]; if(!e) return;
-  const q = allQuestions.find(qq=>qq.id===id); if(!q) return;
+  const q = getQuestionById(id); if(!q) return;
   if (e.active==="after"){
     e.active="before"; q.question=e.before.question; q.answers=e.before.answers.slice(); q.correctIndex=e.before.correctIndex;
   } else {
@@ -1123,7 +1171,7 @@ function resetAllAnswersInCategory(){
 function editQuestion(id){
   if (!isAdmin){ alert("Bu funksiya yalnız admin üçündür."); return; }
 
-  const q = allQuestions.find(qq => qq.id === id);
+  const q = getQuestionById(id);
   if (!q){ alert("Sual tapılmadı."); return; }
 
   const card = document.getElementById("question-"+id);
@@ -1684,14 +1732,14 @@ document.addEventListener("DOMContentLoaded", ()=>{
       const catLabel = document.getElementById("notesCatLabel");
       if (catLabel) catLabel.textContent = currentCategory || "—";
 
-      const ids = Object.keys(questionNotes||{}).map(Number).sort((a,b)=>a-b);
+      const ids = Object.keys(questionNotes||{}).filter(id=>!!getQuestionById(id)).sort((a,b)=>questionSortValue(a)-questionSortValue(b));
       if (!ids.length){
         body.innerHTML = `<div class="notes-empty">Bu kateqoriya üçün qeyd yoxdur.</div>`;
         return;
       }
       const frag = document.createDocumentFragment();
       ids.forEach(id=>{
-        const q = (allQuestions||[]).find(qq=>qq.id===id);
+        const q = getQuestionById(id);
         const note = (questionNotes||{})[id] || "";
         if (search){
           const hay = (String(q && q.question || "") + " " + note).toLowerCase();
@@ -1702,7 +1750,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
 
         const idCol = document.createElement("div");
         idCol.className = "notes-id";
-        idCol.textContent = "#" + id;
+        idCol.textContent = "#" + questionDisplayNumber(id);
 
         const textCol = document.createElement("div");
         textCol.className = "notes-text";
@@ -1915,7 +1963,9 @@ function renderCloudEditedList(remoteEditedMap, updatedAt){
   }
   if (!list) return;
   list.innerHTML = "";
-  const entries = Object.values(remoteEditedMap||{}).sort((a,b)=> (a.id||0)-(b.id||0));
+  const entries = Object.values(remoteEditedMap||{})
+    .filter(e=>!!getQuestionById(e.id))
+    .sort((a,b)=> questionSortValue(a.id)-questionSortValue(b.id));
   if (!entries.length){
     list.classList.add("empty");
     list.textContent = "Göstəriləcək dəyişiklik yoxdur";
@@ -1925,7 +1975,7 @@ function renderCloudEditedList(remoteEditedMap, updatedAt){
   entries.forEach(e=>{
     const btn = document.createElement("button");
     btn.className = "mini-pill";
-    btn.textContent = "#" + e.id;
+    btn.textContent = "#" + questionDisplayNumber(e.id);
     const newQ = e && e.after && e.after.question ? String(e.after.question) : "";
     if (newQ) btn.title = newQ.slice(0,96);
     btn.addEventListener("click", ()=>{
