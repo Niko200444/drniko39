@@ -447,8 +447,21 @@ function computeStats(){
 }
 
 // ---------- Filtering / ordering ----------
+function examQuestionSubsetActive(){
+  return exam.running && Array.isArray(exam.questionIds) && exam.questionIds.length > 0;
+}
+
+function getExamQuestionList(source){
+  const byId = new Map((source || []).map(q => [q.id, q]));
+  return exam.questionIds.map(id => byId.get(id)).filter(Boolean);
+}
+
 function getFilteredQuestionsRaw(){
   let list = allQuestions.slice();
+  if (examQuestionSubsetActive()){
+    return getExamQuestionList(list);
+  }
+
   const query = (searchQuery||"").trim().toLowerCase();
 
   if (query){
@@ -477,11 +490,14 @@ function getFilteredQuestionsRaw(){
   }
   return list;
 }
-function recomputeOrderedIds(){
+function recomputeOrderedIds(opts){
+  opts = opts || {};
+  const previousPage = currentPage;
   const ids = getFilteredQuestionsRaw().map(q=>q.id);
   if (!singleQuestionMode){ orderedIds = ids; return; }
   orderedIds = (flashOrderMode === "random") ? shuffleArray(ids) : ids;
-  currentPage = 1;
+  const maxPage = Math.max(1, orderedIds.length);
+  currentPage = opts.preservePage ? Math.min(Math.max(1, previousPage), maxPage) : 1;
 }
 function getFilteredQuestions(){
   const raw = getFilteredQuestionsRaw();
@@ -618,6 +634,7 @@ async function selectAllMixedCategory(){
   currentCategory = 'ALL';
   currentPage = 1;
   filterMode = 'all'; restoreAllViewPage();
+  syncFilterUI();
   maskMode = { active:false, cleared:false };
   exam.running=false; exam.lastResult=null; exam.questionIds=[];
   if (exam.timerId){ clearInterval(exam.timerId); exam.timerId=null; }
@@ -915,6 +932,16 @@ function startExam(){
 
   if (!confirm(`İmtahan başlayır: ${qCount} sual, ${minutes} dəqiqə.\nMövcud cavabların silinəcək. Davam edək?`)) return;
 
+  singleQuestionMode = false;
+  questionsPerPage = baseQuestionsPerPage;
+  filterMode = "all";
+  searchQuery = "";
+  currentPage = 1;
+  randomOrderIds = [];
+  maskMode = { active:false, cleared:false };
+  syncFilterUI();
+  syncFlashcardToggleLabel();
+
   exam.running = true; exam.lastResult = null; exam.durationSec = minutes*60;
   const shuffledIds = shuffleArray(allQuestions.map(q=>q.id));
   exam.questionIds = shuffledIds.slice(0, qCount);
@@ -1046,6 +1073,7 @@ function scrollToQuestion(id){
   const prevQuery  = searchQuery;
   filterMode = "all";
   searchQuery = "";
+  syncFilterUI();
   recomputeOrderedIds();
   const allList = getFilteredQuestions();
   idx = allList.findIndex(q => q.id === qid);
@@ -1062,6 +1090,7 @@ function scrollToQuestion(id){
   // Revert if somehow still not found
   filterMode = prevFilter;
   searchQuery = prevQuery;
+  syncFilterUI();
 }function toggleEditedVersion(id){
   const e = editedQuestions[id]; if(!e) return;
   const q = allQuestions.find(qq=>qq.id===id); if(!q) return;
@@ -1149,6 +1178,7 @@ function editQuestion(id){
 
       delete selectedAnswers[id];
       saveCategoryState();
+      try{ savePublicEditedForCurrentCategory(); }catch{}
 
       // Kartı yenidən göstər
       renderAll();
@@ -1313,6 +1343,7 @@ function selectCategory(filename){
 currentCategory = filename;
   currentPage = 1;
   filterMode = "all"; restoreAllViewPage();
+  syncFilterUI();
   maskMode = { active:false, cleared:false }; // yeni kateqoriyada maskanı sıfırla
 
   exam.running=false; exam.lastResult=null; exam.questionIds=[];
@@ -1344,6 +1375,16 @@ currentCategory = filename;
 function getSelectedQuizOrder(){
   const r = document.querySelector('input[name="quizOrder"]:checked');
   return r ? r.value : 'sequential';
+}
+
+function syncFilterUI(){
+  document.querySelectorAll(".quiz-filter-btn[data-filter]").forEach(btn=>{
+    btn.classList.toggle("active", (btn.getAttribute("data-filter") || "all") === filterMode);
+  });
+  const searchInput = document.getElementById("searchInput");
+  if (searchInput && searchInput.value !== (searchQuery || "")){
+    searchInput.value = searchQuery || "";
+  }
 }
 
 function resetCurrentCategory(){
@@ -1409,6 +1450,15 @@ function updateDarkButtonUI(){
 }
 
 // ---------- Flashcard ----------
+function syncFlashcardToggleLabel(){
+  const floatFlashBtn = document.getElementById("flashcardFloatingToggle");
+  if (floatFlashBtn){
+    floatFlashBtn.textContent = "🗂️ " + (singleQuestionMode ? "Flashcard ON" : "Flashcard");
+  }
+  const sqToggleEl = document.getElementById("singleQuestionModeToggle");
+  if (sqToggleEl) sqToggleEl.checked = singleQuestionMode;
+}
+
 function updateFlashcardUI(){
   const controls = document.getElementById("flashcardControls"); const body=document.body;
   if (singleQuestionMode){ body.classList.add("flashcard-mode"); if (controls) controls.classList.remove("hidden"); }
@@ -1577,13 +1627,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
   ensure();
 
   // Açma düyməsi (mövcud düyməni eyni saxlayırıq)
-  const btn = document.getElementById("openNotesBtn");
-  if (btn){
-    btn.addEventListener("click", (e)=>{
-      e.preventDefault(); e.stopImmediatePropagation();
-      if (window.__openSimpleNotes) window.__openSimpleNotes();
-    });
-  }
+  // Legacy single-text notes modal is kept dormant; the main notes manager owns the Notes button.
 })();
 
 
@@ -1744,7 +1788,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
       if (sqToggleEl) sqToggleEl.checked = singleQuestionMode;
       flashOrderMode = getSelectedQuizOrder();
       questionsPerPage = singleQuestionMode ? 1 : baseQuestionsPerPage;
-      if (singleQuestionMode){ restoreFlashPage(); } else { if (filterMode==="all") restoreAllViewPage(); else currentPage=1; } window.__suppressPageReset=true; recomputeOrderedIds(); window.__suppressPageReset=false; persistProgress(); renderAll(); updateFlashcardUI(); syncLabel(); }) ;
+      if (singleQuestionMode){ restoreFlashPage(); } else { if (filterMode==="all") restoreAllViewPage(); else currentPage=1; } window.__suppressPageReset=true; recomputeOrderedIds({ preservePage: singleQuestionMode }); window.__suppressPageReset=false; persistProgress(); renderAll(); updateFlashcardUI(); syncFlashcardToggleLabel(); }) ;
   }
 
   const startBtn=document.getElementById("startBtn");
@@ -1764,7 +1808,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
   });
 
   // Filtr düymələri → maskanı qur
-  document.querySelectorAll(".quiz-filter-btn").forEach((btn)=>{
+  document.querySelectorAll(".quiz-filter-btn[data-filter]").forEach((btn)=>{
     btn.addEventListener("click", ()=>{
       const mode = btn.getAttribute("data-filter") || "all";
       filterMode = mode;
@@ -1772,7 +1816,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
       maskMode.active  = (mode === "wrong" || mode === "flagged");
       maskMode.cleared = false;
 
-      document.querySelectorAll(".quiz-filter-btn").forEach(b=> b.classList.toggle("active", b===btn));
+      syncFilterUI();
       if (mode==="all" && !singleQuestionMode) { restoreAllViewPage(); } else { currentPage=1; } window.__suppressPageReset=true; recomputeOrderedIds(); window.__suppressPageReset=false; persistProgress(); renderAll();
     });
   });
@@ -1919,7 +1963,7 @@ async function refreshCloudEditedPreview(){
     btn.__wired = true;
     btn.addEventListener("click", ()=> refreshCloudEditedPreview());
   }
-  setTimeout(()=> refreshCloudEditedPreview(), 0);
+  // Public refresh wiring below performs the initial load.
 })();
 // /mnt/data/app.js
 /* ====== PUBLIC (readable-by-everyone) EDITED QUESTIONS ====== */
@@ -1985,41 +2029,6 @@ async function refreshCloudEditedPreview(){
     if (status) status.textContent = "Bulud · —";
   }
 }
-
-/* ====== HOOK INTO ADMIN SAVE: also push to PUBLIC ====== */
-// Patch: call savePublicEditedForCurrentCategory() after local save
-(function patchEditQuestionPublicSave(){
-  // keep original reference
-  const _origEditQuestion = window.editQuestion;
-  if (typeof _origEditQuestion !== "function") return;
-
-  window.editQuestion = function(id){
-    // wrap to inject onSave handler patch
-    const beforeRenderAll = renderAll; // keep pointer
-
-    // Monkey-patch buildInlineEditor -> onSave
-    const _origBuild = window.buildInlineEditor;
-    if (typeof _origBuild === "function"){
-      window.buildInlineEditor = function(q, handlers){
-        const h = Object.assign({}, handlers);
-        const userOnSave = h.onSave;
-        h.onSave = (payload)=>{
-          // run original onSave first (writes editedQuestions locally)
-          if (typeof userOnSave === "function") userOnSave(payload);
-          // then push to PUBLIC (async, fire-and-forget)
-          try{ savePublicEditedForCurrentCategory(); }catch{}
-          // nothing else changes
-        };
-        const form = _origBuild(q, h);
-        // restore to avoid double-wrapping other calls
-        window.buildInlineEditor = _origBuild;
-        return form;
-      };
-    }
-    // call original flow
-    return _origEditQuestion(id);
-  };
-})();
 
 /* ====== WIRING FOR REFRESH BUTTON (idempotent) ====== */
 (function(){
