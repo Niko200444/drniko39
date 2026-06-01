@@ -398,8 +398,8 @@ body.focus-mode .question{
 }
 body.focus-mode .question-meta,
 body.focus-mode .question-footer,
-body.focus-mode .note-block { display:none !important; }
-body.focus-mode .correct-answer-text.visible { display:block !important; }
+body.focus-mode .note-block,
+body.focus-mode .correct-answer-text { display:none !important; }
 
 /* Focus: de-saturate and simplify */
 body.focus-mode { background:#ffffff; }
@@ -437,6 +437,7 @@ body.dark-mode .floating-focus-btn{ background:linear-gradient(135deg,#22c55e,#4
 }
 /* fade-slide removed */ .question { animation: fadeSlide 0.28s ease-out; }
 
+}
 body.dark-mode .answer-btn .ripple { background: rgba(79,70,229,0.55); }
 
 /* 3) Subtle pressed state */

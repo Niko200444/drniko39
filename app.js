@@ -389,8 +389,7 @@ let allMixConfig = loadJSON('quiz_all_mix', []);
 // ---------- Helpers ----------
 function storageKey(name){ return currentCategory ? ("quiz_"+currentCategory+"_"+name) : ("quiz_global_"+name); }
 
-function normalizeQuestion(raw, index, opts){
-  opts = opts || {};
+function normalizeQuestion(raw, index){
   const originalAnswers = Array.isArray(raw.answers) ? raw.answers.slice() : [];
   const correctAnswer = originalAnswers[0] || "";
   // Make answer order change on each page load while staying consistent within a single session
@@ -398,53 +397,11 @@ function normalizeQuestion(raw, index, opts){
   const seed = (seedBase ^ SESSION_SALT ^ VIEW_SALT) >>> 0;
   const shuffled = stableShuffle(originalAnswers, seed);
   let correctIndex = Math.max(0, shuffled.indexOf(correctAnswer));
-  return {
-    id: opts.id != null ? opts.id : index,
-    displayNumber: opts.displayNumber != null ? opts.displayNumber : index,
-    sourceFile: opts.sourceFile || null,
-    sourceIndex: opts.sourceIndex != null ? opts.sourceIndex : null,
-    question: raw.question||"",
-    answers: shuffled,
-    correctIndex
-  };
-}
-function mixedQuestionId(file, sourceIndex){
-  return hashString(`${file}|${sourceIndex + 1}`) || (sourceIndex + 1);
-}
-function getQuestionById(id){
-  return allQuestions.find(q=>String(q.id) === String(id));
-}
-function idListIncludes(list, id){
-  return _ensureArr(list).some(x=>String(x) === String(id));
-}
-function removeIdFromList(list, id){
-  return _ensureArr(list).filter(x=>String(x) !== String(id));
-}
-function getQuestionByIdOrDisplay(id){
-  const direct = getQuestionById(id);
-  if (direct) return direct;
-  const m = String(id).match(/\d+/);
-  if (!m) return null;
-  const n = parseInt(m[0], 10);
-  return allQuestions.find(q=>q.id === n || q.displayNumber === n) || null;
-}
-function questionDisplayNumber(qOrId){
-  const q = (qOrId && typeof qOrId === "object") ? qOrId : getQuestionById(qOrId);
-  return q ? (q.displayNumber || q.id) : qOrId;
-}
-function questionSortValue(id){
-  const q = getQuestionById(id);
-  return q ? (q.displayNumber || q.id) : Number(id);
-}
-function getCurrentQuestionScope(){
-  return examQuestionSubsetActive() ? getExamQuestionList(allQuestions) : allQuestions;
-}
-function getCurrentQuestionScopeIds(){
-  return new Set(getCurrentQuestionScope().map(q=>String(q.id)));
+  return { id:index, question: raw.question||"", answers: shuffled, correctIndex };
 }
 function applyEditedQuestions(){
   Object.values(editedQuestions||{}).forEach((e)=>{
-    const q = getQuestionById(e.id); if(!q) return;
+    const q = allQuestions.find(qq=>qq.id===e.id); if(!q) return;
     const src = e.active==="before" ? e.before : e.after;
     q.question = src.question; q.answers = src.answers.slice(); q.correctIndex = src.correctIndex;
   });
@@ -457,18 +414,6 @@ function loadCategoryState(){
   questionWrongCount  = loadJSON(storageKey("questionWrongCount"), {});
   editedQuestions     = loadJSON(storageKey("editedQuestions"), {});
   questionNotes       = loadJSON(storageKey("questionNotes"), {});
-}
-function clearQuestionRuntimeState(){
-  allQuestions = [];
-  selectedAnswers = {};
-  wrongQuestions = [];
-  flaggedQuestions = [];
-  questionWrongCount = {};
-  editedQuestions = {};
-  questionNotes = {};
-  orderedIds = [];
-  randomOrderIds = [];
-  activeQuestionId = null;
 }
 function saveCategoryState(){
   saveJSON(storageKey("selectedAnswers"), selectedAnswers);
@@ -490,48 +435,31 @@ function _resolveSelectedIndex(q, info){
   return (typeof info.index==="number") ? info.index : -1;
 }
 function computeStats(){
-  const statsQuestions = getCurrentQuestionScope();
-  const statsIds = new Set(statsQuestions.map(q=>String(q.id)));
-  const total = statsQuestions.length;
-  let answered=0, correct=0, wrong=0;
+  const total = allQuestions.length;
+  const answered = Object.keys(selectedAnswers).length;
+  let correct=0, wrong=0;
   for (const [idStr, info] of Object.entries(selectedAnswers)){
-    if (!statsIds.has(String(idStr))) continue;
-    const q = getQuestionById(idStr); if(!q) continue;
+    const id = Number(idStr); const q = allQuestions.find(qq=>qq.id===id); if(!q) continue;
     const idx = _resolveSelectedIndex(q, info); if (idx===-1) continue;
-    answered++;
     if (idx===q.correctIndex) correct++; else wrong++;
   }
-  const flagged = flaggedQuestions.filter(id=>statsIds.has(String(id))).length;
-  return { total, answered, correct, wrong, flagged };
+  return { total, answered, correct, wrong, flagged: flaggedQuestions.length };
 }
 
 // ---------- Filtering / ordering ----------
-function examQuestionSubsetActive(){
-  return (exam.running || !!exam.lastResult) && Array.isArray(exam.questionIds) && exam.questionIds.length > 0;
-}
-
-function getExamQuestionList(source){
-  const byId = new Map((source || []).map(q => [q.id, q]));
-  return exam.questionIds.map(id => byId.get(id)).filter(Boolean);
-}
-
 function getFilteredQuestionsRaw(){
   let list = allQuestions.slice();
-  if (examQuestionSubsetActive()){
-    return getExamQuestionList(list);
-  }
-
   const query = (searchQuery||"").trim().toLowerCase();
 
   if (query){
     list = list.filter((q)=>{
       if ((q.question||"").toLowerCase().includes(query)) return true;
-      return (q.answers||[]).some(a=>String(a || "").toLowerCase().includes(query));
+      return (q.answers||[]).some(a=>a.toLowerCase().includes(query));
     });
   }
 
-  if (filterMode === "wrong")   list = list.filter(q=>idListIncludes(wrongQuestions, q.id));
-  if (filterMode === "flagged") list = list.filter(q=>idListIncludes(flaggedQuestions, q.id));
+  if (filterMode === "wrong")   list = list.filter(q=>wrongQuestions.includes(q.id));
+  if (filterMode === "flagged") list = list.filter(q=>flaggedQuestions.includes(q.id));
   if (filterMode === "noted")   list = list.filter(q=>!!questionNotes[q.id]);
 
   // Normal rejim random sıralama
@@ -541,21 +469,19 @@ function getFilteredQuestionsRaw(){
       const ids = list.map(q=>q.id);
       const same = (randomOrderIds.length===ids.length) && ids.every(id=>randomOrderIds.includes(id));
       if (!same) randomOrderIds = shuffleArray(ids);
-      list = randomOrderIds.map(id => list.find(q=>String(q.id)===String(id))).filter(Boolean);
+      list = randomOrderIds.map(id => list.find(q=>q.id===id)).filter(Boolean);
     } else {
+    updateSyncControlsUI();
       randomOrderIds = [];
     }
   }
   return list;
 }
-function recomputeOrderedIds(opts){
-  opts = opts || {};
-  const previousPage = currentPage;
+function recomputeOrderedIds(){
   const ids = getFilteredQuestionsRaw().map(q=>q.id);
   if (!singleQuestionMode){ orderedIds = ids; return; }
   orderedIds = (flashOrderMode === "random") ? shuffleArray(ids) : ids;
-  const maxPage = Math.max(1, orderedIds.length);
-  currentPage = opts.preservePage ? Math.min(Math.max(1, previousPage), maxPage) : 1;
+  currentPage = 1;
 }
 function getFilteredQuestions(){
   const raw = getFilteredQuestionsRaw();
@@ -595,7 +521,7 @@ function setActiveQuestion(id, opts){
 function moveActive(delta){
   const ids = getFilteredIds();
   if (!ids.length) return;
-  let idx = activeQuestionId != null ? ids.findIndex(id=>String(id)===String(activeQuestionId)) : -1;
+  let idx = activeQuestionId ? ids.indexOf(activeQuestionId) : -1;
   if (idx < 0) idx = 0;
   let nextIdx = idx + delta;
   if (nextIdx < 0) nextIdx = 0;
@@ -609,6 +535,7 @@ function moveActive(delta){
     renderAll();
     requestAnimationFrame(()=> setActiveQuestion(nextId));
   } else {
+    updateSyncControlsUI();
     setActiveQuestion(nextId);
   }
   persistProgress();
@@ -677,29 +604,8 @@ function showAllMixEditor(){
     selectAllMixedCategory();
   });
 }
-
-function showQuizStatus(emoji, message){
-  const container = document.getElementById("quizContainer");
-  if (!container) return;
-  const box = document.createElement("div");
-  box.className = "empty-hint";
-  const icon = document.createElement("div");
-  icon.className = "emoji";
-  icon.textContent = emoji;
-  const text = document.createElement("p");
-  text.textContent = message;
-  box.append(icon, text);
-  container.replaceChildren(box);
-}
-
-function confirmLeaveRunningExam(){
-  if (!exam.running) return true;
-  return confirm("İmtahan davam edir. Kateqoriyanı dəyişsən, imtahan ləğv olunacaq. Davam edək?");
-}
-
 async function selectAllMixedCategory(){
   const list = getAllCategoryFiles();
-  if (!confirmLeaveRunningExam()) return;
   if (!allMixConfig || !allMixConfig.length){
     showAllMixEditor();
     return;
@@ -712,76 +618,35 @@ async function selectAllMixedCategory(){
   currentCategory = 'ALL';
   currentPage = 1;
   filterMode = 'all'; restoreAllViewPage();
-  syncFilterUI();
   maskMode = { active:false, cleared:false };
   exam.running=false; exam.lastResult=null; exam.questionIds=[];
   if (exam.timerId){ clearInterval(exam.timerId); exam.timerId=null; }
 
-  showQuizStatus("⏳", "ALL mix yüklənir...");
-  clearQuestionRuntimeState();
-  renderSidePanel();
-  renderTinyStats();
-
   const filesToLoad = allMixConfig.slice();
-  let results;
-  try{
-    // fetch all jsons
-    results = await Promise.all(filesToLoad.map(e=>fetch(e.file).then(r=>{
+  // fetch all jsons
+  const results = await Promise.all(filesToLoad.map(e=>fetch(e.file).then(r=>{
     if (!r.ok) throw new Error('Fayl tapılmadı: '+e.file);
     return r.json();
-  }).then(data=>{
-    if (!Array.isArray(data)) throw new Error("JSON massiv deyil: "+e.file);
-    return {file:e.file, weight:e.weight, data};
-  })));
-  }catch(e){
-    console.error(e);
-    showQuizStatus("⚠️", "ALL mix yüklənmədi: " + ((e && e.message) || e));
-    return;
-  }
+  }).then(data=>({file:e.file, weight:e.weight, data}))));
 
   // Build pool per file
   let rawMerged = [];
-  const shortages = [];
   for (const {file, weight, data} of results){
     const needed = Math.max(0, Math.min(100, weight));
-    const arr = data.slice();
-    if (arr.length < needed){
-      shortages.push(`${file}: ${needed} istəndi, ${arr.length} var`);
-    }
+    const arr = Array.isArray(data)? data.slice():[];
     // random sample needed from arr
     const shuffled = shuffleArray(arr);
-    const take = shuffled.slice(0, needed).map(raw=>({
-      raw,
-      file,
-      sourceIndex: arr.indexOf(raw)
-    }));
+    const take = shuffled.slice(0, needed);
     rawMerged = rawMerged.concat(take);
   }
-  if (!rawMerged.length){
-    showQuizStatus("⚠️", "ALL mix üçün yüklənə bilən sual tapılmadı.");
-    return;
-  }
 
-  // Re-normalize with stable internal ids; displayNumber stays compact for the current mix.
-  allQuestions = rawMerged.map((entry, idx)=> normalizeQuestion(entry.raw, idx+1, {
-    id: mixedQuestionId(entry.file, entry.sourceIndex),
-    displayNumber: idx+1,
-    sourceFile: entry.file,
-    sourceIndex: entry.sourceIndex
-  }));
+  // Re-normalize with fresh ids 1..N
+  allQuestions = rawMerged.map((q, idx)=> normalizeQuestion(q, idx+1));
   loadCategoryState();
   applyEditedQuestions();
   flashOrderMode = getSelectedQuizOrder();
   recomputeOrderedIds();
   renderAll(); updateExamUI();
-  queueCloudEditedRefresh();
-
-  if (shortages.length){
-    const warning = "ALL mix: bəzi kateqoriyalarda istədiyin qədər sual yoxdur.\n" + shortages.join("\n");
-    const syncStatus = document.getElementById("syncStatus");
-    if (syncStatus) syncStatus.textContent = warning.replace(/\n/g, " · ");
-    alert(warning);
-  }
 }
 
 // ---------- Render ----------
@@ -817,13 +682,13 @@ function renderQuiz(){
 
     const header = document.createElement("div"); header.className = "question-header";
     const title = document.createElement("div");
-    const num = document.createElement("span"); num.className="question-number"; num.textContent = questionDisplayNumber(q)+".";
-    const tt = document.createElement("span"); tt.className = "question-text"; tt.textContent = q.question;
+    const num = document.createElement("span"); num.className="question-number"; num.textContent = q.id+".";
+    const tt = document.createElement("span"); tt.textContent = q.question;
     title.appendChild(num); title.appendChild(tt);
 
     const meta = document.createElement("div"); meta.className="question-meta";
     const wc = questionWrongCount[q.id]||0; if (wc>0){ const s=document.createElement("span"); s.innerHTML=`<i class="fa fa-fire"></i> ${wc} səhv`; meta.appendChild(s); }
-    if (idListIncludes(flaggedQuestions, q.id)){ const s=document.createElement("span"); s.innerHTML=`<i class="fa fa-flag"></i> flag`; meta.appendChild(s); }
+    if (flaggedQuestions.includes(q.id)){ const s=document.createElement("span"); s.innerHTML=`<i class="fa fa-flag"></i> flag`; meta.appendChild(s); }
     if (editedQuestions[q.id]){ const s=document.createElement("span"); s.innerHTML=`<i class="fa fa-pen"></i> dəyişib`; meta.appendChild(s); }
 
     header.appendChild(title); header.appendChild(meta); card.appendChild(header);
@@ -851,7 +716,7 @@ function renderQuiz(){
     const footer = document.createElement("div"); footer.className="question-footer";
     const actions = document.createElement("div"); actions.className="question-actions";
 
-    const flagBtn = document.createElement("button"); flagBtn.className="icon-btn"; if (idListIncludes(flaggedQuestions, q.id)) flagBtn.classList.add("flagged");
+    const flagBtn = document.createElement("button"); flagBtn.className="icon-btn"; if (flaggedQuestions.includes(q.id)) flagBtn.classList.add("flagged");
     flagBtn.innerHTML = `<i class="fa fa-flag"></i> Flag`; flagBtn.addEventListener("click", ()=> toggleFlag(q.id)); actions.appendChild(flagBtn);
 
     const showBtn = document.createElement("button"); showBtn.className="icon-btn";
@@ -860,7 +725,7 @@ function renderQuiz(){
     const noteBtn = document.createElement("button"); noteBtn.className="icon-btn"; if (questionNotes[q.id]) noteBtn.classList.add("has-note");
     noteBtn.innerHTML = `<i class="fa fa-sticky-note"></i> Qeyd`; noteBtn.addEventListener("click", ()=> toggleNoteEditor(q.id)); actions.appendChild(noteBtn);
 
-    if (idListIncludes(wrongQuestions, q.id)){
+    if (wrongQuestions.includes(q.id)){
       const rmWrongBtn = document.createElement("button"); rmWrongBtn.className="icon-btn";
       rmWrongBtn.innerHTML=`<i class="fa fa-minus-circle"></i> Səhv siyahısından çıxar`; rmWrongBtn.addEventListener("click", ()=> removeFromWrong(q.id)); actions.appendChild(rmWrongBtn);
     }
@@ -903,7 +768,7 @@ function renderQuiz(){
     container.appendChild(card);
   });
   const idsOnPage = pageQuestions.map(q=>q.id);
-  if (!activeQuestionId || !idsOnPage.some(id=>String(id)===String(activeQuestionId))){
+  if (!activeQuestionId || !idsOnPage.includes(activeQuestionId)){
     activeQuestionId = idsOnPage[0];
   }
   setActiveQuestion(activeQuestionId, {scroll:false});
@@ -930,7 +795,6 @@ function renderSidePanel(){
   const notedList = document.getElementById("notedQuestionsList");
   const repeatedList = document.getElementById("repeatedMistakesList");
   const editedList = document.getElementById("editedQuestionsList");
-  const scopeIds = getCurrentQuestionScopeIds();
 
   const s = computeStats();
   if (statsDiv){
@@ -945,54 +809,52 @@ function renderSidePanel(){
 
   if (wrongList){
     wrongList.innerHTML=""; 
-    const visibleWrong = wrongQuestions.filter(id=>scopeIds.has(String(id)) && !!getQuestionById(id)).sort((a,b)=>questionSortValue(a)-questionSortValue(b));
-    if (!visibleWrong.length){ wrongList.classList.add("empty"); wrongList.textContent="Səhv sual yoxdur 🎉"; }
+    if (!wrongQuestions.length){ wrongList.classList.add("empty"); wrongList.textContent="Səhv sual yoxdur 🎉"; }
     else {
       wrongList.classList.remove("empty");
-      visibleWrong.forEach(id=>{ const b=document.createElement("button"); b.className="mini-pill"; b.textContent="#"+questionDisplayNumber(id); b.addEventListener("click",()=>scrollToQuestion(id)); wrongList.appendChild(b); });
+      wrongQuestions.forEach(id=>{ const b=document.createElement("button"); b.className="mini-pill"; b.textContent="#"+id; b.addEventListener("click",()=>scrollToQuestion(id)); wrongList.appendChild(b); });
     }
   }
 
   if (flaggedList){
     flaggedList.innerHTML="";
-    const visibleFlagged = flaggedQuestions.filter(id=>scopeIds.has(String(id)) && !!getQuestionById(id)).sort((a,b)=>questionSortValue(a)-questionSortValue(b));
-    if (!visibleFlagged.length){ flaggedList.classList.add("empty"); flaggedList.textContent="Heç bir sual işarələnməyib"; }
+    if (!flaggedQuestions.length){ flaggedList.classList.add("empty"); flaggedList.textContent="Heç bir sual işarələnməyib"; }
     else {
       flaggedList.classList.remove("empty");
-      visibleFlagged.forEach(id=>{ const b=document.createElement("button"); b.className="mini-pill"; b.textContent="#"+questionDisplayNumber(id); b.addEventListener("click",()=>scrollToQuestion(id)); flaggedList.appendChild(b); });
+      flaggedQuestions.forEach(id=>{ const b=document.createElement("button"); b.className="mini-pill"; b.textContent="#"+id; b.addEventListener("click",()=>scrollToQuestion(id)); flaggedList.appendChild(b); });
     }
   }
 
   if (notedList){
     notedList.innerHTML="";
-    const ids = Object.keys(questionNotes||{}).filter(id=>scopeIds.has(String(id)) && !!getQuestionById(id)).sort((a,b)=>questionSortValue(a)-questionSortValue(b));
+    const ids = Object.keys(questionNotes||{}).map(Number).sort((a,b)=>a-b);
     if (!ids.length){ notedList.classList.add("empty"); notedList.textContent="Qeyd olan sual yoxdur"; }
     else {
       notedList.classList.remove("empty");
-      ids.forEach(id=>{ const b=document.createElement("button"); b.className="mini-pill"; b.textContent="#"+questionDisplayNumber(id); b.addEventListener("click",()=>scrollToQuestion(id)); notedList.appendChild(b); });
+      ids.forEach(id=>{ const b=document.createElement("button"); b.className="mini-pill"; b.textContent="#"+id; b.addEventListener("click",()=>scrollToQuestion(id)); notedList.appendChild(b); });
     }
   }
 
   if (repeatedList){
     repeatedList.innerHTML="";
-    const rep = Object.entries(questionWrongCount||{}).filter(([id,c])=>c>=2 && scopeIds.has(String(id)) && !!getQuestionById(id)).map(([id,c])=>({id, c}));
+    const rep = Object.entries(questionWrongCount||{}).filter(([_,c])=>c>=2).map(([id,c])=>({id:Number(id), c}));
     if (!rep.length){ repeatedList.classList.add("empty"); repeatedList.textContent="Təkrar səhv etdiyin sual yoxdur"; }
     else {
       repeatedList.classList.remove("empty");
-      rep.sort((a,b)=>b.c-a.c || questionSortValue(a.id)-questionSortValue(b.id)).forEach(it=>{ const b=document.createElement("button"); b.className="mini-pill"; b.textContent=`#${questionDisplayNumber(it.id)} · ${it.c} dəfə`; b.addEventListener("click",()=>scrollToQuestion(it.id)); repeatedList.appendChild(b); });
+      rep.sort((a,b)=>b.c-a.c).forEach(it=>{ const b=document.createElement("button"); b.className="mini-pill"; b.textContent=`#${it.id} · ${it.c} dəfə`; b.addEventListener("click",()=>scrollToQuestion(it.id)); repeatedList.appendChild(b); });
     }
   }
 
   if (editedList){
     editedList.innerHTML="";
-    const entries = Object.values(editedQuestions||{}).filter(e=>scopeIds.has(String(e.id)) && !!getQuestionById(e.id)).sort((a,b)=>questionSortValue(a.id)-questionSortValue(b.id));
+    const entries = Object.values(editedQuestions||{}).sort((a,b)=>a.id-b.id);
     if (!entries.length){ editedList.classList.add("empty"); editedList.textContent=""; }
     else {
       editedList.classList.remove("empty");
       entries.forEach(e=>{
         const wrap=document.createElement("div"); wrap.className="edited-item";
         const header=document.createElement("div"); header.className="edited-header";
-        const left=document.createElement("div"); left.textContent="Sual #"+questionDisplayNumber(e.id);
+        const left=document.createElement("div"); left.textContent="Sual #"+e.id;
         const right=document.createElement("div"); right.textContent= e.active==="after" ? "Aktiv: yeni versiya" : "Aktiv: orijinal";
         header.appendChild(left); header.appendChild(right); wrap.appendChild(header);
         const diff=document.createElement("div"); diff.className="edited-diff";
@@ -1053,16 +915,6 @@ function startExam(){
 
   if (!confirm(`İmtahan başlayır: ${qCount} sual, ${minutes} dəqiqə.\nMövcud cavabların silinəcək. Davam edək?`)) return;
 
-  singleQuestionMode = false;
-  questionsPerPage = baseQuestionsPerPage;
-  filterMode = "all";
-  searchQuery = "";
-  currentPage = 1;
-  randomOrderIds = [];
-  maskMode = { active:false, cleared:false };
-  syncFilterUI();
-  syncFlashcardToggleLabel();
-
   exam.running = true; exam.lastResult = null; exam.durationSec = minutes*60;
   const shuffledIds = shuffleArray(allQuestions.map(q=>q.id));
   exam.questionIds = shuffledIds.slice(0, qCount);
@@ -1100,7 +952,7 @@ function finishExam(manual){
 
 // ---------- Actions ----------
 function updateQuestionCardVisuals(id){
-  const q = getQuestionById(id); if(!q) return;
+  const q = allQuestions.find(qq=>qq.id===id); if(!q) return;
   const card = document.getElementById("question-"+id); if(!card) return;
 
   const maskActive = (maskMode.active && !maskMode.cleared);
@@ -1126,16 +978,14 @@ function updateQuestionCardVisuals(id){
 }
 
 function onAnswerClick(id, index){
-  const q = getQuestionById(id); if (!q) return;
+  const q = allQuestions.find(qq=>qq.id===id); if (!q) return;
 
   // Dərhal yadda saxla
   selectedAnswers[id] = { index, value: q.answers[index], updatedAt: Date.now() };
 
   if (index !== q.correctIndex){
-    if (!idListIncludes(wrongQuestions, id)) wrongQuestions.push(id);
+    if (!wrongQuestions.includes(id)) wrongQuestions.push(id);
     questionWrongCount[id] = (questionWrongCount[id]||0)+1;
-  } else {
-    wrongQuestions = removeIdFromList(wrongQuestions, id);
   }
   saveCategoryState();
 
@@ -1149,14 +999,14 @@ function onAnswerClick(id, index){
 }
 
 function toggleFlag(id){
-  if (idListIncludes(flaggedQuestions, id)) flaggedQuestions = removeIdFromList(flaggedQuestions, id);
+  if (flaggedQuestions.includes(id)) flaggedQuestions = flaggedQuestions.filter(x=>x!==id);
   else flaggedQuestions.push(id);
   saveCategoryState(); renderSidePanel(); renderQuiz();
 }
 function removeFromWrong(id){
-  if (!idListIncludes(wrongQuestions, id)) return;
+  if (!wrongQuestions.includes(id)) return;
   if (!confirm("Bu sualı 'səhv suallar' siyahısından çıxarmaq istəyirsən?")) return;
-  wrongQuestions = removeIdFromList(wrongQuestions, id);
+  wrongQuestions = wrongQuestions.filter(x=>x!==id);
   saveCategoryState(); renderAll();
 }
 function toggleCorrectAnswer(id){
@@ -1168,13 +1018,14 @@ function toggleNoteEditor(id){
   el.classList.toggle("open");
 }
 function scrollToQuestion(id){
-  const target = getQuestionByIdOrDisplay(id);
-  if (!target) return;
-  const qid = target.id;
+  // Sanitize id like "677)" -> 677
+  const m = String(id).match(/\d+/);
+  if (!m) return;
+  const qid = parseInt(m[0], 10);
 
   // Ensure navigation works across pages and even when filtered out
   const within = getFilteredQuestions();
-  let idx = within.findIndex(q => String(q.id) === String(qid));
+  let idx = within.findIndex(q => q.id === qid);
   if (idx !== -1){
     const targetPage = Math.floor(idx / questionsPerPage) + 1;
     if (currentPage !== targetPage){
@@ -1189,16 +1040,15 @@ function scrollToQuestion(id){
   }
 
   // If not found due to filters/search, temporarily show all
-  const exists = allQuestions.some(q => String(q.id) === String(qid));
+  const exists = allQuestions.some(q => q.id === qid);
   if (!exists) return;
   const prevFilter = filterMode;
   const prevQuery  = searchQuery;
   filterMode = "all";
   searchQuery = "";
-  syncFilterUI();
   recomputeOrderedIds();
   const allList = getFilteredQuestions();
-  idx = allList.findIndex(q => String(q.id) === String(qid));
+  idx = allList.findIndex(q => q.id === qid);
   if (idx !== -1){
     currentPage = Math.floor(idx / questionsPerPage) + 1;
     renderAll();
@@ -1212,10 +1062,9 @@ function scrollToQuestion(id){
   // Revert if somehow still not found
   filterMode = prevFilter;
   searchQuery = prevQuery;
-  syncFilterUI();
 }function toggleEditedVersion(id){
   const e = editedQuestions[id]; if(!e) return;
-  const q = getQuestionById(id); if(!q) return;
+  const q = allQuestions.find(qq=>qq.id===id); if(!q) return;
   if (e.active==="after"){
     e.active="before"; q.question=e.before.question; q.answers=e.before.answers.slice(); q.correctIndex=e.before.correctIndex;
   } else {
@@ -1245,7 +1094,7 @@ function resetAllAnswersInCategory(){
 function editQuestion(id){
   if (!isAdmin){ alert("Bu funksiya yalnız admin üçündür."); return; }
 
-  const q = getQuestionById(id);
+  const q = allQuestions.find(qq => qq.id === id);
   if (!q){ alert("Sual tapılmadı."); return; }
 
   const card = document.getElementById("question-"+id);
@@ -1300,7 +1149,6 @@ function editQuestion(id){
 
       delete selectedAnswers[id];
       saveCategoryState();
-      try{ savePublicEditedForCurrentCategory(); }catch{}
 
       // Kartı yenidən göstər
       renderAll();
@@ -1460,13 +1308,11 @@ window.editQuestion = editQuestion;
 
 
 function selectCategory(filename){
-  if (!confirmLeaveRunningExam()) return;
     // new salt on each category switch so answer order changes
   VIEW_SALT = (Math.random()*4294967296)>>>0;
 currentCategory = filename;
   currentPage = 1;
   filterMode = "all"; restoreAllViewPage();
-  syncFilterUI();
   maskMode = { active:false, cleared:false }; // yeni kateqoriyada maskanı sıfırla
 
   exam.running=false; exam.lastResult=null; exam.questionIds=[];
@@ -1479,10 +1325,6 @@ currentCategory = filename;
   const container = document.getElementById("quizContainer");
   if (container) container.innerHTML = `<div class="empty-hint"><div class="emoji">⏳</div><p>Suallar yüklənir...</p></div>`;
 
-  clearQuestionRuntimeState();
-  renderSidePanel();
-  renderTinyStats();
-
   fetch(filename).then(r=>{
     if(!r.ok) throw new Error("Fayl tapılmadı");
     return r.json();
@@ -1493,7 +1335,6 @@ currentCategory = filename;
     flashOrderMode = getSelectedQuizOrder();
     recomputeOrderedIds();
     renderAll(); updateExamUI();
-    queueCloudEditedRefresh();
   }).catch(e=>{
     console.error(e);
     if (container) container.innerHTML = `<div class="empty-hint"><div class="emoji">⚠️</div><p>Faylı yükləmək alınmadı: ${filename}</p></div>`;
@@ -1503,16 +1344,6 @@ currentCategory = filename;
 function getSelectedQuizOrder(){
   const r = document.querySelector('input[name="quizOrder"]:checked');
   return r ? r.value : 'sequential';
-}
-
-function syncFilterUI(){
-  document.querySelectorAll(".quiz-filter-btn[data-filter]").forEach(btn=>{
-    btn.classList.toggle("active", (btn.getAttribute("data-filter") || "all") === filterMode);
-  });
-  const searchInput = document.getElementById("searchInput");
-  if (searchInput && searchInput.value !== (searchQuery || "")){
-    searchInput.value = searchQuery || "";
-  }
 }
 
 function resetCurrentCategory(){
@@ -1578,15 +1409,6 @@ function updateDarkButtonUI(){
 }
 
 // ---------- Flashcard ----------
-function syncFlashcardToggleLabel(){
-  const floatFlashBtn = document.getElementById("flashcardFloatingToggle");
-  if (floatFlashBtn){
-    floatFlashBtn.textContent = "🗂️ " + (singleQuestionMode ? "Flashcard ON" : "Flashcard");
-  }
-  const sqToggleEl = document.getElementById("singleQuestionModeToggle");
-  if (sqToggleEl) sqToggleEl.checked = singleQuestionMode;
-}
-
 function updateFlashcardUI(){
   const controls = document.getElementById("flashcardControls"); const body=document.body;
   if (singleQuestionMode){ body.classList.add("flashcard-mode"); if (controls) controls.classList.remove("hidden"); }
@@ -1755,7 +1577,13 @@ document.addEventListener("DOMContentLoaded", ()=>{
   ensure();
 
   // Açma düyməsi (mövcud düyməni eyni saxlayırıq)
-  // Legacy single-text notes modal is kept dormant; the main notes manager owns the Notes button.
+  const btn = document.getElementById("openNotesBtn");
+  if (btn){
+    btn.addEventListener("click", (e)=>{
+      e.preventDefault(); e.stopImmediatePropagation();
+      if (window.__openSimpleNotes) window.__openSimpleNotes();
+    });
+  }
 })();
 
 
@@ -1812,14 +1640,14 @@ document.addEventListener("DOMContentLoaded", ()=>{
       const catLabel = document.getElementById("notesCatLabel");
       if (catLabel) catLabel.textContent = currentCategory || "—";
 
-      const ids = Object.keys(questionNotes||{}).filter(id=>!!getQuestionById(id)).sort((a,b)=>questionSortValue(a)-questionSortValue(b));
+      const ids = Object.keys(questionNotes||{}).map(Number).sort((a,b)=>a-b);
       if (!ids.length){
         body.innerHTML = `<div class="notes-empty">Bu kateqoriya üçün qeyd yoxdur.</div>`;
         return;
       }
       const frag = document.createDocumentFragment();
       ids.forEach(id=>{
-        const q = getQuestionById(id);
+        const q = (allQuestions||[]).find(qq=>qq.id===id);
         const note = (questionNotes||{})[id] || "";
         if (search){
           const hay = (String(q && q.question || "") + " " + note).toLowerCase();
@@ -1830,7 +1658,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
 
         const idCol = document.createElement("div");
         idCol.className = "notes-id";
-        idCol.textContent = "#" + questionDisplayNumber(id);
+        idCol.textContent = "#" + id;
 
         const textCol = document.createElement("div");
         textCol.className = "notes-text";
@@ -1916,7 +1744,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
       if (sqToggleEl) sqToggleEl.checked = singleQuestionMode;
       flashOrderMode = getSelectedQuizOrder();
       questionsPerPage = singleQuestionMode ? 1 : baseQuestionsPerPage;
-      if (singleQuestionMode){ restoreFlashPage(); } else { if (filterMode==="all") restoreAllViewPage(); else currentPage=1; } window.__suppressPageReset=true; recomputeOrderedIds({ preservePage: singleQuestionMode }); window.__suppressPageReset=false; persistProgress(); renderAll(); updateFlashcardUI(); syncFlashcardToggleLabel(); }) ;
+      if (singleQuestionMode){ restoreFlashPage(); } else { if (filterMode==="all") restoreAllViewPage(); else currentPage=1; } window.__suppressPageReset=true; recomputeOrderedIds(); window.__suppressPageReset=false; persistProgress(); renderAll(); updateFlashcardUI(); syncLabel(); }) ;
   }
 
   const startBtn=document.getElementById("startBtn");
@@ -1936,7 +1764,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
   });
 
   // Filtr düymələri → maskanı qur
-  document.querySelectorAll(".quiz-filter-btn[data-filter]").forEach((btn)=>{
+  document.querySelectorAll(".quiz-filter-btn").forEach((btn)=>{
     btn.addEventListener("click", ()=>{
       const mode = btn.getAttribute("data-filter") || "all";
       filterMode = mode;
@@ -1944,7 +1772,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
       maskMode.active  = (mode === "wrong" || mode === "flagged");
       maskMode.cleared = false;
 
-      syncFilterUI();
+      document.querySelectorAll(".quiz-filter-btn").forEach(b=> b.classList.toggle("active", b===btn));
       if (mode==="all" && !singleQuestionMode) { restoreAllViewPage(); } else { currentPage=1; } window.__suppressPageReset=true; recomputeOrderedIds(); window.__suppressPageReset=false; persistProgress(); renderAll();
     });
   });
@@ -2021,11 +1849,17 @@ document.addEventListener("DOMContentLoaded", ()=>{
 
 // Mobile helper
 function toggleMobileMode(){ document.body.classList.toggle('flashcard-mode'); }
-function queueCloudEditedRefresh(){
-  if (typeof refreshCloudEditedPreview !== "function") return;
-  setTimeout(()=> refreshCloudEditedPreview(), 0);
-}
 // ---------- Cloud Edited Questions (Firebase) — preview & apply (ADDED) ----------
+function _getRemoteEditedForCurrentCategory(remoteData){
+  try{
+    const data = remoteData && remoteData.data ? remoteData.data : (remoteData || {});
+    const key = storageKey("editedQuestions");
+    const raw = data[key];
+    const map = (typeof raw === "string") ? _parseJSONMaybe(raw) : raw;
+    return (map && typeof map === "object") ? map : {};
+  }catch{ return {}; }
+}
+
 function renderCloudEditedList(remoteEditedMap, updatedAt){
   const list = document.getElementById("cloudEditedQuestionsList");
   const status = document.getElementById("cloudStatus");
@@ -2037,9 +1871,7 @@ function renderCloudEditedList(remoteEditedMap, updatedAt){
   }
   if (!list) return;
   list.innerHTML = "";
-  const entries = Object.values(remoteEditedMap||{})
-    .filter(e=>!!getQuestionById(e.id))
-    .sort((a,b)=> questionSortValue(a.id)-questionSortValue(b.id));
+  const entries = Object.values(remoteEditedMap||{}).sort((a,b)=> (a.id||0)-(b.id||0));
   if (!entries.length){
     list.classList.add("empty");
     list.textContent = "Göstəriləcək dəyişiklik yoxdur";
@@ -2049,7 +1881,7 @@ function renderCloudEditedList(remoteEditedMap, updatedAt){
   entries.forEach(e=>{
     const btn = document.createElement("button");
     btn.className = "mini-pill";
-    btn.textContent = "#" + questionDisplayNumber(e.id);
+    btn.textContent = "#" + e.id;
     const newQ = e && e.after && e.after.question ? String(e.after.question) : "";
     if (newQ) btn.title = newQ.slice(0,96);
     btn.addEventListener("click", ()=>{
@@ -2062,10 +1894,7 @@ function renderCloudEditedList(remoteEditedMap, updatedAt){
   });
 }
 
-async function refreshCloudEditedPreviewAuthOnlyLegacy(){
-  return refreshCloudEditedPreview();
-}
-/*
+async function refreshCloudEditedPreview(){
   const list = document.getElementById("cloudEditedQuestionsList");
   const status = document.getElementById("cloudStatus");
   if (status) status.textContent = "Bulud · yüklənir…";
@@ -2084,7 +1913,14 @@ async function refreshCloudEditedPreviewAuthOnlyLegacy(){
     if (status) status.textContent = "Bulud · —";
   }
 }
-*/
+(function(){
+  const btn = document.getElementById("cloudRefreshBtn");
+  if (btn && !btn.__wired){
+    btn.__wired = true;
+    btn.addEventListener("click", ()=> refreshCloudEditedPreview());
+  }
+  setTimeout(()=> refreshCloudEditedPreview(), 0);
+})();
 // /mnt/data/app.js
 /* ====== PUBLIC (readable-by-everyone) EDITED QUESTIONS ====== */
 /* Firestore: publicAppState/state -> { data: { "<quiz_<cat>_editedQuestions>": { ... } }, updatedAt } */
@@ -2149,6 +1985,41 @@ async function refreshCloudEditedPreview(){
     if (status) status.textContent = "Bulud · —";
   }
 }
+
+/* ====== HOOK INTO ADMIN SAVE: also push to PUBLIC ====== */
+// Patch: call savePublicEditedForCurrentCategory() after local save
+(function patchEditQuestionPublicSave(){
+  // keep original reference
+  const _origEditQuestion = window.editQuestion;
+  if (typeof _origEditQuestion !== "function") return;
+
+  window.editQuestion = function(id){
+    // wrap to inject onSave handler patch
+    const beforeRenderAll = renderAll; // keep pointer
+
+    // Monkey-patch buildInlineEditor -> onSave
+    const _origBuild = window.buildInlineEditor;
+    if (typeof _origBuild === "function"){
+      window.buildInlineEditor = function(q, handlers){
+        const h = Object.assign({}, handlers);
+        const userOnSave = h.onSave;
+        h.onSave = (payload)=>{
+          // run original onSave first (writes editedQuestions locally)
+          if (typeof userOnSave === "function") userOnSave(payload);
+          // then push to PUBLIC (async, fire-and-forget)
+          try{ savePublicEditedForCurrentCategory(); }catch{}
+          // nothing else changes
+        };
+        const form = _origBuild(q, h);
+        // restore to avoid double-wrapping other calls
+        window.buildInlineEditor = _origBuild;
+        return form;
+      };
+    }
+    // call original flow
+    return _origEditQuestion(id);
+  };
+})();
 
 /* ====== WIRING FOR REFRESH BUTTON (idempotent) ====== */
 (function(){

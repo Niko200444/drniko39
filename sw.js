@@ -1,5 +1,5 @@
 // PWA service worker (robust, no install-time failures)
-const CACHE_NAME = 'ets-quiz-v8';
+const CACHE_NAME = 'ets-quiz-v7';
 const CORE = [
   './',
   './index.html',
@@ -33,10 +33,8 @@ async function networkFirst(req){
   if (req.method !== 'GET') return fetch(req);
   try{
     const fresh = await fetch(req);
-    if (fresh && fresh.ok){
-      const cache = await caches.open(CACHE_NAME);
-      await cache.put(req, fresh.clone());
-    }
+    const cache = await caches.open(CACHE_NAME);
+    req.method==='GET' && cache.put(req, fresh.clone());
     return fresh;
   }catch(e){
     const cached = await caches.match(req);
@@ -50,7 +48,7 @@ async function staleWhileRevalidate(req){
   const cache = await caches.open(CACHE_NAME);
   const cached = await caches.match(req);
   const fetchPromise = fetch(req).then((resp)=>{
-    if (resp && resp.ok) cache.put(req, resp.clone());
+    req.method==='GET' && cache.put(req, resp.clone());
     return resp;
   }).catch(()=>cached);
   return cached || fetchPromise;
@@ -62,9 +60,12 @@ self.addEventListener('fetch', (event) => {
   const url = new URL(req.url);
   const isHTML = req.mode === 'navigate' || req.destination === 'document' || url.pathname.endsWith('/');
   const isJSON = url.pathname.endsWith('.json');
-  const isAppAsset = url.origin === self.location.origin && /\.(?:js|css|webmanifest)$/.test(url.pathname);
 
-  if (isHTML || isJSON || isAppAsset) {
+  if (isHTML) {
+    event.respondWith(networkFirst(req));
+    return;
+  }
+  if (isJSON){
     event.respondWith(networkFirst(req));
     return;
   }
