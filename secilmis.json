@@ -1,0 +1,354 @@
+[
+  {
+    "number": 159,
+    "question": "Peutz-Yeghers sindromu nə ilə səciyyələnir:",
+    "answers": [
+      "mədə-bağırsaq traktının çoxsaylı retension polipləri ilə",
+      "yoğun bağırsağın autosom-domunant yolla irsən ötürülən adenomatoz polipozu, yumşaq toxuma və sümük şişləri ilə",
+      "yoğun bağırsaqda autosom-domunant yolla irsən ötürülən çoxsaylı adenomatoz poliplərin olması ilə",
+      "yoğun bağırsağın autosom-resessiv yolla ötürülmə tərzinə malik adenomatoz polipozu və mərkəzi sinir sisteminin şişi ilə",
+      "əsasən nazik bağırsağı zədələməklə qastrointestinal traktın bağırsağın hamartomatoz polipozu və mukokutaneoz piqmentasiya ilə"
+    ]
+  },
+  {
+    "number": 185,
+    "question": "Qida borusu xərçənginin əsas histoloji forması aşağıdakıdır:",
+    "answers": [
+      "keçid hüceyrəli xərçəng",
+      "buynuzlaşmayan yasti hüceyrəli xərçəng",
+      "sarkoma",
+      "adenokarsinoma",
+      "xırda hüceyrəli xərçəng"
+    ]
+  },
+  {
+    "number": 199,
+    "question": "Qida borusunun boyun hissəsinin xərçəngində əsas tətbiq olunur.",
+    "answers": [
+      "targent terapiya",
+      "hormonal terapiya",
+      "kimyəvi terapiya",
+      "cərrahiyə müalicə",
+      "şüa müalicəsi"
+    ]
+  },
+  {
+    "number": 205,
+    "question": "Mədə xərçənginin əmələ gəlməsində aşağıdakılardan hansı irsi gen mutasiyalarının rolu təsdiq edilməmişdir:",
+    "answers": [
+      "APC gen mutasıyası",
+      "CDH gen mutasiyası",
+      "P53 gen mutasıyası",
+      "BRCA2 gen mutasiyası",
+      "MMR gen mutasiyası"
+    ]
+  },
+  {
+    "number": 213,
+    "question": "Mədə xərçənginin TNM təsnifatında Tis nəyi səciyyələndirir:",
+    "answers": [
+      "şişin əzələ qişasına keçmədiyini",
+      "birincili şişin aşkar edilə bilməməsini",
+      "şişin selikli qişa hüdudunda məhdudlaşmasını",
+      "şişin selikaltı qatda məhdudlaşmasını",
+      "şişin bazal membranı keçməməsini"
+    ]
+  },
+  {
+    "number": 217,
+    "question": "İnstrumental müayinələr arasında mədə xərçənginin aşkar edilməsi baxımından ən informativi hansıdır:",
+    "answers": [
+      "nüvə-maqnit tomoqrafiyası",
+      "ultrasəs müayinəsi",
+      "kompüter tomoqrafiya",
+      "həzm traktının kontrast rentgenoloji müayinəsi",
+      "qastroskopiya"
+    ]
+  },
+  {
+    "number": 218,
+    "question": "Mədə xərçənginin rezektabelliyinin preoperativ dövrdə qiymətləndirməsində aşağıdakı müayinələrdən ən dəqiqi hansıdır:",
+    "answers": [
+      "qastroskopiya",
+      "bioptatın patohistoloji müayinəsi",
+      "ultrasəs müayinəsi",
+      "kompüter-tomoqrafiya, yaxud maqnit-rezonans tomoqrafiya",
+      "rentgenoloji müayinə"
+    ]
+  },
+  {
+    "number": 231,
+    "question": "Süd vəzisi xərçənginin ən geniş yayılmış histoloji forması hansıdır:",
+    "answers": [
+      "papillyar xərçəng",
+      "infiltrativ paycıq xərçəng",
+      "qeyri- infiltrativ paycıq xərçəng",
+      "qeyri-infiltrativ axardaxili xərçəng",
+      "infiltrativ axardaxili xərçəng"
+    ]
+  },
+  {
+    "number": 255,
+    "question": "Müasir dövrdə ən çox istifadə edilən mastektomiya modifikasiyası hansıdır:",
+    "answers": [
+      "sadə mastektomiya",
+      "Urban üsulu ilə mastektomiya",
+      "Peyti-Dayson üsulu ilə mastektomiya",
+      "Xolsted-Mayer üsulu ilə mastektomiya",
+      "Maden üsülü ilə mastektomiya"
+    ]
+  },
+  {
+    "number": 275,
+    "question": "Sümük sarkomalarının diqanostikasında hansı müayinə üsulu həll edicidir:",
+    "answers": [
+      "radioizotop müayinə",
+      "angioqrafik müayinə",
+      "KT müayinə",
+      "rentgenoloji müayinə",
+      "morfoloji müayinə"
+    ]
+  },
+  {
+    "number": 277,
+    "question": "Osteogen sarkomanın müasir müalicə üsulu:",
+    "answers": [
+      "cərrahi müalicə",
+      "cərrahi müalicə + şüa müalicəsi",
+      "kimyəvi dərman müalicəsi",
+      "şüa müalicəsi",
+      "kompleks müalicə (əməliyyatönü kimyəvi dərman müalicəsi + əməliyyat + adyuvant kimyəvi dərman müalicəsi)"
+    ]
+  },
+  {
+    "number": 278,
+    "question": "Bu şişlərdən hansı şüa terapiyasına daha həssasdır:",
+    "answers": [
+      "osteogen sarkoma",
+      "xondrosarkoma",
+      "bədxassəli fibroz histiositoma",
+      "parostal sarkoma",
+      "sümüyün bədxassəli limfoması + Yuinq sarkoması"
+    ]
+  },
+  {
+    "number": 290,
+    "question": "Uşaqlıq boynu xərçənginin əsas metastazvermə yolu:",
+    "answers": [
+      "kontakt",
+      "limfohematogen",
+      "implantasion",
+      "limfogen",
+      "hematogen"
+    ]
+  },
+  {
+    "number": 310,
+    "question": "Uşaqlıq boynu xərçəngi zamanı kimyəvi dərman müalicəsində ən yüksək effektivliyə malik preparatlar:",
+    "answers": [
+      "Letrozol",
+      "Zoladex",
+      "Fareston",
+      "Sisplatin, İzofosfamid",
+      "Tamoksifen"
+    ]
+  },
+  {
+    "number": 315,
+    "question": "Uşaqlıq cismi xərçənginin estrogendən asılı olmayan patogenetik variantı xəstələrin neçə faizində müşahidə olunur:",
+    "answers": [
+      "15%",
+      "20%",
+      "60%",
+      "30%",
+      "70%"
+    ]
+  },
+  {
+    "number": 328,
+    "question": "Uşaqlıq cismi xərçəngi hematogen yolla metastaz verir:",
+    "answers": [
+      "qaraciyərə",
+      "bütün cavablar düzgündür",
+      "baş beyinə",
+      "ağciyərlərə",
+      "sümüklərə"
+    ]
+  },
+  {
+    "number": 361,
+    "question": "Cüt orqanların bədxassəli şişlərində M kateqoriyası hansı orqanın şişinə aid olduğu təyin olunur:",
+    "answers": [
+      "KT",
+      "PET",
+      "qanın biokimyəvi müayinəsi ilə",
+      "MRT",
+      "morfoloji müayinə ilə"
+    ]
+  },
+  {
+    "number": 384,
+    "question": "Hansı orqan və sistemlərin bədxassəli proseslərinin diaqnostikasında radioizotop müayinəsindən istifadə edilmir:",
+    "answers": [
+      "böyrək şişlərində",
+      "qalxanabənzər vəzinin şişlərində",
+      "qaraciyərin birincili və ikincili şişlərində",
+      "bazaliomalar",
+      "sümüklərə metastazlar zamanı"
+    ]
+  },
+  {
+    "number": 390,
+    "question": "Bədxassəli fibroz-histiositomanın hansı histoloji variantı yoxdur:",
+    "answers": [
+      "iltihabi",
+      "nəhənghüceyrəli",
+      "pleomorf",
+      "miksoid",
+      "alveolyar"
+    ]
+  },
+  {
+    "number": 398,
+    "question": "Yumurtalıqların epitelial şişlərin diaqnostikası və müalicə effektivliyinin qiymətləndirilməsində istifadə edilən onkomarker göstəricisi:",
+    "answers": [
+      "İXQ",
+      "CA-15-3",
+      "PSA",
+      "AFP",
+      "CA-125"
+    ]
+  },
+  {
+    "number": 401,
+    "question": "Yumurtalıq şişlərinin histoloji tipinə aid deyil:",
+    "answers": [
+      "qranulyoz hüceyrəli şiş",
+      "disherminoma",
+      "androblastoma",
+      "Brenner şişi",
+      "medulyar xərçəng"
+    ]
+  },
+  {
+    "number": 407,
+    "question": "Aşağıdakılardan hansı yumurtalıqların bədxassəli şişlərindən radioterapiyaya ən həssas olanıdır:",
+    "answers": [
+      "endometriod xərçəng",
+      "musinoz xərçəng",
+      "seroz xərçəng",
+      "uşaqlıq artımı stromanın şişləri",
+      "disherminomalar"
+    ]
+  },
+  {
+    "number": 408,
+    "question": "Sümük sarkomalarının hansı növü skeletin digər sümüklərinə metastaz verməyə daha meyillidir:",
+    "answers": [
+      "Osteogen sarkoma",
+      "Sümüyün primitiv neyroektodermal şişi",
+      "Xondrosarkoma",
+      "Yuinq sarkoması",
+      "Fibrosarkoma"
+    ]
+  },
+  {
+    "number": 409,
+    "question": "Sümüyün nəhənghüceyrəli şişi maliqnizasiyaya uğradıqda hansı sarkoma növünə çevrilə bilər:",
+    "answers": [
+      "Sümüyün nəhənghüceyrəli şişi maliqnizasiyaya uğramır",
+      "Sümüyün primitiv neyroektodermal şişi",
+      "Yuinq sarkoması",
+      "Xondrosarkoma",
+      "Fibrosarkoma və ya osteogen sarkoma"
+    ]
+  },
+  {
+    "number": 412,
+    "question": "Hansı halda yalnız cərrahi müalicə ilə kifayətlənmək olar:",
+    "answers": [
+      "Bütün cavablar doğrudur",
+      "Sümüyün primitiv neyroektodermal şişi",
+      "Sümüyün bədxassəli fibroz histiositoması və osteoxondroma",
+      "Sümüyün nəhənghüceyrəli şişi və osteogen sarkoma",
+      "Osteoid-osteoma və osteoxondroma"
+    ]
+  },
+  {
+    "number": 415,
+    "question": "Qaraciyər xərçənginin müalicəsinə aid deyil:",
+    "answers": [
+      "mikrodalğa ilə koaqulyasion terapiya",
+      "perikutans sirkə turşu inyeksiyası",
+      "krioablasiya",
+      "total-mezorektal ekssiziya",
+      "radiotezliklə ablasiya"
+    ]
+  },
+  {
+    "number": 417,
+    "question": "Mədənin antral hissəsinin stenozla ağırlaşmış inrezektabel xərçəngi zamanı hansı cərrahi əməliyyat aparılır:",
+    "answers": [
+      "total kolektomiya",
+      "proksimal subtotal rezeksiya",
+      "distal subtotal rezeksiya",
+      "qastroektomiya",
+      "qastroenterostomiya"
+    ]
+  },
+  {
+    "number": 419,
+    "question": "Düz bağırsağın hansı şöbəsini xərçəngi üçün şüa müalicəsi xarakterikdir:",
+    "answers": [
+      "yuxarı ampulyar hissə",
+      "s-vari bağırsaq",
+      "rektosiqmoid nahiyə",
+      "bütün şöbələri üçün xarakterikdir",
+      "aşağı ampulyar hissə"
+    ]
+  },
+  {
+    "number": 430,
+    "question": "Süd vəzisinin hansı şişləri daha tez maliqnizasiya uğrayır:",
+    "answers": [
+      "perikanalikulyar fibroadenomalar",
+      "lipomalar",
+      "adenomalar",
+      "filloid şişlər",
+      "intrakanalikulyar fibroadenomalar"
+    ]
+  },
+  {
+    "number": 431,
+    "question": "Uşaqlıq boununun xərçəngönü xəstəliklərinə aiddir:",
+    "answers": [
+      "Keyra eritroplaziyası",
+      "Xaşimoto tireoiditi",
+      "Intestinal metaplaziya",
+      "Pecet xəstəliyi",
+      "Epitelial displaziya"
+    ]
+  },
+  {
+    "number": 433,
+    "question": "Uşaqlıq boynu xərçənginin cərrahi müalicəsinə aiddir:",
+    "answers": [
+      "Bilobektomiya",
+      "Soltərəfli hemikolektomiya",
+      "Lyuis əməliyyatı",
+      "Düken əməliyyatı",
+      "Vertheym əməliyyatı"
+    ]
+  },
+  {
+    "number": 435,
+    "question": "Endometriumun xərçəngi zamanı hormonal terapiyada istifadə olunan peparatlar:",
+    "answers": [
+      "testesteron propionat",
+      "prednizolon",
+      "17-oksiprogesteron kapronat",
+      "L-tiroksin",
+      "Tamoksifen"
+    ]
+  }
+]
