@@ -1,1002 +1,502 @@
 [
   {
-    "question": "Sümüklərin birincili bədxassəli şişiləri daha çox rast gəlinir:",
+    "question": "Göstərilənlərdən hansı qaraciyərxarici öd axarlarına aid deyil?",
     "answers": [
-      "uzunborulu sümüklərdə",
-      "bütün sümüklərdə eyni tezliklə",
-      "xırda sümüklərdə",
-      "yastı sümüklərdə",
-      "qarışıq strukturlu sümüklərdə"
+      "Öd kanalcıqları",
+      "Oddi sfinkteri",
+      "Öd kisəsi və axarı",
+      "Sağ pay axacaqları",
+      "Sol pay axacaqları"
     ]
   },
   {
-    "question": "Sümük şişlərində ən tez rast gəlinən və bədxassəli gedişə malik olan şiş:",
+    "question": "Xolelitiaz nədir?",
     "answers": [
-      "osteogen sarkoma",
-      "parostal sarkoma",
-      "retikulosarkoma",
-      "xondrosarkoma",
-      "Yuinq sarkoması"
+      "Öd daşı",
+      "Öd yollarının fibrozu",
+      "Öd kisəsinin iltihabı",
+      "Öd yollarının iltihabı",
+      "Öd yollarının adenokarsinoması"
     ]
   },
   {
-    "question": "Skeletin hansı sümükləri daha çox metastatik zədələnmələrə məruz qalır:",
+    "question": "Xolesistit nədir?",
     "answers": [
-      "yastı sümüklər",
-      "bütün sümüklər eyni tezliklə",
-      "qarışıq strukturlu sümüklər",
-      "xırda sümüklər",
-      "uzunborulu sümüklər"
+      "Öd yollarının iltihabı",
+      "Öd daşı",
+      "Ümumi öd axarında daş",
+      "Öd kisəsinin iltihabı",
+      "Öd yollarının adenokarsinoması"
     ]
   },
   {
-    "question": "Osteogen sarkoma zamanı hansı sümük daha çox zədələnir:",
+    "question": "Öd sancısını törədən xəstəliklərdən hansı öd daşına bağlı deyil?",
     "answers": [
-      "diz oynağını əmələ gətirən sümüklər",
-      "qalça sümüyü",
-      "kürək sümüyü",
-      "incik sümüyü",
-      "kiçik sümüklər"
+      "Oddi sfinktoru diskineziyası",
+      "Xolangit",
+      "Biliar pankreatit",
+      "Xoledoxolitiaz",
+      "Xroniki daşlı xolesistit"
     ]
   },
   {
-    "question": "Sümüklərin xoşxassəli şişlərində və şişəbənzər zədələnmələrində hansı müalicə üsulundan istifadə edilir:",
+    "question": "32 yaşlı qadın xəstə klinikaya qaşınma, gözün sklerasının və dilin altının saralması şikayətləri ilə daxil olmuşdur. Xəstənin deməsinə görə sarılıq və qaşınma əlamətləri iki gün ərzində başlamış və getdikcə şiddətlənmişdir. Labarator müayinədə QF və QQT səviyyələrinin artması müşahidə edilmişdir. Diaqnoz nədir?",
     "answers": [
-      "cərrahi müalicə",
-      "kimyəvi dərman müalicəsi",
-      "kombinəolunmuş müalicə",
-      "şüa müalicəsi",
-      "kompleks müalicə"
+      "Xolestaz",
+      "Sirroz",
+      "Pankreatit",
+      "Hepatit",
+      "Xolesistolitiaz"
     ]
   },
   {
-    "question": "Hansı orqanların bədxassəli şişləri kişilərdə ən çox skelet sümüklərinə metastaz verir:",
+    "question": "Göstərilənlərdən hansı mexaniki sarılıq nəticəsində bağırsaqlarda əmələ gələn patalogiyalara aid deyil?",
     "answers": [
-      "ağciyər xərçəngi, prostat vəzi xərçəngi",
-      "sidik kisəsinin xərçəngi",
-      "yoğun bağırsaq xərçəngi",
-      "qalxanvari vəzin xərçəngi",
-      "qaraciyər xərçəngi"
+      "Biliar sirroz",
+      "Translokasiya",
+      "Diareya",
+      "Malabsorbsiya",
+      "Avitaminozlar"
     ]
   },
   {
-    "question": "Osteogen sarkoma hansı növ şişlərə aiddir:",
+    "question": "Mexaniki sarılığın səbəbini hansı müayinə daha dəqiq göstərir?",
     "answers": [
-      "sümük əmələ gətirən",
-      "damar mənşəli",
-      "fibroz",
-      "sümük iliyi mənşəli",
-      "qığırdaq əmələ gətirən"
+      "MRT",
+      "Rentgen",
+      "USM",
+      "Qastroskopiya",
+      "KT"
     ]
   },
   {
-    "question": "Sümük sarkomaları hansı yolla daha çox metastaz verir:",
+    "question": "Qəhvəyi xoledox daşlarının səbəbi nədir?",
     "answers": [
-      "hematogen",
-      "qarışıq",
-      "imlantasion",
-      "limfo-hematogen",
-      "limfogen"
+      "İnfeksiya",
+      "Bilirubin artması",
+      "Sirroz",
+      "Xolesterin artması",
+      "Hemoliz"
     ]
   },
   {
-    "question": "Sümük sarkomalarının diqanostikasında hansı müayinə üsulu həll edicidir:",
+    "question": "31 yaşlı qadın xəstə klinikaya sağ qabırğaaltı və epiqastral nahiyədə olan kəskin ağrı şikayətləri ilə daxil olmuşdur. Xəstənin deməsinə görə ağrı yeməkdən 1 saat sonra başlamış, 6 saat ərzində davam etmiş, sonra isə tədricən azalmışdır. Diaqnozu təsdiq etmək üçün ilkin olaraq hansı müayinə aparılmalıdır?",
     "answers": [
-      "morfoloji müayinə",
-      "radioizotop müayinə",
-      "KT müayinə",
-      "rentgenoloji müayinə",
-      "angioqrafik müayinə"
-    ]
-  },
-  {
-    "question": "Sümük sarkomalarının hansı növü daha qənaətbəxş gedişə malikdir:",
-    "answers": [
-      "yüksək differensiasiyalı xondrosarkoma",
-      "osteogen sarkoma",
-      "zəif differensassiyalı xondrosarkoma",
-      "bədxassəli fibroz histiositoma",
-      "Yuinq sarkoması"
-    ]
-  },
-  {
-    "question": "Osteogen sarkomanın müasir müalicə üsulu:",
-    "answers": [
-      "kompleks müalicə (əməliyyatönü kimyəvi dərman müalicəsi + əməliyyat + adyuvant kimyəvi dərman müalicəsi)",
-      "yalnız kimyəvi dərman müalicəsi",
-      "cərrahi müalicə",
-      "cərrahi müalicə + şüa müalicəsi",
-      "şüa müalicəsi"
-    ]
-  },
-  {
-    "question": "Bu şişlərdən hansı şüa terapiyasına daha həssasdır:",
-    "answers": [
-      "sümüyün bədxassəli limfoması + Yuinq sarkoması",
-      "xondrosarkoma",
-      "bədxassəli fibroz histiositoma",
-      "osteogen sarkoma",
-      "parostal sarkoma"
-    ]
-  },
-  {
-    "question": "Hansı şişlər qığırdaq əmələ gətirən şişlərə aiddir:",
-    "answers": [
-      "xondroma və xondrosarkoma",
-      "osteoid-osteoma və parostal sarkoma",
-      "fibroma və fibroz histiositoma",
-      "osteoma və osteogen sarkoma",
-      "angioma və angiosarkoma"
-    ]
-  },
-  {
-    "question": "Onkoortopediyada şikəstedici əməliyyatlar arasında ən travmatik və böyük həcmli əməliyyat:",
-    "answers": [
-      "qalça-qarın arası ayırma",
-      "aşağı ətrafın amputasiyası",
-      "yuxarı ətrafın ekzartikulyasiyası",
-      "aşağı ətrafın ekzartikulyasiyası",
-      "yuxarı ətrafın amputasiyası"
-    ]
-  },
-  {
-    "question": "“Kodman üçbucağı” hansı bədxassəli şişin rentgenoloji əlamətidir:",
-    "answers": [
-      "osteogen sarkoma",
-      "xondrosarkoma",
-      "primitiv neyroektodermal şiş",
-      "osteoxondroma",
-      "sümüyün bədxassəli fibroz histiositoması"
-    ]
-  },
-  {
-    "question": "Mədədə ən çox rast gəlinən bədxassəli şiş hansıdır:",
-    "answers": [
-      "xərçəng",
-      "sarkomalar",
-      "melanoma",
-      "limfoma",
-      "karsinoid şişlər"
-    ]
-  },
-  {
-    "question": "Borman təsnifatı mədə xərçəngini hansı parametr baxımından variantlara ayırır:",
-    "answers": [
-      "makroskopik görüntüsünə görə",
-      "Mədənin hansı şöbəsinin zədələnməsinə görə",
-      "xərçəngin əmələ gəlməsində ekzogen, yaxud endogen amillərin daha əhəmiyyətli rol oynadığını əks etdirən histoarxitektonikaya görə",
-      "şişin mədə divarının dərinliyi boyu infiltrasiyasına görə",
-      "mikroskopik xüsusiyyətlərinə görə"
-    ]
-  },
-  {
-    "question": "Mədə xərçəngi zamanı qastroskopiya klinisisti hansı informasiyalarla təmin edə bilir:",
-    "answers": [
-      "şişin lokalizasiyası, ölçüsü barədə",
-      "peritoneal karsinomatozun olub olmaması",
-      "reginar limfa düyünlərinin metastatik zədələnib-zədələnməməsi ilə bağlı",
-      "şişin qonşu üzvlərə münasibəti ilə bağlı",
-      "şişin mədə divarının hansı qişasına infiltrasiya etməsi ilə bağlı"
-    ]
-  },
-  {
-    "question": "Mədə xərçəngindən sağalmanı aşağıdakı müalicə üsullarından hansı təmin edə bilir:",
-    "answers": [
-      "radikal cərrahi müalicə",
-      "radioxemoterapiya",
-      "target terapiya",
-      "kimyəvi dərman müalicəsi",
-      "radioterapiya"
-    ]
-  },
-  {
-    "question": "Mədə xərçənginin xərçəngönü xəstəliyinə aid deyil:",
-    "answers": [
-      "parazitar infeksiyalar",
-      "xroniki atrofik qastrit",
-      "mədə xorası",
-      "H. pylori infeksiyası",
-      "rezeksiyas olunmuş mədə"
-    ]
-  },
-  {
-    "question": "Mədə xərçənginin “Krukenberq” metastazı dedikdə nə başa düşülür:",
-    "answers": [
-      "yumuralıqlara metastaz",
-      "peritona metastaz",
-      "düz bağırsağa metastaz",
-      "öd kisəsinə metastaz",
-      "göbəyə metastaz"
-    ]
-  },
-  {
-    "question": "Mədənin hansı şöbəsinin xərçəngi zamanı disfagiya əlaməti olur:",
-    "answers": [
-      "kardial",
-      "polirik",
-      "antral",
-      "mədə dibi",
-      "cism"
-    ]
-  },
-  {
-    "question": "Mədənin antral hissəsinin stenozla ağırlaşmış inrezektabel xərçəngi zamanı hansı cərrahi əməliyyat aparılır:",
-    "answers": [
-      "qastroenterostomiya",
-      "total kolektomiya",
-      "distal subtotal rezeksiya",
-      "proksimal subtotal rezeksiya",
-      "qastroektomiya"
-    ]
-  },
-  {
-    "question": "Mədə xərçənginin ən çox rast gəlinən histoloji variantı:",
-    "answers": [
-      "adenokarsinoma",
-      "heç biri",
-      "diferensiya edilməyən xərçəng",
-      "adenoskvamoz xərçəng",
-      "yastı epitel xərçəngi"
-    ]
-  },
-  {
-    "question": "Mədə xərçənginin “Virxov” metastazı aiddir:",
-    "answers": [
-      "sol körpücüküstü limfa düyününə metastaz",
-      "ağciyərlərə",
-      "kiçik çanaq toxumasına metastaz",
-      "göbəyə metastaz",
-      "yumurtalıqlara metastaz"
-    ]
-  },
-  {
-    "question": "Krukenberq metastazları nədir:",
-    "answers": [
-      "mədənin yumurtalıqlara olan metastazları",
-      "mədənin göbəyə metastazları",
-      "mədənin qaraciyərə olan metastazları",
-      "mədənin sol qoltuqaltı limfa düyünlərinə metastazları",
-      "mədənin sol körpücüküstü limfa düyünlərinə metastazları"
-    ]
-  },
-  {
-    "question": "Süd vəzisinin xərçənginin müalicəsində anti-hormonal terapiyanın aparılması üçün əsas şərt:",
-    "answers": [
-      "şişin müsbət hormonal statusu",
-      "uzaq metastazların olması",
-      "şişin III dərəcə bədləşməyə malik olması",
-      "yaşı 35-dən cavan olması",
-      "yaşı 60-dan yuxarı olması"
-    ]
-  },
-  {
-    "question": "Süd vəzi xərçənginin müasir antihormonal müalicə yolları hansılardır:",
-    "answers": [
-      "kastrasiya, antiestrogenlər, aromataza inhibitorları",
-      "kastrasiya, androgenlər, interleykinlər",
-      "kastrasiya, estrogenlər, aromatazanın inhibitorları",
-      "kastrasiya, kimyəvi dərman müalicəsi, estrogenlər",
-      "kastrasiya, aromataza inhibitorlar, androgenlər"
-    ]
-  },
-  {
-    "question": "Tamoksifenin standart qəbul dozası:",
-    "answers": [
-      "20 mq/sut. 5 ildən az olmayaraq",
-      "1 mq/sut 3 il ərzində",
-      "2mq/sut 5 il ərzində",
-      "10 mq/sut 5 ildən az olmayaraq",
-      "150 mq/sut 3 aya qədər"
-    ]
-  },
-  {
-    "question": "Süd vəzi xərçənginin qənaətbəxş proqnoza malik molekulyar tipi:",
-    "answers": [
-      "ER(+) Pr(+) Her2(-), Ki 67 20% az",
-      "ER(-) Pr(-) Her2(-)",
-      "ER(+) Pr(-) Her2(+) ,Ki67 20 % çox",
-      "ER(-) Pr(+) Her2(-)",
-      "ER(-) Pr(-) Her2(+)"
-    ]
-  },
-  {
-    "question": "Qida borusu xərçənginin ən xarakterik kliniki simptomu hansıdır:",
-    "answers": [
-      "disfagiya",
-      "öskürək",
-      "ürəkbulanma",
-      "qanhayxırma",
-      "qusma"
-    ]
-  },
-  {
-    "question": "Yoğun bağırsaq xərçənginin ən çox rast gəlinən histoloji forması hansıdır:",
-    "answers": [
-      "adenokarsinoma",
-      "dimorf (vəzili-yastıhüceyrəli) xərçəng",
-      "şəffafhüceyrəli xərçəng",
-      "yastıhüceyrəli xərçəng",
-      "diferensiasiya olunmayan xərçəng"
-    ]
-  },
-  {
-    "question": "Yastıhüceyrəli və dimorf (vəzili və yastıhüceyrəli) xərçəng kolorektal nahiyənin harasında daha çox rast gəlinir:",
-    "answers": [
-      "düz bağırsaqda",
-      "qalxançənbər bağırsaqda",
-      "enənçənbər bağırsaqda",
-      "kor bağırsaqda",
-      "siqmavari (S-ə bənzər) bağırsaqda"
-    ]
-  },
-  {
-    "question": "Yoğun bağırsaq xərçənginin ən çox metastaz verdiyi orqan hansıdır:",
-    "answers": [
-      "qaraciyər",
-      "dalaq",
-      "böyürəküstü vəzilər",
-      "ağciyərlər",
-      "sümüklər"
-    ]
-  },
-  {
-    "question": "Yoğun bağırsaq xərçənginin risk amillərinə aiddir:",
-    "answers": [
-      "bütün cavablar düzgündür",
-      "irsi-genetik sindromlar",
-      "qidada bitki liflərinin az olması",
-      "qidada zülalların çox olması",
-      "piylənmə"
-    ]
-  },
-  {
-    "question": "Yoğun bağırsaq xərçənginin əsas genetik risk amillərinə aiddir:",
-    "answers": [
-      "Linç sindromu, FAP-sindrom",
-      "siqaretçəkmə",
-      "piqmentli kserodermiya",
-      "Dübrey melanozu",
-      "Marfan sindromu"
-    ]
-  },
-  {
-    "question": "Çənbərbağırsaq xərçənginin toksiko-anemik kliniki forması şişin hansı lokalizasiyasında rast gəlinir:",
-    "answers": [
-      "çənbərbağırsağın sağ yarısında",
-      "bütün nahiyələrdə eyni tezliklə rast gəlinir",
-      "köndələnçənbər bağırsaqda",
-      "siqmavari (S-ə bənzər) bağırsaqda",
-      "enənçənbər bağırsaqda"
-    ]
-  },
-  {
-    "question": "Aşağıdakılardan hansı sfinkter saxlayıcı əməliyyatlara aid deyildir:",
-    "answers": [
-      "düz bağırsağın qarın-aralıq ekstirpasiyası",
-      "bütün sadalananlar sfiktersaxlayıcı əməliyyalara aiddir",
-      "düz bağırsağın qarındaxili rezeksiaysı",
-      "Hartman əməliyyatı",
-      "düz bağırsağın anal rezeksiyası"
-    ]
-  },
-  {
-    "question": "Düz bağırsaq xərçəni zamanı aparılan sfinkterqoruyucu əməliyyatlara aiddir:",
-    "answers": [
-      "düz bağırsağın qarın-anal rezeksiyası",
-      "Osawa-Garlock əməliyyatı",
-      "Lewis əməliyyatı",
-      "düz bağırsağın qarın-aralıq ekstirpasiyası",
-      "Wipple əməliyyatı"
-    ]
-  },
-  {
-    "question": "Çənbər bağırsaq xərçənginin ağırlaşmasına aid edilmir:",
-    "answers": [
-      "toksiki pankreatit",
-      "peritonit",
-      "şişin perforasiyası",
-      "qanaxma",
-      "kəskin bağırsaq keçməməzliyi"
-    ]
-  },
-  {
-    "question": "Yoğun baırsaq xərçənginin ən informativ diaqnostika metodu hansıdır:",
-    "answers": [
-      "şişdən biopsiya ilə kolonoskopiya",
-      "irriqoqrafiya",
-      "rektoromanoskopiya",
-      "selektiv angioqrafiya",
-      "laparoskopiya"
-    ]
-  },
-  {
-    "question": "Yoğun bağırsaq xərçəngi üçün hansı tip bağırsaq keçməməzliyi xarakterikdir:",
-    "answers": [
-      "obturasion",
-      "düzgün cavab yoxdur",
-      "xarakterik tipi yoxdur",
-      "stranqulyasion",
-      "qarşıq"
-    ]
-  },
-  {
-    "question": "Hoçkin limfomasının ən xoş gedişinə malik histoloji variantı:",
-    "answers": [
-      "limfoid üstünlüklü klassik variant",
-      "heç bir variant",
-      "nodulyar sklerotik variant",
-      "limfoid üzülmə (tükənmə) variantı",
-      "qarışıq hüceyrəli variant"
-    ]
-  },
-  {
-    "question": "Hoçkin limfomasının ən bəd gedişinə malik histoloji variant:",
-    "answers": [
-      "limfoid üzülmə (tükənmə) variantı",
-      "bütün variantlar",
-      "limfoid üstünlüklü klassik variant",
-      "qarışıq hüceyrəli variant",
-      "nodulyar sklerotik variant"
-    ]
-  },
-  {
-    "question": "Hoçkin limfoması hansı yaşadək heç rast gəlmir:",
-    "answers": [
-      "1 yaşadək",
-      "7 yaşadək",
-      "10 yaşadək",
-      "yaş rol oynamır",
-      "3 yaşadək"
-    ]
-  },
-  {
-    "question": "Hoçkin limfomasının əmələ gəlməsində hansı virusun rolu qeyd olunur:",
-    "answers": [
-      "Epşteyn-Barr virusu",
-      "Hepatit B virusu",
-      "infeksiyaların rolu yoxdur",
-      "düzgün cavab yoxdur",
-      "Hepatit C virusu"
-    ]
-  },
-  {
-    "question": "1832-cil ildə limfoqranulematozu ayrıca xəstəlik kimi hansı alim təsvir etmişdir:",
-    "answers": [
-      "T. Hoçkin",
-      "heç biri",
-      "D. Rid",
-      "C. Berezovski",
-      "K. Şternberq"
-    ]
-  },
-  {
-    "question": "Hansı üsul rentgenoloji müayinə üsuluna aid edilmir:",
-    "answers": [
-      "termoqrafiya",
-      "ekskretor uroqrafiya",
+      "USM",
+      "MRT",
+      "PET KT",
       "KT",
-      "rentgenopnevmoperitoneum",
-      "angioqrafiya"
+      "Rentgen"
     ]
   },
   {
-    "question": "Hansı orqan və sistemlərin bədxassəli proseslərinin diaqnostikasında radioizotop müayinəsindən istifadə edilmir:",
+    "question": "Göstərilənlərdən hansı kəskin daşsız xolesistitin labarator əlamətlərinə aid deyil?",
     "answers": [
-      "bazaliomalar",
-      "böyrək şişlərində",
-      "qalxanabənzər vəzinin şişlərində",
-      "süd vəzi xərçəngində",
-      "sümüklərə metastazlar zamanı"
+      "Hipoamilazemiya",
+      "ALT artması",
+      "AST artması",
+      "Leykositoz",
+      "QQT artması"
     ]
   },
   {
-    "question": "Aşağıda sadalananların hansı onkomarker deyil:",
+    "question": "Xolangitin diaqnostikasında ilk seçim hansı müayinə metodudur?",
     "answers": [
-      "HPV",
-      "CEA",
-      "PSA",
-      "CA 15-3",
-      "AFP"
+      "USM",
+      "ERXPQ",
+      "PTX",
+      "Kolonoskopiya",
+      "Qastroskopiya"
     ]
   },
   {
-    "question": "Orqanizmin normal hüceyrələrinin şiş hüceyrələrinə transformasiyasına səbəb olan çoxetaplı mürəkkəb proses necə adlanır:",
+    "question": "Göstərilənlərdən hansı xoledoxolitiaz üçün xarakterik deyil?",
     "answers": [
-      "kanserogenez",
-      "obliqat xərçəngönü",
-      "hüceyrə atipiyası",
-      "displaziya",
-      "fakultativ xərçəngönü"
+      "Kəskin arıqlama",
+      "Ağrı tutmasının ardınca sarılığın inkişafı",
+      "Xolangit",
+      "Qaşınma",
+      "Ağrı tutması"
     ]
   },
   {
-    "question": "İnsanda xoşxassəli şişlərin xüsusiyyətlərinə aiddir:",
+    "question": "Kəskin xolesistitə şübhə olanda hansı müayinə aparılmır?",
     "answers": [
-      "böyümənin ləng xarakteri",
-      "sırf limfogen metastazvermə",
-      "hüceyrə atipizmi və limfogen metastazvermə",
-      "sırf hematogen metastazvermə",
-      "invaziv böyümə və metastazlar"
+      "Laparoskopiya",
+      "Qanda bilirubinin təyini",
+      "Qanın ümumi analizi",
+      "USM",
+      "Laparosentez"
     ]
   },
   {
-    "question": "İnsanda xoşxassəli şişlərin xüsusiyyətlərinə aid deyil:",
+    "question": "Öd daşı xəstəliyi hansına səbəb olmur?",
     "answers": [
-      "hematogen metastazvermə",
-      "ləng böyümə",
-      "kapsulanın olması",
-      "toxuma atipizmi",
-      "ekspansiv böyümə"
+      "Qarındaxili qanaxmaya",
+      "Öd kisəsinin xərçənginə",
+      "Xolesisto-duodenal fistulaya",
+      "Bağırsaq keçməzliyinə",
+      "Mexaniki sarılığa"
     ]
   },
   {
-    "question": "Müasir nəzəriyyələrə əsasən xərçəng hesab olunur:",
+    "question": "Xoledoxdakı daşı müəyyənləşdirmədə aşağıdakılardan hansının həssaslığı ən aşağıdır?",
     "answers": [
-      "genetik xəstəlik",
-      "travmadan sonra əmələ gələn xəstəlik",
-      "normanın bir variantıdır",
-      "infeksion xəstəlik",
-      "iltihabi xəstəlik"
+      "MRT",
+      "Xoledoxoskopiya",
+      "ERXPQ",
+      "İntraoperasion xolangioqrafiya",
+      "USM"
     ]
   },
   {
-    "question": "Daha çox kanserogen aktivliyə malikdir:",
+    "question": "Kəskin xolesistitin radikal müalicəsi hansıdır?",
     "answers": [
-      "politsiklik aromatik karbohidrogenlər",
-      "zülallar",
-      "yağlar",
-      "A və B qrup vitaminləri",
-      "karbohidratlar"
+      "Xolesistektomiya",
+      "Dekompressiya",
+      "İltihab əlehinə dərmanlar",
+      "Dekompressiya və antibiotikoterapiya",
+      "Antibiotikoterapiya"
     ]
   },
   {
-    "question": "Aşağıdakılardan hansı bədxassəli şişlərin skrininqinə aiddir?",
+    "question": "Kəskin irinli xolangitin simptomları arasında ən çox müşahidə olunanı hansıdır?",
     "answers": [
-      "xərçəngin erkən mərhələdə aşkar edilməsi",
-      "rasional qidalanma komponentləri",
-      "məişətdə və istehsalatda havanın təmizliyinin saxlanması",
-      "havanın çirklənməsi ilə mübarizə",
-      "siqaretçəkmə ilə mübarizə"
+      "Yüksək hərarət",
+      "Beyin pozğunluğu",
+      "Septik şok",
+      "Sarılıq",
+      "Qarında ağrılar"
     ]
   },
   {
-    "question": "Bədxassəli şişlərə xas olan əlamət:",
+    "question": "Xəstə 70 yaşında sarılıq, qarında kəskin başlayan ağrı və qaşınma şikayətləri ilə klinikaya daxil olur. Anamnezində öd kisəsində daşların olduğunu bildirir. Mexaniki sarılığa şübhə var, ilk ediləcək müaytinə hansıdır?",
     "answers": [
-      "cavabların hamısı",
-      "nisbi avtonom böyümə",
-      "aydın sərhədlərin olmaması",
-      "residiv və metastaz verməsi",
-      "hüceyrə və toxuma atipizmi"
+      "USM",
+      "Nativ KT",
+      "ERXPQ",
+      "MRT",
+      "Kontrastlı KT"
     ]
   },
   {
-    "question": "Bədxassəli şişə xas olmayan əlamət:",
+    "question": "Xəstə 50 yaşında qadın, yağlı qida qəbulundan 2 saat sonra qarında, sağ qabırğaltı nahiyyədə kəskin başlayan ağrı səbəbi ilə təcili xəstəxanaya daxil olur. Hərarəti: 37. 5°C, leykosit- 12. 000/mm3- dir. Fizikal müayinədə sağ qabırğaaltı nahiyyədə gərginlik təyin olunur. Aşağıdakılardan hansını ilk olaraq edərsiniz?",
     "answers": [
-      "həqiqi kapsulanın olması",
-      "TNM təsnifatı",
-      "infiltrativ və invaziv böyümə",
-      "morfoloji atipizm",
-      "nisbi avtonom inkişaf"
+      "USM",
+      "Rentgenoqrafiya",
+      "Qastrodudenoskopiya",
+      "KT",
+      "MRT"
     ]
   },
   {
-    "question": "Şişləri adlandırmaq üçün hansı ifadələrin istifadə olunmur",
+    "question": "2 il əvvəl xolesistektomiya keçirmiş 60 yaşında xəstə 390 C hərarət, titrətmə, sarılıq və qarında ağrı ilə xəstəxanaya müraciət edir. İlkin diaqnoz aşağıdakılardan hansıdır?",
     "answers": [
-      "“İtis”",
-      "“Oma”",
-      "sarkoma",
-      "blastoma",
-      "karsinoma"
+      "Kəskin xolangit",
+      "Kəskin pankreatit",
+      "Bağırsaq keçməzliyi",
+      "Pankreas başı xərçəngi",
+      "Kəskin hepatit"
     ]
   },
   {
-    "question": "Epitel toxumasından inkişaf edən bədxassəli şişləri adlandırmaq üçün istifadə olunan kəlmələr:",
+    "question": "Assit nədir?",
     "answers": [
-      "xərçəng, adenokarsinoma",
-      "xondrosarkoma və osteogen sarkoma",
-      "sinovioma və fibroma",
-      "adenoma və papilloma",
-      "melanoma və sarkoma"
+      "Periton boşluğunda mayenin toplanması",
+      "Bədəndə diffuz qaşınma hissi",
+      "Skleranın sarı rəngə boyanması",
+      "Palpasiya zamanı ağrının olması",
+      "Mədə möhtəviyyatının geri qayıtması"
     ]
   },
   {
-    "question": "Şişin stromasına aiddir:",
+    "question": "Göstərilən əlamətlərdən hansı qaraciyər xəstəliklərinə ən az şübhə yaradar?",
     "answers": [
-      "cavabların hamısı düzdür",
-      "sinir hüceyrələri",
-      "qan damarları",
-      "limfa damarlar",
-      "birləşdirici toxuma"
+      "İshal",
+      "Halsızlıq",
+      "Mədə bağırsaq qanaxması",
+      "Hepatomeqaliya",
+      "Qaşınma"
     ]
   },
   {
-    "question": "Xoşxassəli şişlər:",
+    "question": "Göstərilənlərdən hansı portal hipertenziyanın qaraciyərüstü səbəblərinə aiddir?",
     "answers": [
-      "metastaz vermirlər",
-      "qonşu toxumalara invaziya edirlər",
-      "bütün periferik limfa düyünlərinə metastaz verir",
-      "ipsilateral limfa düyünlərinə metastaz verirlər",
-      "infiltrativ inkişaf edirlər"
+      "ABV (aşağı boş vena) membranı",
+      "Sinusoidal",
+      "Sarkoidoz",
+      "Portal tromboz",
+      "Dalaq venası trombozu"
     ]
   },
   {
-    "question": "Bədxassəli şişlər:",
+    "question": "Göstərilənlərdən hansı porto-kaval kollaterallara aid deyil?",
     "answers": [
-      "residiv və metastazvermə xüsusiyyətləri vardır",
-      "kliniki mərhələləri yoxdur",
-      "həqiqi kapsulaya malikdirlər",
-      "yalnız ekspansiv inkişaf edirlər",
-      "morfoloji və funksional atipizm yoxdur"
+      "Tac venaları",
+      "Hemorroidal venalar",
+      "Diafraqmal venalar",
+      "Qastro-ezofageal venalar",
+      "Göbək venası"
     ]
   },
   {
-    "question": "Ağciyər xərçənginin əsas simptomları:",
+    "question": "Portal hipertenziyada qanaxmaların əsas diaqnostik müayinə metodu hansıdır?",
     "answers": [
-      "öskürək, qanhayxırma, döş qəfəsində ağrılar",
-      "sianoz, taxikardiya, ətraflarda keyləşmə",
-      "qıcqırma, sarılıq, döş qəfəsində ağrılar",
-      "baş ağrıları, öskürək, hemiparez",
-      "zəiflik, hıçqırma"
+      "Qastroskopiya",
+      "Elastoqrafiya",
+      "KT",
+      "USM",
+      "MRT"
     ]
   },
   {
-    "question": "Ağciyər xərçəngi zamanı paraneoplastik sindroma aiddir:",
+    "question": "Qaraciyərin anadangəlmə sistlərinin klinik əlamətləri hansılar üçün xarakterikdir?",
     "answers": [
-      "”saat şüşələri dırnaqlar və əl barmaqlarda təbil çöpləri simptomları”",
-      "Horner simptomu",
-      "”qalop ritmi” simptomu",
-      "”moruq jelesi” simptomu",
-      "qanhayxırma"
+      "Əksərən asimtomatik olur",
+      "Taxikardiya",
+      "Hipertenziya",
+      "Ürəkbulanma",
+      "Sarılıq"
     ]
   },
   {
-    "question": "Pankost xərçəngə aiddir :",
+    "question": "Göstərilənlərdən hansı qaraciyər absesinin ağırlaşmalarına aid deyil?",
     "answers": [
-      "Horner sindromu ( ptoz, mioz, enoftalm )",
-      "öskürək və paraneoplastik sindrom",
-      "döş qəfəsində ağrılar və alt dodağın sianozu",
-      "tənginəfəslik və qanhayxırma",
-      "baş ağrıları və ishal"
+      "Hepatoma",
+      "Qarın boşluğuna açılma",
+      "Xolangit",
+      "Sepsis",
+      "Peritonit"
     ]
   },
   {
-    "question": "Ağciyər xərçənginin simptomsuz gedişatı ən çox rast gəlinir:",
+    "question": "Qaraciyərin USM müayinəsində 4 sm-lik sist görünür. İlk növbədə nə düşünülməlidir?",
     "answers": [
-      "periferik xərçəngdə",
-      "mediastinal formalı ağciyər xərçəngində",
-      "mərkəzi xərçəngdə",
-      "endobronxial xərçəngdə",
-      "yastı hüceyrəli xərçəngdə"
+      "Exinokokk sisti",
+      "Qaraciyər absesi",
+      "Neoplastik sist",
+      "Travmatik sist",
+      "Sadə sist"
     ]
   },
   {
-    "question": "Mərkəzi ağciyər xərçəngində əsas müayinə üsulu aşağıdakıdır:",
+    "question": "Qaraciyər exinokokkozunun müalicəsində əsas yeri hansı tutur?",
     "answers": [
-      "bronxoskopiya biopsiya ilə",
-      "radioizotop müayinə",
-      "bronxoqrafiya",
-      "selektiv angoqrafiya",
-      "ultrasəs müayinəsi"
+      "Cərrahi üsulla xaric edilməsi",
+      "Perkutan destruksiya",
+      "Punksion-aspirasiyon müalicə",
+      "Perkutan yolla antihelmint dərmanın yeridilməsi",
+      "Oral antihelmint terapiya"
     ]
   },
   {
-    "question": "Ağciyər xərçənginin hansı formasında bronxoskopiya üsulu daha dəqiq və informativdir:",
+    "question": "Qaraciyər sirrozunun gecikmiş mərhələsinə hansı xas deyil?",
     "answers": [
-      "mərkəzi xərçəngində",
-      "ağciyər xərçənginin mediastinal formasında",
-      "periferik xərçəngində",
-      "pnevmoniyayabənzər xərçəngində",
-      "baş beyinə metastazlar zamanı"
+      "Mədənin kəskin genişlənməsi",
+      "Assit",
+      "Qarının ön divarı venalarının varikozu",
+      "Qida borusu venalarının varikozu",
+      "Hepatorenal sindrom"
     ]
   },
   {
-    "question": "Ağciyər xərçəngi zamanı hormonal aktivliyin yüksək olması xarakterikdir:",
+    "question": "50 yaşlı xəstə epiqastral nahiyədə ağrıdan, ürəkbulanmadan, dövri qusmalardan şikayət edir. Qastroduodenoskopiyada mədədə və 12 bb-da çoxsaylı xoralar görünmüşdür. Xəstəliyin səbəbi ilk növədə aşağıdakılardan hansıdır:",
     "answers": [
-      "xırdahüceyrəli xərçəngə",
-      "yastıhüceyrəli xərçəngə",
-      "ağciyərin mediastinal xərçənginə",
-      "Pankost xərçənginə",
-      "ağciyərin sarkomasına"
+      "Qastrinoma",
+      "Asinar toxumanın şişi",
+      "İnsulinoma",
+      "Qlükaqonoma",
+      "Mədəaltı vəzin sisti"
     ]
   },
   {
-    "question": "Ağciyər xərçəngi zamanı radikal əməliyyatlar aşağıdakılardır:",
+    "question": "Aşağıdakılardan hansı kəskin pankreatitin yerli ağırlaşması sayılmır?",
     "answers": [
-      "pulmonektomiya və lobektomiya",
-      "ağciyərin atipik rezeksiyası",
-      "seqmentektomiya və ağciyərin kökünün limfadisseksiyası",
-      "mediastinotomiya",
-      "torakotomiya"
+      "Böyrək yetməzliyi",
+      "Piylik kisəsinin absesi",
+      "Retroperitoneal fleqmona",
+      "Mədəaltı vəzin psevdosisti",
+      "Mədəaltı vəzin fistulası"
     ]
   },
   {
-    "question": "Ağciyərin baş bronxun xərçəngi zamanı radikal əməliyyat aşağıdakıdır:",
+    "question": "Mədəaltı vəzin xərçəngi üçün xarakterikdir:",
     "answers": [
-      "pulmonektomiya",
-      "laparotomiya",
-      "seqmentektomiya",
-      "torakotomiya",
-      "lobektomiya"
+      "İntensiv arıqlama",
+      "İshal",
+      "Lipazemiya",
+      "Requrqitasiya",
+      "Peritonun zəif qıcıqılanması"
     ]
   },
   {
-    "question": "Şüa müalicəsi ağciyər xərçəngində daha effektivdir:",
+    "question": "Aşağıdakılardan hansı kəskin pankreatitin səbəbi dеyil?",
     "answers": [
-      "yastıhüceyrəli variantda",
-      "metastatik plevritdə",
-      "ağciyərin hemangiomasında",
-      "sarkomada",
-      "adenokarsinomada"
+      "hipokalsеmiya",
+      "parotit virusu",
+      "hipеrlipidеmiya",
+      "alkoqol",
+      "öd yolları хəstəlikləri"
     ]
   },
   {
-    "question": "IV mərhələ ağciyər xərçəngində əsas müalicə üsulu hansıdır:",
+    "question": "Parapankreatik sahəyə maye toplanmasının ən informativ diaqnostika metodu hansıdır?",
     "answers": [
-      "kimyəvi dərman terapiyası",
-      "cərrahi müalicə + şüa terapiyası",
-      "cərrahi müalcə + kimyəvi terapiya",
-      "cərrahi müalicə",
-      "şüa terapiyası"
+      "КТ",
+      "Duodenoskopiya",
+      "Retroqrad xolangioqrafiya",
+      "Retroqrad virsunqoqrafiya",
+      "Laparoskopiya"
     ]
   },
   {
-    "question": "Ağciyər xərçənginin erkən klinik simptomları rast gəlinir:",
+    "question": "Kəskin pankreatitin diaqnostikasında hansının əhəmiyyəti çoх azdır?",
     "answers": [
-      "mərkəzi xərçəngin endobronxial tipində",
-      "periferik xərçəngdə",
-      "mərkəzi xərçəngin peribronxial şaxələnmiş tipində",
-      "böyümə tipi əhəmiyyət kəsb etmir",
-      "mərkəzi xərçəngin peribronxial düyünlü tipində"
+      "Rentgenoqrafiya",
+      "KT",
+      "Endoskopik USM",
+      "MRT",
+      "Laparosokpiya"
     ]
   },
   {
-    "question": "Ağciyər xərçəngində Horner sindromu rast gəlinir:",
+    "question": "Kəskin pankreatitdə sarılıq hansı ilə əlaqədar olmaz?",
     "answers": [
-      "Pankost xərçəngində",
-      "mərkəzin xərçəngin peribronxeal şaxələnmiş növündə",
-      "böyümə növünün əhəmiyyəti yoxdur",
-      "mərkəzin xərçəngin peribronxial düyünlü növündə",
-      "mərkəzi xərçəngin endobronxeal növündə"
+      "Qaraciyərin hemangioması",
+      "Xoledoxun mədəaltı vəz toxuması ilə sıxılması",
+      "Pankreatogen hepatit",
+      "Böyük duodenal məməciyin ödemi",
+      "Böyük duodenal məməciyə daşın pərçimlənməsi"
     ]
   },
   {
-    "question": "Mərkəzi ağciyər xərçəngi zamanı diaqnozun morfoloji diaqnostikası üçün lazım olan materialın əsas alınması üçün:",
+    "question": "Kəskin pankreatitin ən çox rast gəlinən klinik-morfoloji forması hansıdır?",
     "answers": [
-      "fibrobronxoskopiya",
-      "laparoskopiya",
-      "mediastinoskopiya",
-      "bəlğəmin alınması",
-      "transtorakal punksiya"
+      "Ödemli pankreatit",
+      "İrinli pankreatit",
+      "Piy pankreonekrozu",
+      "Postoperativ pankreatit",
+      "Hemorragik pankreonekroz"
     ]
   },
   {
-    "question": "Periferik ağciyər xərçənginin morfoloji verifikasiyası üçün materialın əldə edilməsinin əsas metoduna aiddir:",
+    "question": "Kişilərdə kəskin pankreatitin ən çox rast gəlinən səbəbi hansıdır?",
     "answers": [
-      "transtorakal punksiya",
-      "mediastinoskopiya",
-      "laparoskopiya",
-      "fibrobronxoskopiya",
-      "bəlxəmin müayinəsi"
+      "Alkoqol",
+      "Damarların trombozu",
+      "Mədə və 12-barmaq bağırsaq xorası",
+      "Travma",
+      "Qida allergiyası"
     ]
   },
   {
-    "question": "Ağciyərin xırdahüceyrəli xərçəngində hansı şişəleyhinə müalicədən praktiki olaraq istifadə edilmir:",
+    "question": "Kəskin pankreatiti bir qayda olaraq hansı xəstəliklə differensasiya etmək lazım gəlmir?",
     "answers": [
-      "cərrahi",
-      "immunoterapiya",
-      "hormonoterapiya",
-      "kimyəvi terapiya",
-      "şüa terapiyası"
+      "Mezenterial limfadenit",
+      "Stranqulyasion bağırsaq keçməzliyi",
+      "Perforativ xora",
+      "Aorta anevrizmasının partlaması",
+      "Müsariqə damarlarının trombozu"
     ]
   },
   {
-    "question": "Uşaqlıq cismi xərçəngi zamanı əsas klinik əlamət:",
+    "question": "Kəskin pankreatitin ən çox rast gəlinən səbəbi hansıdır?",
     "answers": [
-      "menopauzada vaginal qanaxma",
-      "ishal",
-      "heç biri",
-      "dizuriya",
-      "beldə olan ağrılar"
+      "Öd daşı xəstəliyi",
+      "Medikamentoz",
+      "Postoperativ",
+      "Hipertriqliseridemiya",
+      "Hiperkalsemiya"
     ]
   },
   {
-    "question": "Uşaqlıq cismi xərçəngi əsas klinik əlamətlərindən biri:",
+    "question": "Aşağıdakı əlamətlərdən hansı xroniki pankreatit diaqnozunu qoymaq üçün daha spesifik göstəricidir?",
     "answers": [
-      "cinsiyyət yollarından qanlı ifrazat",
-      "baş ağrıları",
-      "enurez",
-      "defekasiya aktın pozulması",
-      "dizuriya"
+      "Kalsifikasiya",
+      "Duktal genişlənmə",
+      "Şəkərli diabet",
+      "Steatoreya",
+      "Xoledox stenozu"
     ]
   },
   {
-    "question": "Uşaqlıq cismi və boynu xərçənginin diaqnostikasında istifadə olunan onkomarkerlər:",
+    "question": "Aşağıdakı əlamətlərdən hansı mədəaltı vəzin cərrahi xəstəliklərində ən az rast gələnidir?",
     "answers": [
-      "CA-125, CEA",
-      "AFP",
-      "XQ",
-      "PSA",
-      "kalsitonin"
+      "kökəlmə",
+      "sarılıq",
+      "ürəkbulanma",
+      "ağrı",
+      "arıqlama"
     ]
   },
   {
-    "question": "Uşaqlıq cismi xərçənginin diaqnostikasında istifadə olunan metodlar:",
+    "question": "Xroniki pankreatitin ən çox rast gəlinən ağırlaşması?",
     "answers": [
-      "bütün cavablar düzgündür",
-      "histeroskopiya",
-      "sitolojı,histolojı",
-      "anamnez",
-      "bimanual müayinə"
+      "Diabet",
+      "Mədə bağırsaq qanaxmaları",
+      "Pankreas şişləri",
+      "Psixi pozğunluq",
+      "Arıqlama"
     ]
   },
   {
-    "question": "Uşaqlıq cismi xərçənginin müalicəsində istifadə olunur:",
+    "question": "Xroniki pankreatitin diaqnozunu dəqiqləşdirmək üçün hansı müayinə mütləq deyil?",
     "answers": [
-      "bütün cavablar düzgündür",
-      "kimyəvi terapiya",
-      "cərrahi müalicə",
-      "şua müalicəsi",
-      "hormonal müalicə"
+      "Qanın ümumi analizi",
+      "Pankreatoqrafiya",
+      "KT",
+      "USM",
+      "MRT"
     ]
   },
   {
-    "question": "Uşaqlıq cismi xərçənginin müalicəsində istifadə olunan cərrahi əməliyyat:",
+    "question": "Aşağıdakı mədəaltı vəz xəstəliklərinin hansında angioqrafiyaya ehtiyac olmur?",
     "answers": [
-      "uşaqlığın artımlarla birlikdə ekstirpasiyası",
-      "uşaqlığın amputasiyası",
-      "ovarioektomiya",
-      "əməliyyat istifadə olunmur",
-      "miomektomiya"
+      "Ödematoz pankreatit",
+      "Xroniki pankreatit",
+      "Pankreas adenokarsinoması",
+      "Adacıq şişləri",
+      "Pankreasın başındakı şişləri"
     ]
   },
   {
-    "question": "Uşaq yaşlarında ən çox təsadüf edilən yumurtalıq şişləri:",
+    "question": "Transplantantın çox kəskin “rəddetmə” reaksiyası nə zaman baş verir?",
     "answers": [
-      "herminogen şişlər",
-      "musinoz şişlər",
-      "lipidhüceyrəli şişlər",
-      "endometrioid şişlər",
-      "seroz şişlər"
+      "əməliyyatdan sonrakı ilk dəqiqələrdə və saatlarda",
+      "əməliyyatdan sonrakı ilk 5 il ərzində",
+      "əməliyyatdan sonrakı ilk 2 il ərzində",
+      "əməliyyatdan sonrakı ilk 3 ay ərzində",
+      "əməliyyatdan sonrakı ilk 1 il ərzində"
     ]
   },
   {
-    "question": "Yumurtalıqların epitelial şişlərin diaqnostikası və müalicə effektivliyinin qiymətləndirilməsində istifadə edilən onkomarker göstəricisi:",
+    "question": "Orqan trasplantasiyasından sonra xəstələr immunosupressiv müalicəni nə qədər vaxt alır?",
     "answers": [
-      "CA-125",
-      "PSA",
-      "AFP",
-      "CA-15-3",
-      "İXQ"
+      "Həyat boyu",
+      "7 ilə qədər",
+      "6 aya qədər",
+      "10 ilə qədər",
+      "1 ilə qədər"
     ]
   },
   {
-    "question": "Yumurtalıqların bədxassəli şişlərinin 80-90%-ni təşkil edir:",
+    "question": "Hansı xəstəlik organ donasiyası üçün əks göstərişdir?",
     "answers": [
-      "epitelial şişlər",
-      "endometriod şişlər",
-      "herminogen şişlər",
-      "lipid-hüceyrəli şişlər",
-      "uşaqlıq artımı stromasının şişləri"
+      "Bədxassəli törəmə",
+      "Spastik kolit",
+      "Qastro-ezofageal refluks xəstəliyi",
+      "Kəllə-beyin travması",
+      "Öd daşı xəstəliyi"
     ]
   },
   {
-    "question": "Yumurtalıqların qranulyoz hüceyrəli şişlərinə xarakterdir:",
+    "question": "Pankreas transplantasiyası üçün əsas göstəriş hansıdır?",
     "answers": [
-      "hiperestrogenizm və ya androgenizasiya",
-      "hiperinsulinemizm",
-      "hiperqlikemiya",
-      "prolaktinemiya",
-      "hiperkalsinemiya"
-    ]
-  },
-  {
-    "question": "Yumurtalıq şişlərinin histoloji tipinə aid deyil:",
-    "answers": [
-      "medulyar xərçəng",
-      "qranulyoz hüceyrəli şiş",
-      "androblastoma",
-      "Brenner şişi",
-      "disherminoma"
-    ]
-  },
-  {
-    "question": "Bədxassəli şişi göstərin:",
-    "answers": [
-      "xorionepitelioma",
-      "papilloma",
-      "sistadenoma",
-      "yetkin teratoma",
-      "fibroma"
-    ]
-  },
-  {
-    "question": "Mədə xərçənginin yumurtalıqlara olan metastazı göstərin:",
-    "answers": [
-      "Krukenberq",
-      "Virxov",
-      "Şifo",
-      "Rotter",
-      "Snisler"
-    ]
-  },
-  {
-    "question": "Yumurtalıqların xərçəngönü xəstəliklərini göstərir:",
-    "answers": [
-      "yumurtalıqların xoşxassəli şişləri",
-      "endrometriumun hiperplastik prosesləri",
-      "follikulyar kista",
-      "yumurtalıqların xroniki iltihabi prosesləri",
-      "hiperestrogeniya"
-    ]
-  },
-  {
-    "question": "Yumurtalıq xərçəngi qadın cinsiyyət orqanlarının bədxassəli şişlərindən ölümün strukturunda neçənci yeri tutur:",
-    "answers": [
-      "1-ci yeri",
-      "5-ci yeri",
-      "4-cü yeri",
-      "2-ci yeri",
-      "3-cü yeri"
-    ]
-  },
-  {
-    "question": "Yumurtalıqlara ən çox hansı orqanların xərçəngi metastaz verir:",
-    "answers": [
-      "mədə xərçəngi",
-      "uşaqlıq cismi xərçəngi",
-      "ağciyər xərçəngi",
-      "uşaqlıq boynu xərçəngi",
-      "süd vəzi xərçəngi"
-    ]
-  },
-  {
-    "question": "Krukenberq metastazı nədir:",
-    "answers": [
-      "mədə xərçənginin yumurtalıqlara metastazı",
-      "süd vəzi xərçənginin endometriuma metastazları",
-      "uşaqlıq cismi xərçənginin ağciyərə metastazı",
-      "mədə xərçənginin uşaqlıq boynuna metastazı",
-      "süd vəzi xərçənginin qaraciyərə metastazı"
-    ]
-  },
-  {
-    "question": "Aşağıdakılardan hansı yumurtalıqların bədxassəli şişlərindən radioterapiyaya ən həssas olanıdır:",
-    "answers": [
-      "disherminomalar",
-      "seroz xərçəng",
-      "uşaqlıq artımı stromanın şişləri",
-      "endometriod xərçəng",
-      "musinoz xərçəng"
-    ]
-  },
-  {
-    "question": "Uşaqlıq boununun xərçəngönü xəstəliklərinə aiddir:",
-    "answers": [
-      "Epitelial displaziya",
-      "Intestinal metaplaziya",
-      "Xaşimoto tireoiditi",
-      "Keyra eritroplaziyası",
-      "Pecet xəstəliyi"
-    ]
-  },
-  {
-    "question": "Uşaqlıq boynu xərçənginin cərrahi müalicəsinə aiddir:",
-    "answers": [
-      "Vertheym əməliyyatı",
-      "Düken əməliyyatı",
-      "Lyuis əməliyyatı",
-      "Bilobektomiya",
-      "Soltərəfli hemikolektomiya"
-    ]
-  },
-  {
-    "question": "Uşaqlıq boynunun xərçənginin I mərhələsində daha çox istifadə olunan müalicə metodu:",
-    "answers": [
-      "cərrahi müalicə + şüa terapiyası",
-      "cərrahi müalicə",
-      "kimyəvi terapiya",
-      "hormonterapiya",
-      "kompleks müalicə"
+      "Şəkərli diabet tip 1",
+      "Xronik pankreatit",
+      "Virsunq axacağının obstruksiyası",
+      "Pankreasın bədxassəli şişi",
+      "Kəskin hemorragik pankreatit"
     ]
   }
 ]
