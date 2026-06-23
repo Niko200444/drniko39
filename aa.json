@@ -1,1 +1,1002 @@
-
+[
+  {
+    "question": "Bilavasitə anesteziya ərəfəsində aparılan hazırlığa aid deyil:",
+    "answers": [
+      "Tənəffüs yollarında və ağciyərlərdə olan xroniki iltihabi proseslərin aşkarlanıb ləğv edilməsi.",
+      "Protez dişlərin çıxarılması.",
+      "Təmizləyici imalənin aparılması.",
+      "Sidik kisəsinə kateter salınması",
+      "Mədəyə zond salınması."
+    ]
+  },
+  {
+    "question": "Anesteziya önü planlı hazırlıq dövründə hansı tədbir həyata keçirilməlidir?",
+    "answers": [
+      "Xəstənin üzv və sistemləri hərtərəfli yoxlanaraq aşkar edilmiş pozğunluqların müalicə olunması.",
+      "Sidik kisəsinin kateterizasiyasının aparılması.",
+      "Protez dişlər varsa onların çıxarılması.",
+      "İki damar yolunun əldə olunması",
+      "Mədəyə zond salınması."
+    ]
+  },
+  {
+    "question": "Premedikasiyanın məqsədinə daxil deyil:",
+    "answers": [
+      "İnfuzion terapiyanın həcmini azaltmaq.",
+      "Allergik reaksiyaların qarşısını almaq.",
+      "Neyrovegetativ sabitləşməni təmin etmək.",
+      "Anestetikin təsir etməsinə əlverişli şərait yaratmaq.",
+      "Emosional gərginliyi aradan qaldırmaq."
+    ]
+  },
+  {
+    "question": "Premedikasiyanın məqsədinə daxil deyil:",
+    "answers": [
+      "Anesteziya zamanı istifadə olunan oksigenə tələbatı azaltmaq.",
+      "Anestetiklərin təsir etməsinə əlverişli şərait yaratmaq.",
+      "Bronxial sekresiyanı azaltmaq.",
+      "Neyrovegetativ sabitlik yaratmaq .",
+      "Allergik reaksiyaların profilaktikasını təmin etmək."
+    ]
+  },
+  {
+    "question": "Premedikasiyanın məqsədinə daxil deyil:",
+    "answers": [
+      "Antibakterial təsir göstərmək.",
+      "Neyrovegetativ sabitliyini təmin etmək.",
+      "Xəstənin emosional gərginliyini aradan qaldırmaq.",
+      "Tüpürcək vəzlərinin şirə ifrazını azaltmaq.",
+      "Ətraf mühit qıcıqlarına qarşı reaksiyanı zəiflətmək."
+    ]
+  },
+  {
+    "question": "Premedikasiya məqsədilə bu dərman preparatlarından istifadə olunmur:",
+    "answers": [
+      "Sitostatiklər.",
+      "Antihistamin preparatlar.",
+      "Neyroleptiklər.",
+      "Xolinolitiklər.",
+      "Yuxugətiricilər."
+    ]
+  },
+  {
+    "question": "Premedikasiya məqsədilə bu dərman preparatlarından istifadə olunmur:",
+    "answers": [
+      "Vitaminlər.",
+      "Antihistamin preparatlar.",
+      "Xolinolitiklər.",
+      "Narkotik analgetiklər",
+      "Trankvilizatorlar."
+    ]
+  },
+  {
+    "question": "Sadalanan anestetiklərdən hansı barbituratlar qrupuna aiddir?",
+    "answers": [
+      "Tiopental-natrium",
+      "Propofol",
+      "Midazolam",
+      "Sevofluran",
+      "Ketamin"
+    ]
+  },
+  {
+    "question": "Bunlardan hansı venadaxili anestetik deyil?",
+    "answers": [
+      "Ksenon",
+      "Ketamin",
+      "Tiopental natrium",
+      "Diazepam",
+      "Diprivan"
+    ]
+  },
+  {
+    "question": "Çoxkomponentli ümumi anesteziyada hipnotik effekt hansı preparatın hesabına əldə edilir?",
+    "answers": [
+      "Propofol",
+      "Transamin",
+      "Promedol",
+      "Fentanil",
+      "Morfin"
+    ]
+  },
+  {
+    "question": "Tiopental natrium vena daxili hansı şəkildə yeridilir?",
+    "answers": [
+      "1%-li məhlul",
+      "40%-li məhlul",
+      "20%-li məhlul",
+      "10%-li məhlul",
+      "5%-li məhlul"
+    ]
+  },
+  {
+    "question": "Ağır şok vəziyyətində olan xəstədə hansı anestetikdən istifadə etmək məsləhətdir?",
+    "answers": [
+      "Ketamin",
+      "Tiopental-natrium",
+      "Diprivan",
+      "İzofluran",
+      "Propofol"
+    ]
+  },
+  {
+    "question": "Hansı preparat hallusinogen effektə malikdir?",
+    "answers": [
+      "Ketamin",
+      "Diazepam",
+      "Diprivan",
+      "İzofluran",
+      "Tiopental - natrium"
+    ]
+  },
+  {
+    "question": "Propofolun induksiya dozası nə qədər təşkil edir?",
+    "answers": [
+      "2 mg/kg",
+      "6 mg/kg",
+      "20 mg/kg",
+      "1 mg/kg",
+      "8 mg/kg"
+    ]
+  },
+  {
+    "question": "Giriş narkoz üçün ketamin venadaxili hansı dozada tətbiq edilir?",
+    "answers": [
+      "2 mq/kq",
+      "6 mq/kq",
+      "10 mq/kq",
+      "5 mq/kq",
+      "0,5 mq/kq"
+    ]
+  },
+  {
+    "question": "Endotraxeal narkoz zamanı premedikasiyaya hansı preparat daxil edilməlidir?",
+    "answers": [
+      "Atropin",
+      "Seftriakson",
+      "Bronxomunal",
+      "Prednizolon",
+      "Eufillin"
+    ]
+  },
+  {
+    "question": "Sadalanan tənəffüs dövrlərindən hansı qeyri-reversivlərə aiddir?",
+    "answers": [
+      "Yarımaçıq",
+      "Minimal axınlı",
+      "Aşağı axınlı",
+      "Yarım qapalı",
+      "Qapalı"
+    ]
+  },
+  {
+    "question": "Sadalanan preparatlardan hansı əzələlərin fibrilyasiyasını yaratmır?",
+    "answers": [
+      "Tubokurarin",
+      "Listenon",
+      "Miorelaksin",
+      "Suksinilxolin",
+      "Ditilin"
+    ]
+  },
+  {
+    "question": "Hansı miorelaksantın təsirini aradan qaldırmaq üçün prozerin tətbiq edilir?",
+    "answers": [
+      "Tubokurarin",
+      "Listenon",
+      "Miorelaksin",
+      "Suksinilxolin",
+      "Ditilin"
+    ]
+  },
+  {
+    "question": "Kombinə olunmuş anesteziyanın spesifik komponentlərinə aiddir:",
+    "answers": [
+      "Süni hipotoniya",
+      "Narkotik yuxu",
+      "Analgeziya",
+      "Neyrovegetativ blokada",
+      "Miorelaksasiya"
+    ]
+  },
+  {
+    "question": "Depolyarizasiyaedici miorelaksantlara aiddir?",
+    "answers": [
+      "Miorelaksin",
+      "Arduan",
+      "Esmeron",
+      "Pavulon",
+      "Tubokurarin"
+    ]
+  },
+  {
+    "question": "Neyroleptoanalgeziya məqsədilə hansı preparatlar kombinə edilir?",
+    "answers": [
+      "Fentanil və droperidol",
+      "Droperidol və ketamin",
+      "Fentanil və ketamin",
+      "Diprivan və fentanil",
+      "Seduksen və fentanil"
+    ]
+  },
+  {
+    "question": "Ataralgeziya aparılması üçün hansı preparatlar kombinə edilir?",
+    "answers": [
+      "Diazepam və fentanil",
+      "Fentanil və droperidol",
+      "Tiopental-natrium və fentanil",
+      "Fentanil və ketamin",
+      "Droperidol və propofol"
+    ]
+  },
+  {
+    "question": "Anesteziyanın ümumi komponentlərinə aiddir:",
+    "answers": [
+      "Analgeziya",
+      "Hemotransfuziya",
+      "Süni qandövranı",
+      "Süni hipotermiya",
+      "Süni hipotoniya"
+    ]
+  },
+  {
+    "question": "Kombinəedilmiş anesteziyanın ən geniş yayılmış metodunu seçin:",
+    "answers": [
+      "Propofol+izofluran+fentanil",
+      "Morfin+halotan+fentanil",
+      "Efir+izofluran+droperidol",
+      "Halotan+sevofluran+ketamin",
+      "Sevofluran+izofluran+ketamin"
+    ]
+  },
+  {
+    "question": "Ümumi anesteziyanın əsas əlamətlərini seçin:",
+    "answers": [
+      "Huşun olmaması",
+      "Arterial təzyiqin yüksəlməsi",
+      "Apnoe",
+      "Əzələ tonusunun saxlanması",
+      "Əzələlərin titrəməsi"
+    ]
+  },
+  {
+    "question": "Qarın boşluğu orqanlarında təcili əməliyyatlarda giriş narkozu zamanı ən çox hansı ağırlaşma baş verə bilər?",
+    "answers": [
+      "Mədə möhtəviyyatının tənəffüs yollarına aspirasiyası",
+      "Ağrı sindromunun güclənməsi",
+      "Koqnitiv pozğunluqlar",
+      "Hipertonik kriz",
+      "Ürək dayanması"
+    ]
+  },
+  {
+    "question": "Propofolun istifadəsinə əks göstəriş hansıdır?",
+    "answers": [
+      "Arterial hipotoniya",
+      "Beyin daxili yüksək təzyiq",
+      "Şəkərli diabet",
+      "Xroniki böyrək xəstəliyi",
+      "Arterial hipertoniya"
+    ]
+  },
+  {
+    "question": "Tənəffüs dövrlərindən hansı tibbi personal üşün daha təhlükəsizdir?",
+    "answers": [
+      "Qapalı",
+      "Qeyri-reversiv",
+      "Yarım açıq",
+      "Açıq",
+      "Yarım qapalı"
+    ]
+  },
+  {
+    "question": "Narkotik analgetiklərin ən çox rast gəlinən fəsadı hansıdır?",
+    "answers": [
+      "Tənəffüs mərkəzinin depressiyası",
+      "Anuriya",
+      "Ürək aritmiyaları",
+      "Koaqulopatiya",
+      "Arterial hipertenziya"
+    ]
+  },
+  {
+    "question": "Hansı inhalyasion anestetik bronxgenişləndirici, miorelaksant və qanqlioblokator təsirinə malikdir?",
+    "answers": [
+      "Halotan",
+      "Sevofluran",
+      "Azot 1-oksid",
+      "İzofluran",
+      "Desfluran"
+    ]
+  },
+  {
+    "question": "Bunlardan hansı azot-1oksid üçün xas xüsusiyyət deyil?",
+    "answers": [
+      "Parenximatoz üzvlərə toksiki təsir göstərir",
+      "İysiz qazdır",
+      "Qısamüddətli əməliyyat üçün daha münasibdir",
+      "Hipersekresiya yaratmır",
+      "Analgeziya təmin edir"
+    ]
+  },
+  {
+    "question": "Qaz halında olan inhalyasion anestetik hansıdır?",
+    "answers": [
+      "Dinitrogen oksid",
+      "Desfluran",
+      "Sevofluran",
+      "Halotan",
+      "İzofluran"
+    ]
+  },
+  {
+    "question": "Epidural anesteziya məqsədilə lidokain hansı dozada tətbiq edilir?",
+    "answers": [
+      "2%-li 15 ml",
+      "2%-li 3ml",
+      "2%-li 50 ml",
+      "2%-li 1 ml",
+      "2%-li 30 ml"
+    ]
+  },
+  {
+    "question": "Hazırda ən geniş tətbiq edilən anestetiki seçin:",
+    "answers": [
+      "İzofluran",
+      "Dinitrogen oksid",
+      "Halotan",
+      "Azot 1-oksid",
+      "Efir"
+    ]
+  },
+  {
+    "question": "Halotan narkozu üçün xas deyil:",
+    "answers": [
+      "Bronxospazm",
+      "Arterial təzyiqin enməsi",
+      "Bradikardiya",
+      "Hepatotoksik təsir",
+      "Bronxların genəlməsi"
+    ]
+  },
+  {
+    "question": "İnhalyasion anesteziyada ən çox rast gələn ağırlaşma hansıdır?",
+    "answers": [
+      "Hipoksiya",
+      "Göz daxili təzyiqin artması",
+      "Oliqo-anuriya",
+      "Əzələ titrəmələri",
+      "Bağırsaqların atoniyası"
+    ]
+  },
+  {
+    "question": "Hansı inhalyasion anestetik tam şəkildə tənəffüs yollarından xaric olunur?",
+    "answers": [
+      "Azot 1-oksid",
+      "Sevofluran",
+      "Ftorotan",
+      "Halotan",
+      "İzofluran"
+    ]
+  },
+  {
+    "question": "Qaraciyər çatışmazlığı olan xəstələrdə hansı inhalyasion anestetik məsləhət görülmür?",
+    "answers": [
+      "Halotan",
+      "Ksenon",
+      "Azot 1-oksid",
+      "Sevofluran",
+      "İzofluran"
+    ]
+  },
+  {
+    "question": "Spinal anesteziyada bupivakain hansı dozada tətbiq edilir?",
+    "answers": [
+      "10-15 mq",
+      "1-2 mq",
+      "50-100 mq",
+      "20-25 mq",
+      "3-5 mq"
+    ]
+  },
+  {
+    "question": "Aşağıdakılardan hansı spinal anesteziyaya mütləq əks göstəriş deyil?",
+    "answers": [
+      "Hipertoniya xəstəliyinin ağır forması",
+      "Peritonit zamanı ağır intoksikasiya",
+      "Arterial hipotenziya",
+      "Anestetikə fərdi həssaslığin yüksək olması",
+      "Punksiya aparılacaq nahiyədə irinli-iltihabi dəyişikliklər"
+    ]
+  },
+  {
+    "question": "Spinal anesteziyadan sonra gecikmiş ağırlaşmalara bunlardan hansı aiddir?",
+    "answers": [
+      "Meningit",
+      "Bradikardiya",
+      "Tənəffüsün dayanması",
+      "Qusma",
+      "Arterial təzyiqin enməsi"
+    ]
+  },
+  {
+    "question": "Hansı cərrahi əməliyyatlarda spinal anesteziya aparılması məqsədəuyğun deyil?",
+    "answers": [
+      "Yuxarı ətraflarda aparılan cərrahi əməliyyatlar",
+      "Qarın boşluğu orqanları üzərində əməliyyatlar",
+      "Kiçik çanaq üzvlərində əməliyyatlar",
+      "Aşağı ətraflarda aparılan cərrahi əməliyyatlar",
+      "Bud çanaq oynağında əməliyyatlar"
+    ]
+  },
+  {
+    "question": "Yerli anestetiklərə hansı dərman preparatını əlavə etməklə anesteziyanın müddətini uzatmaq olar?",
+    "answers": [
+      "Adrenalin",
+      "Pantoprazol",
+      "Amiodaron",
+      "Atropin",
+      "Asetilsistein"
+    ]
+  },
+  {
+    "question": "Aşağıdakılardan hansı spinal anesteziyaya əks-göstəriş deyil?",
+    "answers": [
+      "38 həftəlik hamiləlik",
+      "Mərkəzi sinir sisteminin xəstəlikləri",
+      "Travmatik şok",
+      "Yerli anestetikə fərdi həssaslığın yüksək olması",
+      "Punksiya aparılacaq nahiyədə iltihabi dəyişikliklər"
+    ]
+  },
+  {
+    "question": "Yerli anestetik L3-L4 səviyyəsində epidural yeridilərsə hansı nahiyələrdə anesteziya əldə edilir?",
+    "answers": [
+      "Aralıq və aşağı ətraflar",
+      "Döş qəfəsi",
+      "Yuxarı ətraflar",
+      "Boyun nahiyəsi",
+      "Qarının yuxarı yarısı"
+    ]
+  },
+  {
+    "question": "Aşağıdakılardan hansı epidural anesteziyaya əks-göstəriş sayılmır?",
+    "answers": [
+      "Yuxarı tənəffüs yollarının deformasiyası",
+      "Hipokoaqulyasiya",
+      "Kifoz",
+      "Mərkəzi sinir sisteminin xəstəlikləri",
+      "Ağır dərəcəli şok"
+    ]
+  },
+  {
+    "question": "Aşağıdakılardan hansı nəqledici anesteziyanın növlərinə aid deyil?",
+    "answers": [
+      "Infiltrasion anesteziya",
+      "Spinal anesteziya",
+      "Epidural anesteziya",
+      "Bazu kələfinin blokadası",
+      "Sakral anesteziya"
+    ]
+  },
+  {
+    "question": "Ağrı sindromunun dərəcəsinin qiymətləndirməsinin subyektiv-obyektiv metodlarına aid deyil:",
+    "answers": [
+      "Vizual analoq şkalası",
+      "Tənəffüs göstəricilərinin qiymətləndirilməsi",
+      "Qanda stress hormonların miqdarın təyini",
+      "Sensometriya",
+      "Dəri-qalvanik reaksiya"
+    ]
+  },
+  {
+    "question": "Opioidlərin antaqonisti hansıdır?",
+    "answers": [
+      "Nalokson",
+      "Pentazosin",
+      "Nalbufin",
+      "Omnopon",
+      "Butorfanol"
+    ]
+  },
+  {
+    "question": "Ürək ağciyər reanimasiyası tədbirləri aparılarkən təsdiqləmniş asistoliya zamanı nə istifadə olunmur?",
+    "answers": [
+      "Lidokain",
+      "Elektrik kardiostimulyasiya",
+      "Adrenalin",
+      "Atropin",
+      "Ürək massajı"
+    ]
+  },
+  {
+    "question": "Aşağıda göstərilənlərdən hansı ürək ağciyər reanimasiyasının ağırlaşması deyil?",
+    "answers": [
+      "Yuxu arteriyasının anevrizması",
+      "Ağciyərin parenximasının partlaması",
+      "Qaraciyərin partlaması",
+      "Qabırqaların sınıqları",
+      "Dərinin yanıqları"
+    ]
+  },
+  {
+    "question": "Ürək-ağciyər reanimasiyasına göstərişdir:",
+    "answers": [
+      "Kliniki ölüm",
+      "Hemorragik şok",
+      "Komatoz vəziyyət",
+      "Dekortikasiya",
+      "Preaqonal vəziyyət"
+    ]
+  },
+  {
+    "question": "Elektrik defibrillyasiya üçün göstərişdir:",
+    "answers": [
+      "Mədəciklərin tonik fibrilyasiyası",
+      "Qulaqcıkların titrəməsi",
+      "Qulaqcıkların fibrillyasiyası",
+      "Supraventrikulyar taxikardiyası",
+      "Mədəciklərin atonik fibrilyasiyası"
+    ]
+  },
+  {
+    "question": "Turşu-qələvi müvazinətinin əsas laborator göstəriciləri hansıdır?",
+    "answers": [
+      "pH, pCO2, BE",
+      "pH, pCO2, SpO2",
+      "pH, pO2, BE",
+      "pO2, pCO2, pH,",
+      "pO2, pCO2, BE"
+    ]
+  },
+  {
+    "question": "Metabolik asidozun səbəbi hansıdır?",
+    "answers": [
+      "Kəskin böyrək çatışmazlığı",
+      "Qusma ilə müşahidə olunan zəhərlənmələr",
+      "Kəskin tənəfffüs çatışmazlığı",
+      "Beyin ödemi",
+      "Hipoventilyasiya"
+    ]
+  },
+  {
+    "question": "Metabolik alkalozun səbəbi deyil",
+    "answers": [
+      "İshal",
+      "Mineralokortikoidlərin artıq toplanması",
+      "Nazoqastrsal zonddan mədə möhtəviyyatının itgisi",
+      "Uzun müddət diuretiklərin tətbiqi",
+      "Bufer məhlullarının çox miqdarda köçürülməsi"
+    ]
+  },
+  {
+    "question": "Arterial qanda pH=7,10, BE=0, pO2=90 mm c. st., pCO2 =70 mm c. st. qeyd edilir . Turşu-qələvi müvazinəti necə qiymətləndirilməlidir?",
+    "answers": [
+      "Tənəffüs asidozu",
+      "Metabolik asidoz",
+      "Tənəffüs alkalozu",
+      "Normal",
+      "Metabolik alkaloz"
+    ]
+  },
+  {
+    "question": "Qan plazmasının osmolyarlığı normada necə mosm/l təşkil edir",
+    "answers": [
+      "285-310",
+      "220-280",
+      "350-380",
+      "320-350",
+      "260-270"
+    ]
+  },
+  {
+    "question": "Hipernatriemiyanın müalicəsində istifadə olunur:",
+    "answers": [
+      "5% -li qlukoza məhlulu",
+      "20% Mannitol məhlulu",
+      "15%-li mannitol məhlulu",
+      "3% -li NaCl məhlulu",
+      "5%-li NaCl məhlulu"
+    ]
+  },
+  {
+    "question": "Kaliumun qanda miqdarı 7 mmol/l və daha yuxarı olarsa nə baş verə bilər?",
+    "answers": [
+      "Asistoliya",
+      "Paroksizmal taxikardiya",
+      "Səyrici aritmiya",
+      "Mədəcik ekstrosistoliyası",
+      "Sinus taxikardiyası"
+    ]
+  },
+  {
+    "question": "Hiperkalemiyanın müalicəsində istifadə olunmur:",
+    "answers": [
+      "Atenolol",
+      "10%-li Kalsium qlukonat",
+      "Furosemid",
+      "Natrium bikarbonat",
+      "40%-li qlukoza+insulin"
+    ]
+  },
+  {
+    "question": "Uzun müddət ilgək diuretiklərin infuziyası nəyə səbəb ola bilər?",
+    "answers": [
+      "Hipokalemiyaya",
+      "Hipervolemiaya",
+      "Hipertoniyaya",
+      "Hipermagnemiyaya",
+      "Hiperkalemiyaya"
+    ]
+  },
+  {
+    "question": "Hemorragik şokda hansı qrup infuzion məhlulların tətbiqi daha məqsədəuyğundur?",
+    "answers": [
+      "Kolloid məhlullar",
+      "Oksigen daşıya bilən məhlullar",
+      "Kristalloid məhlullar",
+      "Parenteral qidalanma üçün preparatlar",
+      "Dezintoksikasiya təsirli məhlullar"
+    ]
+  },
+  {
+    "question": "Enerji mənbəyi kimi hansı məhlul istifadə edilir?",
+    "answers": [
+      "20%-li Qlukoza",
+      "Reopoliqlukin",
+      "Hemodez",
+      "4%-li Natrium bikarbonat",
+      "Aminosteril"
+    ]
+  },
+  {
+    "question": "Parenteral qidalanma məqsədi ilə hansı məhlul istifadə olunur?",
+    "answers": [
+      "Infezol",
+      "Mannitol",
+      "Reopoliqlukin",
+      "Natrium bikarbonat",
+      "Poliqlukin"
+    ]
+  },
+  {
+    "question": "Kristalloid məhlullar qrupuna aid deyil:",
+    "answers": [
+      "Reopoliqlukin məhlulu",
+      "Ringer məhlulu",
+      "Laktasol məhlulu",
+      "Trisamin məhlulu",
+      "5%-li Glükoza məhlulu"
+    ]
+  },
+  {
+    "question": "Parenteral qidalanma məhlullar qrupuna aiddir:",
+    "answers": [
+      "Poliamin",
+      "Polioksifumarin",
+      "Polifer",
+      "Poliglükin",
+      "Polidez"
+    ]
+  },
+  {
+    "question": "Transfuzion terapiya komponentlərinə aiddir:",
+    "answers": [
+      "Albumin",
+      "Kristalloid məhlullar",
+      "Kolloid məhlullar",
+      "Parenteral qidalanma üçün preparatlar",
+      "Oksigen daşıya bilən məhlullar"
+    ]
+  },
+  {
+    "question": "Ekstrakorporal detoksikasiya metodlarina aiddir?",
+    "answers": [
+      "Hemosorbsiya",
+      "Qanin dəyişdirilməsi.",
+      "Sürətləndirilmiş diurez",
+      "Periton dializi",
+      "Bagirsaq dializi"
+    ]
+  },
+  {
+    "question": "Ekstrakorporal detoksikasiya metodlarina aid deyil?",
+    "answers": [
+      "Müalicəvi hiperventilyasiya",
+      "Hemosorbsiya",
+      "Plazmasorbsiya",
+      "Plazmaferez",
+      "Hemodializ"
+    ]
+  },
+  {
+    "question": "İnfuzion məhlullar neçə qrupa bölünür:",
+    "answers": [
+      "6",
+      "5",
+      "10",
+      "4",
+      "7"
+    ]
+  },
+  {
+    "question": "Miokard infarktln ən kəskin fazasında hansı ağrısızlaşdlrma medodikası daha adekvat sayılır?",
+    "answers": [
+      "Morginin venadaxili fraksion yeridilməsi",
+      "Analqin əzələdaxili",
+      "Analqin venadaxili",
+      "Morfin əzələdaxili",
+      "Tramal venadaxili"
+    ]
+  },
+  {
+    "question": "Kardiogen şokun növlərinə aid deyil:",
+    "answers": [
+      "Areflektor",
+      "Aritmik",
+      "Reflektor",
+      "Həqiqi",
+      "Areaktiv"
+    ]
+  },
+  {
+    "question": "Miokard infarktının erkən ağırlaşmalarına aid deyil:",
+    "answers": [
+      "Residivləşən miokard infarktı",
+      "Aritmiyalar",
+      "Kəskin sol mədəcik çatışmazlığı",
+      "Qəfləti ölüm",
+      "Areaktiv kardiogen şok"
+    ]
+  },
+  {
+    "question": "Kəskin sol mədəcik çatışmazlığı zamanı müalicə prinsipinə daxil deyil:",
+    "answers": [
+      "Peridural anesteziya",
+      "Kiçik qan dövranında təzyiqi azaltmaq",
+      "Hipoksiyanı azaltmaq",
+      "Miokardın yığılma qabiliyyətini yaxşılaşdırmaq",
+      "Ürəyin yükünü azaltmaq"
+    ]
+  },
+  {
+    "question": "Kəskin sol mədəcik çatışmazlığı zamanı hansı qrup preparatlar tətbiq edilmir:",
+    "answers": [
+      "Osmodiuretiklər",
+      "Narkotik analgetiklər",
+      "Qanqlioblokatorlar",
+      "Simpatomimetiklər",
+      "Vazodillatatorlar"
+    ]
+  },
+  {
+    "question": "Hipertonik krizin müalicəsinə hansı qrup preparatlar daxil deyil:",
+    "answers": [
+      "Simpatomimetiklər",
+      "Sidikqovucular",
+      "B-blokatorlar",
+      "Sedativ preparatlar",
+      "Vazodillatatorlar"
+    ]
+  },
+  {
+    "question": "Kəskin işemik insultun səbəbinə aid deyil:",
+    "answers": [
+      "Beyin damarlarının partlaması",
+      "Beyin damarlarının yağ emboliyası",
+      "Beyin damarlarının qaz emboliyası",
+      "Beyin damarlarının aterosklerozu",
+      "Beyin damarlarının tromboemboliyası"
+    ]
+  },
+  {
+    "question": "Kəskin hemorragik insultun müalicəsində tətbiq edilir:",
+    "answers": [
+      "Osmodiuretiklər",
+      "Antikoaqulyantlar",
+      "Trombolitiklər",
+      "Glükoza məhlulunun infuziyasi",
+      "İnsulinoterapiya"
+    ]
+  },
+  {
+    "question": "“Peri-arrest” aritmiyalara aid deyil:",
+    "answers": [
+      "Sinus taxikardiyası",
+      "III dərəcəli AV blokada",
+      "Mədəcik taxikardiyası",
+      "Qulaqcıqların fibrilyasiyası",
+      "Paroksizmal supraventrikulyar taxikardiya"
+    ]
+  },
+  {
+    "question": "Hansı aritmiya zamanı müvəqqəti kardiostimulyasiya tətbiq edilmir:",
+    "answers": [
+      "Supraventrikulyar taxikardiya",
+      "Asistoliya",
+      "AV blokada III dərəcə",
+      "AV blokada II dərəcə",
+      "Qulaqcıqların səyirməsi"
+    ]
+  },
+  {
+    "question": "Trombohemorragik sindrom zamanı patogenetik müalicə",
+    "answers": [
+      "Təzə dondurulmuş plazma",
+      "Prednizalon",
+      "10% kalsium xlorid",
+      "Vikasol",
+      "Disinon"
+    ]
+  },
+  {
+    "question": "Anafilaktik şok zamanı təcili nə vurulmalıdır?",
+    "answers": [
+      "Adrenalin",
+      "Kordiamin",
+      "Promedol",
+      "Laziks",
+      "Atropin"
+    ]
+  },
+  {
+    "question": "Hemorragik şok zamanı ilkin tədbirlərə aiddir:",
+    "answers": [
+      "Infuzion-transfuzion terapiya",
+      "Vazodilatator infuziyazı",
+      "Antikoaqulyant terapiya",
+      "Piy emulsiyası infuziyası",
+      "Antibiotik terapiyası"
+    ]
+  },
+  {
+    "question": "Alqoverin şok indeksi nədir?",
+    "answers": [
+      "Nəbz tezliyi və sistolik AT-nin nisbətidir",
+      "Nəbz tezliyi və diastolik AT-nin nisbətidir",
+      "Nəbz tezliyinin orta AT nisbətidir",
+      "Nəbz tezliyinin nəbz təsyiqinə AT-nin nisbətidir",
+      "Mərkəzi venoz təzyiqin dövr edən qana nisbəti"
+    ]
+  },
+  {
+    "question": "Hansı halda qıcolmalar izlənilmir?",
+    "answers": [
+      "Miasteniya",
+      "Beyin ödemi",
+      "Epilepsiya",
+      "Hipertermiya",
+      "Tetanus"
+    ]
+  },
+  {
+    "question": "Komatoz halın əsas meyarları:",
+    "answers": [
+      "Huşun itməsi, reflekslərin sönməsi",
+      "İsterik tutmalar",
+      "Epilepsiya tutmaları",
+      "Kollaps halı",
+      "Bayılma halı"
+    ]
+  },
+  {
+    "question": "Komatoz halın qiymətləndirilməsi necə aparılır?",
+    "answers": [
+      "Qlazko cədvəlinə əsasən",
+      "Patoloji reflekslərin baş verməsinə görə",
+      "Sidik ifrazinin dəyişməsinə görə",
+      "Hemodinamik göstəricilərin dəyişməsinə görə",
+      "Tənəffüsün pozulmasına əsasən"
+    ]
+  },
+  {
+    "question": "Qaraciyər komasının inkişafında əsas rol oynayır:",
+    "answers": [
+      "Ammonyak və fenolun beyinə təsiri",
+      "Kəskin tənəffüs çatışmazlığı nəticəsində hipoksiya",
+      "Beyin qan dövranının pozulması",
+      "Miokard infarktı",
+      "Mədə xorasının kəskinləşməsi"
+    ]
+  },
+  {
+    "question": "Hiperqlikemik komada kritik vəziyyət hansıdır?",
+    "answers": [
+      "pH - 7,1",
+      "pH – 7,5",
+      "pH - 7,4",
+      "pH - 7,3",
+      "pH – 7,45"
+    ]
+  },
+  {
+    "question": "Kəskin böyrək çatışmazlığının prerenal formasında müalicənin əsas istiqaməti:",
+    "answers": [
+      "AT-nın tənzimlənməsi",
+      "Asidozla mübarizə",
+      "Diuretiklərin tədbiqi",
+      "Hiperkalemiya ilə mübarizə",
+      "Antibiotikoterapiya"
+    ]
+  },
+  {
+    "question": "Anuriya hansı halda deyilir?",
+    "answers": [
+      "Sutkalık sidiyin miqdari 50 ml qədər",
+      "Sutkalık sidiyin miqdari 1000 ml",
+      "Sutkalık sidiyin miqdari 1500 ml",
+      "Sutkalık sidiyin miqdari 1500 ml çox olduqda",
+      "Sutkalık sidiyin miqdari 300 ml"
+    ]
+  },
+  {
+    "question": "Böyrək kanalcıqlarının nekrozunu (tubulonekroz) dəqiqləşdirmək üçün hansı preparatla sınağ aparılır?",
+    "answers": [
+      "Spironolakton",
+      "Xlorhydrotiazid",
+      "Furosemid",
+      "Mannitol",
+      "Adrenalin"
+    ]
+  },
+  {
+    "question": "Morfin ilə zəhərlənmə zamani hansi antidot maddədən istifadə olunur?",
+    "answers": [
+      "Nalokson",
+      "Tetasin",
+      "Dipiridoksin",
+      "Unitiol",
+      "Atropin"
+    ]
+  },
+  {
+    "question": "Fosfor üzvi birləşmələrlə zəhərlənmənin intensiv müalicəsində tətbiq olunur:",
+    "answers": [
+      "Atropin",
+      "Prozerin",
+      "Etil alkokolu",
+      "Nalokson",
+      "Metilen yaşili"
+    ]
+  },
+  {
+    "question": "Yuxugətiricilərlə zəhərlənmənin intensiv müalicəsində tətbiq edilmir:",
+    "answers": [
+      "Fentanil",
+      "Mədə-bagirsagin təmizlənməsi",
+      "Hemosorbsiya",
+      "Vitamin kompleksi",
+      "Plazmanin qələviləşdirilməsi"
+    ]
+  },
+  {
+    "question": "Benzodiazepin törəmələri ilə zəhərlənmənin intensiv müalicəsində tətbiq olunmur",
+    "answers": [
+      "Plazmanin qələviləşdirilməsi",
+      "Sürətləndirilmiş diurez",
+      "Vitamin preparatlarinin tətbiqi",
+      "Mədə bagirsagin təmizlənməsi",
+      "Hemosorbsiya"
+    ]
+  },
+  {
+    "question": "Dəm qazi ilə agir dərəcəli zəhərlənmə zamani qanda karboksihemoqlobinin səviyyəsi neçə faiz təşkil edir?",
+    "answers": [
+      "40% çox",
+      "30-35%",
+      "15%",
+      "10%-ə qədər",
+      "20-25%"
+    ]
+  },
+  {
+    "question": "Sirkə turşusu ilə zəhərləmə zamanı sərbəst hemoqlobini xaric etmək üçün hansı intensiv terapiya üsülundan istifadə olunur?",
+    "answers": [
+      "Sürətləndirilmiş diurez",
+      "Süni hipotermiya",
+      "Idarəedilən hipotoniya",
+      "Qanın transfuziyası",
+      "Bağırsaqların təmizlənməsi"
+    ]
+  }
+]
