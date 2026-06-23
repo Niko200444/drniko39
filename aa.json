@@ -998,5 +998,505 @@
       "Qanın transfuziyası",
       "Bağırsaqların təmizlənməsi"
     ]
+  },
+   {
+    "question": "Morfinin venadaxili sürətli bolus yeridilməsi zamanı ən çox rast gəlinən ağırlaşma hansıdır?",
+    "answers": [
+      "Tənəffüsün dayanması",
+      "Layell sindromu",
+      "Venoz tromboz",
+      "Ürək dayanması",
+      "Anafilaktik şok"
+    ]
+  },
+  {
+    "question": "Qeyri-opioid analgetiklər üçün xarakterik olmayan xüsusiyyət:",
+    "answers": [
+      "Öskürək mərkəzini depressiya etməsi",
+      "İltihab və qızdırmaya təsir göstərməsi",
+      "Eyforiya yaratmaması",
+      "Analgetik təsir",
+      "Fiziki və psixoloji asılılıq yaratmaması"
+    ]
+  },
+  {
+    "question": "Reanimasiya üsullarından biri:",
+    "answers": [
+      "Süni ağciyər ventilyasiyası",
+      "Sidik kisəsinin kateterizasiyası",
+      "Elektrokardioqrafiya",
+      "Lumbal punksiya",
+      "Fibroqastroduodenoskopiya"
+    ]
+  },
+  {
+    "question": "“Reanimasiya (crash cart)” dəstinə daxildir:",
+    "answers": [
+      "Ambu kisəsi",
+      "Valdman manometri",
+      "Bir iynəsi",
+      "Neqatoskop",
+      "Laparoskop"
+    ]
+  },
+  {
+    "question": "Arterial qanda oksigenin parsial təzyiqi (PaO₂) neçədir?",
+    "answers": [
+      "90–100 mm civə sütunu",
+      "40–50 mm civə sütunu",
+      "10–20 mm civə sütunu",
+      "60–70 mm civə sütunu",
+      "110–120 mm civə sütunu"
+    ]
+  },
+  {
+    "question": "Arterial qanda karbon qazının parsial təzyiqi (PaCO₂) neçədir?",
+    "answers": [
+      "35–45 mm civə sütunu",
+      "55–60 mm civə sütunu",
+      "25–30 mm civə sütunu",
+      "10–20 mm civə sütunu",
+      "80–90 mm civə sütunu"
+    ]
+  },
+  {
+    "question": "Tənəffüs dayanması zamanı əsas vacib tədbir:",
+    "answers": [
+      "Süni ağciyər ventilyasiyası",
+      "Nazoqastrik zondun qoyulması",
+      "Trendelenburq vəziyyəti",
+      "Döş qəfəsinin kompressiyası",
+      "Kordiamin inyeksiyası"
+    ]
+  },
+  {
+    "question": "Uzunmüddətli mexaniki ventilyasiya zamanı tövsiyə olunan təhlükəsiz oksigen konsentrasiyası:",
+    "answers": [
+      "40%",
+      "70%",
+      "80%",
+      "90%",
+      "60%"
+    ]
+  },
+  {
+    "question": "Endotraxeal intubasiyaya göstəriş:",
+    "answers": [
+      "Tənəffüs yollarının açılması",
+      "Ürək funksiyasının yaxşılaşdırılması",
+      "Tənəffüs mərkəzinin qıcıqlandırılması",
+      "Pnevmoniyanın effektiv müalicəsi",
+      "Mədə şirəsinin turşuluğunun azalması"
+    ]
+  },
+  {
+    "question": "Traxeostomiyaya göstəriş:",
+    "answers": [
+      "Qırtlaq ödemi",
+      "Ürək dayanması",
+      "Eksudativ plevrit",
+      "Paylı pnevmoniya",
+      "Tənəffüs tezliyinin dəqiqədə 40-dan çox olması"
+    ]
+  },
+  {
+    "question": "Terminal vəziyyətin inkişafında əsas rol oynamayan sistem:",
+    "answers": [
+      "Əzələ-skelet sistemi",
+      "Ürək-damar sistemi",
+      "Mədə-bağırsaq sistemi",
+      "Mərkəzi sinir sistemi",
+      "Tənəffüs sistemi"
+    ]
+  },
+  {
+    "question": "Klinik ölümün əlamətlərindən biri:",
+    "answers": [
+      "Bəbəklərin genişlənməsi və işığa reaksiyanın olmaması",
+      "Dərinin hiperemiyası",
+      "Zəif nəbz",
+      "Nəbzin azalması",
+      "Arterial təzyiqin azalması"
+    ]
+  },
+  {
+    "question": "Klinik ölümün əlavə əlaməti:",
+    "answers": [
+      "Kardiomonitorun düz xətt göstərməsi",
+      "Arterial təzyiqin artması",
+      "Dərinin hiperemiyası",
+      "Periferik damarlarda zəif nəbz",
+      "Bradikardiya"
+    ]
+  },
+  {
+    "question": "Ürək dayanmasının mexanizmlərindən biri:",
+    "answers": [
+      "Ventrikulyar fibrillyasiya",
+      "Sinus bradikardiyası",
+      "Sinus taxikardiyası",
+      "Arterial hipertenziya",
+      "Ventrikulyar ekstrasistoliya"
+    ]
+  },
+  {
+    "question": "Ürək dayanmasının növlərindən biri:",
+    "answers": [
+      "Elektromexaniki dissosiasiya",
+      "Ürək astması",
+      "Sinkopa",
+      "Kəskin koronar sindrom",
+      "Kardiogen şok"
+    ]
+  },
+  {
+    "question": "Klinik ölüm zamanı baş verməyən hal:",
+    "answers": [
+      "Mioz",
+      "Şüurun itməsi",
+      "Midriaz",
+      "Ürək tonlarının eşidilməməsi",
+      "Bəbəklərin işığa reaksiyasının olmaması"
+    ]
+  },
+  {
+    "question": "Klinik ölümün orta müddəti:",
+    "answers": [
+      "5–6 dəqiqə",
+      "7–8 dəqiqə",
+      "9–10 dəqiqə",
+      "11–12 dəqiqə",
+      "1–2 dəqiqə"
+    ]
+  },
+  {
+    "question": "Klinik ölümün müddətini qısaltmayan amil:",
+    "answers": [
+      "Hipotermiya",
+      "Hipertermiya",
+      "Hiperkapniya",
+      "Metabolik asidoz",
+      "Hipoksiya"
+    ]
+  },
+  {
+    "question": "Dekortikasiya zamanı müşahidə olunur:",
+    "answers": [
+      "Tam arefleksiya və atoniya",
+      "Likvorda laktatın azalması",
+      "Arterial təzyiqin artması",
+      "Karotid arteriyada nəbzin itməsi",
+      "EEG-də beyin hüceyrələrinin aktivliyinin saxlanması"
+    ]
+  },
+  {
+    "question": "Beyin ölümünün əlaməti:",
+    "answers": [
+      "Karotid arteriya qanı ilə yuxarı boş ven qanı arasında O₂ fərqinin 2%-dən az olması",
+      "Qanda xolinesterazanın artması",
+      "Arterial təzyiqin davamlı artması",
+      "Aydın şüur",
+      "Likvorda laktatın azalması"
+    ]
+  },
+  {
+    "question": "Asistoliya üçün xarakterik olmayan əlamət:",
+    "answers": [
+      "Arterial təzyiqin stabil qalması",
+      "Şüurun itməsi",
+      "Bəbəklərin genişlənməsi",
+      "EKQ-də düz xətt",
+      "Tənəffüsün dayanması"
+    ]
+  },
+  {
+    "question": "Effektiv reanimasiyanın erkən əlamətlərindən biri:",
+    "answers": [
+      "Bəbəklərin daralması",
+      "Bədən temperaturunun azalması",
+      "Bədən temperaturunun artması",
+      "Koordinasiyalı hərəkətlər",
+      "Şüurun bərpası"
+    ]
+  },
+  {
+    "question": "Dekortikasiya zamanı baş verməyən hal:",
+    "answers": [
+      "Aydın şüur",
+      "Proqressiv arterial hipotenziya",
+      "Tam arefleksiya",
+      "Buynuz qişanın bulanması",
+      "Proqressiv bradikardiya"
+    ]
+  },
+  {
+    "question": "Dekortikasiya zamanı baş verməyən hal:",
+    "answers": [
+      "Ağrıya reaksiyanın artması",
+      "Hipotermiya",
+      "Ürək tonlarının zəifləməsi",
+      "Karotid nəbzin olmaması",
+      "Arterial təzyiqin azalması"
+    ]
+  },
+  {
+    "question": "Terminal vəziyyətin mərhələsi sayılmayan:",
+    "answers": [
+      "Koma",
+      "Aqoniya",
+      "Klinik ölüm",
+      "Preaqoniya",
+      "Terminal pauza"
+    ]
+  },
+  {
+    "question": "Klinik ölümün əlaməti olmayan:",
+    "answers": [
+      "Aydın şüur",
+      "Auskultasiyada ürək tonlarının eşidilməməsi",
+      "Arterial təzyiqin təyin olunmaması",
+      "Dərinin sianozu",
+      "EKQ-də düz xətt"
+    ]
+  },
+  {
+    "question": "Klinik ölümün əlamətlərindən biri:",
+    "answers": [
+      "Apnoe",
+      "Radiyal arteriyada nəbzin olmaması",
+      "Mioz",
+      "Arterial təzyiqin azalması",
+      "Nəbzin qəfil artması"
+    ]
+  },
+  {
+    "question": "Ürək dayanmasının növünü müəyyən edən üsul:",
+    "answers": [
+      "EKQ",
+      "Torakotomiya",
+      "Klinik əlamətlər",
+      "Laborator analizlər",
+      "EEG"
+    ]
+  },
+  {
+    "question": "Elektromexaniki dissosiasiyanın əlamətlərindən biri:",
+    "answers": [
+      "EKQ-də sinus bradikardiyası ilə geniş QRS kompleksləri",
+      "Arterial təzyiqin artması",
+      "Nəbzin əhəmiyyətli artması",
+      "EKQ-də yüksək tezlikli sinusoidal xətt",
+      "Mioz"
+    ]
+  },
+  {
+    "question": "Əsas həyat dəstəyinə (CPR) daxil olmayan:",
+    "answers": [
+      "Dərman inyeksiyası",
+      "Süni tənəffüs",
+      "Açıq ürək masajı",
+      "Tənəffüs yollarının açılması",
+      "Döş qəfəsinin kompressiyası"
+    ]
+  },
+  {
+    "question": "Bir xilasedici tərəfindən süni tənəffüs : döş qəfəsi kompressiyası nisbəti:",
+    "answers": [
+      "2:30",
+      "2:5",
+      "3:10",
+      "3:15",
+      "1:5"
+    ]
+  },
+  {
+    "question": "İki xilasedici tərəfindən süni tənəffüs : döş qəfəsi kompressiyası nisbəti:",
+    "answers": [
+      "2:30",
+      "3:10",
+      "3:10",
+      "1:10",
+      "2:15"
+    ]
+  },
+  {
+    "question": "Monofazik defibrillyasiya zamanı istifadə olunan enerji:",
+    "answers": [
+      "200–300–360 J",
+      "100–200–300 J",
+      "50–150–250 J",
+      "50–100–300 J",
+      "150–250–350 J"
+    ]
+  },
+  {
+    "question": "Bifazik defibrillyasiya zamanı istifadə olunan enerji:",
+    "answers": [
+      "120–150–200 J",
+      "50–80–120 J",
+      "100–150–200 J",
+      "30–50–100 J",
+      "100–120–150 J"
+    ]
+  },
+  {
+    "question": "Asistoliya zamanı tətbiq edilən reanimasiya üsulu:",
+    "answers": [
+      "KPR (CPR)",
+      "Bemegrid sınağı",
+      "Kardioversiya",
+      "Kordaron yeridilməsi",
+      "Defibrillyasiya"
+    ]
+  },
+  {
+    "question": "Asistoliya zamanı istifadə olunmayan dərman:",
+    "answers": [
+      "Kordiamin",
+      "Adrenalin",
+      "Natrium bikarbonat",
+      "Eufillin",
+      "Atropin"
+    ]
+  },
+  {
+    "question": "Elektromexaniki dissosiasiyada istifadə olunmayan dərman:",
+    "answers": [
+      "Lidokain",
+      "Natrium bikarbonat",
+      "Kalsium xlorid",
+      "Adrenalin",
+      "Atropin"
+    ]
+  },
+  {
+    "question": "Açıq ürək masajına göstəriş olmayan:",
+    "answers": [
+      "Ventrikulyar fibrillyasiya",
+      "Döş qəfəsi əməliyyatı zamanı ürək dayanması",
+      "Ürək tamponadası",
+      "Sərt və ya deformasiyalı döş qəfəsi",
+      "Çoxsaylı qabırğa sınıqları"
+    ]
+  },
+  {
+    "question": "Erkən postreanimasiya dövründə daha çox müşahidə olunur:",
+    "answers": [
+      "Metabolik asidoz",
+      "Qarışıq asidoz",
+      "Respirator alkaloz",
+      "Respirator asidoz",
+      "Metabolik alkaloz"
+    ]
+  },
+  {
+    "question": "Davamlı ventrikulyar fibrillyasiyada tövsiyə olunan dərman:",
+    "answers": [
+      "Lidokain",
+      "İzadrin",
+      "Tiyopental natrium",
+      "Eufillin",
+      "Klofelin"
+    ]
+  },
+  {
+    "question": "Süni hipotermiyanın məqsədi:",
+    "answers": [
+      "Hüceyrələrin hipoksiyaya davamlılığının artırılması",
+      "İmmun sistemin gücləndirilməsi",
+      "Metabolizmin aktivləşdirilməsi",
+      "Böyrək funksiyasının artırılması",
+      "Hüceyrələrin hipoksiyaya davamlılığının azaldılması"
+    ]
+  },
+  {
+    "question": "Süni hipotermiya zamanı soyuğun mənfi təsirindən qorunmaq üçün istifadə olunur:",
+    "answers": [
+      "Ümumi anesteziya",
+      "Defibrillyasiya",
+      "İnsulin",
+      "Antibiotiklər",
+      "Lokal anesteziya"
+    ]
+  },
+  {
+    "question": "Nəzarətli hipotenziyanın məqsədi:",
+    "answers": [
+      "Əməliyyat zamanı qan itkisinin azaldılması",
+      "Aterosklerozun müalicəsi",
+      "Diurezin artırılması",
+      "Qanda qlükozanın azaldılması",
+      "Hipovolemiyanın müalicəsi"
+    ]
+  },
+  {
+    "question": "Cərrahiyyədə nəzarətli hipotenziya zamanı saxlanmalı sistolik təzyiq səviyyəsi:",
+    "answers": [
+      "70 mm civə sütunu",
+      "50 mm civə sütunu",
+      "90 mm civə sütunu",
+      "80 mm civə sütunu",
+      "60 mm civə sütunu"
+    ]
+  },
+  {
+    "question": "Nə qədər müddət sistolik təzyiq 70 mm civə sütunu səviyyəsində saxlanıla bilər?",
+    "answers": [
+      "2 saat",
+      "5 saat",
+      "7 saat",
+      "3 saat",
+      "4 saat"
+    ]
+  },
+  {
+    "question": "Nəzarətli hipotenziya üçün istifadə olunan dərmanlar:",
+    "answers": [
+      "Nitratlar",
+      "ACE inhibitorları",
+      "Antixolinergiklər",
+      "Simpatomimetiklər",
+      "Diuretiklər"
+    ]
+  },
+  {
+    "question": "Dekortikasiyanın əlaməti olmayan:",
+    "answers": [
+      "Buynuz qişa refleksinin olması",
+      "Tam adinamiya",
+      "Bəbəklərin genişlənməsi",
+      "Tam arefleksiya",
+      "Şüursuzluq"
+    ]
+  },
+  {
+    "question": "CPR zamanı klinik ölümün bioloji ölümə keçməsinin əlaməti olmayan:",
+    "answers": [
+      "Aqonal tənəffüs",
+      "Bəbəklərin maksimal genişlənməsi",
+      "Dəridə meyit ləkələrinin yaranması",
+      "EEG-də beyin biopotensialının olmaması",
+      "Ürək səslərinin olmaması"
+    ]
+  },
+  {
+    "question": "Dekortikasiyanı təsdiqləmək üçün istifadə olunan test:",
+    "answers": [
+      "Soyuq su testi",
+      "Mannitol testi",
+      "Nitroqliserin testi",
+      "Furosemid testi",
+      "Kalium testi"
+    ]
+  },
+  {
+    "question": "Tənəffüs yollarının açılması üsulu olmayan:",
+    "answers": [
+      "Nazoqastrik zondun qoyulması",
+      "Esmarx (çənə irəli) manevri",
+      "Safar triadası",
+      "Traxeal intubasiya",
+      "Hava yolu borusunun yeridilməsi"
+    ]
   }
 ]
